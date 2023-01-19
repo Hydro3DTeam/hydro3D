@@ -1,2 +1,0 @@
-# PartLoc\_Initial
-
