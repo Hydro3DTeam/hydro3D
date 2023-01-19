@@ -655,6 +655,11 @@ _**Purpose:**_ Run iteratively the poisson-pressure solver, and export the step 
 
 _**Difficulty:**_ Very High | _**The user change likelihood:**_ Very Unlikely
 
+_**Subroutines:**_
+
+* newsolv\_mg
+* plotres
+
 </details>
 
 <details>
@@ -664,6 +669,12 @@ _**Difficulty:**_ Very High | _**The user change likelihood:**_ Very Unlikely
 _**Purpose:**_ Calculation for the bed sedimentation.
 
 _**Difficulty:**_ High | _**The user change likelihood:**_ Unlikely
+
+_**Subroutines:**_
+
+* particle\_init
+* particle\_move
+* particle\_feedback
 
 </details>
 
@@ -675,6 +686,17 @@ _**Purpose:**_ Export all the data files of the simulation.
 
 _**Difficulty:**_ Easy | _**The user change likelihood:**_ Very Likely
 
+_**Subroutines:**_
+
+* tecplot\_t
+* tecplot\_s
+* tecplot\_p
+* tec\_turb
+* tecplot\_phi
+* tecbin
+* tec\_instant
+* tec\_inst\_plane
+
 </details>
 
 <details>
@@ -684,6 +706,14 @@ _**Difficulty:**_ Easy | _**The user change likelihood:**_ Very Likely
 _**Purpose:**_ Calculate the fractional-step velocity after the pressure-solver. Performed SIP solver.
 
 _**Difficulty:**_ Medium | _**The user change likelihood:**_ Unlikely
+
+_**Subroutines:**_
+
+* calmas
+* calvel
+* pbound
+* pressure\_forcing
+* pressure\_1sweep
 
 </details>
 
@@ -695,6 +725,13 @@ _**Purpose:**_ Calculate the roughness function for porous beds.
 
 _**Difficulty:**_ Medium | _**The user change likelihood:**_ Very Unlikely
 
+_**Subroutines:**_
+
+* init\_rough
+* roughness\_function
+* rough\_velocity
+* rough\_restart
+
 </details>
 
 <details>
@@ -704,6 +741,14 @@ _**Difficulty:**_ Medium | _**The user change likelihood:**_ Very Unlikely
 _**Purpose:**_ Numerical method for convection and diffusion spatial terms.
 
 _**Difficulty:**_ High | _**The user change likelihood:**_ Very Unlikely
+
+_**Subroutines:**_
+
+* rungek\_conv4th
+* runge\_diff4th
+* rungek\_conv2nd
+* rungek\_convweno
+* rungek\_diff2nd
 
 </details>
 
@@ -725,6 +770,10 @@ _**Purpose:**_ Initialise and perform calculations for SEM.
 
 _**Difficulty:**_ High | _**The user change likelihood:**_ Unlikely
 
+_**Subroutines:**_
+
+* sem
+
 </details>
 
 <details>
@@ -734,6 +783,20 @@ _**Difficulty:**_ High | _**The user change likelihood:**_ Unlikely
 _**Purpose:**_ Create specific shapes geometry.
 
 _**Difficulty:**_ Medium | _**The user change likelihood:**_ Unlikely
+
+_**Subroutines:**_
+
+* imb\_hemisphere
+* imb\_dune
+* imb\_cone
+* imb\_square
+* imb\_cylinder
+* imb\_cube
+* imb\_sphere
+* imb\_file
+* imb\_number
+* imb\_moved
+* imb\_moved\_shades
 
 </details>
 
@@ -745,6 +808,10 @@ _**Purpose:**_ Perform Stone Implicit Pressure solver.
 
 _**Difficulty:**_ Very High | _**The user change likelihood:**_ Very Unlikely
 
+_**Subroutines:**_
+
+* sipsol
+
 </details>
 
 <details>
@@ -754,6 +821,10 @@ _**Difficulty:**_ Very High | _**The user change likelihood:**_ Very Unlikely
 _**Purpose:**_ Export the variables for each probe.
 
 _**Difficulty:**_ Easy | _**The user change likelihood:**_ Likely
+
+_**Subroutines:**_
+
+* sipsol
 
 </details>
 
@@ -765,6 +836,10 @@ _**Purpose:**_ Calculate wall-function boundary conditions.
 
 _**Difficulty:**_ Easy | _**The user change likelihood:**_ Unlikely
 
+_**Subroutines:**_
+
+* wall\_function
+
 </details>
 
 <details>
@@ -774,5 +849,11 @@ _**Difficulty:**_ Easy | _**The user change likelihood:**_ Unlikely
 _**Purpose:**_ Perform the WENO differencing scheme.
 
 _**Difficulty:**_ Very High | _**The user change likelihood:**_ Very Unlikely
+
+_**Subroutines:**_
+
+* hj\_weno\_dx
+* hj\_weno\_dy
+* hj\_weno\_dz
 
 </details>
