@@ -552,9 +552,9 @@ _**Purpose:**_ Declare global variables for the HRS.
 
 _**Difficulty:**_ Easy | _**The user change likelihood:**_ Very Likely
 
-_**Subroutines:**_
+_**Module:**_
 
-*
+* hrs
 
 </details>
 
@@ -566,6 +566,10 @@ _**Purpose:**_ Declare global variables for the IBM.
 
 _**Difficulty:**_ Easy | _**The user change likelihood:**_ Very Likely
 
+_**Module:**_
+
+* imb
+
 </details>
 
 <details>
@@ -575,6 +579,15 @@ _**Difficulty:**_ Easy | _**The user change likelihood:**_ Very Likely
 _**Purpose:**_ Declare and initialise global variables for the MESSAGE PASSING INTERFACE.
 
 _**Difficulty:**_ Easy | _**The user change likelihood:**_ Very Likely
+
+_**Module:**_
+
+* mpi
+
+_**Subroutines:**_
+
+* init\_parallelisation
+* end\_parallelisation
 
 </details>
 
@@ -586,6 +599,10 @@ _**Purpose:**_ Declare the eulerian structure dom(ib) variables.
 
 _**Difficulty:**_ Easy | _**The user change likelihood:**_ Very Likely
 
+_**Module:**_
+
+* multidata
+
 </details>
 
 <details>
@@ -595,6 +612,10 @@ _**Difficulty:**_ Easy | _**The user change likelihood:**_ Very Likely
 _**Purpose:**_ Declare global variables for the LPT.
 
 _**Difficulty:**_ Easy | _**The user change likelihood:**_ Very Likely
+
+_**Module:**_
+
+* lpt
 
 </details>
 
@@ -606,6 +627,10 @@ _**Purpose:**_ Declare global variables for the LSM.
 
 _**Difficulty:**_ Easy | _**The user change likelihood:**_ Very Likely
 
+_**Module:**_
+
+* lsm
+
 </details>
 
 <details>
@@ -615,6 +640,10 @@ _**Difficulty:**_ Easy | _**The user change likelihood:**_ Very Likely
 _**Purpose:**_ Declare global variables for the basic simulations.
 
 _**Difficulty:**_ Easy | _**The user change likelihood:**_ Very Likely
+
+_**Module:**_
+
+* vars
 
 </details>
 
