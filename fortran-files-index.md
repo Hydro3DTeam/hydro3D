@@ -113,7 +113,7 @@ _**Subroutines:**_
 
 <details>
 
-<summary>dcheckdt.for</summary>
+<summary>checkdt.for</summary>
 
 _**Purpose:**_ Check the CFL and adapt the time step size if set up as variable in control.cin
 
@@ -127,7 +127,7 @@ _**Subroutines:**_
 
 <details>
 
-<summary>dconvection.for</summary>
+<summary>convection.for</summary>
 
 _**Purpose:**_ Numerical discretization of the convection term N-S.
 
@@ -266,6 +266,10 @@ _**Purpose:**_ Used for periodic boundaries to exchange free-surface data betwee
 
 _**Difficulty:**_ High | _**The user change likelihood:**_ Very Unlikely
 
+_**Subroutines:**_
+
+* exchange\_bcphi
+
 </details>
 
 <details>
@@ -275,6 +279,10 @@ _**Difficulty:**_ High | _**The user change likelihood:**_ Very Unlikely
 _**Purpose:**_ Exchange the phi variable (free-surface) between the neighbouring subdomain ghost-cells using the MPI.
 
 _**Difficulty:**_ High | _**The user change likelihood:**_ Very Unlikely
+
+_**Subroutines:**_
+
+* exchange\_phi
 
 </details>
 
@@ -286,6 +294,10 @@ _**Purpose:**_ Exchange the p variable (pressure) between the neighbouring subdo
 
 _**Difficulty:**_ High | _**The user change likelihood:**_ Very Unlikely
 
+_**Subroutines:**_
+
+* exchangep
+
 </details>
 
 <details>
@@ -296,15 +308,24 @@ _**Purpose:**_ Exchange the pp variable (pseudo-pressure) between the neighbouri
 
 _**Difficulty:**_ High | _**The user change likelihood:**_ Very Unlikely
 
+_**Subroutines:**_
+
+* exchangepp
+* exchbc\_mgpp
+
 </details>
 
 <details>
 
 <summary>exchangesca.for</summary>
 
-un_**Purpose:**_ Exchange the sca variable (scalar) between the neighbouring subdomain ghost-cells using the MPI.
+_**Purpose:**_ Exchange the sca variable (scalar) between the neighbouring subdomain ghost-cells using the MPI.
 
 _**Difficulty:**_ High | _**The user change likelihood:**_ Very Unlikely
+
+_**Subroutines:**_
+
+* exchangesca
 
 </details>
 
@@ -312,9 +333,13 @@ _**Difficulty:**_ High | _**The user change likelihood:**_ Very Unlikely
 
 <summary>exchangeu.for</summary>
 
-u_**Purpose:**_ Exchange the u variable (streamwise-velocity) between the neighbouring subdomain ghost-cells using the MPI.
+_**Purpose:**_ Exchange the u variable (streamwise-velocity) between the neighbouring subdomain ghost-cells using the MPI.
 
 _**Difficulty:**_ High | _**The user change likelihood:**_ Very Unlikely
+
+_**Subroutines:**_
+
+* exchangeu
 
 </details>
 
@@ -326,6 +351,10 @@ _**Purpose:**_ Exchange the v variable (spanwise-velocity) between the neighbour
 
 _**Difficulty:**_ High | _**The user change likelihood:**_ Very Unlikely
 
+_**Subroutines:**_
+
+* exchangev
+
 </details>
 
 <details>
@@ -335,6 +364,10 @@ _**Difficulty:**_ High | _**The user change likelihood:**_ Very Unlikely
 _**Purpose:**_ Exchange the w variable (vertical-velocity) between the neighbouring subdomain ghost-cells using the MPI.
 
 _**Difficulty:**_ High | _**The user change likelihood:**_ Very Unlikely
+
+_**Subroutines:**_
+
+* exchangew
 
 </details>
 
@@ -356,6 +389,10 @@ _**Purpose:**_ Squeletton to run each time-step.
 
 _**Difficulty:**_ Easy | _**The user change likelihood:**_ Very Likely
 
+_**Subroutines:**_
+
+* flosol
+
 </details>
 
 <details>
@@ -376,6 +413,23 @@ _**Purpose:**_ Perform the IBM to enforce a no-slip condition at the Lagrangian 
 
 _**Difficulty:**_ High | _**The user change likelihood:**_ Unlikely
 
+_**Subroutines:**_
+
+* imb\_initial
+* imb\_alpha0
+* parloc\_initial
+* ib\_previous
+* ibm
+* partloc
+* deltah
+* imb\_openmp
+* caldrag
+* imb\_pressure
+* imb\_fem
+* imb\_fem\_oneblade
+* imb\_vel\_zero
+* imb\_averaging
+
 </details>
 
 <details>
@@ -385,6 +439,10 @@ _**Difficulty:**_ High | _**The user change likelihood:**_ Unlikely
 _**Purpose:**_ Initialise most of the variable and initial field conditions of the simulation.
 
 _**Difficulty:**_ Medium | _**The user change likelihood:**_ Very Likely
+
+_**Subroutines:**_
+
+*
 
 </details>
 
