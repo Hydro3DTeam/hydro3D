@@ -4,7 +4,7 @@
 
 <summary>actuator.for</summary>
 
-nn_**Purpose:**_ Computational method to represent an array of turbines for a lower cost.
+_**Purpose:**_ Computational method to represent an array of turbines for a lower cost.
 
 _**Difficulty:**_ Hard | _**The user change likelihood:**_ Unlikely
 
@@ -107,7 +107,14 @@ _**Difficulty:**_ High | _**The user change likelihood:**_ Very Unlikely
 
 _**Subroutines:**_
 
-*
+* cadtoibps
+* create\_gmsh\_file
+* octree\_cmshtoibps
+* read\_gmsh\_geometry
+* octree\_domain
+* octmesh\_export
+* ibps\_removal
+* geom\_export
 
 </details>
 
@@ -403,6 +410,15 @@ _**Purpose:**_ Prescribe mass inflow or outflow at a specific domain location.
 
 _**Difficulty:**_ Medium | _**The user change likelihood:**_ Likely
 
+_**Subroutines:**_
+
+* read\_hrs\_input\_data
+* bc\_human\_initial
+* bc\_human\_u
+* bc\_human\_v
+* bc\_human\_w
+* bc\_human\_s
+
 </details>
 
 <details>
@@ -595,7 +611,7 @@ _**Subroutines:**_
 
 <summary>module_multidata.for</summary>
 
-_**Purpose:**_ Declare the eulerian structure dom(ib) variables.
+_**Purpose:**_ Declare the Eulerian structure dom(ib) variables.
 
 _**Difficulty:**_ Easy | _**The user change likelihood:**_ Very Likely
 
@@ -759,6 +775,15 @@ _**Subroutines:**_
 _**Purpose:**_ Initial and perform the calculation for the scalar fields.
 
 _**Difficulty:**_ High | _**The user change likelihood:**_ Likely
+
+_**Subroutines:**_
+
+* init\_scalar
+* ib\_matrix
+* scalar\_cal
+* velocity\_particle
+* exchange\_scal
+* mom\_buo
 
 </details>
 
