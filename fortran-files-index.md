@@ -4,7 +4,7 @@
 
 <summary>actuator.for</summary>
 
-n_**Purpose:**_ Computational method to represent an array of turbines for a lower cost.
+nn_**Purpose:**_ Computational method to represent an array of turbines for a lower cost.
 
 _**Difficulty:**_ Hard | _**The user change likelihood:**_ Unlikely
 
@@ -79,7 +79,7 @@ _**Difficulty:**_ Easy | _**The user change likelihood:**_ Unlikely
 _**Subroutines:**_
 
 * boundksgs
-* boune
+* boundeps
 
 </details>
 
@@ -91,6 +91,10 @@ _**Purpose:**_ Specify the boundary conditions for LSM simulations.
 
 _**Difficulty:**_ Medium | _**The user change likelihood:**_ Likely
 
+_**Subroutines:**_
+
+* bound\_lsm
+
 </details>
 
 <details>
@@ -101,25 +105,37 @@ _**Purpose:**_ Transform GMsh (.msh) or CAD (.STEP) into Hydro3D geometric file.
 
 _**Difficulty:**_ High | _**The user change likelihood:**_ Very Unlikely
 
+_**Subroutines:**_
+
+*
+
 </details>
 
 <details>
 
-<summary>checkdt.for</summary>
+<summary>dcheckdt.for</summary>
 
 _**Purpose:**_ Check the CFL and adapt the time step size if set up as variable in control.cin
 
 _**Difficulty:**_ Medium | _**The user change likelihood:**_ Very Unlikely
 
+_**Subroutines:**_
+
+* checkdt
+
 </details>
 
 <details>
 
-<summary>convection.for</summary>
+<summary>dconvection.for</summary>
 
 _**Purpose:**_ Numerical discretization of the convection term N-S.
 
 _**Difficulty:**_ Medium | _**The user change likelihood:**_ Very Unlikely
+
+_**Subroutines:**_
+
+* convection
 
 </details>
 
@@ -131,6 +147,13 @@ _**Purpose:**_ Calculate the delta interpolation function to couple Lagrangian p
 
 _**Difficulty:**_ Medium | _**The user change likelihood:**_ Very Unlikely
 
+_**Subroutines:**_
+
+* shapefunction\_mls
+* kerneltododer
+* forma3dder
+* Back\_Substitution
+
 </details>
 
 <details>
@@ -140,6 +163,10 @@ _**Difficulty:**_ Medium | _**The user change likelihood:**_ Very Unlikely
 _**Purpose:**_ Numerical discretization of the diffusion term N-S.
 
 _**Difficulty:**_ Medium | _**The user change likelihood:**_ Very Unlikely
+
+_**Subroutines:**_
+
+* diffusion
 
 </details>
 
@@ -151,6 +178,10 @@ _**Purpose:**_ Calculate the SGS viscosity created by the turbulence lower than 
 
 _**Difficulty:**_ Medium | _**The user change likelihood:**_ Very Unlikely
 
+_**Subroutines:**_
+
+* eddyv\_1eqn
+
 </details>
 
 <details>
@@ -160,6 +191,12 @@ _**Difficulty:**_ Medium | _**The user change likelihood:**_ Very Unlikely
 _**Purpose:**_ Calculate the SGS viscosity created by the turbulence lower than the filter. For RANS.
 
 _**Difficulty:**_ Medium | _**The user change likelihood:**_ Very Unlikely
+
+_**Subroutines:**_
+
+* eddyv\_keps
+* eddyv\_k
+* eddyv\_eps
 
 </details>
 
@@ -171,6 +208,11 @@ _**Purpose:**_ Calculate the SGS viscosity created by the turbulence lower than 
 
 _**Difficulty:**_ Medium | _**The user change likelihood:**_ Very Unlikely
 
+_**Subroutines:**_
+
+* eddyv\_smag
+* tauw\_noslip
+
 </details>
 
 <details>
@@ -180,6 +222,10 @@ _**Difficulty:**_ Medium | _**The user change likelihood:**_ Very Unlikely
 _**Purpose:**_ Calculate the SGS viscosity created by the turbulence lower than the filter. Using the WALE algorithm.
 
 _**Difficulty:**_ Medium | _**The user change likelihood:**_ Very Unlikely
+
+_**Subroutines:**_
+
+* eddyv\_wale
 
 </details>
 
@@ -191,6 +237,11 @@ _**Purpose:**_ Menu to select the variable to exchange between the ghost-cell us
 
 _**Difficulty:**_ Medium | _**The user change likelihood:**_ Unlikely
 
+_**Subroutines:**_
+
+* exchange
+* exchangesmlvl
+
 </details>
 
 <details>
@@ -200,6 +251,10 @@ _**Difficulty:**_ Medium | _**The user change likelihood:**_ Unlikely
 _**Purpose:**_ Used for periodic boundaries to exchange data between the inlet and outlet of the main domain.
 
 _**Difficulty:**_ High | _**The user change likelihood:**_ Very Unlikely
+
+_**Subroutines:**_
+
+* exchange\_bc
 
 </details>
 
@@ -247,7 +302,7 @@ _**Difficulty:**_ High | _**The user change likelihood:**_ Very Unlikely
 
 <summary>exchangesca.for</summary>
 
-_**Purpose:**_ Exchange the sca variable (scalar) between the neighbouring subdomain ghost-cells using the MPI.
+un_**Purpose:**_ Exchange the sca variable (scalar) between the neighbouring subdomain ghost-cells using the MPI.
 
 _**Difficulty:**_ High | _**The user change likelihood:**_ Very Unlikely
 
