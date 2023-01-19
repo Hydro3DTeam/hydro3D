@@ -442,7 +442,11 @@ _**Difficulty:**_ Medium | _**The user change likelihood:**_ Very Likely
 
 _**Subroutines:**_
 
-*
+* read\_control
+* initial
+* iniflux
+* correctoutflux
+* initflowfield
 
 </details>
 
@@ -454,6 +458,10 @@ _**Purpose:**_ Evaluate the multigrid level at which the simulation can be run. 
 
 _**Difficulty:**_ Medium | _**The user change likelihood:**_ Very Unlikely
 
+_**Subroutines:**_
+
+* localparameter
+
 </details>
 
 <details>
@@ -463,6 +471,10 @@ _**Difficulty:**_ Medium | _**The user change likelihood:**_ Very Unlikely
 _**Purpose:**_ Provide log\_law boundary condition at each time step.
 
 _**Difficulty:**_ Medium | _**The user change likelihood:**_ Unlikely
+
+_**Subroutines:**_
+
+* log\_law
 
 </details>
 
@@ -474,6 +486,17 @@ _**Purpose:**_ Initialise and perform the calculation for Lagrangian particles.
 
 _**Difficulty:**_ High | _**The user change likelihood:**_ Unlikely
 
+_**Subroutines:**_
+
+* alloc\_pt
+* release\_pt
+* init\_particle
+* tecplot
+* tecparticle
+* particle\_tracking
+* final\_lpt
+* mpi\_pt
+
 </details>
 
 <details>
@@ -483,6 +506,22 @@ _**Difficulty:**_ High | _**The user change likelihood:**_ Unlikely
 _**Purpose:**_ Initialise and perform the free-surface calculation at each time step.
 
 _**Difficulty:**_ High | _**The user change likelihood:**_ Unlikely
+
+_**Subroutines:**_
+
+* read\_lsm\_input\_data
+* initial\_lsm\_3d\_channel
+* lsm\_3d
+* dphi\_a\_v\_3d
+* tvd\_rk\_reinit
+* dphi\_for\_reinit
+* hj\_weno\_dxplus\_3d
+* hj\_weno\_dxminus\_3d
+* hj\_weno\_dyplus\_3d
+* hj\_weno\_dyminus\_3d
+* hj\_weno\_dzplus\_3d
+* hj\_weno\_dzminus\_3d
+* heaviside
 
 </details>
 
@@ -494,6 +533,15 @@ _**Purpose:**_ Calculate the pressure from the velocity field using the poisson-
 
 _**Difficulty:**_ High | _**The user change likelihood:**_ Unlikely
 
+_**Subroutines:**_
+
+* coef
+* mgkcyc
+* mgrelax
+* mgrestr
+* mgcorr
+* mgbound
+
 </details>
 
 <details>
@@ -503,6 +551,10 @@ _**Difficulty:**_ High | _**The user change likelihood:**_ Unlikely
 _**Purpose:**_ Declare global variables for the HRS.
 
 _**Difficulty:**_ Easy | _**The user change likelihood:**_ Very Likely
+
+_**Subroutines:**_
+
+*
 
 </details>
 
