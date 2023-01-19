@@ -16,8 +16,6 @@
 
 ## Code Description
 
-***
-
 * [Architecture](architecture.md)
 * [Fortran Files Index](fortran-files-index.md)
 
