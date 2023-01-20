@@ -1,8 +1,8 @@
 ---
 description: >-
   Understanding and developing CFD code is recognised as one of the most
-  challenging tasks in our field. In hope to ease your adventure into Hyd code
-  this page explains briefly the purpose of each file,
+  challenging task of our field. In hope to ease your adventure into the code
+  this page explains briefly the purpose of each files.
 ---
 
 # Fortran Files Index
