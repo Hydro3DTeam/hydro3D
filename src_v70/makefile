@@ -1,7 +1,7 @@
 #############################################################
-F90=mpif90
-OPTIONS    = -c -real-size 64 -O2 -openmp 
-LOPTIONS   = -O2 -openmp 
+F90 = mpiifort
+OPTIONS    = -traceback -c -real-size 64 -O2 -qopenmp 
+LOPTIONS   = -traceback -O2 -qopenmp 
 ##############################################################
 
 objects = \

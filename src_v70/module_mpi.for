@@ -1,37 +1,27 @@
 !##########################################################################
-        module mpi
+      module mpi
 !##########################################################################
-        implicit none
-        include 'mpif.h'
+      implicit none
+      include 'mpif.h'
 
-	  SAVE
-        integer           :: nprocs     ! nr. of processors
-        integer           :: myrank      ! nr of this processor
-        integer           :: ierr
-        integer           :: MPI_FLT  
-        integer           :: status(MPI_STATUS_SIZE)
-        real ( kind =8 )  :: wtime
-        real ( kind =8 )  :: wtime2
-!v70 new tag offsets. Done in collaboration with EPCC !Pablo
-!Need to use these ones when using a non-intel compiler, e.g. Cray.
-! offset1:  used in most exchange processes
-! offset2 and 3: used in exchangepp, exchange_bc and exchange_bc_phi --> when periodic BC are used!
+      SAVE
+      INTEGER           :: nprocs     ! nr. of processors
+      INTEGER           :: myrank      ! nr of this processor
+      INTEGER           :: ierr
+      INTEGER           :: MPI_FLT  
+      INTEGER           :: status(MPI_STATUS_SIZE)
+      REAL ( kind =8 )  :: wtime
+      REAL ( kind =8 )  :: wtime2
 
-        integer, parameter :: tag_offset1=10000
-        integer, parameter :: tag_offset2=500
-        integer, parameter :: tag_offset3=250000
+      INTEGER,parameter :: tag_offset1=10000
+      INTEGER,parameter :: tag_offset2=500
+      INTEGER,parameter :: tag_offset3=250000      ! Reduce this number if compiler fails
 
-
-! In the older versions this always works:
-!        integer, parameter :: tag_offset1=10**5 
-!        integer, parameter :: tag_offset2=10**4
-!        integer, parameter :: tag_offset3=10**8
-
-        contains
+      contains
 !#########################################################################
-        subroutine init_parallelisation
+      subroutine init_parallelisation
 !#########################################################################
-        implicit none
+      implicit none
 
 !  initialize MPI.
         call MPI_INIT ( ierr )
@@ -56,9 +46,9 @@
 
         end subroutine init_parallelisation
 !##########################################################################
-        subroutine end_parallelisation
+      subroutine end_parallelisation
 !##########################################################################
-        implicit none
+      implicit none
 
         if ( myrank == 0 ) then
            write ( *, '(a)' ) ' '
@@ -74,8 +64,8 @@
 
         call MPI_FINALIZE ( ierr )
 
-        end subroutine end_parallelisation
+      end subroutine end_parallelisation
 !##########################################################################
 
-        end module mpi
+      end module mpi
 !##########################################################################
