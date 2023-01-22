@@ -1,13 +1,14 @@
 !##########################################################################
-        subroutine diffusion
+      subroutine diffusion
 !##########################################################################
-        use vars
-        use mpi
-        use multidata
-        implicit none
-        integer :: i,j,k,ib
-        integer :: is,ie,js,je,ks,ke
-        double precision :: dxx,dyy,dzz
+      use vars
+      use mpi
+      use multidata
+      implicit none
+      
+      INTEGER :: i,j,k,ib
+      INTEGER :: is,ie,js,je,ks,ke
+      DOUBLE PRECISION :: dxx,dyy,dzz
 
 ! ------ Compute coefficients for diffusion terms
 
@@ -205,8 +206,8 @@
                  end if
 
                  if (LENERGY) dom(ib)%su(i,j,k)=
-     & dom(ib)%su(i,j,k)+dt*grz*(1.d0-0.5*beta*
-     & (dom(ib)%T(i,j,k+1)+dom(ib)%T(i,j,k)) )
+     &dom(ib)%su(i,j,k)+dt*grz*(1.d0-0.5*beta*
+     &(dom(ib)%T(i,j,k+1)+dom(ib)%T(i,j,k)) )
 
                  dom(ib)%wstar(i,j,k)=0.0
               end do
@@ -219,5 +220,5 @@
         if (LROUGH) call rough_velocity
 
         return
-        end subroutine diffusion
+      end subroutine diffusion
 !##########################################################################

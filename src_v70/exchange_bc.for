@@ -1,15 +1,16 @@
 !##########################################################################
-        subroutine  exchange_bc(op,nly)
+      subroutine  exchange_bc(op,nly)
 !##########################################################################
-        use multidata
-        use mpi
-        use vars
-        implicit none
-        integer :: i,j,k,ijk,op,ib,tsend,ly,nly
-        integer :: my_cor,tag1,tag2,tag3,tag4
-        integer :: is,ie,js,je,ks,ke
-        double precision, pointer, dimension(:,:,:) :: fi
-        double precision, pointer, dimension(:)   :: sbuf,rbuf
+      use multidata
+      use mpi
+      use vars
+      implicit none
+        
+      INTEGER :: i,j,k,ijk,op,ib,tsend,ly,nly
+      INTEGER :: my_cor,tag1,tag2,tag3,tag4
+      INTEGER :: is,ie,js,je,ks,ke
+      DOUBLE PRECISION,pointer,dimension(:)   :: sbuf,rbuf
+      DOUBLE PRECISION,pointer,dimension(:,:,:) :: fi
 
         MPI_FLT   = MPI_DOUBLE_PRECISION
 
@@ -506,5 +507,5 @@
 
         end do
         return
-        end subroutine exchange_bc
+      end subroutine exchange_bc
 !##########################################################################

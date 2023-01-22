@@ -1,26 +1,27 @@
 !##########################################################################
-        subroutine  exchange_phi(op,nly)
+      subroutine  exchange_phi(op,nly)
 !##########################################################################
-        use multidata
-        use mpi
-        use vars
-        implicit none
-        integer :: i,j,k,ijk,ib,op,nly,chck_f,chck_c,no1,no2
-        integer :: is,ie,js,je,ks,ke,ief,jef,kef,iec,jec,kec
-        integer :: isf,jsf,ksf,isc,jsc,ksc
-        integer :: st1,st2,st3,pl1,pl2,pl3,pll,nn
-        integer :: iepr,jepr,kepr,ispr,jspr,kspr
-        integer :: ieprf,jeprf,keprf,isprf,jsprf,ksprf
-        integer :: ieprc,jeprc,keprc,isprc,jsprc,ksprc
-        integer :: i1,i2,j1,j2,k1,k2,ii,jj,kk
-        integer :: tag,ta,ly
-        integer :: tsend,trecv
-        integer :: ni,nj,nk,nic,nif,njc,njf,nkc,nkf
-        integer :: nix,njx,nkx,nixc,njxc,nkxc,nixf,njxf,nkxf
-        double precision, allocatable,dimension(:,:,:,:) :: fif
-        double precision, allocatable,dimension(:,:,:,:) :: fic
-        double precision, pointer, dimension(:,:,:) :: fi
-        double precision, pointer, dimension(:) :: sbuf
+      use multidata
+      use mpi
+      use vars
+      implicit none
+        
+      INTEGER :: i,j,k,ijk,ib,op,nly,chck_f,chck_c,no1,no2
+      INTEGER :: is,ie,js,je,ks,ke,ief,jef,kef,iec,jec,kec
+      INTEGER :: isf,jsf,ksf,isc,jsc,ksc
+      INTEGER :: st1,st2,st3,pl1,pl2,pl3,pll,nn
+      INTEGER :: iepr,jepr,kepr,ispr,jspr,kspr
+      INTEGER :: ieprf,jeprf,keprf,isprf,jsprf,ksprf
+      INTEGER :: ieprc,jeprc,keprc,isprc,jsprc,ksprc
+      INTEGER :: i1,i2,j1,j2,k1,k2,ii,jj,kk
+      INTEGER :: tag,ta,ly
+      INTEGER :: tsend,trecv
+      INTEGER :: ni,nj,nk,nic,nif,njc,njf,nkc,nkf
+      INTEGER :: nix,njx,nkx,nixc,njxc,nkxc,nixf,njxf,nkxf
+      DOUBLE PRECISION,allocatable,dimension(:,:,:,:) :: fif
+      DOUBLE PRECISION,allocatable,dimension(:,:,:,:) :: fic
+      DOUBLE PRECISION,pointer,dimension(:,:,:) :: fi
+      DOUBLE PRECISION,pointer,dimension(:) :: sbuf
 
         pll=(pl+1)*(pl+1)
 
@@ -1677,5 +1678,5 @@
         if(chck_f.eq.1) deallocate(fif)
 
         return
-        end subroutine exchange_phi
+      end subroutine exchange_phi
 !########################################################################## 

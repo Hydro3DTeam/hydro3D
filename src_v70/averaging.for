@@ -1,6 +1,5 @@
-!##########################################################################
+!#######################################################################
         subroutine update_mean
-!##########################################################################
 !
 !     calculate averaged values of u, v, w, (p),
 !                                  u'u', v'v', w'w',
@@ -9,17 +8,19 @@
 !     installed options (for constant grid spacing in aver. directions):
 !
 !     only time averaging
+!#######################################################################
         use multidata
         use vars
         implicit none
-!        double precision    :: facp1,facm1,facp2,facm2
-        double precision :: ufuf,vfvf,wfwf,ufvf,ufwf,vfwf
-        double precision :: ucf,vcf,wcf,pfpf,TfTf,SfSf,SfUf,SfVf,SfWf
-        double precision :: dudx,dudy,dudz,dvdx,dvdy,dvdz,dwdx,dwdy,dwdz
-	  double precision :: uf_ip1,uf_im1,uf_jp1,uf_jm1,uf_kp1,uf_km1
-	  double precision :: vf_ip1,vf_im1,vf_jp1,vf_jm1,vf_kp1,vf_km1
-	  double precision :: wf_ip1,wf_im1,wf_jp1,wf_jm1,wf_kp1,wf_km1
-        integer :: i,j,k,ib
+
+        INTEGER :: i,j,k,ib
+!       DOUBLE PRECISION :: facp1,facm1,facp2,facm2
+        DOUBLE PRECISION :: ufuf,vfvf,wfwf,ufvf,ufwf,vfwf
+        DOUBLE PRECISION :: ucf,vcf,wcf,pfpf,TfTf,SfSf,SfUf,SfVf,SfWf
+        DOUBLE PRECISION :: dudx,dudy,dudz,dvdx,dvdy,dvdz,dwdx,dwdy,dwdz
+	 DOUBLE PRECISION :: uf_ip1,uf_im1,uf_jp1,uf_jm1,uf_kp1,uf_km1
+	 DOUBLE PRECISION :: vf_ip1,vf_im1,vf_jp1,vf_jm1,vf_kp1,vf_km1
+	 DOUBLE PRECISION :: wf_ip1,wf_im1,wf_jp1,wf_jm1,wf_kp1,wf_km1
 
         do ib=1,nbp
 
@@ -327,15 +328,16 @@
         end do
 
         end subroutine update_mean
-!##########################################################################
+!#######################################################################
         subroutine add_noise(fnoise)
-!##########################################################################
+!#######################################################################
         use vars
         use multidata
         implicit none
-        double precision    :: fnoise
-        double precision    :: random_number_normal
-        integer :: i,j,k,ib
+
+        INTEGER :: i,j,k,ib
+        DOUBLE PRECISION :: fnoise
+        DOUBLE PRECISION :: random_number_normal
 
 !......add some gausian noise to flowfield
 
@@ -409,9 +411,9 @@
         end do
 
         end subroutine add_noise
-!##########################################################################
+!#######################################################################
         function random_number_normal(mean,sigma) result( fn_val )
-!##########################################################################
+
 !       Generate random numbers
 !       with a normal distribution with given mean and standard deviaton.
 !
@@ -419,13 +421,14 @@
 !       Reference: Marsaglia,G. & Bray,T.A. 'A convenient method for generating
 !                  normal variables', Siam Rev., vol.6, 260-264, 1964.
 !       (source from internet)
-
+!#######################################################################
         implicit none
-        double precision       :: fn_val,mean,sigma
-        double precision       :: ull, sumall
-        double precision, save :: vll, sln
-        logical, save   :: second = .false.
-        double precision, parameter :: one = 1.0, vsmall = tiny( one )
+
+        DOUBLE PRECISION :: fn_val,mean,sigma
+        DOUBLE PRECISION :: ull, sumall
+        DOUBLE PRECISION, save :: vll, sln
+        DOUBLE PRECISION, parameter :: one = 1.0, vsmall = tiny( one )
+        LOGICAL, save   :: second = .false.
 
         if (second) then
 
@@ -458,4 +461,4 @@
         return
 
         end function random_number_normal
-!##########################################################################
+!#######################################################################

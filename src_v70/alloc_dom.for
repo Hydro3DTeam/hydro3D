@@ -5,9 +5,10 @@
         use vars
         use mpi
         implicit none
-        integer i,j,k,ib,dir
-        integer sync_dir,cpu_next,cpu_prev,rdivmy,rdivng,my_cor
-        integer ng_p,ng_n
+
+        INTEGER :: i,j,k,ib,dir
+        INTEGER :: sync_dir,cpu_next,cpu_prev,rdivmy,rdivng,my_cor
+        INTEGER :: ng_p,ng_n
 
         if(rdivmax.gt.1) then
 
@@ -286,10 +287,11 @@
         use vars
         use mpi
         implicit none
-        integer i,j,k,ib,nptemp,myranktemp,nbtemp,cpu_no,type_mdmp
-        integer :: subdom_cpu,remain_dom
-        integer,allocatable,dimension(:) :: domtemp,buf_domindid
-        character*80 :: dummyline
+
+        INTEGER :: i,j,k,ib,nptemp,myranktemp,nbtemp,cpu_no,type_mdmp
+        INTEGER :: subdom_cpu,remain_dom
+        INTEGER,allocatable,dimension(:) :: domtemp,buf_domindid
+        CHARACTER(80) :: dummyline
 
 	if (myrank.eq.0) then
         numfile=1001
@@ -417,10 +419,11 @@
         use vars
         use mpi
         implicit none
-        integer :: i,j,k,ib,ndoms,say,ndo,type_info,sync_dir
-	integer :: cpu_next,cpu_prev
-        double precision :: lx_loc,ly_loc,lz_loc,dx_nx,dy_ny,dz_nz
-        character*80 :: dummyline
+
+        INTEGER :: i,j,k,ib,ndoms,say,ndo,type_info,sync_dir
+	 INTEGER :: cpu_next,cpu_prev
+        DOUBLE PRECISION :: lx_loc,ly_loc,lz_loc,dx_nx,dy_ny,dz_nz
+        CHARACTER(80) :: dummyline
 
         open (unit=12, file='infodom.cin')
         read (12,*) type_info   
@@ -1459,7 +1462,8 @@
         use multidata
         use mpi
         implicit none
-        integer :: ib,aa
+
+        INTEGER :: ib,aa
 
 
         aa=110+myrank

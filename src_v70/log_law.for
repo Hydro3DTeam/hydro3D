@@ -4,14 +4,15 @@
 !			Cardiff 2016
 !			Schumman type boundary conditions
 !##########################################################################
-        use vars
-        use multidata
-        implicit none
-        integer i,j,k,ib,bound,cond,icont,tkmax
-        double precision delta,n_x,n_y,n_z,vnor,vtan
-        double precision uc,vc,wc,rrey,small
-	  double precision aaa,bbb,const1,const2,const3,const4
-	  double precision ustar,yplus,ustarold,conv,Ecte,kappa
+      use vars
+      use multidata
+      implicit none
+        
+      INTEGER :: i,j,k,ib,bound,cond,icont,tkmax
+      DOUBLE PRECISION :: delta,n_x,n_y,n_z,vnor,vtan
+      DOUBLE PRECISION :: uc,vc,wc,rrey,small
+      DOUBLE PRECISION :: aaa,bbb,const1,const2,const3,const4
+      DOUBLE PRECISION :: ustar,yplus,ustarold,conv,Ecte,kappa
 
         rrey  = 1.0/Re
         small = 1.e-30
@@ -296,5 +297,5 @@
         end do
 
         return
-        end subroutine log_law
+      end subroutine log_law
 !##########################################################################

@@ -6,12 +6,14 @@
       use imb
       use mpi
       implicit none
+      
+      INTEGER :: L,I,M,strlen,maxn
       DOUBLE PRECISION :: PI,revoltime,anst,iteratime
-      INTEGER      :: L,I,M,strlen,maxn
-      CHARACTER*8  :: char_block
-      CHARACTER*31 :: gridfile
-      CHARACTER*80 :: dummyline
-        PI = 4.D0*DATAN(1.D0)
+      CHARACTER(8) :: char_block
+      CHARACTER(31) :: gridfile
+      CHARACTER(80) :: dummyline
+        
+      PI = 4.D0*DATAN(1.D0)
 
 	master=0 ! 0 is going to be always the master processor
 
@@ -233,10 +235,11 @@
       use imb
       use mpi
       implicit none
+
       INTEGER  :: M,L,iii,K,strlen
       DOUBLE PRECISION :: PI
-      CHARACTER*8  :: char_block2
-      CHARACTER*31 :: gridfile
+      CHARACTER(8) :: char_block2
+      CHARACTER(31) :: gridfile
 
        PI = 4.D0*DATAN(1.D0)
       
@@ -341,7 +344,7 @@
    88 FORMAT (i5)
    89 FORMAT (5f12.5)
         RETURN
-        END SUBROUTINE
+      END SUBROUTINE
 !######################################################################
       SUBROUTINE PartLoc_Initial
 !######################################################################
@@ -350,7 +353,8 @@
       use mpi
       use multidata
       implicit none
-	INTEGER :: K,L,N,numIBslv
+      
+      INTEGER :: K,L,N,numIBslv
 
        call MPI_BCAST(maxnodeIBS,1,MPI_INTEGER,
      &  master,MPI_COMM_WORLD,ierr)		!Total # IB points
@@ -427,8 +431,10 @@
       use multidata
       use imb
       implicit none
+      
       INTEGER :: K
-	Do K=1,bodynum
+	
+      Do K=1,bodynum
 
 !Distribute properties of the actuator line turbines
 	if(itime==itime_start .and. imb_shape(K)==5 .and. turax(K)==3) then
@@ -465,7 +471,9 @@
       use multidata
       use imb
       implicit none
+
       INTEGER :: NF,M,L,N
+
 !call exchange subroutines to fill the ghost cells with Ustar values
 	call exchange(11) ; call exchange(22) ; call exchange(33)
 
@@ -497,11 +505,12 @@
       use mpi
       use multidata
       implicit none
-      INTEGER 	:: M,L,ii,nxdom,nydom,nzdom,tnm,N,nx,ny,nz
+
+      INTEGER :: M,L,ii,nxdom,nydom,nzdom,tnm,N,nx,ny,nz
       DOUBLE PRECISION :: lxdom(idom+1),lydom(jdom+1),lzdom(kdom+1)
-	DOUBLE PRECISION,ALLOCATABLE,DIMENSION(:)::nodex_mas,nodey_mas
-	DOUBLE PRECISION,ALLOCATABLE,DIMENSION(:)::nodez_mas
-	INTEGER,ALLOCATABLE,DIMENSION(:)::lag_bod_mas
+      DOUBLE PRECISION,allocatable,dimension(:) :: nodex_mas,nodey_mas
+      DOUBLE PRECISION,allocatable,dimension(:) :: nodez_mas
+      INTEGER,allocatable,dimension(:) :: lag_bod_mas
 
        IF(myrank.eq.master)THEN
 !Variables used by the master than involve all the markers	
@@ -624,8 +633,10 @@
       use multidata
       use imb
       implicit none
-      DOUBLE PRECISION :: dh,dhtotal
+
       INTEGER :: I,J,L,ib,K,nnnmls
+      DOUBLE PRECISION :: dh,dhtotal
+
 	 nnnmls=0
 	IF(nnnmls.eq.0) then
 
@@ -752,6 +763,7 @@
       use multidata
       use imb
       implicit none
+
       INTEGER :: I,J,K,L,M,ib,nt,nnmls,KK,iii
       DOUBLE PRECISION :: dh,dhtotal
       DOUBLE PRECISION :: PI,UIB_loc,VIB_loc,WIB_loc,A1,A2,R1,R2,fbeta
@@ -1040,22 +1052,25 @@
 !######################################################################
       SUBROUTINE caldrag
 !######################################################################
-	use vars
+      use vars
       use multidata
       use imb
       use mpi
       implicit none
+      
       INTEGER :: N,M,L,j,iii,inipts,finpts,totalpoints
-      DOUBLE PRECISION::PI,fx_loc,fy_loc,fz_loc,alpharads
-      DOUBLE PRECISION::ft_loc,fn_loc,ft2_loc,fn2_loc,M_loc
-      DOUBLE PRECISION::sumvel,l1normU,l1normV
-	DOUBLE PRECISION,allocatable,dimension(:)::FX1_mas,FX2_mas
-	DOUBLE PRECISION,allocatable,dimension(:)::FX3_mas
+      DOUBLE PRECISION :: PI,fx_loc,fy_loc,fz_loc,alpharads
+      DOUBLE PRECISION :: ft_loc,fn_loc,ft2_loc,fn2_loc,M_loc
+      DOUBLE PRECISION :: sumvel,l1normU,l1normV
+      DOUBLE PRECISION,allocatable,dimension(:) :: FX1_mas,FX2_mas
+      DOUBLE PRECISION,allocatable,dimension(:) :: FX3_mas
+
       PI = 4.D0*DATAN(1.D0)
+
       allocate (FX1_mas(maxnodeIBS),FX2_mas(maxnodeIBS))
       allocate (FX3_mas(maxnodeIBS))
-	FX1_mas =0.d0 ; FX2_mas =0.d0 ; FX3_mas =0.d0 
-	FX1_loc =0.d0 ; FX2_loc =0.d0 ; FX3_loc =0.d0 
+      FX1_mas =0.d0 ; FX2_mas =0.d0 ; FX3_mas =0.d0 
+      FX1_loc =0.d0 ; FX2_loc =0.d0 ; FX3_loc =0.d0 
         
 ! To gather the forces ordered by the marker global index L
 ! the forces calculated by the masters are sent to the MASTER PROC
@@ -1194,9 +1209,10 @@
       use imb
       use mpi
       implicit none
-      INTEGER      :: ib,M,L,I,J,K,strlen,strlen2,Geom_Time1    
-      CHARACTER*8  :: char_block,ibnum
-      CHARACTER*31 :: gridfile1
+
+      INTEGER :: ib,M,L,I,J,K,strlen,strlen2,Geom_Time1    
+      CHARACTER(8) :: char_block,ibnum
+      CHARACTER(31) :: gridfile1
 
 	IF (myrank.eq.master) then
 
@@ -1240,11 +1256,12 @@
       use imb
       use mpi
       implicit none
-      INTEGER          :: M,L,K,numblades  
+
+      INTEGER :: M,L,K,numblades  
       DOUBLE PRECISION :: dh,alpharads,PI,x1,x2,x3,Rhub
       DOUBLE PRECISION :: Mxtot(3),Mqtot(3),Mzytot(3),Mzxtot(3)
-	DOUBLE PRECISION,allocatable,dimension(:)::Mx,Mq,Tx,Tq
-	DOUBLE PRECISION,allocatable,dimension(:)::R0_x,R0_y,R0_z
+      DOUBLE PRECISION,allocatable,dimension(:) :: Mx,Mq,Tx,Tq
+      DOUBLE PRECISION,allocatable,dimension(:) :: R0_x,R0_y,R0_z
 
 	IF (myrank.eq.master) then
       PI = 4.D0*DATAN(1.D0)
@@ -1349,12 +1366,13 @@
       use imb
       use mpi
       implicit none
-	INTEGER,parameter	:: numsections=5,numblades=3
-      INTEGER          :: M,L,K 
+      
+      INTEGER :: M,L,K 
       DOUBLE PRECISION :: alpharads,Rhub,PI
       DOUBLE PRECISION :: fx,fx_tot,ft,ft_tot,Mx,Mq,Mx_tot,Mq_tot
-	DOUBLE PRECISION,dimension(numsections)::Mxtot,Mqtot
-	DOUBLE PRECISION,dimension(numsections)::Xtot,Qtot
+      INTEGER,parameter :: numsections=5,numblades=3
+      DOUBLE PRECISION,dimension(numsections)::Mxtot,Mqtot
+      DOUBLE PRECISION,dimension(numsections)::Xtot,Qtot
 
 	IF (myrank.eq.master) then
       PI = 4.D0*DATAN(1.D0)
@@ -1490,8 +1508,9 @@
       use multidata
       use imb
       implicit none
-      DOUBLE PRECISION :: dh,umin,xmax,xmin,ymax,ymin,zmax,zmin
+      
       INTEGER :: I,J,K,L,ib
+      DOUBLE PRECISION :: dh,umin,xmax,xmin,ymax,ymin,zmax,zmin
 
 	xmax=0.d0;  xmin=10000.d0  ;ymax=0.d0;  ymin=10000.d0   
 	zmax=0.d0;  zmin=10000.d0   
@@ -1569,10 +1588,11 @@
       use imb
       use mpi
       implicit none
-      double precision    :: facp1,facm1,facp2,facm2
-      INTEGER      :: ib,M,L,I,J,K,strlen,strlen2,Geom_Time1    
-      CHARACTER*8  :: char_block,ibnum
-      CHARACTER*31 :: gridfile1
+
+      INTEGER :: ib,M,L,I,J,K,strlen,strlen2,Geom_Time1    
+      DOUBLE PRECISION :: facp1,facm1,facp2,facm2
+      CHARACTER(8) :: char_block,ibnum
+      CHARACTER(31) :: gridfile1
 
 	IF (myrank.eq.master) then
 
@@ -1629,4 +1649,4 @@
 
    89 FORMAT (17e14.5)
         RETURN
-        END SUBROUTINE	
+      END SUBROUTINE	

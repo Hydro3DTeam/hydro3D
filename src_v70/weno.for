@@ -4,10 +4,13 @@
       use vars
       use multidata
       implicit none
+
       INTEGER :: I,J,K,L,k_star,np,nq,nr,op,ib,pll
-      REAL, pointer, DIMENSION(:,:,:)::FI
-      REAL :: e,Q1,Q2,Q3,c_star,v1,v2,v3,v4,v5,v11,v22,v33,v44,v55,S1,S2
-     &,S3,a1,a2,a3,w1,w2,w3
+      DOUBLE PRECISION :: e,Q1,Q2,Q3,c_star
+      DOUBLE PRECISION :: v1,v2,v3,v4,v5,v11,v22,v33,v44,v55
+      DOUBLE PRECISION :: S1,S2,S3,a1,a2,a3,w1,w2,w3
+      DOUBLE PRECISION,pointer,dimension(:,:,:) :: FI
+
       pll=pl_ex+1
       do ib=1,nbp
 
@@ -122,10 +125,13 @@
       use vars
       use multidata
       implicit none
+      
       INTEGER :: I,J,K,L,k_star,np,nq,nr,op,ib,pll
-      REAL, pointer, DIMENSION(:,:,:)::FI
-      REAL :: e,Q1,Q2,Q3,c_star,v1,v2,v3,v4,v5,v11,v22,v33,v44,v55,S1,S2
-     &,S3,a1,a2,a3,w1,w2,w3
+      DOUBLE PRECISION :: e,Q1,Q2,Q3,c_star
+      DOUBLE PRECISION :: v1,v2,v3,v4,v5,v11,v22,v33,v44,v55
+      DOUBLE PRECISION :: S1,S2,S3,a1,a2,a3,w1,w2,w3
+      DOUBLE PRECISION,pointer,dimension(:,:,:) :: FI
+
       pll=pl_ex+1
       do ib=1,nbp
 
@@ -240,10 +246,13 @@
       use vars
       use multidata
       implicit none
+
       INTEGER :: I,J,K,L,k_star,np,nq,nr,op,ib,pll
-      REAL, pointer, DIMENSION(:,:,:)::FI
-      REAL :: e,Q1,Q2,Q3,c_star,v1,v2,v3,v4,v5,v11,v22,v33,v44,v55,S1,S2
-     &,S3,a1,a2,a3,w1,w2,w3
+      DOUBLE PRECISION :: e,Q1,Q2,Q3,c_star
+      DOUBLE PRECISION :: v1,v2,v3,v4,v5,v11,v22,v33,v44,v55
+      DOUBLE PRECISION :: S1,S2,S3,a1,a2,a3,w1,w2,w3
+      DOUBLE PRECISION,pointer,dimension(:,:,:) :: FI
+
       pll=pl_ex+1
       do ib=1,nbp
 

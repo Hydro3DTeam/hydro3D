@@ -1,13 +1,15 @@
 !##########################################################################
-        subroutine timesig
+      subroutine timesig
 !##########################################################################
-        use multidata
-        use vars
-	  use mpi
-        implicit none
-        integer :: i,j,idfile,ib,jtime
-        character*25 :: unst
-        character*8 :: numpt,x,y,z
+      use multidata
+      use vars
+      use mpi
+      implicit none
+        
+      INTEGER :: i,j,idfile,ib,jtime
+      CHARACTER(8) :: numpt,x,y,z
+      CHARACTER(25) :: unst
+
 	do i=1,n_unstpt
 	  do ib=1,nbp
 	    if (dom_id(ib).eq.id_unst(i)) then
@@ -24,19 +26,20 @@
 
   500  format(F16.7,6e18.8)
 
-	end subroutine
+      end subroutine
 !##########################################################################
-        subroutine write_inflow
+      subroutine write_inflow
 !##########################################################################
-        use vars
-        use mpi
-        use multidata
-        implicit none
-	  double precision :: xmapp,lxdom(idom+1)
-        integer i,j,k,ib,strlen,imapp,nimapp,nx
-	  character (LEN=38) :: filename
-	  character (LEN=5) :: name_end
-	  character (LEN=4) :: domain
+      use vars
+      use mpi
+      use multidata
+      implicit none
+	 
+      INTEGER :: i,j,k,ib,strlen,imapp,nimapp,nx
+      DOUBLE PRECISION :: xmapp,lxdom(idom+1)
+      CHARACTER(5) :: name_end
+      CHARACTER(4) :: domain
+      CHARACTER(38) :: filename
 
 	 xmapp=2.5d0		!location where inflow planes are taken
         do ib=1,nbp
@@ -91,18 +94,19 @@
 	   enddo
           endif !xmapp
          enddo !ib
-	end subroutine
+      end subroutine
 !##########################################################################
-        subroutine write_mapping
+      subroutine write_mapping
 !##########################################################################
-        use vars
-        use mpi
-        use multidata
-        implicit none
-        integer i,j,k,ib,strlen,imapp,nimapp,nx
-	  double precision :: xmapp,lxdom(idom+1)
-	  character (LEN=29) :: filename
-	  character (LEN=4) :: domain
+      use vars
+      use mpi
+      use multidata
+      implicit none
+        
+      INTEGER :: i,j,k,ib,strlen,imapp,nimapp,nx
+      DOUBLE PRECISION :: xmapp,lxdom(idom+1)
+      CHARACTER(29) :: filename
+      CHARACTER(4) :: domain
 
 	  xmapp=2.5d0		!location where inflow planes are taken
         do ib=1,nbp
@@ -147,4 +151,4 @@
 	   enddo
           endif !xmapp
          enddo !ib
-	end subroutine
+      end subroutine

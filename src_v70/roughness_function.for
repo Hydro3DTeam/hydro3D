@@ -1,18 +1,19 @@
 !##########################################################################
       MODULE var_rough
 !##########################################################################
+      SAVE 
 
-        real hd,sigma
-        integer :: maxk,iblock,rough_blockno,rough_proc
-        integer, allocatable,dimension (:) :: rough_block
+      integer :: maxk,iblock,rough_blockno,rough_proc
+      DOUBLE PRECISION :: hd,sigma
+      integer, allocatable,dimension (:) :: rough_block
 
-        type multi_rough
+      type multi_rough
         real d50
         real, pointer, dimension(:,:,:) :: rough,irough
         real, pointer, dimension(:,:)   :: zbp,z_rough
-        end type multi_rough
+      end type multi_rough
 
-        type (multi_rough), pointer, dimension(:) :: rough_dom
+      type (multi_rough), pointer, dimension(:) :: rough_dom
 
 	END MODULE
 !##########################################################################
@@ -23,9 +24,10 @@
       use var_rough
       use multidata
       implicit none
-      integer :: ib,proc_no,L,N,ni,nj,nk
-      real :: d50_dummy
-      CHARACTER*31 :: gridfile
+
+      INTEGER :: ib,proc_no,L,N,ni,nj,nk
+      DOUBLE PRECISION :: d50_dummy
+      CHARACTER(31) :: gridfile
 
       gridfile='in_rough_info.cin'
       open (unit=1, file=gridfile)      
@@ -53,24 +55,26 @@
       END DO
     
       RETURN
+
       END SUBROUTINE
 !##########################################################################	
-	Subroutine Roughness_Function(ib)
+      Subroutine Roughness_Function(ib)
 !##########################################################################
       use vars
       use mpi
       use var_rough
       use multidata
       implicit none
-      integer, intent(in) :: ib
-      integer :: ni, nj,nk
-      real aa(301), A(301),b
-      real    :: xistep,yjstep,zdelta,zbav, rms
-      real    :: random_number_normal2,maxelev,minelev,maxelev2,minelev2
-      integer :: i,j,k,istep,jstep,ii1,ii2,ii,icount!,ib
-      character (LEN=80)   :: tecfile, cdummy
-      character (LEN=4)    :: char_block
-      real 	  :: random, xicount
+
+      INTEGER, intent(in) :: ib
+      INTEGER :: i,j,k,istep,jstep,ii1,ii2,ii,icount,b,ni,nj,nk
+      DOUBLE PRECISION,dimension(301) :: aa,A
+      DOUBLE PRECISION :: xistep,yjstep,zdelta,zbav, rms
+      DOUBLE PRECISION :: random_number_normal2
+      DOUBLE PRECISION :: maxelev,minelev,maxelev2,minelev2
+      DOUBLE PRECISION :: random, xicount
+      CHARACTER(80) :: tecfile, cdummy
+      CHARACTER(4) :: char_block
 
       ni=dom(ib)%ttc_i; nj=dom(ib)%ttc_j; nk=dom(ib)%ttc_k
 
@@ -251,8 +255,8 @@ C determine roughness geometry function
       end do
 
       RETURN
-      END Subroutine
 
+      END Subroutine
 !##########################################################################	
       Subroutine Rough_velocity
 !##########################################################################
@@ -260,10 +264,10 @@ C determine roughness geometry function
       use mpi
       use var_rough     
       use multidata
+      implicit none
 
-      IMPLICIT NONE
       INTEGER :: I,J,K,L,ib,nip,njp,N
-      CHARACTER*31 :: gridfile
+      CHARACTER(31) :: gridfile
 
       DO ib = 1, nbp
 
@@ -300,18 +304,17 @@ C determine roughness geometry function
 !##########################################################################
       Subroutine Rough_restart
 !##########################################################################
-
-       use vars
-       use mpi
-       use var_rough
-       use multidata
-
-       IMPLICIT NONE
-       integer i,j,k,ib
-       integer :: ni, nj,nk,L
-       real dummy
-       character (LEN=80)   :: tecfile,charac
-       character (LEN=4)    :: char_block
+      use vars
+      use mpi
+      use var_rough
+      use multidata
+      implicit none
+       
+      INTEGER :: i,j,k,ib
+      INTEGER :: ni, nj,nk,L
+      DOUBLE PRECISION :: dummy
+      CHARACTER(80) :: tecfile,charac
+      CHARACTER(4) :: char_block
 
        DO ib = 1, nbp
 
@@ -344,30 +347,22 @@ C determine roughness geometry function
        END DO	
 
        RETURN
-       END SUBROUTINE         
-
-C******************ADD NOISE****************************************************
-C*******************************************************************************
-
-!-----------------------------------------------------------------------
+      END SUBROUTINE         
+!#######################################################################
       FUNCTION random_number_normal2(mean,sigma) RESULT( fn_val )
-!         Generate random numbers
-!         with a normal distribution with given mean and standard deviaton.
+!     Generate random numbers
+!     with a normal distribution with given mean and standard deviaton.
 !
-!         Generate a random normal deviate using the polar method.
-!         Reference: Marsaglia,G. & Bray,T.A. 'A convenient method for generating
-!                    normal variables', Siam Rev., vol.6, 260-264, 1964.
-!------------------------------------------------------------------------
+!     Generate a random normal deviate using the polar method.
+!     Reference: Marsaglia,G. & Bray,T.A. 'A convenient method for generating
+!                normal variables', Siam Rev., vol.6, 260-264, 1964.
+!#######################################################################
       IMPLICIT NONE
-      REAL  :: fn_val
-      REAL  :: mean,sigma
-!
-!.... Local variables
-!
-      REAL            :: u, sum
-      REAL, SAVE      :: v, sln
-      LOGICAL, SAVE   :: second = .FALSE.
-      REAL, PARAMETER :: one = 1.0, vsmall = TINY( one )
+
+      DOUBLE PRECISION :: fn_val,mean,sigma,u,sum
+      DOUBLE PRECISION,SAVE :: v, sln
+      LOGICAL,SAVE :: second = .FALSE.
+      DOUBLE PRECISION,PARAMETER :: one = 1.0, vsmall = TINY( one )
 
       IF (second) THEN
 !
@@ -402,6 +397,4 @@ C*******************************************************************************
 !
       RETURN
       END FUNCTION random_number_normal2
-
-C*******************************************************************************
-C*******************************************************************************
+!#######################################################################

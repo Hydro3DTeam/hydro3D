@@ -4,16 +4,16 @@
 !			Cardiff 2013-2015
 !=======================================================================
 !##########################################################################
-        subroutine alloc_pt
+      subroutine alloc_pt
 !##########################################################################
-        use vars
-        use mpi
-        use multidata
- 	  use vars_pt
-        implicit none
+      use vars
+      use mpi
+      use multidata
+      use vars_pt
+      implicit none
 
-        integer l,out_cnt   
-	  logical,allocatable,dimension(:):: out_pt			
+      INTEGER :: l,out_cnt   
+      LOGICAL,allocatable,dimension(:) :: out_pt			
 
 !	wtime_refresh = MPI_WTIME ( ) 
 
@@ -115,21 +115,18 @@
 
       return
       end subroutine
-
-
 !##########################################################################
-        subroutine release_pt
+      subroutine release_pt
 !##########################################################################
-        use vars
-        use mpi
-        use multidata
- 	  use vars_pt
-        implicit none
+      use vars
+      use mpi
+      use multidata
+      use vars_pt
+      implicit none
 
-        integer l
-	  integer X2a,X2b,X2c,X2d
-        real X,X3,X4,X5,X6	
-	  double precision random_number_normal
+      INTEGER :: l,X2a,X2b,X2c,X2d
+      DOUBLE PRECISION :: X,X3,X4,X5,X6	
+      DOUBLE PRECISION :: random_number_normal
 
 !	  wtime_release = MPI_WTIME ( )
 
@@ -275,18 +272,16 @@
 C#############################################################
       SUBROUTINE INIT_PARTICLE
 C#############################################################
-        use multidata
-        use mpi
-        use vars   
-   	  use vars_pt
+      use multidata
+      use mpi
+      use vars   
+      use vars_pt
+      implicit none	
 
-	implicit none	
-
-	integer l,ib
-	integer X2a,X2b,X2c,X2d
-      real X,X3,X4,X5,X6	
-	double precision :: Dw,random_number_normal
-      integer :: i,j,k,tti,ttj,ttk
+      INTEGER :: l,ib,X2a,X2b,X2c,X2d
+      INTEGER :: i,j,k,tti,ttj,ttk
+      DOUBLE PRECISION :: X,X3,X4,X5,X6	
+      DOUBLE PRECISION :: Dw,random_number_normal
 
 	CALL RANDOM_SEED
 
@@ -468,23 +463,20 @@ C#############################################################
 
       RETURN
       END SUBROUTINE
-
-C **********************************************************************
+!#######################################################################
       SUBROUTINE TECPLOT(num_output)
-C **********************************************************************
+!#######################################################################
+      use multidata
+      use mpi
+      use vars   
+      use vars_pt
+      implicit none	
 
-        use multidata
-        use mpi
-        use vars   
-   	  use vars_pt
-
-	implicit none	
-
-      integer strlen,i,j,k,ib,ni,nj,nk,ii,idfile,num_output
-	integer is,ie,js,je,ks,ke
-      character(LEN=18) filename
-      character(LEN=3) b_str,c_str
-	double precision u_cn,v_cn,w_cn,p_cn,S_cn,k_cn,eps_cn,vis_cn
+      INTEGER :: strlen,i,j,k,ib,ni,nj,nk,ii,idfile,num_output
+      INTEGER :: is,ie,js,je,ks,ke
+      DOUBLE PRECISION :: u_cn,v_cn,w_cn,p_cn,S_cn,k_cn,eps_cn,vis_cn
+      CHARACTER(18) :: filename
+      CHARACTER(3) :: b_str,c_str
    		
 !        if (LRESTART) KK1=KK+KK2
 !        if (LRESTART.eq..false.) KK1=KK
@@ -579,23 +571,18 @@ C **********************************************************************
 !   88 FORMAT (10F15.8)
 
       END SUBROUTINE
-
-
-C **********************************************************************
+!#######################################################################
       SUBROUTINE TECPARTICLE(num_output)
-C **********************************************************************
-C
-  
-        use multidata
-        use mpi
-        use vars   
-   	  use vars_pt
+!#######################################################################  
+      use multidata
+      use mpi
+      use vars   
+      use vars_pt
+      implicit none	
 
-	implicit none	
-
-      integer l,strlen,ib,num_output
-      character(LEN=80) filename,filename2
-      character(LEN=3) b_str
+      INTEGER :: l,strlen,ib,num_output
+      CHARACTER(3) :: b_str
+      CHARACTER(80) :: filename,filename2
 
         write(b_str,'(I3)') num_output
         strlen=LEN(TRIM(ADJUSTL(b_str)))
@@ -625,34 +612,33 @@ C
       subroutine particle_tracking
 
 !	Calculates particles' velocities and the resulting source terms
-
 !##########################################################################
-        use multidata
-        use mpi
-        use vars   
-   	  use vars_pt
-        use omp_lib, only : omp_get_num_threads,
+      use multidata
+      use mpi
+      use vars   
+      use vars_pt
+      use omp_lib, only : omp_get_num_threads,
      &                    omp_get_thread_num,
      &                    omp_set_num_threads
       implicit none
 
-      integer i,j,k,l
-      integer ib,is,ie,js,je,ks,ke  
-	integer nt,m
-	integer iballs_u,iballe_u,jballs_u,jballe_u,kballs_u,kballe_u
-	integer iballs_v,iballe_v,jballs_v,jballe_v,kballs_v,kballe_v
-	integer iballs_w,iballe_w,jballs_w,jballe_w,kballs_w,kballe_w
-      real REp,rho_p,rx,ry,rz
-      double precision a,b,c,wx,wy,wz,Cd,ao,bo,co
-	double precision dwdy,dvdz,dudz,dwdx,dvdx,dudy
-	double precision dh,delta
-	double precision Vcell,Vp!,Vball
+      INTEGER :: i,j,k,l
+      INTEGER :: ib,is,ie,js,je,ks,ke  
+      INTEGER :: nt,m
+      INTEGER :: iballs_u,iballe_u,jballs_u,jballe_u,kballs_u,kballe_u
+      INTEGER :: iballs_v,iballe_v,jballs_v,jballe_v,kballs_v,kballe_v
+      INTEGER :: iballs_w,iballe_w,jballs_w,jballe_w,kballs_w,kballe_w
+      DOUBLE PRECISION :: REp,rho_p,rx,ry,rz
+      DOUBLE PRECISION :: a,b,c,wx,wy,wz,Cd,ao,bo,co
+      DOUBLE PRECISION :: dwdy,dvdz,dudz,dwdx,dvdx,dudy
+      DOUBLE PRECISION :: dh,delta
+      DOUBLE PRECISION :: Vcell,Vp!,Vball
+      INTEGER,dimension(nprocs) :: strider
 !      double precision, allocatable, dimension(:):: Fpu,Fpv,Fpw
-      double precision, allocatable, dimension(:):: up_pt,vp_pt,wp_pt
-      double precision, allocatable, dimension(:):: ui_pt,vi_pt,wi_pt
-      double precision, allocatable, dimension(:):: uoi_pt,voi_pt,woi_pt
-	integer,allocatable,dimension(:)::  ip,jp,kp,ipu,jpv,kpw
-	integer,dimension(nprocs) :: strider
+      INTEGER,allocatable,dimension(:) :: ip,jp,kp,ipu,jpv,kpw
+      DOUBLE PRECISION,allocatable,dimension(:) :: up_pt,vp_pt,wp_pt
+      DOUBLE PRECISION,allocatable,dimension(:) :: ui_pt,vi_pt,wi_pt
+      DOUBLE PRECISION,allocatable,dimension(:) :: uoi_pt,voi_pt,woi_pt
 
       allocate (ui_pt(np_loc),vi_pt(np_loc),wi_pt(np_loc))
       allocate (uoi_pt(np_loc),voi_pt(np_loc),woi_pt(np_loc))
@@ -1190,22 +1176,19 @@ C
 
       return
       end subroutine
-
 !##########################################################################      
       subroutine final_LPT
 
 !	sends backp(l) to master processor 
 
 !##########################################################################
-
-        use multidata
-        use mpi
-   	  use vars_pt
-
+      use multidata
+      use mpi
+      use vars_pt
       implicit none
 
-	integer,dimension(nprocs) :: strider
-	integer s
+      INTEGER :: s
+      INTEGER,dimension(nprocs) :: strider
 
 	strider(1) = 0
 	do s=2,nprocs
@@ -1262,21 +1245,20 @@ C
       use vars
       use mpi
       use multidata
-	use vars_pt
-
+      use vars_pt
       implicit none
 
-      integer :: l,o,ii,nxdom,nydom,nzdom,ntot
-	real :: lx,ly,lz
-	integer,allocatable,dimension(:)::	lpt_proc,lpt_block
-	integer,allocatable,dimension(:)::	id_MPI,id_MPI_loc
-      double precision, allocatable, dimension(:):: X_MPI,Y_MPI,Z_MPI
-      double precision, allocatable, dimension(:):: X_MPI_loc,Y_MPI_loc
-      double precision, allocatable, dimension(:):: Z_MPI_loc
-      double precision, allocatable, dimension(:):: U_MPI,V_MPI,W_MPI
-      double precision, allocatable, dimension(:):: U_MPI_loc,V_MPI_loc
-      double precision, allocatable, dimension(:):: W_MPI_loc
-      double precision, allocatable, dimension(:):: dp_MPI,dp_MPI_loc
+      INTEGER :: l,o,ii,nxdom,nydom,nzdom,ntot
+      DOUBLE PRECISION :: lx,ly,lz
+      INTEGER,allocatable,dimension(:) ::	lpt_proc,lpt_block
+      INTEGER,allocatable,dimension(:) ::	id_MPI,id_MPI_loc
+      DOUBLE PRECISION,allocatable,dimension(:) :: X_MPI,Y_MPI,Z_MPI
+      DOUBLE PRECISION,allocatable,dimension(:) :: X_MPI_loc,Y_MPI_loc
+      DOUBLE PRECISION,allocatable,dimension(:) :: Z_MPI_loc
+      DOUBLE PRECISION,allocatable,dimension(:) :: U_MPI,V_MPI,W_MPI
+      DOUBLE PRECISION,allocatable,dimension(:) :: U_MPI_loc,V_MPI_loc
+      DOUBLE PRECISION,allocatable,dimension(:) :: W_MPI_loc
+      DOUBLE PRECISION,allocatable,dimension(:) :: dp_MPI,dp_MPI_loc
 
 	call MPI_BARRIER (MPI_COMM_WORLD,ierr)
       call MPI_BCAST(np,1,MPI_INTEGER,0,MPI_COMM_WORLD,ierr)

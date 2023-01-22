@@ -1,15 +1,16 @@
 !##########################################################################
-        subroutine calmas
-!##########################################################################
+      subroutine calmas
 !
 ! Calculate divergence free condition
 !
-        use vars
-        use mpi
-        use multidata
-        implicit none
-        integer i,j,k,ib
-        double precision fact,fact1,buffer_rmax
+!##########################################################################
+      use vars
+      use mpi
+      use multidata
+      implicit none
+        
+      INTEGER :: i,j,k,ib
+      DOUBLE PRECISION :: fact,fact1,buffer_rmax
 
         rmax=0.d0
         if(differencing.eq.2) then
@@ -71,18 +72,19 @@
         call MPI_ALLREDUCE(buffer_rmax,rmax,1,MPI_FLT,MPI_MAX,
      &MPI_COMM_WORLD,ierr)
 
-        end subroutine calmas
+      end subroutine calmas
 !##########################################################################
-        subroutine calvel
-!##########################################################################
+      subroutine calvel
 !
 !Correct velocity field with pressure gradient
 !
+!##########################################################################
         use vars
         use mpi
         use multidata
         implicit none
-        integer i,j,k,ib
+
+        INTEGER :: i,j,k,ib
 
         do ib=1,nbp
 
@@ -139,14 +141,15 @@
         call exchange(2)
         call exchange(3)
 
-        end subroutine calvel
+      end subroutine calvel
 !##########################################################################
-        subroutine pbound
+      subroutine pbound
 !##########################################################################
-        use vars
-        use multidata
-        implicit none
-        integer i,j,k,ib,isp,iep,jsp,jep,ksp,kep
+      use vars
+      use multidata
+      implicit none
+      
+      INTEGER :: i,j,k,ib,isp,iep,jsp,jep,ksp,kep
 
         do ib=1,nbp
 
@@ -201,21 +204,22 @@
 
         end do
 
-        end subroutine pbound
+      end subroutine pbound
 !##########################################################################
-        subroutine pressure_forcing
+      subroutine pressure_forcing
 !##########################################################################
-        use vars
-        use mpi
-        use multidata
-        implicit none
-        integer i,j,k,ib,isp,jsp,ksp,jspr,jepr,kspr,kepr,ispr,iepr
-        double precision ::  qstpp,fakfor,flwsum_loc,flwsum,A_loc,A
-        double precision ::  qstpp_y,flwsum_loc_y,flwsum_y,A_loc_y,A_y
-        double precision ::  qstpp_z,flwsum_loc_z,flwsum_z,A_loc_z,A_z
-        double precision,dimension(2) :: sndbuffer,recbuffer
-        double precision,dimension(2) :: sndbuffer_y,recbuffer_y
-        double precision,dimension(2) :: sndbuffer_z,recbuffer_z
+      use vars
+      use mpi
+      use multidata
+      implicit none
+
+      INTEGER :: i,j,k,ib,isp,jsp,ksp,jspr,jepr,kspr,kepr,ispr,iepr
+      DOUBLE PRECISION ::  qstpp,fakfor,flwsum_loc,flwsum,A_loc,A
+      DOUBLE PRECISION ::  qstpp_y,flwsum_loc_y,flwsum_y,A_loc_y,A_y
+      DOUBLE PRECISION ::  qstpp_z,flwsum_loc_z,flwsum_z,A_loc_z,A_z
+      DOUBLE PRECISION,dimension(2) :: sndbuffer,recbuffer
+      DOUBLE PRECISION,dimension(2) :: sndbuffer_y,recbuffer_y
+      DOUBLE PRECISION,dimension(2) :: sndbuffer_z,recbuffer_z
 
         MPI_FLT = MPI_DOUBLE_PRECISION
 
@@ -373,18 +377,19 @@
      & 	write (numfile5,'(4F20.12)') ctime,forcn_z,qstpn_z,flwsum_z
 	 endif
 
-        end subroutine pressure_forcing
+      end subroutine pressure_forcing
 !##########################################################################
-        subroutine pressure_1sweep
+      subroutine pressure_1sweep
 !##########################################################################
-        use vars
-        use mpi
-        use multidata
-        implicit none
-        integer :: i,j,k,l,m
-        integer :: ib,isp,iep,jsp,jep,ksp,kep
-        double precision :: ppref,buffer_ppref
-        real ( kind =8 )  :: wtimedum
+      use vars
+      use mpi
+      use multidata
+      implicit none
+        
+      INTEGER :: i,j,k,l,m
+      INTEGER :: ib,isp,iep,jsp,jep,ksp,kep
+      DOUBLE PRECISION :: ppref,buffer_ppref
+      DOUBLE PRECISION :: wtimedum
 
         MPI_FLT   = MPI_DOUBLE_PRECISION
 
@@ -511,5 +516,5 @@
         end if
 
         return
-        end subroutine pressure_1sweep
+      end subroutine pressure_1sweep
 !##########################################################################

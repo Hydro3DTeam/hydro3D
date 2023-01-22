@@ -1,21 +1,20 @@
 !#######################################################################
-        subroutine sipsol(ifi)
-!####################################################################### 
+      subroutine sipsol(ifi)
 !     This routine incorporates the Stone s SIP solver, based on  
 !     ILU-decomposition.
-!----------------------------------------------------------------------- 
-        use vars
-        use multidata
-        use mpi
-        implicit none
-        integer i,j,k,ib,ijk,l,ifi,iff,xx,maxttc_ijk
-        integer is,ie,js,je,ks,ke,nj,nij,nijk
-        double precision, pointer, dimension(:,:,:) :: fi
-        double precision, allocatable,dimension(:,:) :: ue,un,ut,lw
-        double precision, allocatable,dimension(:,:) :: ls,lb,lpr,res
-        double precision :: alfa,res1,resab,small,p1,p2,p3
-        double precision :: rsm,reldif,relast
-        double precision :: buffer_resab 
+!####################################################################### 
+      use vars
+      use multidata
+      use mpi
+      implicit none
+      
+      integer :: i,j,k,ib,ijk,l,ifi,iff,xx,maxttc_ijk
+      integer :: is,ie,js,je,ks,ke,nj,nij,nijk
+      double precision :: alfa,res1,resab,small,p1,p2,p3
+      double precision :: rsm,reldif,relast,buffer_resab 
+      double precision,pointer,dimension(:,:,:) :: fi
+      double precision,allocatable,dimension(:,:) :: ue,un,ut,lw
+      double precision,allocatable,dimension(:,:) :: ls,lb,lpr,res
 
         MPI_FLT   = MPI_DOUBLE_PRECISION
 
@@ -202,5 +201,5 @@
 
 
         return 
-        end 
+      end 
 !#######################################################################

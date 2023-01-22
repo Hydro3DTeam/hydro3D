@@ -1,11 +1,12 @@
 !##########################################################################
-        subroutine read_control
+      subroutine read_control
 !##########################################################################
-        use vars
-        use multidata
-        use mpi
-        implicit none
-        integer mgi,mgj,mgk,pow2,ib,i,j
+      use vars
+      use multidata
+      use mpi
+      implicit none
+      
+      INTEGER :: mgi,mgj,mgk,pow2,ib,i,j
 
         open (unit=12, file='control.cin')
 !------DOMAIN SIZE AND DISCRETIZATION -------------------------------------    
@@ -119,17 +120,18 @@
 	   endif
         end if
 
-        end 
+      end 
 !##########################################################################
-        subroutine initial
+      subroutine initial
 !##########################################################################
-        use vars
-        use mpi
-        use multidata
-        implicit none
-        integer :: i,ib,tti,ttj,ttk
-        integer :: glevel,gl,mgc_i,mgc_j,mgc_k,is,ie,js,je,ks,ke
-        double precision    :: ndx,ndy,ndz,nwxend,nwyend,nwzend
+      use vars
+      use mpi
+      use multidata
+      implicit none
+        
+      INTEGER :: i,ib,tti,ttj,ttk
+      INTEGER :: glevel,gl,mgc_i,mgc_j,mgc_k,is,ie,js,je,ks,ke
+      DOUBLE PRECISION :: ndx,ndy,ndz,nwxend,nwyend,nwzend
 
         do ib=1,nbp
            tti=dom(ib)%ttc_i; ttj=dom(ib)%ttc_j ; ttk=dom(ib)%ttc_k
@@ -359,16 +361,17 @@
 
         end do
         
-        end subroutine initial
+      end subroutine initial
 !##########################################################################
-        subroutine iniflux
+      subroutine iniflux
 !##########################################################################
-        use vars
-        use multidata
-        use mpi
-        implicit none
-        integer i,j,k,ib,ispr,iepr,jspr,jepr,kspr,kepr
-        double precision buffer_flomas
+      use vars
+      use multidata
+      use mpi
+      implicit none
+
+      INTEGER :: i,j,k,ib,ispr,iepr,jspr,jepr,kspr,kepr
+      DOUBLE PRECISION :: buffer_flomas
 
         MPI_FLT = MPI_DOUBLE_PRECISION
 
@@ -441,14 +444,15 @@
         return
         end 
 !##########################################################################
-        subroutine correctoutflux
+      subroutine correctoutflux
 !##########################################################################
-        use vars
-        use multidata
-        use mpi
-        implicit none
-        integer i,j,k,ib,ispr,iepr,jspr,jepr,kspr,kepr
-        double precision fmout,fct,buffer_fmout
+      use vars
+      use multidata
+      use mpi
+      implicit none
+
+      INTEGER :: i,j,k,ib,ispr,iepr,jspr,jepr,kspr,kepr
+      DOUBLE PRECISION :: fmout,fct,buffer_fmout
 
         MPI_FLT = MPI_DOUBLE_PRECISION
 
@@ -646,22 +650,23 @@
         end do
 
         return
-        end 
+      end 
 !##########################################################################
-        subroutine initflowfield
+      subroutine initflowfield
 !##########################################################################
-        use vars
-        use mpi
-        use multidata
-        implicit none
-        integer :: i,j,k,ib,tti,ttj,ttk,pll
-        integer :: sn,sn2,jtime,idfile,inind,jnind,knind
-        double precision dum,ubw,ube,ubs,ubn,ubt,ubb,vb,wb,lz,dummy
-	  double precision ::ufric
-        double precision, dimension(23) :: dm
-        character*8   :: chb1,numpt,x,y,z
-        character*25  :: gf,unst
-        character*100 :: dummyline
+      use vars
+      use mpi
+      use multidata
+      implicit none
+        
+      INTEGER :: i,j,k,ib,tti,ttj,ttk,pll
+      INTEGER :: sn,sn2,jtime,idfile,inind,jnind,knind
+      DOUBLE PRECISION :: dum,ubw,ube,ubs,ubn,ubt,ubb,vb,wb,lz,dummy
+      DOUBLE PRECISION :: ufric
+      CHARACTER(8) :: chb1,numpt,x,y,z
+      CHARACTER(25) :: gf,unst
+      CHARACTER(100) :: dummyline
+      DOUBLE PRECISION,dimension(23) :: dm
 
         do ib=1,nbp
 
@@ -1121,5 +1126,5 @@
 70      format (10e25.8)
 71      format (3F15.6)
 
-        end subroutine 
+      end subroutine 
 !##########################################################################

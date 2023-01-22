@@ -1,20 +1,19 @@
-!=======================================================================
-!    			k-eps model
-!	includes low-Re near wall damping (as in Lam and Bremhorst, 1981)
-!			Bruño Fraga Bugallo
-!			Cardiff 2016
-!=======================================================================
 !##########################################################################
-        subroutine eddyv_keps
+      subroutine eddyv_keps
+! k-eps model
+! includes low-Re near wall damping (as in Lam and Bremhorst, 1981)
+! Bruño Fraga Bugallo
+! Cardiff 2016
 !##########################################################################
-        use vars
-        use multidata
-        implicit none
-        integer :: i,j,k,rk
-        integer :: ib,is,ie,js,je,ks,ke
-        double precision :: cmu
-        double precision :: rrey,dx,dy,dz
-        double precision :: alfark(3),strain
+      use vars
+      use multidata
+      implicit none
+      
+      INTEGER :: i,j,k,rk
+      INTEGER :: ib,is,ie,js,je,ks,ke
+      DOUBLE PRECISION :: cmu
+      DOUBLE PRECISION :: rrey,dx,dy,dz
+      DOUBLE PRECISION :: alfark(3),strain
 
         alfark(1)=1./3.
         !alfark(1)=1./4.
@@ -346,24 +345,25 @@
 
 
         return
-        end subroutine eddyv_keps
+      end subroutine eddyv_keps
 
 !##########################################################################
-        subroutine eddyv_k(alfark)
+      subroutine eddyv_k(alfark)
 !##########################################################################
-        use vars
-        use multidata
-        implicit none
-        integer :: i,j,k
-        integer :: ib,is,ie,js,je,ks,ke
-        double precision :: dukdx,dvkdy,dwkdz,kp,km,ku,kc,kd,b_r
-        double precision :: awT,aeT,asT,anT,abT,atT,apT
-        double precision :: dxx,dyy,dzz,vsgs
-        double precision :: visc_w,visc_e,visc_s,visc_n,visc_b,visc_t
-        double precision :: sigmak,cmu
-        double precision :: rrey,conv,diff,prod,other
-        double precision :: alfark
-	  double precision :: strain
+      use vars
+      use multidata
+      implicit none
+      
+      INTEGER :: i,j,k
+      INTEGER :: ib,is,ie,js,je,ks,ke
+      DOUBLE PRECISION :: dukdx,dvkdy,dwkdz,kp,km,ku,kc,kd,b_r
+      DOUBLE PRECISION :: awT,aeT,asT,anT,abT,atT,apT
+      DOUBLE PRECISION :: dxx,dyy,dzz,vsgs
+      DOUBLE PRECISION :: visc_w,visc_e,visc_s,visc_n,visc_b,visc_t
+      DOUBLE PRECISION :: sigmak,cmu
+      DOUBLE PRECISION :: rrey,conv,diff,prod,other
+      DOUBLE PRECISION :: alfark
+      DOUBLE PRECISION :: strain
 
         rrey=1.0/Re
         sigmak=1.00
@@ -587,24 +587,25 @@
         call boundksgs(cmu)
 
         return
-        end subroutine eddyv_k
+      end subroutine eddyv_k
 !##########################################################################
-        subroutine eddyv_eps(alfark)
+      subroutine eddyv_eps(alfark)
 !##########################################################################
-        use vars
-        use multidata
-        implicit none
-        integer :: i,j,k
-        integer :: ib,is,ie,js,je,ks,ke
-        double precision :: epsdudx,epsdvdy,epsdwdz
- 	  double precision :: epsp,epsm,epsu,epsc,epsd,b_r
-        double precision :: awT,aeT,asT,anT,abT,atT,apT
-        double precision :: dxx,dyy,dzz,vsgs
-        double precision :: visc_w,visc_e,visc_s,visc_n,visc_b,visc_t
-        double precision :: rrey
-        double precision :: cmu,c1eps,c2eps,sigmaeps
-        double precision :: conv,diff,prod,other
-        double precision :: alfark,strain
+      use vars
+      use multidata
+      implicit none
+      
+      INTEGER :: i,j,k
+      INTEGER :: ib,is,ie,js,je,ks,ke
+      DOUBLE PRECISION :: epsdudx,epsdvdy,epsdwdz
+      DOUBLE PRECISION :: epsp,epsm,epsu,epsc,epsd,b_r
+      DOUBLE PRECISION :: awT,aeT,asT,anT,abT,atT,apT
+      DOUBLE PRECISION :: dxx,dyy,dzz,vsgs
+      DOUBLE PRECISION :: visc_w,visc_e,visc_s,visc_n,visc_b,visc_t
+      DOUBLE PRECISION :: rrey
+      DOUBLE PRECISION :: cmu,c1eps,c2eps,sigmaeps
+      DOUBLE PRECISION :: conv,diff,prod,other
+      DOUBLE PRECISION :: alfark,strain
 
         c1eps=1.44; c2eps=1.92 ; sigmaeps=1.31 ; cmu=0.09
         rrey=1.0/Re
@@ -835,15 +836,15 @@
         double precision function strain(i,j,k)
 !	  calculates the Strain tensor based on the velocity gradients
 !##########################################################################
-
         use vars
         use multidata
         implicit none
-        integer :: i,j,k
-        integer :: ib,is,ie,js,je,ks,ke
-        double precision :: dudx,dudy,dudz,dvdx,dvdy,dvdz,dwdx,dwdy,dwdz
-        double precision :: vr_a,vr_b,vr_c,vr_d
-        double precision :: s12,s13,s23
+
+        INTEGER :: i,j,k
+        INTEGER :: ib,is,ie,js,je,ks,ke
+        DOUBLE PRECISION :: dudx,dudy,dudz,dvdx,dvdy,dvdz,dwdx,dwdy,dwdz
+        DOUBLE PRECISION :: vr_a,vr_b,vr_c,vr_d
+        DOUBLE PRECISION :: s12,s13,s23
 
         do ib=1,nbp				
 
@@ -900,4 +901,4 @@
 
 	enddo
 
-	end function
+      end function

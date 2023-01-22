@@ -6,16 +6,17 @@
       use imb
       use mpi
       implicit none
-      integer, intent (in) :: numIB
-      DOUBLE PRECISION:: thc,PI,thz(80),zccos,zcsin
-      INTEGER      :: M,L,K,c,nxhem,nyhem,p,Lt,Lrow1,Lrow2
-      INTEGER      :: strlen2,nzr(80),izr,maxnzr
-      CHARACTER*8  :: char_block2
-      CHARACTER*31 :: gridfile
-      DOUBLE PRECISION,allocatable,dimension (:) :: ztemp_layer
-      DOUBLE PRECISION,allocatable,dimension (:,:) :: Rtemp_layer      
-      INTEGER,allocatable,dimension (:) :: ctot_layer,nodes_layer
-      INTEGER,allocatable,dimension (:,:) :: nodes_percyl_layer
+
+      INTEGER,intent(in) :: numIB
+      INTEGER :: M,L,K,c,nxhem,nyhem,p,Lt,Lrow1,Lrow2
+      INTEGER :: strlen2,nzr(80),izr,maxnzr
+      DOUBLE PRECISION :: thc,PI,thz(80),zccos,zcsin
+      DOUBLE PRECISION,allocatable,dimension(:) :: ztemp_layer
+      DOUBLE PRECISION,allocatable,dimension(:,:) :: Rtemp_layer      
+      INTEGER,allocatable,dimension(:) :: ctot_layer,nodes_layer
+      INTEGER,allocatable,dimension(:,:) :: nodes_percyl_layer
+      CHARACTER(8) :: char_block2
+      CHARACTER(31) :: gridfile
 
       PI = 4.D0*DATAN(1.D0)
 
@@ -192,11 +193,12 @@
       use imb
       use mpi
       implicit none
-      integer, intent (in) :: numIB
-      DOUBLE PRECISION:: thc,PI,xtemp,ytemp
-      INTEGER      :: P,M,L,I,K,c,nxlay,nylay,maxc,strlen2
-      CHARACTER*8  :: char_block2
-      CHARACTER*31 :: gridfile
+
+      INTEGER :: P,M,L,I,K,c,nxlay,nylay,maxc,strlen2
+      INTEGER,intent (in) :: numIB
+      DOUBLE PRECISION :: thc,PI,xtemp,ytemp
+      CHARACTER(8) :: char_block2
+      CHARACTER(31) :: gridfile
 
          PI = 4.D0*DATAN(1.D0)       
 
@@ -306,11 +308,12 @@
       use imb
       use mpi
       implicit none
-      integer, intent (in) :: numIB
-      DOUBLE PRECISION:: thc,PI,Rtemp
-      INTEGER      ::M,L,I,K,c,nlay,maxc,strlen2,nodes_percyl
-      CHARACTER*8  :: char_block2
-      CHARACTER*31 :: gridfile
+
+      INTEGER,intent(in) :: numIB
+      INTEGER :: M,L,I,K,c,nlay,maxc,strlen2,nodes_percyl
+      DOUBLE PRECISION :: thc,PI,Rtemp
+      CHARACTER(8)  :: char_block2
+      CHARACTER(31) :: gridfile
 
          PI = 4.D0*DATAN(1.D0)       
 
@@ -367,11 +370,12 @@
       use imb
       use mpi
       implicit none
-      integer, intent (in) :: numIB      
+
+      INTEGER,intent (in) :: numIB      
+      INTEGER :: M,L,nin,njn,I,J,k,strlen2,c,nlay,maxc,clay
       DOUBLE PRECISION:: nodexmin,nodexmax,nodeymin,nodeymax
-      INTEGER      :: M,L,nin,njn,I,J,k,strlen2,c,nlay,maxc,clay
-      CHARACTER*8  :: char_block2
-      CHARACTER*31 :: gridfile
+      CHARACTER(8) :: char_block2
+      CHARACTER(31) :: gridfile
 
          write(char_block2,'(I8)') myrank
          strlen2=LEN(TRIM(ADJUSTL(char_block2)))
@@ -503,11 +507,12 @@
       use imb
       use mpi
       implicit none
-      integer, intent (in) :: numIB
-      DOUBLE PRECISION:: thc,PI,Rtemp(1000),zccos,zcsin
-      INTEGER      ::M,L,I,K,c,ctot,nlay,maxc,strlen2,nodes_percyl(1000)
-      CHARACTER*8  :: char_block2
-      CHARACTER*31 :: gridfile
+
+      INTEGER,intent(in) :: numIB
+      INTEGER :: M,L,I,K,c,ctot,nlay,maxc,strlen2,nodes_percyl(1000)
+      DOUBLE PRECISION :: thc,PI,Rtemp(1000),zccos,zcsin
+      CHARACTER(8) :: char_block2
+      CHARACTER(31) :: gridfile
 
          PI = 4.D0*DATAN(1.D0)       
 
@@ -610,12 +615,13 @@
       use imb
       use mpi
       implicit none
-      integer, intent (in) :: numIB
-      DOUBLE PRECISION:: nodexmin,nodexmax,nodeymin,nodeymax
-      DOUBLE PRECISION:: nodezmin,nodezmax
-      INTEGER      :: M,L,nin,njn,nkn,I,J,k,strlen2
-      CHARACTER*8  :: char_block2
-      CHARACTER*31 :: gridfile
+
+      INTEGER,intent(in) :: numIB
+      INTEGER :: M,L,nin,njn,nkn,I,J,k,strlen2
+      DOUBLE PRECISION :: nodexmin,nodexmax,nodeymin,nodeymax
+      DOUBLE PRECISION :: nodezmin,nodezmax
+      CHARACTER(8) :: char_block2
+      CHARACTER(31) :: gridfile
 
          write(char_block2,'(I8)') myrank
          strlen2=LEN(TRIM(ADJUSTL(char_block2)))
@@ -706,16 +712,17 @@
       use imb
       use mpi
       implicit none
-      integer, intent (in) :: numIB
+
+      INTEGER,intent(in) :: numIB
+      INTEGER :: M,L,K,c
+      INTEGER :: strlen2,nzr(80),izr,maxnzr
       DOUBLE PRECISION:: thc,PI,thz(80),zccos,zcsin
-      INTEGER      :: M,L,K,c
-      INTEGER      :: strlen2,nzr(80),izr,maxnzr
-      CHARACTER*8  :: char_block2
-      CHARACTER*31 :: gridfile
-      DOUBLE PRECISION,allocatable,dimension (:,:) :: ztemp_layer
-      DOUBLE PRECISION,allocatable,dimension (:,:,:) :: Rtemp_layer      
+      CHARACTER(8) :: char_block2
+      CHARACTER(31) :: gridfile
       INTEGER,allocatable,dimension (:,:) :: ctot_layer,nodes_layer
       INTEGER,allocatable,dimension (:,:,:) :: nodes_percyl_layer
+      DOUBLE PRECISION,allocatable,dimension (:,:) :: ztemp_layer
+      DOUBLE PRECISION,allocatable,dimension (:,:,:) :: Rtemp_layer      
 
 
       PI = 4.D0*DATAN(1.D0)
@@ -814,12 +821,13 @@
       use imb
       use mpi
       implicit none
-      integer, intent (in) :: numIB
-      DOUBLE PRECISION:: PI,an
-      INTEGER      :: L,nin,I,K,nlay,dummy,strlen
-      CHARACTER*8  :: char_block2
-      CHARACTER*31 :: gridfile
-      DOUBLE PRECISION,ALLOCATABLE,DIMENSION (:) :: xfile,yfile,zfile
+
+      INTEGER,intent(in) :: numIB
+      INTEGER :: L,nin,I,K,nlay,dummy,strlen
+      DOUBLE PRECISION :: PI,an
+      CHARACTER(8)  :: char_block2
+      CHARACTER(31) :: gridfile
+      DOUBLE PRECISION,allocatable,dimension(:) :: xfile,yfile,zfile
 
        PI = 4.D0*DATAN(1.D0)
 
@@ -979,8 +987,9 @@
       use imb
       use mpi
       implicit none
-      integer, intent (in) :: numIB
-      INTEGER      :: I,K
+      
+      INTEGER :: I,K
+      INTEGER,intent(in) :: numIB
 
 	K=nodes(numIB)/imbnumber(numIB) !# of Lagrangians per unit
       write(6,*)' '
@@ -1089,8 +1098,8 @@
    88 FORMAT (i5)
    89 FORMAT (3e25.5)
 
-	RETURN
-	END SUBROUTINE 
+      RETURN
+      END SUBROUTINE 
 !#############################################################
       SUBROUTINE imb_moved(numIB)
 !#############################################################
@@ -1099,12 +1108,14 @@
       use imb
       use mpi
       implicit none
-      INTEGER, intent(in) :: numIB
-      DOUBLE PRECISION:: PI
-      INTEGER      :: L,I,K,strlen,strlen2,Geom_Time1,nplot    
-      CHARACTER*8  :: char_block,num_ib
-      CHARACTER*31 :: gridfile1     
-       PI = 4.D0*DATAN(1.D0)
+
+      INTEGER,intent(in) :: numIB
+      INTEGER :: L,I,K,strlen,strlen2,Geom_Time1,nplot    
+      DOUBLE PRECISION :: PI
+      CHARACTER(8) :: char_block,num_ib
+      CHARACTER(31) :: gridfile1     
+      
+      PI = 4.D0*DATAN(1.D0)
 
       IF (myrank.ne.master) RETURN
 
@@ -1200,12 +1211,14 @@
       use imb
       use mpi
       implicit none
-      INTEGER, intent(in) :: numIB
-      DOUBLE PRECISION:: PI,xtop,ytop,ztop
-      INTEGER      :: L,I,K,strlen,strlen2,GT1,numnodes,ntri,ii,P   
-      CHARACTER*8  :: char_block,num_ib
-      CHARACTER*31 :: gridfile1     
-       PI = 4.D0*DATAN(1.D0)
+
+      INTEGER,intent(in) :: numIB
+      INTEGER :: L,I,K,strlen,strlen2,GT1,numnodes,ntri,ii,P   
+      DOUBLE PRECISION :: PI,xtop,ytop,ztop
+      CHARACTER(8) :: char_block,num_ib
+      CHARACTER(31) :: gridfile1     
+
+      PI = 4.D0*DATAN(1.D0)
 
       if (mod(itime,n_out).ne.0) RETURN
 
@@ -1267,5 +1280,5 @@
    88 FORMAT (4i5)
    89 FORMAT (3e25.6)
 
-        RETURN
-        END SUBROUTINE	
+      RETURN
+      END SUBROUTINE	

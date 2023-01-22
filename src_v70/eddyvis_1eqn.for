@@ -1,26 +1,26 @@
 !##########################################################################
-        subroutine eddyv_1eqn
+      subroutine eddyv_1eqn
 !##########################################################################
-        use vars
-        use multidata
-        implicit none
-        integer :: i,j,k,rk
-        integer :: ib,is,ie,js,je,ks,ke
-        double precision :: dudx,dudy,dudz,dvdx,dvdy,dvdz,dwdx,dwdy,dwdz
-        double precision :: dukdx,dvkdy,dwkdz,kp,km,ku,kc,kd,b_r
-        double precision :: awT,aeT,asT,anT,abT,atT,apT
-        double precision :: dxx,dyy,dzz,vsgs
-        double precision :: visc_w,visc_e,visc_s,visc_n,visc_b,visc_t
-        double precision :: vr_a,vr_b,vr_c,vr_d
-        double precision :: s12,s13,s23
-        double precision :: ss,cons_k,cons_eps
-        double precision :: rrey,conv,diff,prod,other
-        double precision :: delta_grid
-        double precision :: alfark(3)
-        double precision ::dx,dy,dz
-        integer :: sn
-        character*8 :: chb1
-        character*25 :: gf
+      use vars
+      use multidata
+      implicit none
+
+      INTEGER :: i,j,k,rk,sn
+      INTEGER :: ib,is,ie,js,je,ks,ke
+      DOUBLE PRECISION :: dudx,dudy,dudz,dvdx,dvdy,dvdz,dwdx,dwdy,dwdz
+      DOUBLE PRECISION :: dukdx,dvkdy,dwkdz,kp,km,ku,kc,kd,b_r
+      DOUBLE PRECISION :: awT,aeT,asT,anT,abT,atT,apT
+      DOUBLE PRECISION :: dxx,dyy,dzz,vsgs
+      DOUBLE PRECISION :: visc_w,visc_e,visc_s,visc_n,visc_b,visc_t
+      DOUBLE PRECISION :: vr_a,vr_b,vr_c,vr_d
+      DOUBLE PRECISION :: s12,s13,s23
+      DOUBLE PRECISION :: ss,cons_k,cons_eps
+      DOUBLE PRECISION :: rrey,conv,diff,prod,other
+      DOUBLE PRECISION :: delta_grid
+      DOUBLE PRECISION :: alfark(3)
+      DOUBLE PRECISION :: dx,dy,dz
+      CHARACTER(8) :: chb1
+      CHARACTER(25) :: gf
 
         alfark(1)=1./3.
         alfark(2)=0.5

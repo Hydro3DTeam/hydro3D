@@ -1,25 +1,25 @@
 !##########################################################################
-        subroutine eddyv_wale
+      subroutine eddyv_wale
 !##########################################################################
-        use vars
-        use multidata
-        implicit none
-        integer :: i,j,k
-        integer :: ib,is,ie,js,je,ks,ke
-        double precision :: dudx,dudy,dudz,dvdx,dvdy,dvdz,dwdx,dwdy,dwdz
-        double precision :: vr_a,vr_b,vr_c,vr_d
-        double precision :: s12,s13,s23
-        double precision :: s11d,s22d,s33d,s12d,s13d,s23d
-        double precision :: ss,sdsd,eqnA,denom
-        double precision :: rrey,h1,h2,h3,rh123
-        double precision :: ufv_c,ufv_n1,ufv_n2
-        double precision :: vfv_c,vfv_n1,vfv_n2
-        double precision :: wfv_c,wfv_n1,wfv_n2
-        double precision :: cw,delta_grid,l_s
-        double precision :: dx,dy,dz
-        integer :: sn
-        character*8 :: chb1
-        character*25 :: gf
+      use vars
+      use multidata
+      implicit none
+
+      INTEGER :: i,j,k,sn
+      INTEGER :: ib,is,ie,js,je,ks,ke
+      DOUBLE PRECISION :: dudx,dudy,dudz,dvdx,dvdy,dvdz,dwdx,dwdy,dwdz
+      DOUBLE PRECISION :: vr_a,vr_b,vr_c,vr_d
+      DOUBLE PRECISION :: s12,s13,s23
+      DOUBLE PRECISION :: s11d,s22d,s33d,s12d,s13d,s23d
+      DOUBLE PRECISION :: ss,sdsd,eqnA,denom
+      DOUBLE PRECISION :: rrey,h1,h2,h3,rh123
+      DOUBLE PRECISION :: ufv_c,ufv_n1,ufv_n2
+      DOUBLE PRECISION :: vfv_c,vfv_n1,vfv_n2
+      DOUBLE PRECISION :: wfv_c,wfv_n1,wfv_n2
+      DOUBLE PRECISION :: cw,delta_grid,l_s
+      DOUBLE PRECISION :: dx,dy,dz
+      CHARACTER(8) :: chb1
+      CHARACTER(25) :: gf
 
 
         rrey=1.0/Re
@@ -589,5 +589,5 @@
         end do
 
         return
-        end subroutine eddyv_wale
+      end subroutine eddyv_wale
 !##########################################################################

@@ -5,10 +5,11 @@
       use LSM
       use multidata
       implicit none
-      integer :: I,J,K,np,nq,nr,op,ib,ipl
-      double precision, pointer, dimension(:,:,:) :: FI
-      double precision :: H_s,k_w,c,h_wave,tau
-      real, parameter :: PI = 4 * atan (1.0)
+
+      INTEGER :: I,J,K,np,nq,nr,op,ib,ipl
+      DOUBLE PRECISION, pointer, dimension(:,:,:) :: FI
+      DOUBLE PRECISION :: H_s,k_w,c,h_wave,tau
+      DOUBLE PRECISION,parameter :: PI=4*atan (1.0)
 
         do ib=1,nbp
 

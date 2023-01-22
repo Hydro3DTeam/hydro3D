@@ -1,17 +1,18 @@
 !##########################################################################
-        subroutine checkdt
+      subroutine checkdt
 !##########################################################################
-        use vars
-        use mpi
-        use multidata
-        implicit none
-        integer :: i,j,k,ib
-	  double precision :: dxx,dyy,dzz,umax,vmax,wmax,dtmax
-	  double precision :: dtmax1,dtvisc,dtvisc1,dtthr
-	  double precision :: uc,vc,wc
-        double precision :: buffer_umax,buffer_vmax,buffer_wmax
-        double precision :: buffer_dtmax,dt1,small
-	  double precision :: Cu,Cv,Cw
+      use vars
+      use mpi
+      use multidata
+      implicit none
+      
+      INTEGER :: i,j,k,ib
+      DOUBLE PRECISION :: dxx,dyy,dzz,umax,vmax,wmax,dtmax
+      DOUBLE PRECISION :: dtmax1,dtvisc,dtvisc1,dtthr
+      DOUBLE PRECISION :: uc,vc,wc
+      DOUBLE PRECISION :: buffer_umax,buffer_vmax,buffer_wmax
+      DOUBLE PRECISION :: buffer_dtmax,dt1,small
+      DOUBLE PRECISION :: Cu,Cv,Cw
 
         umax=0.0
         vmax=0.0

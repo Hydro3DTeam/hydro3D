@@ -6,11 +6,12 @@
       use imb
       use mpi
       implicit none
-      integer, intent (in) :: numIB
+
+      INTEGER, intent (in) :: numIB
+      INTEGER :: L,nin,I,K,nlay,strlen,n_act,BladeN,fileact
       DOUBLE PRECISION:: PI,an,d1,Dtot,alph,dummy,c_in
-      INTEGER      :: L,nin,I,K,nlay,strlen,n_act,BladeN,fileact
-      CHARACTER*8  :: char_block
-      CHARACTER*31 :: gridfile
+      CHARACTER(8)  :: char_block
+      CHARACTER(31) :: gridfile
 
        PI = 4.D0*DATAN(1.D0)
 
@@ -69,10 +70,13 @@
       use imb
       use mpi
       implicit none
-      integer, intent (in) :: M,L,ib
-	integer :: fileact
+
+      INTEGER, intent (in) :: M,L,ib
+      INTEGER :: fileact
       DOUBLE PRECISION :: Utheta,Vrel,Vrot,phi,alpeff,Lift,Drag,c_in
-	DOUBLE PRECISION :: betaeff,Vperp,Vtan,radlocal,alphalocal
+      DOUBLE PRECISION :: betaeff,Vperp,Vtan,radlocal,alphalocal
+
+
 !actuator line - VATT: forced velocities based on rotational speed
 		c_in=0.14d0 !Change chord length accordingly
 !Local velocity at the marker: Vlocal=Vperp,Vtan
@@ -162,11 +166,12 @@
       use imb
       use mpi
       implicit none
-      integer, intent (in) :: numIB
+
+      INTEGER, intent (in) :: numIB
+      INTEGER :: L,nin,I,K,nlay,strlen,n_act,BladeN,fileact
       DOUBLE PRECISION:: PI,an,d1,Dtot,alph,dummy
-      INTEGER      :: L,nin,I,K,nlay,strlen,n_act,BladeN,fileact
-      CHARACTER*8  :: char_block
-      CHARACTER*31 :: gridfile,gridfile2
+      CHARACTER(8)  :: char_block
+      CHARACTER(31) :: gridfile,gridfile2
       DOUBLE PRECISION,ALLOCATABLE,DIMENSION(:)::r_in,c_in,Pit_in
 
        PI = 4.D0*DATAN(1.D0)
@@ -287,8 +292,10 @@
       use imb
       use mpi
       implicit none
-	integer::M
-	if(itime.eq.itime_start .and. myrank.ne.0) then
+
+      INTEGER :: M
+      
+      if(itime.eq.itime_start .and. myrank.ne.0) then
         call MPI_BCAST(c_act,maxnodeIBS,MPI_DOUBLE_PRECISION,
      &			master,MPI_COMM_WORLD,ierr)
         call MPI_BCAST(Pit_act,maxnodeIBS,MPI_DOUBLE_PRECISION,
@@ -305,11 +312,13 @@
       use imb
       use mpi
       implicit none
+
       integer, intent (in) :: M,L,ib
-      DOUBLE PRECISION::Utheta,Vrel,Vrot,phi,alpeff,Lift,Drag
-	DOUBLE PRECISION::F1,GVAL,expval
-	DOUBLE PRECISION,PARAMETER:: PI = 4.D0*DATAN(1.D0)
-	real :: Radius,NumBlades
+      DOUBLE PRECISION :: Utheta,Vrel,Vrot,phi,alpeff,Lift,Drag
+      DOUBLE PRECISION :: F1,GVAL,expval
+      DOUBLE PRECISION :: Radius,NumBlades
+      DOUBLE PRECISION,PARAMETER :: PI = 4.D0*DATAN(1.D0)
+
 	Radius = 0.135
 	NumBlades = 3.0
 !actuator line - HATT: forced velocities based on rotational speed
@@ -360,15 +369,16 @@
       use imb
       use mpi
       implicit none
-      integer, intent (in) :: numIB
-	integer ::M,L,fileact,fileact2
-	DOUBLE PRECISION :: PI,alpharads,RtoHub
-	DOUBLE PRECISION :: T1_ACT,T2_ACT,T3_ACT,Q1_ACT,Q2_ACT,Q3_ACT
-	DOUBLE PRECISION :: BR1_ACT,BR2_ACT,BR3_ACT,BT1_ACT,BT2_ACT,BT3_ACT
-	DOUBLE PRECISION :: Myaw,MtwrX,MtwrY,rho,FQ
-      CHARACTER*8  :: char_block
-      CHARACTER*31 :: gridfile
-	INTEGER:: strlen
+
+      INTEGER, intent (in) :: numIB
+      INTEGER ::M,L,fileact,fileact2,strlen
+      DOUBLE PRECISION :: PI,alpharads,RtoHub
+      DOUBLE PRECISION :: T1_ACT,T2_ACT,T3_ACT,Q1_ACT,Q2_ACT,Q3_ACT
+      DOUBLE PRECISION :: BR1_ACT,BR2_ACT,BR3_ACT
+      DOUBLE PRECISION :: BT1_ACT,BT2_ACT,BT3_ACT
+      DOUBLE PRECISION :: Myaw,MtwrX,MtwrY,rho,FQ
+      CHARACTER(8)  :: char_block
+      CHARACTER(31) :: gridfile
 
  	IF(itime.eq. itime_start) then
 	  F_X_MEAN=0.D0  ;F_Q_MEAN=0.D0 ; F_Y_MEAN=0.D0 ; F_Z_MEAN=0.D0 
@@ -452,13 +462,16 @@
 	write(fileact2,88)alpharads,Myaw,MtwrX,MtwrY
 
    88 FORMAT (1f18.7,18e18.9)
-	END SUBROUTINE
+
+      END SUBROUTINE
 !######################################################################
       SUBROUTINE Stallard(phi)
 !######################################################################
       use imb
-      Double precision, intent(in) :: phi
-      Double precision :: Cl_1,Cl_2,d1,dtot,Cd_1,Cd_2,ang1,ang2
+      implicit none
+
+      DOUBLE PRECISION, intent(in) :: phi
+      DOUBLE PRECISION :: Cl_1,Cl_2,d1,dtot,Cd_1,Cd_2,ang1,ang2
 
 	ang1=0.d0 ;ang2=0.d0 ; Cl_act=0.d0 ; Cd_act=0.d0
 	Cl_1=0.d0;Cd_1=0.d0;Cl_2=0.d0;Cd_2=0.d0

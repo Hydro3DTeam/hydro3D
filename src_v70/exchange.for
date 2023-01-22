@@ -1,13 +1,14 @@
 !##########################################################################
-        subroutine  exchange(op)
+      subroutine  exchange(op)
 !##########################################################################
-        use vars
-        use multidata
-        implicit none
-        integer :: op,ly,ib,ni,nj,nk,ijk,nly
-        integer :: i,j,k,is,ie,js,je,ks,ke
-        integer :: ispr,iepr,jspr,jepr,kspr,kepr
-        double precision, pointer, dimension(:,:,:) :: fi
+      use vars
+      use multidata
+      implicit none
+        
+      INTEGER :: op,ly,ib,ni,nj,nk,ijk,nly
+      INTEGER :: i,j,k,is,ie,js,je,ks,ke
+      INTEGER :: ispr,iepr,jspr,jepr,kspr,kepr
+      DOUBLE PRECISION,pointer,dimension(:,:,:) :: fi
 
 ! stfcinf: 1=iprev, 3=jprev, 5=kprev, 2=inext, 4=jnext, 6=knext
 
@@ -296,22 +297,23 @@
         end if
 
         return
-        end subroutine exchange
+      end subroutine exchange
 !##########################################################################
-        subroutine  exchange_smlvl(op,nly)
+      subroutine  exchange_smlvl(op,nly)
 !##########################################################################
-        use multidata
-        use mpi
-        use vars
-        implicit none
-        integer :: i,j,k,ijk,ib,op,nly
-        integer :: is,ie,js,je,ks,ke
-        integer :: iepr,jepr,kepr,ispr,jspr,kspr
-        integer :: tag,ta,ly
-        integer :: tsend,trecv
-        integer :: ni,nj,nk,pl1,pl2,pl3,pll,nn
-        double precision, pointer, dimension(:,:,:) :: fi
-        double precision, pointer, dimension(:) :: sbuf
+      use multidata
+      use mpi
+      use vars
+      implicit none
+        
+      INTEGER :: i,j,k,ijk,ib,op,nly
+      INTEGER :: is,ie,js,je,ks,ke
+      INTEGER :: iepr,jepr,kepr,ispr,jspr,kspr
+      INTEGER :: tag,ta,ly
+      INTEGER :: tsend,trecv
+      INTEGER :: ni,nj,nk,pl1,pl2,pl3,pll,nn
+      DOUBLE PRECISION,pointer,dimension(:) :: sbuf
+      DOUBLE PRECISION,pointer,dimension(:,:,:) :: fi
 
         pll=(pl+1)*(pl+1)
 

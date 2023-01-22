@@ -1,16 +1,17 @@
 !##########################################################################
-        subroutine coeff
+      subroutine coeff
 !##########################################################################
-        use vars
-        use multidata
-        implicit none
-        integer i,j,k,ijk,ib
-        integer ijkp,ijke,ijkw,ijkn,ijks,ijkb,ijkt,ijkphi,ijksu
-        integer ij1,ij2,ij3,ij4,ij5,ij6,ij7,ij8,pre_nipl,pre_njpl,
-     & pre_nkpl
-        integer glevel,gl,mgc_i,mgc_j,mgc_k,cnt,incr,ijk_lsm
-        integer prmgci,prmgcj,prmgck
-        double precision :: dxx,dyy,dzz,ndx,ndy,ndz
+      use vars
+      use multidata
+      implicit none
+        
+      INTEGER :: i,j,k,ijk,ib
+      INTEGER :: ijkp,ijke,ijkw,ijkn,ijks,ijkb,ijkt,ijkphi,ijksu
+      INTEGER :: ij1,ij2,ij3,ij4,ij5,ij6,ij7,ij8
+      INTEGER :: pre_nipl,pre_njpl,pre_nkpl
+      INTEGER :: glevel,gl,mgc_i,mgc_j,mgc_k,cnt,incr,ijk_lsm
+      INTEGER :: prmgci,prmgcj,prmgck
+      DOUBLE PRECISION :: dxx,dyy,dzz,ndx,ndy,ndz
 
         do ib=1,nbp
 
@@ -220,17 +221,18 @@
 
 
         return
-        end subroutine coeff
+      end subroutine coeff
 !##########################################################################
-        subroutine mgkcyc
+      subroutine mgkcyc
 !##########################################################################
-        use vars
-        use multidata
-        implicit none
-        integer i,j,k,ib,ijk,l
-        integer glevel,mgc_i,mgc_j,mgc_k,kcycle,nrel
-        integer incr,incrp
-        integer, allocatable,dimension(:) :: kount
+      use vars
+      use multidata
+      implicit none
+        
+      INTEGER :: i,j,k,ib,ijk,l
+      INTEGER :: glevel,mgc_i,mgc_j,mgc_k,kcycle,nrel
+      INTEGER :: incr,incrp
+      INTEGER,allocatable,dimension(:) :: kount
 
         allocate (kount(ngrd_gl))
 
@@ -270,72 +272,72 @@
         glevel=1
         kcycle=1
 
-c pre-relax at current finest grid level
+! pre-relax at current finest grid level
         call mgrelax(1,irestr)
 
-c if at coarsest level, post-relax
+! if at coarsest level, post-relax
         if (ngrd_gl.eq.1) goto 5
 
-c calculate residual and restrict it to ngrid-1 
-c (note: the residuals are stored in the memory space used by the
-c the rhs array rhsf, which is therefore erased)
+! calculate residual and restrict it to ngrid-1 
+! (note: the residuals are stored in the memory space used by the
+! the rhs array rhsf, which is therefore erased)
         call mgrestr(glevel+1) !send coarser grid level
 
-c set counter for grid levels to zero
+! set counter for grid levels to zero
         do l=1,ngrd_gl
            kount(l)=0
         end do
 
-c set new level and continue K-cycling
+! set new level and continue K-cycling
         glevel=glevel+1
         nrel=irestr
 
-c K-cycle control point
+! K-cycle control point
 10    continue
 
-c post-relax when kcur revisited
+! post-relax when kcur revisited
         if (glevel.eq.1) goto 5
 
-c count "hit" at current level
+! count "hit" at current level
         kount(glevel)=kount(glevel)+1
 
-c relax at current level
+! relax at current level
         call mgrelax(glevel,nrel)
 
 
         if (kount(glevel).eq.(kcycle+1)) then
 
-c K-cycle(iprer,ipost) complete at glevel
-c inject correction to finer grid
+! K-cycle(iprer,ipost) complete at glevel
+! inject correction to finer grid
            call mgcorr(glevel-1) !send finer grid level
 
-c reset counter to zero at glevel
+! reset counter to zero at glevel
            kount(glevel)=0
 
-c ascend to next higher level and set to post-relax there
+! ascend to next higher level and set to post-relax there
            glevel=glevel-1
            nrel=iproln
            goto 10
         
         else
 
-c K-cycle not complete so descend unless at coarsest
+! K-cycle not complete so descend unless at coarsest
            if (glevel.lt.ngrd_gl) then
               call mgrestr(glevel+1) !send coarser grid level
 
-c pre-relax at next coarser level
+! pre-relax at next coarser level
               glevel=glevel+1
               nrel=irestr
               goto 10
 
            else
-c post-relax at coarsest level
+! post-relax at coarsest level
               call mgrelax(glevel,iproln)
 
-c inject correction to grid level 2
+! inject correction to grid level 2
               call mgcorr(glevel-1) !send finer grid level
 
-c set to post-relax at level ngrid-1
+! set to post-relax at level ngrid-1
               nrel=iproln
               glevel=ngrd_gl-1
               goto 10
@@ -346,7 +348,7 @@ c set to post-relax at level ngrid-1
 
 5     continue
 
-c post-relax at finest level
+! post-relax at finest level
         call mgrelax(1,iproln)
 
         do ib=1,nbp
@@ -367,19 +369,20 @@ c post-relax at finest level
         deallocate (kount)
 
         return
-        end subroutine mgkcyc
+      end subroutine mgkcyc
 !##########################################################################
-        subroutine mgrelax(glevel,it)
+      subroutine mgrelax(glevel,it)
 !##########################################################################
-        use vars
-        use multidata
-        implicit none
-        integer i,j,k,ib
-        integer ijkp,ijke,ijkw,ijkn,ijks,ijkb,ijkt,ijkphi,ijksu
-        integer glevel,it,gl
-        integer incr,itr,ni,nj,nk,nij,nij2,nijk
-        real apr
-        real, dimension(ngg) :: a,c
+      use vars
+      use multidata
+      implicit none
+
+      INTEGER :: i,j,k,ib
+      INTEGER :: ijkp,ijke,ijkw,ijkn,ijks,ijkb,ijkt,ijkphi,ijksu
+      INTEGER :: glevel,it,gl
+      INTEGER :: incr,itr,ni,nj,nk,nij,nij2,nijk
+      DOUBLE PRECISION :: apr
+      DOUBLE PRECISION,dimension(ngg) :: a,c
 
 
         do itr=1,it
@@ -615,20 +618,21 @@ C.....SOLVE WITH "TDMA" ALONG  K-LINES
 !        call mgbound(glevel)
      
         return
-        end subroutine mgrelax
+      end subroutine mgrelax
 !##########################################################################
-        subroutine mgrestr(glevel)
+      subroutine mgrestr(glevel)
 !##########################################################################
-        use vars
-        use multidata
-        implicit none
-        integer i,j,k,ib
-        integer ijkp,ijke,ijkw,ijkn,ijks,ijkb,ijkt,ijkphi,ijksu
-        integer glevel,gl
-        integer nif,njf,nkf,nic,njc,nkc
-        integer nijc,nijf,nijc2,nijf2,nijkc,nijkf
-        integer incr_c,incr_f
-        real, allocatable,dimension(:,:,:) :: resf
+      use vars
+      use multidata
+      implicit none
+        
+      INTEGER :: i,j,k,ib
+      INTEGER :: ijkp,ijke,ijkw,ijkn,ijks,ijkb,ijkt,ijkphi,ijksu
+      INTEGER :: glevel,gl
+      INTEGER :: nif,njf,nkf,nic,njc,nkc
+      INTEGER :: nijc,nijf,nijc2,nijf2,nijkc,nijkf
+      INTEGER :: incr_c,incr_f
+      DOUBLE PRECISION,allocatable,dimension(:,:,:) :: resf
 
 
         do ib=1,nbp
@@ -712,10 +716,10 @@ c calbculate residual for fine grid
            end do
         end do
 
-c calculate the right-hand side at the coarser grid
-c level from the averages of the values at the 4 surrounding points;
-c if there is no coarsifying in one direction, only 2 points are
-c used; no exchange of boundary data is necessary
+! calculate the right-hand side at the coarser grid
+! level from the averages of the values at the 4 surrounding points;
+! if there is no coarsifying in one direction, only 2 points are
+! used; no exchange of boundary data is necessary
 
         if(glevel.gt.dom(ib)%ngrid) then
 
@@ -759,18 +763,18 @@ c used; no exchange of boundary data is necessary
 
 
         return
-        end subroutine mgrestr
+      end subroutine mgrestr
 !##########################################################################
-        subroutine mgcorr(glevel)
+      subroutine mgcorr(glevel)
 !##########################################################################
-        use vars
-        use multidata
-        implicit none
-        integer i,j,k,ib,ijkc,ijkf
-        integer glevel,gl
-        integer ic,jc,kc,nic,njc,nkc,nif,njf,nkf
-        integer nijf,nijkf,nijc,nijkc
+      use vars
+      use multidata
+      implicit none
 
+      INTEGER :: i,j,k,ib,ijkc,ijkf
+      INTEGER :: glevel,gl
+      INTEGER :: ic,jc,kc,nic,njc,nkc,nif,njf,nkf
+      INTEGER :: nijf,nijkf,nijc,nijkc
 
         do ib=1,nbp
 
@@ -895,24 +899,24 @@ c coarsifying takes place in all directions or not
 
         end do
 
-c impose Neumann and Dirichlet boundary conditions
-C TEMP: periodicity is not enforced to save one call to gxch1lin;
-c check whether it has an impact or not...
+! impose Neumann and Dirichlet boundary conditions
+! TEMP: periodicity is not enforced to save one call to gxch1lin;
+! check whether it has an impact or not...
         
 
         call mgbound(glevel)
 
         return
-        end subroutine mgcorr
+      end subroutine mgcorr
 !##########################################################################
-        subroutine mgbound(glevel)
+      subroutine mgbound(glevel)
 !##########################################################################
-        use vars
-        use multidata
-        implicit none
-        integer i,j,k,ib,ni,nj,nk,nij,nijk,ijk
-        integer glevel,gl
+      use vars
+      use multidata
+      implicit none
 
+      INTEGER :: i,j,k,ib,ni,nj,nk,nij,nijk,ijk
+      INTEGER :: glevel,gl
 
         do ib=1,nbp
 
@@ -990,5 +994,5 @@ c check whether it has an impact or not...
 
 
         return
-        end subroutine mgbound
+      end subroutine mgbound
 !##########################################################################

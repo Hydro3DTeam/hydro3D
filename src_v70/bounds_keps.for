@@ -1,14 +1,15 @@
 !#############################################################################
-        subroutine boundksgs(cmu)
+      subroutine boundksgs(cmu)
 !			Bruño Fraga Bugallo
 !			Cardiff 2016
 !##############################################################################
-        use vars
-        use multidata
-        implicit none
-        integer :: i,j,k,ib,ly
-        integer :: is,ie,js,je,ks,ke
-	  double precision :: cmu
+      use vars
+      use multidata
+      implicit none
+
+      INTEGER :: i,j,k,ib,ly
+      INTEGER :: is,ie,js,je,ks,ke
+      DOUBLE PRECISION :: cmu
 
         if (PERIODIC) call exchange_bc(6,pl_ex)
 
@@ -193,17 +194,18 @@
 !==============================================================================
         end do
         end do
-        end subroutine boundksgs
+      end subroutine boundksgs
 !#############################################################################
-        subroutine boundeps
+      subroutine boundeps
 !##############################################################################
-        use vars
-        use multidata
-        implicit none
-        integer :: i,j,k,ib,ly
-        integer :: is,ie,js,je,ks,ke
-	  double precision :: rrey,rk1,drkdy,lz
-	  double precision :: dx,dy,dz,kappa,delta
+      use vars
+      use multidata
+      implicit none
+        
+      INTEGER :: i,j,k,ib,ly
+      INTEGER :: is,ie,js,je,ks,ke
+      DOUBLE PRECISION :: rrey,rk1,drkdy,lz
+      DOUBLE PRECISION :: dx,dy,dz,kappa,delta
 
         rrey=1.0/Re
 	  kappa=0.41
@@ -420,5 +422,5 @@
 !==============================================================================
         end do
         end do
-        end subroutine boundeps
+      end subroutine boundeps
 !#############################################################################

@@ -1,13 +1,14 @@
 !##########################################################################
-        subroutine tecplot_T(ki)
+      subroutine tecplot_T(ki)
 !##########################################################################
-        use multidata
-        implicit none
-        integer :: sn,i,j,k,toti,totj,totk
-        integer :: is,ie,js,je,ks,ke
-        integer :: ki,ib
-        character*8 :: chb
-        character*25 :: gf
+      use multidata
+      implicit none
+        
+      INTEGER :: sn,i,j,k,toti,totj,totk
+      INTEGER :: is,ie,js,je,ks,ke
+      INTEGER :: ki,ib
+      CHARACTER(8) :: chb
+      CHARACTER(25) :: gf
 
         do ib=1,nbp
 
@@ -41,17 +42,18 @@
         end do
 88      format (15e25.8)
 
-        end
+      end
 !##########################################################################
-        subroutine tecplot_S(ki)
+      subroutine tecplot_S(ki)
 !##########################################################################
-        use multidata
-        implicit none
-        integer :: sn,i,j,k,toti,totj,totk
-        integer :: is,ie,js,je,ks,ke
-        integer :: ki,ib
-        character*8 :: chb
-        character*25 :: gf
+      use multidata
+      implicit none
+
+      INTEGER :: sn,i,j,k,toti,totj,totk
+      INTEGER :: is,ie,js,je,ks,ke
+      INTEGER :: ki,ib
+      CHARACTER(8) :: chb
+      CHARACTER(25) :: gf
 
         do ib=1,nbp
 
@@ -85,17 +87,18 @@
 
         end do
 88      format (15e25.8)
-        end
+      end
 !##########################################################################
-        subroutine tecplot_p(ki)
+      subroutine tecplot_p(ki)
 !##########################################################################
-        use multidata
-        implicit none
-        integer :: sn,i,j,k,toti,totj,totk
-        integer :: is,ie,js,je,ks,ke
-        integer :: ki,ib
-        character*8 :: chb
-        character*25 :: gf
+      use multidata
+      implicit none
+
+      INTEGER :: sn,i,j,k,toti,totj,totk
+      INTEGER :: is,ie,js,je,ks,ke
+      INTEGER :: ki,ib
+      CHARACTER(8) :: chb
+      CHARACTER(25) :: gf
 
         do ib=1,nbp
 
@@ -132,21 +135,22 @@
         end do
 88      format (15e25.8)
 
-        end
+      end
 !##########################################################################
-        subroutine tec_turb(ki)
+      subroutine tec_turb(ki)
 !##########################################################################
-        use multidata
-        use vars
-        implicit none
-        integer :: sn,i,j,k,toti,totj,totk
-        integer :: is,ie,js,je,ks,ke
-        integer :: ki,ib
-        double precision u_cn,v_cn,w_cn,um_cn,vm_cn,wm_cn
-        double precision uum_cn,vvm_cn,wwm_cn,uvml,uwml,vwml
-        integer :: itoti,itotj,itotk,ntoti,ntotj,ntotk
-        character*8 :: chb
-        character*25 :: gf
+      use multidata
+      use vars
+      implicit none
+
+      INTEGER :: sn,i,j,k,toti,totj,totk
+      INTEGER :: is,ie,js,je,ks,ke
+      INTEGER :: ki,ib
+      INTEGER :: itoti,itotj,itotk,ntoti,ntotj,ntotk
+      DOUBLE PRECISION :: u_cn,v_cn,w_cn,um_cn,vm_cn,wm_cn
+      DOUBLE PRECISION :: uum_cn,vvm_cn,wwm_cn,uvml,uwml,vwml
+      CHARACTER(8) :: chb
+      CHARACTER(25) :: gf
 
         do ib=1,nbp
 
@@ -248,19 +252,20 @@
 
         end do
 88      format (20e25.8)
-        end
+      
+      end
 !##########################################################################
-        subroutine tecplot_phi(ki)
+      subroutine tecplot_phi(ki)
 !##########################################################################
-        use vars
-        use multidata
-        implicit none
+      use vars
+      use multidata
+      implicit none
 
-        integer :: sn,sn1,i,j,k,toti,totj,totk
-        integer :: is,ie,js,je,ks,ke
-        integer :: ki,ib
-        character*8 :: chb,chb1
-        character*27 :: gf
+      INTEGER :: sn,sn1,i,j,k,toti,totj,totk
+      INTEGER :: is,ie,js,je,ks,ke
+      INTEGER :: ki,ib
+      CHARACTER(8) :: chb,chb1
+      CHARACTER(27) :: gf
 
         do ib=1,nbp
 
@@ -314,17 +319,18 @@
 
 88      format (8e20.8)
 
-        end
+      end
 !##########################################################################
-        subroutine tecbin(ki)
+      subroutine tecbin(ki)
 !##########################################################################
-        use multidata
-        use vars
-        implicit none
-        integer :: sn,i,j,k,toti,totj,totk
-        integer :: ki,ib,inind,jnind,knind
-        character*8 :: chb
-        character*25 :: gf
+      use multidata
+      use vars
+      implicit none
+        
+      INTEGER :: sn,i,j,k,toti,totj,totk
+      INTEGER :: ki,ib,inind,jnind,knind
+      CHARACTER(8) :: chb
+      CHARACTER(35) :: gf
 
         do ib=1,nbp
 
@@ -366,19 +372,20 @@
         close (88)
 
         end do
-        end
+      end
 !##########################################################################
-        subroutine tec_instant(ki)
+      subroutine tec_instant(ki)
 !##########################################################################
-        use multidata
-        use vars
-	use mpi
-        implicit none
-        integer :: sn,i,j,k,toti,totj,totk
-        integer :: is,ie,js,je,ks,ke
-        integer :: ki,ib,itoti,itotj,itotk,ntoti,ntotj,ntotk
-        character*8 :: chb,chb2
-        character*35 :: gf
+      use multidata
+      use vars
+      use mpi
+      implicit none
+        
+      INTEGER :: sn,i,j,k,toti,totj,totk
+      INTEGER :: is,ie,js,je,ks,ke
+      INTEGER :: ki,ib,itoti,itotj,itotk,ntoti,ntotj,ntotk
+      CHARACTER(8) :: chb,chb2
+      CHARACTER(35) :: gf
 
 !	if (nbp.gt.1) RETURN
 
@@ -426,20 +433,21 @@
 88      format (10e15.5)
 89      format (a7,i4,a4,i4,a4,i4,a8)
 
-        end
+      end
 !##########################################################################
-        subroutine tec_inst_plane(ki)
+      subroutine tec_inst_plane(ki)
 !##########################################################################
-        use multidata
-        use vars
-	  use mpi
-        implicit none
-        integer :: sn,i,j,k,toti,totj,totk,is,ie,js,je,ks,ke,ki,ib
-        integer :: itoti,itotj,itotk,ntoti,ntotj,ntotk
-	  double precision :: xval,yval,zval
-	  integer :: iplane
-        character*8 :: chb,chb2
-        character*35 :: gf
+      use multidata
+      use vars
+      use mpi
+      implicit none
+        
+      INTEGER :: sn,i,j,k,toti,totj,totk,is,ie,js,je,ks,ke,ki,ib
+      INTEGER :: itoti,itotj,itotk,ntoti,ntotj,ntotk
+      INTEGER :: iplane
+      DOUBLE PRECISION :: xval,yval,zval
+      CHARACTER(8) :: chb,chb2
+      CHARACTER(35) :: gf
 
         do ib=1,nbp
 
@@ -538,4 +546,4 @@
 88      format (10e15.5)
 89      format (a7,i4,a4,i4,a4,i4,a8)
 
-        end
+      end

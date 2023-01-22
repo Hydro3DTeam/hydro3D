@@ -1,27 +1,28 @@
 !##########################################################################
-        subroutine  exchangep(op)
+      subroutine  exchangep(op)
 !##########################################################################
-        use multidata
-        use mpi
-        use vars
-        implicit none
-        integer :: i,j,k,ijk,ib,op,chck_f,chck_c,no1,no2
-        integer :: is,ie,js,je,ks,ke,ief,jef,kef,iec,jec,kec,ic,jc,kc
-        integer :: isf,jsf,ksf,isc,jsc,ksc
-        integer :: st1,st2,st3,pl1,pl2,pl3,pll,nn
-        integer :: iepr,jepr,kepr,ispr,jspr,kspr
-        integer :: ieprf,jeprf,keprf,isprf,jsprf,ksprf
-        integer :: ieprc,jeprc,keprc,isprc,jsprc,ksprc
-        integer :: i1,i2,j1,j2,k1,k2,ii,jj,kk
-        integer :: tag,ta
-        integer :: tsend,trecv
-        integer :: ni,nj,nk,nic,nif,njc,njf,nkc,nkf
-        integer :: nix,njx,nkx,nixc,njxc,nkxc,nixf,njxf,nkxf
-        real    :: chc1,chc2,chc3
-        double precision, allocatable,dimension(:,:,:,:) :: fif
-        double precision, allocatable,dimension(:,:,:,:) :: fic
-        double precision, pointer, dimension(:,:,:) :: fi
-        double precision, pointer, dimension(:) :: sbuf
+      use multidata
+      use mpi
+      use vars
+      implicit none
+        
+      INTEGER :: i,j,k,ijk,ib,op,chck_f,chck_c,no1,no2
+      INTEGER :: is,ie,js,je,ks,ke,ief,jef,kef,iec,jec,kec,ic,jc,kc
+      INTEGER :: isf,jsf,ksf,isc,jsc,ksc
+      INTEGER :: st1,st2,st3,pl1,pl2,pl3,pll,nn
+      INTEGER :: iepr,jepr,kepr,ispr,jspr,kspr
+      INTEGER :: ieprf,jeprf,keprf,isprf,jsprf,ksprf
+      INTEGER :: ieprc,jeprc,keprc,isprc,jsprc,ksprc
+      INTEGER :: i1,i2,j1,j2,k1,k2,ii,jj,kk
+      INTEGER :: tag,ta
+      INTEGER :: tsend,trecv
+      INTEGER :: ni,nj,nk,nic,nif,njc,njf,nkc,nkf
+      INTEGER :: nix,njx,nkx,nixc,njxc,nkxc,nixf,njxf,nkxf
+      DOUBLE PRECISION :: chc1,chc2,chc3
+      DOUBLE PRECISION,pointer,dimension(:) :: sbuf
+      DOUBLE PRECISION,pointer,dimension(:,:,:) :: fi
+      DOUBLE PRECISION,allocatable,dimension(:,:,:,:) :: fif
+      DOUBLE PRECISION,allocatable,dimension(:,:,:,:) :: fic
 
         pll=(pl+1)*(pl+1)
 
@@ -1909,5 +1910,5 @@
         if(chck_f.eq.1) deallocate(fif)
 
         return
-        end subroutine exchangep
+      end subroutine exchangep
 !########################################################################## 

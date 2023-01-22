@@ -1,22 +1,23 @@
 !##############################################################################     
-        subroutine boundu
+      subroutine boundu
 !	Note 1: prescribed inflow always comes from East
 !	Note 2: wall functions apply in ALL directions/if node inside vicous layer->no slip
 !	Note 3: if LSM/LSMbase are selected, inflow/outflow BCs only applied BELOW surface/lid
 !##############################################################################
-        use vars
-        use multidata
-	  use mpi
-	  use imb
-        implicit none
-        integer :: i,j,k,ib,ly,im,kk,jj
-        integer :: is,ie,js,je,ks,ke,ktop,itop,strlen,dummy
-	  double precision ::Fwallu,dyy,dzz,dxx,up,ufric
-        double precision ::n_r,U_corr,H,k_w,c,tau,dn,ddn,n_m,dddn,n_h,ep
-	  character (LEN=29) :: filename,fileSEM
-	  character (LEN=4) :: domain
-	  character (LEN=5) :: name_end
-        real, parameter :: PI = 4 * atan (1.0)	
+      use vars
+      use multidata
+      use mpi
+      use imb
+      implicit none
+      
+      INTEGER :: i,j,k,ib,ly,im,kk,jj
+      INTEGER :: is,ie,js,je,ks,ke,ktop,itop,strlen,dummy
+      DOUBLE PRECISION ::Fwallu,dyy,dzz,dxx,up,ufric
+      DOUBLE PRECISION ::n_r,U_corr,H,k_w,c,tau,dn,ddn,n_m,dddn,n_h,ep
+      DOUBLE PRECISION,parameter :: PI=4*atan(1.0)	
+      CHARACTER(29) :: filename,fileSEM
+      CHARACTER(4) :: domain
+      CHARACTER(5) :: name_end
 
         if (PERIODIC) call exchange_bc(1,pl_ex)
         do ly=0,pl_ex
@@ -439,22 +440,23 @@
         end do
         if(diff_sch.ne.3) call boundcoef(1)
         end do
-        end subroutine
+      end subroutine
 !#############################################################################
-        subroutine boundv
+      subroutine boundv
 !#############################################################################
-        use vars
-        use multidata
-	  use mpi
-	  use imb
-        implicit none
-        integer :: i,j,k,ib,ly,kk,jj
-        integer :: is,ie,js,je,ks,ke,ktop
-	  integer :: strlen
-	  character (LEN=29):: filename,fileSEM
-	  character (LEN=4) :: domain
-	  character (LEN=5) :: name_end
-	  double precision :: Fwallv,dxx,dzz,dummy,dyy
+      use vars
+      use multidata
+      use mpi
+      use imb
+      implicit none
+
+      INTEGER :: i,j,k,ib,ly,kk,jj
+      INTEGER :: is,ie,js,je,ks,ke,ktop
+      INTEGER :: strlen
+      DOUBLE PRECISION :: Fwallv,dxx,dzz,dummy,dyy
+      CHARACTER(29):: filename,fileSEM
+      CHARACTER(4) :: domain
+      CHARACTER(5) :: name_end
 
         if (PERIODIC) call exchange_bc(2,pl_ex)
  
@@ -756,21 +758,22 @@
         end do
         if(diff_sch.ne.3) call boundcoef(2)
         end do
-        end subroutine
+      end subroutine
 !#############################################################################
-        subroutine boundw
+      subroutine boundw
 !#############################################################################
-        use vars
-        use multidata
-	  use mpi
-	  use imb
-        implicit none
-        integer :: i,j,k,ib,ly,kk,jj,is,ie,js,je,ks,ke,ktop,strlen
-	  character (LEN=29):: filename,fileSEM
-	  character (LEN=4) :: domain
-	  character (LEN=5) :: name_end
-	  double precision :: Fwallw,dxx,dyy,dummy,dzz
-	  double precision :: H,k_w,c,tau,dn,ddn,dddn,n_h,ep
+      use vars
+      use multidata
+      use mpi
+      use imb
+      implicit none
+      
+      INTEGER :: i,j,k,ib,ly,kk,jj,is,ie,js,je,ks,ke,ktop,strlen
+      DOUBLE PRECISION :: Fwallw,dxx,dyy,dummy,dzz
+      DOUBLE PRECISION :: H,k_w,c,tau,dn,ddn,dddn,n_h,ep
+      CHARACTER(29) :: filename,fileSEM
+      CHARACTER(4) :: domain
+      CHARACTER(5) :: name_end
 
         if (PERIODIC) call exchange_bc(3,pl_ex)
 
@@ -1115,17 +1118,17 @@
         end do
         if(diff_sch.ne.3) call boundcoef(3)
         end do
-        end subroutine
+      end subroutine
 !##############################################################################
-        subroutine boundcoef(op)
+      subroutine boundcoef(op)
 !##############################################################################
-        use vars
-        use multidata
-        implicit none
-        integer :: i,j,k,ib,op,is,ie,js,je,ks,ke
-        double precision d,dxx,dyy,dzz
-        double precision, pointer, dimension(:,:,:) :: fi
-
+      use vars
+      use multidata
+      implicit none
+        
+      INTEGER :: i,j,k,ib,op,is,ie,js,je,ks,ke
+      DOUBLE PRECISION :: d,dxx,dyy,dzz
+      DOUBLE PRECISION,pointer,dimension(:,:,:) :: fi
 
         do ib=1,nbp
            dxx=dom(ib)%dx*dom(ib)%dx
@@ -1238,4 +1241,4 @@
 
         end do
 
-        end subroutine
+      end subroutine

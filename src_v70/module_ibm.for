@@ -7,7 +7,6 @@
       INTEGER :: bodynum,maxnode,master,maxnodeIBS,mdfsteps,yangcase
       INTEGER :: ibm_out_forces,nIBslv,nl    
 
-      LOGICAL,allocatable,dimension(:) :: rotating,ibturbine
 	
       DOUBLE PRECISION :: lambda,sigma,dxm,dym,dzm,nxl
       DOUBLE PRECISION,allocatable :: Cx(:),Cxor(:),Cy(:),Cyor(:)
@@ -48,6 +47,7 @@
       INTEGER,allocatable,dimension(:) :: nscatter	
                
       CHARACTER(32),allocatable,dimension (:) :: filepoints
+      LOGICAL,allocatable,dimension(:) :: rotating,ibturbine
 
       INTEGER,allocatable,dimension(:) :: numIBslave,Lslave,Lslv,dsplc
       INTEGER,allocatable,dimension(:) :: imb_proc_loc

@@ -1,17 +1,18 @@
 !##########################################################################
-        subroutine convection
+      subroutine convection
 !##########################################################################
-        use vars
-        use multidata
-        implicit none
-        integer i,j,k,ib,ii,jj,kk
-        double precision :: du2dx,dv2dy,dw2dz,vel
-        double precision :: duvdx,duvdy,duwdx,duwdz,dvwdy,dvwdz
-        double precision :: up12,um12,vp12,vm12,wp12,wm12
-        double precision :: uijk,vijk,wijk
-        double precision :: dxx,dyy,dzz,dudx,dudy,dudz
-        double precision :: dvdx,dvdy,dvdz,dwdx,dwdy,dwdz
-        double precision :: sp2,sp1,sn,sm1,sm2
+      use vars
+      use multidata
+      implicit none
+      
+      INTEGER :: i,j,k,ib,ii,jj,kk
+      DOUBLE PRECISION :: du2dx,dv2dy,dw2dz,vel
+      DOUBLE PRECISION :: duvdx,duvdy,duwdx,duwdz,dvwdy,dvwdz
+      DOUBLE PRECISION :: up12,um12,vp12,vm12,wp12,wm12
+      DOUBLE PRECISION :: uijk,vijk,wijk
+      DOUBLE PRECISION :: dxx,dyy,dzz,dudx,dudy,dudz
+      DOUBLE PRECISION :: dvdx,dvdy,dvdz,dwdx,dwdy,dwdz
+      DOUBLE PRECISION :: sp2,sp1,sn,sm1,sm2
 
         do ib=1,nbp
            dom(ib)%ustar=dom(ib)%u

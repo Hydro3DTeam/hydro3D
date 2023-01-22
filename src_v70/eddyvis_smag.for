@@ -1,21 +1,22 @@
 !##########################################################################
-        subroutine eddyv_smag
+      subroutine eddyv_smag
 !##########################################################################
-        use vars
-        use multidata
-        implicit none
-        integer :: i,j,k,chk_wallboun
-        integer :: ib,is,ie,js,je,ks,ke
-        double precision dudx,dudy,dudz,dvdx,dvdy,dvdz,dwdx,dwdy,dwdz
-        double precision vr_a,vr_b,vr_c,vr_d
-        double precision s12,s13,s23,sbet,rrey,utauw,he1
-        double precision h1,h2,h3,rh123,dist
-        double precision ufv_c,ufv_n1,ufv_n2
-        double precision vfv_c,vfv_n1,vfv_n2
-        double precision wfv_c,wfv_n1,wfv_n2
-        double precision dx,dy,dz
-        double precision cs1,delta_grid,l_s,dnmin,yplus,ratio,damp
-	  logical vandriest
+      use vars
+      use multidata
+      implicit none
+      
+      INTEGER :: i,j,k,chk_wallboun
+      INTEGER :: ib,is,ie,js,je,ks,ke
+      DOUBLE PRECISION :: dudx,dudy,dudz,dvdx,dvdy,dvdz,dwdx,dwdy,dwdz
+      DOUBLE PRECISION :: vr_a,vr_b,vr_c,vr_d
+      DOUBLE PRECISION :: s12,s13,s23,sbet,rrey,utauw,he1
+      DOUBLE PRECISION :: h1,h2,h3,rh123,dist
+      DOUBLE PRECISION :: ufv_c,ufv_n1,ufv_n2
+      DOUBLE PRECISION :: vfv_c,vfv_n1,vfv_n2
+      DOUBLE PRECISION :: wfv_c,wfv_n1,wfv_n2
+      DOUBLE PRECISION :: dx,dy,dz
+      DOUBLE PRECISION :: cs1,delta_grid,l_s,dnmin,yplus,ratio,damp
+      LOGICAL :: vandriest
 
         vandriest=.true.
         rrey=1.0/Re
@@ -670,16 +671,17 @@
 
 
         return
-        end subroutine eddyv_smag
+      end subroutine eddyv_smag
 !##########################################################################
-        subroutine tauw_noslip
+      subroutine tauw_noslip
 !##########################################################################
-        use vars
-        use multidata
-        implicit none
-        integer i,j,k,ib
-        double precision delta,n_x,n_y,n_z,vnor,vtan
-        double precision uc,vc,wc,rrey,small
+      use vars
+      use multidata
+      implicit none
+        
+      INTEGER :: i,j,k,ib
+      DOUBLE PRECISION :: delta,n_x,n_y,n_z,vnor,vtan
+      DOUBLE PRECISION :: uc,vc,wc,rrey,small
 
 
         rrey=1.0/Re
@@ -814,5 +816,5 @@
         end do
 
         return
-        end subroutine tauw_noslip
+      end subroutine tauw_noslip
 !##########################################################################

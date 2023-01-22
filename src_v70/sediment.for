@@ -5,15 +5,15 @@
 !			Cardiff 2015-2016
 !=======================================================================
 !##########################################################################
-        subroutine sediment_init
+      subroutine sediment_init
 !##########################################################################
-
-	use vars
-	use mpi
-	use multidata
-	implicit none
-	integer :: ib,i,j,k
-	double precision :: Vcell
+      use vars
+      use mpi
+      use multidata
+      implicit none
+      
+      INTEGER :: ib,i,j,k
+      DOUBLE PRECISION :: Vcell
 
 	do ib=1,nbp
 
@@ -60,24 +60,24 @@
 !	   end do
 !	end do
 
-	end
-
+      end
 !##########################################################################
-        subroutine sediment_4thtest
+      subroutine sediment_4thtest
 !##########################################################################
-        use vars
-        use mpi
-        use multidata
-        implicit none
-        integer :: i,j,k,ib
-        double precision :: dxx,dyy,dzz
-        double precision :: conv,diff
-        double precision :: duSdx,dvSdy,dwSdz,dwsSdz,dSdt
-        double precision :: awS,aeS,asS,anS,ab_S,atS,apS
-	double precision :: masout
-	double precision :: ues,uws,vns,vss,wts,wbs,wsbs
-	double precision :: masconv,masdiff,masws
-	double precision :: kp,km,ku,kc,kd,b_r,ws,Vcell
+      use vars
+      use mpi
+      use multidata
+      implicit none
+        
+      INTEGER :: i,j,k,ib
+      DOUBLE PRECISION :: dxx,dyy,dzz
+      DOUBLE PRECISION :: conv,diff
+      DOUBLE PRECISION :: duSdx,dvSdy,dwSdz,dwsSdz,dSdt
+      DOUBLE PRECISION :: awS,aeS,asS,anS,ab_S,atS,apS
+      DOUBLE PRECISION :: masout
+      DOUBLE PRECISION :: ues,uws,vns,vss,wts,wbs,wsbs
+      DOUBLE PRECISION :: masconv,masdiff,masws
+      DOUBLE PRECISION :: kp,km,ku,kc,kd,b_r,ws,Vcell
 
         do ib=1,nbp
 
@@ -289,18 +289,19 @@
 
         call boundS
 
-        return
-        end subroutine sediment_4thtest
+      return
+      end subroutine sediment_4thtest
 !##########################################################################
-        subroutine boundS
+      subroutine boundS
 !##########################################################################
-	use mpi
-        use vars
-        use multidata
-        implicit none
-        integer :: i,j,k,ib,ni,nj,nk,ly
-        integer :: is,ie,js,je,ks,ke
-	double precision :: absz,absy
+      use mpi
+      use vars
+      use multidata
+      implicit none
+        
+      INTEGER :: i,j,k,ib,ni,nj,nk,ly
+      INTEGER :: is,ie,js,je,ks,ke
+      DOUBLE PRECISION :: absz,absy
 
         if (PERIODIC) call exchange_bc(8,pl_ex)
 
@@ -411,5 +412,5 @@
 
 	end do ! ly
 
-        end subroutine boundS
+      end subroutine boundS
 !#############################################################################

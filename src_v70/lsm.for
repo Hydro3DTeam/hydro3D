@@ -1,9 +1,10 @@
 !######################################################################
       module lsm
 !######################################################################
-	SAVE
-      DOUBLE PRECISION,allocatable,dimension(:,:):: f,g,hj_phi,hj_phi1
+      SAVE
+
       DOUBLE PRECISION :: dt_reinit,initial_vol,total_vol
+      DOUBLE PRECISION,allocatable,dimension(:,:):: f,g,hj_phi,hj_phi1
      
       end module lsm
 !######################################################################
@@ -12,7 +13,8 @@
       use vars
       use lsm
       use multidata
-	use mpi
+      use mpi
+      implicit none
 
         open (unit=12, file='in_lsm.cin')
 
@@ -78,13 +80,14 @@
       use vars
       use lsm
       use multidata
-	use mpi
+      use mpi
       implicit none
-      integer :: i,j,k,ib,tti,ttj,ttk,sn,is,ie,js,je,ks,ke
+
+      INTEGER :: i,j,k,ib,tti,ttj,ttk,sn,is,ie,js,je,ks,ke
       DOUBLE PRECISION :: b,dummy
-      character*8  :: chb
-      character*31 :: gridfile
-      character*80 :: dummyline
+      CHARACTER(8)  :: chb
+      CHARACTER(31) :: gridfile
+      CHARACTER(80) :: dummyline
 
 	if (myrank.eq.0) then
 	  write(*,'(a)') '**********************************************'
@@ -232,16 +235,16 @@
 !######################################################################
       subroutine  lsm_3d
 !######################################################################
-!**********************************************************************
-! 3 step runge kutta routine to return convected phi field
-!**********************************************************************
       use vars
       use lsm
       use multidata
       use mpi
       implicit none
-      integer :: i,j,k,ib
+
+      INTEGER :: i,j,k,ib
       DOUBLE PRECISION :: uijk,vijk,wijk,h1,h2,h3
+
+! 3 step runge kutta routine to return convected phi field
 !
 ! First RK step (phi --> phi_new)
 !
@@ -487,7 +490,8 @@
       use mpi
       use multidata
       implicit none
-      integer :: i,j,k,ifi,op,ib
+
+      INTEGER :: i,j,k,ifi,op,ib
       DOUBLE PRECISION :: uijk,vijk,wijk,phi_minus_ip12j
       DOUBLE PRECISION :: phi_plus_ip12j,phi_minus_ijp12
       DOUBLE PRECISION :: phi_plus_ijp12
@@ -570,18 +574,18 @@
 !######################################################################
       subroutine tvd_rk_reinit
 !######################################################################
-!**********************************************************************
-! 3 step runge kutta routine which returns re-initialised phi field
-!**********************************************************************
       use vars
       use lsm
       use multidata
       use mpi
       implicit none
-      integer :: i,j,k,it,ib
-      logical :: bool
+
+      INTEGER :: i,j,k,it,ib
       DOUBLE PRECISION :: max_abs,abs_dphi,abs_phidiff,max_phidiff
       DOUBLE PRECISION :: local_max_abs,local_max_phidiff
+      LOGICAL :: bool
+
+! 3 step runge kutta routine which returns re-initialised phi field
 
       bool=.false.
       it=0
@@ -748,10 +752,11 @@
       use lsm
       use multidata
       implicit none
-      integer :: i,j,k,ifi,op,ib
+
+      INTEGER :: i,j,k,ifi,op,ib
       DOUBLE PRECISION :: s_phi012
-      DOUBLE PRECISION, pointer, dimension(:,:,:)::fi
       DOUBLE PRECISION :: lsv,lssig,xm,xp,ym,yp,zm,zp
+      DOUBLE PRECISION,pointer,dimension(:,:,:) :: fi
 
           call hj_weno_dxplus_3d(op)          
           call hj_weno_dyplus_3d(op)      
@@ -833,10 +838,11 @@
       use vars
       use multidata
       implicit none
-      integer :: i,j,k,l,k_star,np,nq,nr,op,ib
-      DOUBLE PRECISION, pointer, dimension(:,:,:)::fi
+
+      INTEGER :: i,j,k,l,k_star,np,nq,nr,op,ib
       DOUBLE PRECISION :: q1,q2,q3,c_star,v1,v2,v3,v4,v5,v11,v22
-	DOUBLE PRECISION :: v33,v44,v55,s1,s2,s3,a1,a2,a3,w1,w2,w3,e
+      DOUBLE PRECISION :: v33,v44,v55,s1,s2,s3,a1,a2,a3,w1,w2,w3,e
+      DOUBLE PRECISION,pointer,dimension(:,:,:) :: fi
 
       do ib=1,nbp
 
@@ -944,10 +950,11 @@
       use vars
       use multidata
       implicit none
-      integer :: i,j,k,l,k_star,np,nq,nr,op,ib
-      double precision, pointer, dimension(:,:,:)::fi
+      
+      INTEGER :: i,j,k,l,k_star,np,nq,nr,op,ib
       DOUBLE PRECISION :: q1,q2,q3,c_star,v1,v2,v3,v4,v5,v11,v22
-	DOUBLE PRECISION :: v33,v44,v55,s1,s2,s3,a1,a2,a3,w1,w2,w3,e
+      DOUBLE PRECISION :: v33,v44,v55,s1,s2,s3,a1,a2,a3,w1,w2,w3,e
+      DOUBLE PRECISION,pointer,dimension(:,:,:) :: fi
 
       do ib=1,nbp
 
@@ -1055,10 +1062,11 @@
       use vars
       use multidata
       implicit none
-      integer :: i,j,k,l,k_star,np,nq,nr,op,ib
-      double precision, pointer, dimension(:,:,:)::fi
+      
+      INTEGER :: i,j,k,l,k_star,np,nq,nr,op,ib
       DOUBLE PRECISION :: q1,q2,q3,c_star,v1,v2,v3,v4,v5,v11,v22
-	DOUBLE PRECISION :: v33,v44,v55,s1,s2,s3,a1,a2,a3,w1,w2,w3,e
+      DOUBLE PRECISION :: v33,v44,v55,s1,s2,s3,a1,a2,a3,w1,w2,w3,e
+      DOUBLE PRECISION,pointer,dimension(:,:,:) :: fi
 
       do ib=1,nbp
 
@@ -1165,10 +1173,11 @@
       use vars
       use multidata
       implicit none
-      integer :: i,j,k,l,k_star,np,nq,nr,op,ib
-      double precision, pointer, dimension(:,:,:)::fi
+      
+      INTEGER :: i,j,k,l,k_star,np,nq,nr,op,ib
       DOUBLE PRECISION :: q1,q2,q3,c_star,v1,v2,v3,v4,v5,v11,v22
-	DOUBLE PRECISION :: v33,v44,v55,s1,s2,s3,a1,a2,a3,w1,w2,w3,e
+      DOUBLE PRECISION :: v33,v44,v55,s1,s2,s3,a1,a2,a3,w1,w2,w3,e
+      DOUBLE PRECISION,pointer,dimension(:,:,:) :: fi
 
       do ib=1,nbp
 
@@ -1276,10 +1285,11 @@
       use vars
       use multidata
       implicit none
-      integer :: i,j,k,l,k_star,np,nq,nr,op,ib
-      double precision, pointer, dimension(:,:,:)::fi
-      DOUBLE PRECISION :: e,q1,q2,q3,c_star,v1,v2,v3,v4,v5,v11,v22
-	DOUBLE PRECISION :: v33,v44,v55,s1,s2,s3,a1,a2,a3,w1,w2,w3
+      
+      INTEGER :: i,j,k,l,k_star,np,nq,nr,op,ib
+      DOUBLE PRECISION :: q1,q2,q3,c_star,v1,v2,v3,v4,v5,v11,v22
+      DOUBLE PRECISION :: v33,v44,v55,s1,s2,s3,a1,a2,a3,w1,w2,w3,e
+      DOUBLE PRECISION,pointer,dimension(:,:,:) :: fi
 
       do ib=1,nbp
 
@@ -1387,10 +1397,11 @@
       use vars
       use multidata
       implicit none
-      integer :: i,j,k,l,k_star,np,nq,nr,op,ib
-      double precision, pointer, dimension(:,:,:)::fi
+
+      INTEGER :: i,j,k,l,k_star,np,nq,nr,op,ib
       DOUBLE PRECISION :: q1,q2,q3,c_star,v1,v2,v3,v4,v5,v11,v22
-	DOUBLE PRECISION :: v33,v44,v55,s1,s2,s3,a1,a2,a3,w1,w2,w3,e
+      DOUBLE PRECISION :: v33,v44,v55,s1,s2,s3,a1,a2,a3,w1,w2,w3,e
+      DOUBLE PRECISION, pointer, dimension(:,:,:) :: fi
 
       do ib=1,nbp
 
@@ -1500,10 +1511,11 @@
       use mpi
       use multidata
       implicit none
-      integer :: i,j,k,ib,tti,ttj,ttk
+
+      INTEGER :: i,j,k,ib,tti,ttj,ttk
       DOUBLE PRECISION :: epsl,n_epsl
-      DOUBLE PRECISION, parameter :: pi = 3.14159265359D0
-	DOUBLE PRECISION :: vol !!
+      DOUBLE PRECISION :: vol 
+      DOUBLE PRECISION,parameter :: PI=4.d0*atan(1.d0)
 !	
 ! Define an infinitely differentiable smoothed heaviside function h_phi
 !

@@ -1,14 +1,15 @@
 !##########################################################################
-        subroutine rungek_conv4th
+      subroutine rungek_conv4th
 !##########################################################################
-        use vars
-        use mpi
-        use multidata
-        implicit none
-        integer :: i,j,k,ib,ii,jj,kk
-        double precision :: du2dx,dv2dy,dw2dz
-        double precision :: duvdx,duvdy,duwdx,duwdz,dvwdy,dvwdz
-        double precision :: sp2,sp1,sn,sm1,sm2
+      use vars
+      use mpi
+      use multidata
+      implicit none
+        
+      INTEGER :: i,j,k,ib,ii,jj,kk
+      DOUBLE PRECISION :: du2dx,dv2dy,dw2dz
+      DOUBLE PRECISION :: duvdx,duvdy,duwdx,duwdz,dvwdy,dvwdz
+      DOUBLE PRECISION :: sp2,sp1,sn,sm1,sm2
 
         call boundu
 
@@ -199,18 +200,19 @@
         end do
 
 
-        return
-        end subroutine rungek_conv4th
+      return
+      end subroutine rungek_conv4th
 !##########################################################################
-        subroutine rungek_diff4th
+      subroutine rungek_diff4th
 !##########################################################################
-        use vars
-        use mpi
-        use multidata
-        implicit none
-        integer :: i,j,k,ib
-        integer :: is,ie,js,je,ks,ke
-        double precision :: dxx,dyy,dzz,visc,diff
+      use vars
+      use mpi
+      use multidata
+      implicit none
+        
+      INTEGER :: i,j,k,ib
+      INTEGER :: is,ie,js,je,ks,ke
+      DOUBLE PRECISION :: dxx,dyy,dzz,visc,diff
 
         fac=1.0
 
@@ -314,19 +316,21 @@
 
         if (LENERGY) call mom_buo
         if (LROUGH) call rough_velocity
+
         return
-        end subroutine rungek_diff4th
+      end subroutine rungek_diff4th
 !##########################################################################
-        subroutine rungek_conv2nd
+      subroutine rungek_conv2nd
 !##########################################################################
-        use vars
-        use mpi
-        use multidata
-        implicit none
-        integer :: i,j,k,ib
-        double precision :: du2dx,dv2dy,dw2dz
-        double precision :: up12,um12,vp12,vm12,wp12,wm12
-        double precision :: duvdx,duvdy,duwdx,duwdz,dvwdy,dvwdz
+      use vars
+      use mpi
+      use multidata
+      implicit none
+        
+      INTEGER :: i,j,k,ib
+      DOUBLE PRECISION :: du2dx,dv2dy,dw2dz
+      DOUBLE PRECISION :: up12,um12,vp12,vm12,wp12,wm12
+      DOUBLE PRECISION :: duvdx,duvdy,duwdx,duwdz,dvwdy,dvwdz
 
         call boundu
 
@@ -415,19 +419,20 @@
         end do
 
         return
-        end subroutine rungek_conv2nd
+      end subroutine rungek_conv2nd
 !##########################################################################
-        subroutine rungek_convWENO
+      subroutine rungek_convWENO
 !##########################################################################
-        use vars
-        use mpi
-        use multidata
-        implicit none
-        integer :: i,j,k,ib
-        double precision :: du2dx,dv2dy,dw2dz
-        double precision :: duvdx,duvdy,duwdx,duwdz,dvwdy,dvwdz
-        double precision :: uijk,vijk,wijk,dudx,dudy,dudz
-        double precision :: dvdx,dvdy,dvdz,dwdx,dwdy,dwdz
+      use vars
+      use mpi
+      use multidata
+      implicit none
+        
+      INTEGER :: i,j,k,ib
+      DOUBLE PRECISION :: du2dx,dv2dy,dw2dz
+      DOUBLE PRECISION :: duvdx,duvdy,duwdx,duwdz,dvwdy,dvwdz
+      DOUBLE PRECISION :: uijk,vijk,wijk,dudx,dudy,dudz
+      DOUBLE PRECISION :: dvdx,dvdy,dvdz,dwdx,dwdy,dwdz
 
         call boundu
         call HJ_WENO_dx(1)
@@ -584,18 +589,19 @@
 
         end do
 
-        return
-        end subroutine rungek_convWENO
+      return
+      end subroutine rungek_convWENO
 !##########################################################################
-        subroutine rungek_diff2nd
+      subroutine rungek_diff2nd
 !##########################################################################
-        use vars
-        use mpi
-        use multidata
-        implicit none
-        integer :: i,j,k,ib
-        integer :: is,ie,js,je,ks,ke
-        double precision :: dxx,dyy,dzz,visc,diff
+      use vars
+      use mpi
+      use multidata
+      implicit none
+      
+      INTEGER :: i,j,k,ib
+      INTEGER :: is,ie,js,je,ks,ke
+      DOUBLE PRECISION :: dxx,dyy,dzz,visc,diff
 
         fac=1.d0
 
@@ -781,6 +787,6 @@
         if (LENERGY) call mom_buo
         if (LROUGH) call rough_velocity
 
-        return
-        end subroutine rungek_diff2nd
+      return
+      end subroutine rungek_diff2nd
 !##########################################################################

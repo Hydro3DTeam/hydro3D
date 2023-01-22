@@ -1,9 +1,9 @@
 !##########################################################################
-        program fdstag
+      program fdstag
 !##########################################################################
-        use mpi
-        use vars
-        implicit none
+      use mpi
+      use vars
+      implicit none
 
         call init_parallelisation
      
@@ -63,5 +63,5 @@
 !End MPI parallelisation
         call end_parallelisation
 
-        end program
+      end program
 !##########################################################################

@@ -1,15 +1,16 @@
 !##########################################################################
-        subroutine flosol
+      subroutine flosol
 !##########################################################################
-        use vars
-        use mpi
-        use multidata
-	  use vars_pt
-        implicit none
-        real *8:: wtimedum,wtime_total,wtime_solver,wtime_ib,wtime_cd
-	  real *8:: wtime_lsm
-        integer ib,i,j,k,kutta,kuttacond,jtime,ii
-        double precision :: alfark(3)
+      use vars
+      use mpi
+      use multidata
+      use vars_pt
+      implicit none
+      
+      INTEGER :: ib,i,j,k,kutta,kuttacond,jtime,ii
+      DOUBLE PRECISION :: wtimedum,wtime_total,wtime_solver,wtime_ib
+      DOUBLE PRECISION :: wtime_cd,wtime_lsm
+      DOUBLE PRECISION :: alfark(3)
 
 ! Set some constants ---------------------
 ! ..... 3-STEP RUNGE KUTTA
@@ -316,5 +317,5 @@
 5000  format(/1x,10(1h=),' nrtstp=',i8,2x,'ctime=',e14.6,2x,
      & 'dt=',e14.6,'  dtavg=',e14.6)
 5500  format(/1x,'Work took ',f18.8,2x,' seconds')
-        end subroutine flosol
+      end subroutine flosol
 !##########################################################################

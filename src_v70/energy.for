@@ -3,9 +3,10 @@
 !######################################################################
       use vars
       use multidata
-	use mpi
+      use mpi
+      implicit none
 
-        open (unit=12, file='in_energy.cin')
+      open (unit=12, file='in_energy.cin')
 
 	  read (12,*) 
 	  read (12,*) Pr
@@ -22,16 +23,17 @@
 	 close(12)
 
 	return
-	end subroutine
+      end subroutine
 !##########################################################################
-        subroutine mom_buo
+      subroutine mom_buo
 !##########################################################################
-        use vars
-        use mpi
-        use multidata
-        implicit none
-        integer :: i,j,k,ib
-        integer :: is,ie,js,je,ks,ke
+      use vars
+      use mpi
+      use multidata
+      implicit none
+        
+      INTEGER :: i,j,k,ib
+      INTEGER :: is,ie,js,je,ks,ke
  
 
         do ib=1,nbp
@@ -82,20 +84,21 @@
         end do
 
         return
-        end subroutine mom_buo
+      end subroutine mom_buo
 !##########################################################################
-        subroutine energy
+      subroutine energy
 !##########################################################################
-        use vars
-        use mpi
-        use multidata
-        implicit none
-        integer :: i,j,k,ib
-        double precision :: dxx,dyy,dzz
-        double precision :: conv,diff
-        double precision :: duTdx,dvTdy,dwTdz
-        double precision :: awT,aeT,asT,anT,abT,atT,apT
-        double precision :: kp,km,ku,kc,kd,b_r
+      use vars
+      use mpi
+      use multidata
+      implicit none
+      
+      INTEGER :: i,j,k,ib
+      DOUBLE PRECISION :: dxx,dyy,dzz
+      DOUBLE PRECISION :: conv,diff
+      DOUBLE PRECISION :: duTdx,dvTdy,dwTdz
+      DOUBLE PRECISION :: awT,aeT,asT,anT,abT,atT,apT
+      DOUBLE PRECISION :: kp,km,ku,kc,kd,b_r
 
         do ib=1,nbp
 
@@ -247,15 +250,16 @@
         call boundT
 
         return
-        end subroutine energy
+      end subroutine energy
 !##########################################################################
-        subroutine boundT
+      subroutine boundT
 !##########################################################################
-        use vars
-        use multidata
-        implicit none
-        integer :: i,j,k,ib,ni,nj,nk,ly
-        integer :: is,ie,js,je,ks,ke
+      use vars
+      use multidata
+      implicit none
+        
+      INTEGER :: i,j,k,ib,ni,nj,nk,ly
+      INTEGER :: is,ie,js,je,ks,ke
 
         do ly=0,pl_ex
 
@@ -379,5 +383,5 @@
         end do
         end do
 
-        end subroutine boundT
+      end subroutine boundT
 !#############################################################################

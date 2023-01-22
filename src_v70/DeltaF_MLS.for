@@ -1,11 +1,14 @@
 !######################################################################
-       Double precision function phi_r1smth(r)
+      Double precision function phi_r1smth(r)
 !######################################################################
       implicit none 
-       Double precision, intent(in) :: r
-       Double precision :: PI,abr
-       PI = 4.D0*DATAN(1.D0)
-       abr=SQRT(r*r)
+      
+      DOUBLE PRECISION, intent(in) :: r
+      DOUBLE PRECISION :: PI,abr
+      
+      PI = 4.D0*DATAN(1.D0)
+      abr=SQRT(r*r)
+      
       IF (abr.ge.1.5) THEN
         phi_r1smth = 0.0
       ELSE IF ((abr.lt.1.5).and.(abr.ge.0.5)) THEN
@@ -19,9 +22,12 @@
       Double precision function phi_r2smth(r)
 !######################################################################
       implicit none 
-       Double precision, intent(in) :: r
-       Double precision :: PI
-       PI = 4.D0*DATAN(1.D0)
+      
+      DOUBLE PRECISION, intent(in) :: r
+      DOUBLE PRECISION :: PI
+      
+      PI = 4.D0*DATAN(1.D0)
+
       IF (r.le.-2.5) THEN
         phi_r2smth = 0.0
       ELSE IF ((r.ge.-2.5).and.(r.le.-1.5)) THEN
@@ -41,10 +47,12 @@
       RETURN
       End Function
 !######################################################################
-       Double precision function phi_r3(r)
+      Double precision function phi_r3(r)
 !######################################################################
       implicit none 
-       Double precision, intent(in) :: r
+      
+      DOUBLE PRECISION, intent(in) :: r
+
       IF (r.le.-1.5) THEN
         phi_r3 = 0.0
       ELSE IF ((r.ge.-1.5).and.(r.le.-0.5)) THEN
@@ -62,12 +70,15 @@
       RETURN
       End Function
 !######################################################################
-       Double precision function phi_r3smth2(r)
+      Double precision function phi_r3smth2(r)
 !######################################################################
       implicit none 
-       Double precision, intent(in) :: r
-       Double precision :: PI
-       PI = 4.D0*DATAN(1.D0)
+      
+      DOUBLE PRECISION, intent(in) :: r
+      DOUBLE PRECISION :: PI
+      
+      PI = 4.D0*DATAN(1.D0)
+      
       IF (r.le.-2.0) THEN
         phi_r3smth2 = 0.0
       ELSE IF ((r.ge.-2.0).and.(r.le.-1.0)) THEN
@@ -93,11 +104,12 @@
       RETURN
       End Function
 !######################################################################
-       Double precision function phi_r3smth(r)
+      Double precision function phi_r3smth(r)
 !######################################################################
       implicit none 
-      Double precision, intent(in) :: r
-      Double precision :: scal1,scal2,scal3,scal4,scal5,scal6
+
+      DOUBLE PRECISION, intent(in) :: r
+      DOUBLE PRECISION :: scal1,scal2,scal3,scal4,scal5,scal6
 
       scal1 = 1.095450017660160615261  ! 55.0/48.0 - sqrt(3.0)*pi/108.0
       scal2 = 1.083333333333333333333  ! 13.0/12.0
@@ -127,10 +139,12 @@
       RETURN
       End Function
 !######################################################################
-       Double precision function phi_r4(r)
+      Double precision function phi_r4(r)
 !######################################################################
       implicit none 
-       Double precision, intent(in) :: r
+      
+      DOUBLE PRECISION, intent(in) :: r
+      
       IF (r.le.-2.0) THEN
         phi_r4 = 0.0
       ELSE IF ((r.ge.-2.0).and.(r.le.-1.0)) THEN
@@ -148,13 +162,16 @@
       RETURN
       End Function
 !######################################################################
-       Double precision function phi_r4smth(r)
+      Double precision function phi_r4smth(r)
 !######################################################################
       implicit none
-       Double precision, intent(in) :: r
-       Double precision :: PI,ar
-       PI = 4.D0*DATAN(1.D0)
-	ar=abs(r)
+
+      DOUBLE PRECISION, intent(in) :: r
+      DOUBLE PRECISION :: PI,ar
+      
+      PI = 4.D0*DATAN(1.D0)
+      ar=abs(r)
+      
       IF ((ar.ge.0.0).and.(ar.le.0.5)) THEN
 	phi_r4smth = 3.0/8.0+ PI/32.0 - r*r/4.0
       ELSE IF ((ar.ge.0.5).and.(ar.le.1.5)) THEN
@@ -170,13 +187,14 @@
       RETURN
       End Function
 !######################################################################
-       Double precision function dh(dx,dy,dz,xij,yij,zij,Xl,Yl,Zl,order)
+      Double precision function dh(dx,dy,dz,xij,yij,zij,Xl,Yl,Zl,order)
 !######################################################################
       implicit none 
-       Double precision,    intent(in) :: dx,dy,dz,xij,yij,zij,Xl,Yl,Zl
-       INTEGER, intent(in) :: order
-       Double precision :: phi_r2smth,phi_r3smth,phi_r4
-       Double precision :: phi_r3,phi_r1smth,phi_r4smth
+
+      INTEGER, intent(in) :: order
+      DOUBLE PRECISION,intent(in) :: dx,dy,dz,xij,yij,zij,Xl,Yl,Zl
+      DOUBLE PRECISION :: phi_r2smth,phi_r3smth,phi_r4
+      DOUBLE PRECISION :: phi_r3,phi_r1smth,phi_r4smth
 
       SELECT CASE (order)
 
@@ -210,36 +228,35 @@
       End Function
 !######################################################################
 !######################################################################
-!		MOVING LEAST-SQUARE methodology
+      subroutine ShapeFunction_MLS(UorV,L,ib)
+! MOVING LEAST-SQUARE methodology
 ! Implemented by Pablo (2015)
 ! Algorithm from Ramirez and Nogueira (University of A Coruna)
 !######################################################################
-!######################################################################
-	subroutine ShapeFunction_MLS(UorV,L,ib)
-!######################################################################
-         use vars
-	 use multidata
-         use mpi
-	 use imb
-         implicit none
-         INTEGER :: order_mls,nbase,MAXCELL,MAXNEIG
-	 LOGICAL :: vanella_mls
-         INTEGER, intent(in) :: UorV,L,ib
-         INTEGER :: I,J,K,ipface,inodehalo,nn,neignum
-         INTEGER:: MVefx(126),MVefy(126),MVefz(126)
-         Double precision :: vmaxdist,xN,yN,zN,h0,xv2,yv2,zv2
-    	 Double precision::  Xf(126),Yf(126),Zf(126),hx,hy,hz
-         Double precision :: offsety,offsetx,offsetz,ratioHKx1,ratioHKx2
-         Double precision :: ratioHKy1,ratioHKy2,ratioHKz1,ratioHKz2
-         Double precision :: kwx1,kwx2,kwy1,kwy2,kwz1,kwz2,dist_ff
-	 Double precision :: parametros(9),W(126),difx(126)
-	 Double precision :: dify(126),difz(126)
-         Double precision :: dX2(126),dY2(126),dZ2(126)
-         Double precision :: FF(126),dFFX(126),dFFY(126),dFFZ(126)
-         Double precision :: ddFFXX(126),ddFFXY(126),ddFFYY(126)
-         Double precision :: ddFFXZ(126),ddFFZZ(126),ddFFYZ(126)
-	 Double precision :: nmls,k_mls
-         INTEGER :: MLS_neignum(maxnodeIBS)
+      use vars
+      use multidata
+      use mpi
+      use imb
+      implicit none
+
+      INTEGER, intent(in) :: UorV,L,ib
+      INTEGER :: order_mls,nbase,MAXCELL,MAXNEIG
+      INTEGER :: I,J,K,ipface,inodehalo,nn,neignum
+      DOUBLE PRECISION :: nmls,k_mls
+      DOUBLE PRECISION :: vmaxdist,xN,yN,zN,h0,xv2,yv2,zv2,hx,hy,hz
+      DOUBLE PRECISION :: offsety,offsetx,offsetz,ratioHKx1,ratioHKx2
+      DOUBLE PRECISION :: ratioHKy1,ratioHKy2,ratioHKz1,ratioHKz2
+      DOUBLE PRECISION :: kwx1,kwx2,kwy1,kwy2,kwz1,kwz2,dist_ff
+      LOGICAL :: vanella_mls
+      INTEGER :: MLS_neignum(maxnodeIBS)
+      INTEGER,dimension(9) :: MVefx,MVefy,MVefz
+      DOUBLE PRECISION,dimension(9) :: parametros
+      DOUBLE PRECISION,dimension(126) :: Xf,Yf,Zf
+      DOUBLE PRECISION,dimension(126) :: difx,dify,difz
+      DOUBLE PRECISION,dimension(126) :: dX2,dY2,dZ2
+      DOUBLE PRECISION,dimension(126) :: W,FF,dFFX,dFFY,dFFZ
+      DOUBLE PRECISION,dimension(126) :: ddFFXX,ddFFXY,ddFFYY
+      DOUBLE PRECISION,dimension(126) :: ddFFXZ,ddFFZZ,ddFFYZ
 
 !"""  Data for MLS
 
@@ -256,6 +273,7 @@
 	Do i=1,MAXNEIG
  	  MVefx(i)=0 ; MVefy(i)=0 ; MVefz(i)=0 
 	Enddo
+
 	nn=0  ; nxl=1.9999999
 
 	IF (UorV.eq.1) then
@@ -280,6 +298,7 @@
 100 	CONTINUE
        END DO
 	ENDIF
+
 	IF (UorV.eq.2) then
        DO I = 1, dom(ib)%ttc_i
        IF ( dom(ib)%xc(i).gt.(nodex_loc(L)+nxl*dom(ib)%dx) .or.
@@ -304,6 +323,7 @@
 200 	CONTINUE
        END DO
 	ENDIF
+
 	IF (UorV.eq.3) then
        DO I = 1, dom(ib)%ttc_i 
        IF ( dom(ib)%xc(i).gt.(nodex_loc(L)+nxl*dom(ib)%dx) .or.
@@ -410,28 +430,29 @@
       subroutine kerneltododer(W,dX1,dY1,dZ1,difx,dify,difz,hx,hy,hz,
      &  neignum,kwx1,kwx2,kwy1,kwy2,kwz1,kwz2,MAXNEIG)
 !######################################################################
-        use mpi
-	implicit none
-	Double precision, intent(in) :: hx,hy,hz,kwx1,kwx2,kwy1
-	Double precision, intent(in) :: kwy2,kwz1,kwz2
-	Double precision, intent(in) :: difx(MAXNEIG)
-	Double precision, intent(in) ::dify(MAXNEIG)
-	Double precision, intent(in) :: difz(MAXNEIG)
-	INTEGER, intent(in):: neignum,MAXNEIG
-        INTEGER :: I,J
-        Double precision:: cero, coef,cx1,cx2,cy1,cy2,cz1,cz2,PI
-        Double precision:: dmx,dmy,dmz,Wx,Wy,Wz,dWx,dWy,dWz
-        Double precision:: coef1x,coef2x,coefd1x,coefd2x,coefd3x
-        Double precision:: coef1y,coef2y,coefd1y,coefd2y,coefd3y
-        Double precision:: coef1z,coef2z,coefd1z,coefd2z,coefd3z
-	Double precision:: sx(MAXNEIG),sy(MAXNEIG),sz(MAXNEIG)
-	Double precision:: W(MAXNEIG),dX1(MAXNEIG),dY1(MAXNEIG),dZ1(MAXNEIG)
+      use mpi
+      implicit none
 
-        cero=1.d-08  ;   coef=1.d+00  ;    PI = 4.D0*DATAN(1.D0)
+      INTEGER :: I,J
+      INTEGER, intent(in) :: neignum,MAXNEIG
+      DOUBLE PRECISION,intent(in) :: hx,hy,hz,kwx1,kwx2,kwy1
+      DOUBLE PRECISION,intent(in) :: kwy2,kwz1,kwz2
+      DOUBLE PRECISION,intent(in) :: difx(MAXNEIG)
+      DOUBLE PRECISION,intent(in) :: dify(MAXNEIG)
+      DOUBLE PRECISION,intent(in) :: difz(MAXNEIG)
+      DOUBLE PRECISION :: cero, coef,cx1,cx2,cy1,cy2,cz1,cz2,PI
+      DOUBLE PRECISION :: dmx,dmy,dmz,Wx,Wy,Wz,dWx,dWy,dWz
+      DOUBLE PRECISION :: coef1x,coef2x,coefd1x,coefd2x,coefd3x
+      DOUBLE PRECISION :: coef1y,coef2y,coefd1y,coefd2y,coefd3y
+      DOUBLE PRECISION :: coef1z,coef2z,coefd1z,coefd2z,coefd3z
+      DOUBLE PRECISION,dimension(MAXNEIG) :: sx,sy,sz
+      DOUBLE PRECISION,dimension(MAXNEIG) :: W,dX1,dY1,dZ1
 
-        do j=1, neignum
-	  sx(j)=0.0d+00   ;  sy(j)=0.0d+00;  sz(j)=0.0d+00
-	enddo
+      cero=1.d-08  ;   coef=1.d+00  ; PI = 4.D0*DATAN(1.D0)
+
+      do j=1, neignum
+	 sx(j)=0.0d+00   ;  sy(j)=0.0d+00;  sz(j)=0.0d+00
+      enddo
 
 ! Primero cogemos las distancias que nos interesan
       do j=1, neignum
@@ -514,37 +535,35 @@
      &   dFFX,dFFY,dFFZ,ddFFXX,ddFFXY,ddFFXZ,ddFFYY,ddFFYZ,ddFFZZ,
      &   MAXNEIG,nbase)
 !######################################################################
-        implicit none
-        INTEGER, intent(in) :: neignum,MAXNEIG,nbase
-        Double precision, intent(in) :: hx,hy,hz,xgau,ygau,zgau
-        Double precision, intent(in) :: W2(MAXNEIG)
-	Double precision, intent(in) :: Xmls(MAXNEIG),Ymls(MAXNEIG)
-	Double precision, intent(in) :: Zmls(MAXNEIG)
-	Double precision, intent(in) :: dX2(MAXNEIG),dY2(MAXNEIG)
-	Double precision, intent(in) :: dZ2(MAXNEIG)
-        INTEGER :: I,J,K,ifila,icolumna,ibase,nelim,icol
-        Double precision :: xg,yg,zg,wmax,wmin,valor
-        Double precision :: FF(MAXNEIG),dFFX(MAXNEIG),dFFY(MAXNEIG)
-        Double precision :: dFFZ(MAXNEIG)
-        Double precision :: ddFFXX(MAXNEIG),ddFFXY(MAXNEIG)
-        Double precision :: ddFFYY(MAXNEIG)
-        Double precision :: ddFFXZ(MAXNEIG),ddFFYZ(MAXNEIG)
-        Double precision :: ddFFZZ(MAXNEIG)
-	Double precision :: A(nbase,nbase),vIA(nbase,nbase)
-        Double precision :: eye(nbase,nbase)
-        Double precision :: C(nbase,MAXNEIG),PtC(MAXNEIG,MAXNEIG)
-        Double precision :: auxiliar(MAXNEIG,nbase)
-	Double precision :: auxiliar1(nbase),auxiliar2(nbase)
-        Double precision :: sol(nbase,nbase),wsv(10),vsv(10,10),coef
+      implicit none
+      
+      INTEGER, intent(in) :: neignum,MAXNEIG,nbase
+      DOUBLE PRECISION,intent(in) :: hx,hy,hz,xgau,ygau,zgau
+      DOUBLE PRECISION,intent(in) :: W2(MAXNEIG)
+      DOUBLE PRECISION,intent(in) :: Xmls(MAXNEIG),Ymls(MAXNEIG)
+      DOUBLE PRECISION,intent(in) :: Zmls(MAXNEIG)
+      DOUBLE PRECISION,intent(in) :: dX2(MAXNEIG),dY2(MAXNEIG)
+      DOUBLE PRECISION,intent(in) :: dZ2(MAXNEIG)
+      INTEGER :: I,J,K,ifila,icolumna,ibase,nelim,icol
+      DOUBLE PRECISION :: xg,yg,zg,wmax,wmin,valor
+      DOUBLE PRECISION,dimension(MAXNEIG) :: FF,dFFX,dFFY,dFFZ
+      DOUBLE PRECISION,dimension(MAXNEIG) :: ddFFXX,ddFFXY,ddFFYY
+      DOUBLE PRECISION,dimension(MAXNEIG) :: ddFFXZ,ddFFYZ,ddFFZZ
+      DOUBLE PRECISION :: A(nbase,nbase),vIA(nbase,nbase)
+      DOUBLE PRECISION :: eye(nbase,nbase)
+      DOUBLE PRECISION :: C(nbase,MAXNEIG),PtC(MAXNEIG,MAXNEIG)
+      DOUBLE PRECISION :: auxiliar(MAXNEIG,nbase)
+      DOUBLE PRECISION :: auxiliar1(nbase),auxiliar2(nbase)
+      DOUBLE PRECISION :: sol(nbase,nbase),wsv(10),vsv(10,10),coef
 
-c Inicializamos la matriz C
+! Inicializamos la matriz C
         do i=1,nbase
 	 do j=1, MAXNEIG
 	  C(i,j)=0.d+00
 	 enddo
 	enddo
-c Construimos la matriz A
 
+! Construimos la matriz A
       do i=1,nbase
 	do j=1,nbase
 	 A(i,j)= 0.d+00
@@ -557,7 +576,7 @@ c Construimos la matriz A
 	enddo
       enddo
 
-c Construimos un vector auxiliar para hacer los calculos
+! Construimos un vector auxiliar para hacer los calculos
       do k=1,neignum
        xg=(Xmls(k)-xgau)/hx ; yg=(Ymls(k)-ygau)/hy ;zg=(Zmls(k)-zgau)/hz
 
@@ -610,12 +629,13 @@ c Construimos un vector auxiliar para hacer los calculos
 
 
 
-c Calculamos la inversa de A
-c Para calcularla resolvemos 6 sistemas de ecuaciones
-c Primero triangularizamos la matriz A y hacemos las operaciones por filas
-c sobre la matriz identidad
+! Calculamos la inversa de A
+! Para calcularla resolvemos 6 sistemas de ecuaciones
+! Primero triangularizamos la matriz A y hacemos las operaciones por filas
+! sobre la matriz identidad
+ 
       do i=1,nbase-1
-c Comprobamos que el pivote no sea nulo
+! Comprobamos que el pivote no sea nulo
         if(A(i,i).lt.1.d-06)then
 	  write(6,*)' Pivote nulo',hx,hy,hz,i
 	  pause
@@ -625,7 +645,7 @@ c Comprobamos que el pivote no sea nulo
           do k=i,nbase
             A(j,k)=A(j,k)+coef*A(i,k)
           enddo
-c Aplicamos la operación a las columnas de la identidad
+! Aplicamos la operación a las columnas de la identidad
 	    do icol=1,nbase
             eye(j,icol)= eye(j,icol)+coef*eye(i,icol)
 	    enddo
@@ -642,7 +662,7 @@ c Aplicamos la operación a las columnas de la identidad
        enddo
 
 
-c We calculate C, which is A^-1*B
+! We calculate C, which is A^-1*B
       do i=1,nbase
 	do k=1, neignum
  	 C(i,k)= 0.d+00
@@ -652,7 +672,8 @@ c We calculate C, which is A^-1*B
 	 C(i,k)= C(i,k)*W2(k)
 	enddo
       enddo
-c We calculate I-Pt*C
+
+! We calculate I-Pt*C
       do i=1,neignum
 	do j=1,neignum
 
@@ -729,20 +750,23 @@ c We calculate I-Pt*C
 	return
 	end
 !######################################################################
-	subroutine Back_Substitution(ndim,A,b,x)
+      subroutine Back_Substitution(ndim,A,b,x)
 !######################################################################
-	INTEGER :: i
-        INTEGER, intent(in) :: ndim
-        Double precision :: A(ndim,ndim),b(ndim),x(ndim)
+      implicit none
+
+      INTEGER :: i,j
+      INTEGER, intent(in) :: ndim
+      DOUBLE PRECISION :: suma
+      DOUBLE PRECISION :: A(ndim,ndim),b(ndim),x(ndim)
 
       x(ndim)=b(ndim)/A(ndim,ndim)
       do i=ndim-1,1,-1
         suma=0
-          do j=i+1,ndim
-            suma=suma+A(i,j)*x(j)
-          enddo
+        do j=i+1,ndim
+          suma=suma+A(i,j)*x(j)
+        enddo
         x(i)=(b(i)-suma)/A(i,i)
       enddo
-	return
-	end
+      return
+      end
 

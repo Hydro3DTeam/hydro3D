@@ -4,14 +4,15 @@
 !			Cardiff 2014
 !			werner/wengle type boundary conditions
 !##########################################################################
-        use vars
-        use multidata
-        implicit none
-        integer i,j,k,ib,bound,cond
-        double precision delta,n_x,n_y,n_z,vnor,vtan,dvtan,sub
-        double precision uc,vc,wc,rrey,small,dycell,rycell,vtankr
-        double precision tausub,taupow
-	  double precision aaa,bbb,const1,const2,const3,const4
+      use vars
+      use multidata
+      implicit none
+      
+      INTEGER :: i,j,k,ib,bound,cond
+      DOUBLE PRECISION :: delta,n_x,n_y,n_z,vnor,vtan,dvtan,sub
+      DOUBLE PRECISION :: uc,vc,wc,rrey,small,dycell,rycell,vtankr
+      DOUBLE PRECISION :: tausub,taupow
+      DOUBLE PRECISION :: aaa,bbb,const1,const2,const3,const4
 
         rrey=1.0/Re
         small = 1.e-30
@@ -234,5 +235,5 @@
         end do
 
         return
-        end subroutine wall_function
+      end subroutine wall_function
 !##########################################################################

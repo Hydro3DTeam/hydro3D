@@ -1,17 +1,19 @@
 !#############################################################################
-	subroutine SEM
+      subroutine SEM
 !#############################################################################
-	USE module_SEM
-	USE vars
-	USE multidata
-	USE mpi
-	IMPLICIT NONE
-	DOUBLE PRECISION :: VOL,Ly,Lz,ENNE,rrandom,PI,U0
-	DOUBLE PRECISION :: MAXVSEM,MINVSEM,SIGMA_VALUE
-	INTEGER :: IY,IZ,II,N,I,J,M,IT,IGLOBAL,DIVY,DIVZ
-	INTEGER,allocatable,dimension(:)::lsy,lsz,ley,lez
-	DOUBLE PRECISION :: XMAX,XMIN,YMIN,YMAX,ZMIN,ZMAX,NE_SEM
-	DOUBLE PRECISION:: R(3,3),X_POINT(3),REYNOLDS(6),TEMP(3),UAVE(3)
+      use module_SEM
+      use vars
+      use multidata
+      use mpi
+      implicit none
+      
+      INTEGER :: IY,IZ,II,N,I,J,M,IT,IGLOBAL,DIVY,DIVZ
+      DOUBLE PRECISION :: VOL,Ly,Lz,ENNE,rrandom,PI,U0
+      DOUBLE PRECISION :: MAXVSEM,MINVSEM,SIGMA_VALUE
+      DOUBLE PRECISION :: XMAX,XMIN,YMIN,YMAX,ZMIN,ZMAX,NE_SEM
+      INTEGER,allocatable,dimension(:)::lsy,lsz,ley,lez
+      DOUBLE PRECISION :: R(3,3),X_POINT(3),REYNOLDS(6),TEMP(3),UAVE(3)
+
 !THE BOX DIMENSIONS ARE DIFINED AS [XLENGHT] * [Ly] * [Lz]
 ![DIVX], [DIVY] & [DIVZ] ARE THE NUMBERS OF SPACIAL POINTS.
 	PI = 2*ACOS(0.0D0) 

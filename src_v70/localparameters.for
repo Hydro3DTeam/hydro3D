@@ -1,16 +1,18 @@
 !##########################################################################
-        subroutine localparameters
+      subroutine localparameters
 !##########################################################################
-        use vars
-        use mpi
-        use multidata
-        implicit none
-        integer :: i,j,ib,nicell,njcell,nkcell
-        integer :: buffer_nmax,nmax,buffer_nemax,nemax,ni,nj,nk
-        integer :: buffer_rdiv,maxrdiv,act_ngrid
-        integer :: glevel,gl,mgc_i,mgc_j,mgc_k,pow2
-        real    :: n1,n2,n3
-        integer,allocatable,dimension(:,:) :: b_rv1,b_rv2
+      use vars
+      use mpi
+      use multidata
+      implicit none
+        
+      INTEGER :: i,j,ib,nicell,njcell,nkcell
+      INTEGER :: buffer_nmax,nmax,buffer_nemax,nemax,ni,nj,nk
+      INTEGER :: buffer_rdiv,maxrdiv,act_ngrid
+      INTEGER :: glevel,gl,mgc_i,mgc_j,mgc_k,pow2
+      DOUBLE PRECISION :: n1,n2,n3
+      INTEGER,allocatable,dimension(:,:) :: b_rv1,b_rv2
+        
         nmax=0
         nemax=0
 
@@ -264,5 +266,5 @@
 
 88      format (a,i5,a,i4,a,i4,a,i4)
 
-        end subroutine localparameters
+      end subroutine localparameters
 !##########################################################################

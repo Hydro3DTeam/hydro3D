@@ -1,32 +1,35 @@
 !##########################################################################
-        module module_parmove
+      module module_parmove
 !##########################################################################
-	  double precision a_p,b_p,c_p,sigy_XZ,umax,vmax,wmax
-	  integer :: n_p,n_pnum,XZunit
-	  double precision x_p(300),y_p(300),z_p(300)
-        double precision u_p(300),v_p(300),w_p(300)
-        double precision u_p0(300),v_p0(300),w_p0(300)
-        double precision phi_xp(300),phi_yp(300),phi_zp(300)
-        double precision omga_xp(300),omga_yp(300),omga_zp(300)
-        double precision Fdx_p(300),Fdy_p(300),Fdz_p(300)
-        double precision fx_p(300),fy_p(300),fz_p(300)
-        double precision Fl_p(300),Fm_p(300),ff_p(300),FB_p(300)
-	  double precision,allocatable :: dh_loc(:,:,:),I_nr(:,:,:)
-	  double precision,allocatable :: J_nr(:,:,:),K_nr(:,:,:)
-	  double precision,allocatable :: u_int(:),v_int(:),w_int(:)
-        end module
+      SAVE 
 
+      INTEGER :: n_p,n_pnum,XZunit
+      DOUBLE PRECISION :: a_p,b_p,c_p,sigy_XZ,umax,vmax,wmax
+      DOUBLE PRECISION,dimension(300) :: x_p,y_p,z_p
+      DOUBLE PRECISION,dimension(300) :: u_p,v_p,w_p
+      DOUBLE PRECISION,dimension(300) :: u_p0,v_p0,w_p0
+      DOUBLE PRECISION,dimension(300) :: phi_xp,phi_yp,phi_zp
+      DOUBLE PRECISION,dimension(300) :: omga_xp,omga_yp,omga_zp
+      DOUBLE PRECISION,dimension(300) :: Fdx_p,Fdy_p,Fdz_p
+      DOUBLE PRECISION,dimension(300) :: fx_p,fy_p,fz_p
+      DOUBLE PRECISION,dimension(300) :: Fl_p,Fm_p,ff_p,FB_p
+      DOUBLE PRECISION,allocatable,dimension(:,:,:) :: dh_loc,I_nr
+      DOUBLE PRECISION,allocatable,dimension(:,:,:) :: J_nr,K_nr
+      DOUBLE PRECISION,allocatable,dimension(:):: u_int,v_int,w_int
+
+      end module
 !##########################################################################
-        subroutine particle_ini
+      subroutine particle_ini
 !##########################################################################
-       use module_parmove
-       use mpi
-       use vars
-       use multidata
-       implicit none 
-       integer ::i,sn,l
-       CHARACTER*8  :: chb
-       CHARACTER*25 :: gf
+      use mpi
+      use vars
+      use multidata
+      use module_parmove
+      implicit none 
+       
+      INTEGER ::i,sn,l
+      CHARACTER(8) :: chb
+      CHARACTER(25) :: gf
 
 ! read 'particle.cin' to get the initial information of particles
        open(unit=1,file='particle.cin')
@@ -67,28 +70,28 @@
        end if
 
 88      format (15e19.8)
-       end
-        
+      end 
 !##########################################################################
-        subroutine particle_move
+      subroutine particle_move
 !##########################################################################
-       use module_parmove
-	use mpi
-	use vars
-	use multidata
-        implicit none
-	integer :: ib,ni,nj,nk,ks,ke,i,j,k,l,nxdom,nydom,nzdom
-	integer :: is,ie,js,je,strlen,sn,ndoms,nway,nl
-	double precision ::lx,ly,lz,m_p,G_p,a1,a2,a3,zd,pi,dstard,thetcr
-      double precision ::k1,du,dv,dw,REp,Cd,Cl,Fdx,Fdy,Fdz,Fl,ff,Fd,tt
-      double precision ::ad_p,bd_p,cd_p,du1,dw1,Fdx1,Fdz1,u_ref,d_vel
-      double precision ::b_a,c_a,dvdx,dwdx,dudy,dwdy,dudz,dvdz,kk,u_s
-      double precision ::omga_x,omga_y,omga_z,S_xy,S_xz,S_yz,Fm,Rew,Cw
-      double precision ::Ix,Iy,Iz,FB,nxl,dh,dist,l_dist
-      integer,allocatable,dimension(:)::locdom_p
-!      double precision,allocatable,dimension(:)::fx_p,fy_p,fz_p
-      CHARACTER*8  :: chb
-      CHARACTER*25 :: gf
+      use mpi
+      use vars
+      use multidata
+      use module_parmove
+      implicit none
+	
+      INTEGER :: ib,ni,nj,nk,ks,ke,i,j,k,l,nxdom,nydom,nzdom
+      INTEGER :: is,ie,js,je,strlen,sn,ndoms,nway,nl
+      DOUBLE PRECISION :: lx,ly,lz,m_p,G_p,a1,a2,a3,zd,pi,dstard,thetcr
+      DOUBLE PRECISION :: k1,du,dv,dw,REp,Cd,Cl,Fdx,Fdy,Fdz,Fl,ff,Fd,tt
+      DOUBLE PRECISION :: ad_p,bd_p,cd_p,du1,dw1,Fdx1,Fdz1,u_ref,d_vel
+      DOUBLE PRECISION :: b_a,c_a,dvdx,dwdx,dudy,dwdy,dudz,dvdz,kk,u_s
+      DOUBLE PRECISION :: omga_x,omga_y,omga_z,S_xy,S_xz,S_yz,Fm,Rew,Cw
+      DOUBLE PRECISION :: Ix,Iy,Iz,FB,nxl,dh,dist,l_dist
+      INTEGER,allocatable,dimension(:) :: locdom_p
+!      DOUBLE PRECISION,allocatable,dimension(:)::fx_p,fy_p,fz_p
+      CHARACTER(8) :: chb
+      CHARACTER(25) :: gf
       
 	if (itime.eq.itime_start) then
 		allocate(dh_loc(n_p,27,3)) ; dh_loc=0.d0	!Interpolation function	
@@ -627,17 +630,18 @@
       end do
 
 88      format (15e19.8)
-	end
+      end
 !##########################################################################
-        subroutine particle_feedback
+      subroutine particle_feedback
 !##########################################################################
-        use module_parmove
-        use vars
-        use mpi
-        use multidata
-        implicit none
-        integer :: i,j,k,ib,l,nl,nway
-        double precision :: visc,diff,fre,pi,m_p,dist,l_dist,nxl,dh
+      use module_parmove
+      use vars
+      use mpi
+      use multidata
+      implicit none
+        
+      INTEGER :: i,j,k,ib,l,nl,nway
+      DOUBLE PRECISION :: visc,diff,fre,pi,m_p,dist,l_dist,nxl,dh
 
          pi=4.D0*DATAN(1.D0)
          m_p=1.0/6.0*2.65*pi*a_p*b_p*c_p*1000.0   !particles mass
@@ -785,4 +789,4 @@
         end do   !l=1,n_p 
         end do !ib=1,nbp
         return
-        end subroutine particle_feedback
+      end subroutine particle_feedback

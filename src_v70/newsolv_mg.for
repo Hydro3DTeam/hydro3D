@@ -1,13 +1,14 @@
 !##########################################################################
-        subroutine newsolv_mg
+      subroutine newsolv_mg
 !##########################################################################
-        use vars
-        use mpi
-        use multidata
-        implicit none
-        integer i,j,k,ib
-        double precision :: ppref,buffer_ppref
-        real ( kind =8 )  :: wtimedum
+      use vars
+      use mpi
+      use multidata
+      implicit none
+        
+      INTEGER :: i,j,k,ib
+      DOUBLE PRECISION :: ppref,buffer_ppref
+      DOUBLE PRECISION :: wtimedum
 
         if (L_LSM) then! .or. L_LSMbase)  then
 	    call coeff
@@ -89,18 +90,19 @@
         end if
 
         return
-        end subroutine newsolv_mg
+      end subroutine newsolv_mg
 !##########################################################################
-        subroutine plotres
+      subroutine plotres
 !##########################################################################
-        use vars
-        use mpi
-        use multidata
-        implicit none
-        integer i,j,k,ib,sn
-        double precision resid
-        character*8 :: chb
-        character*25 :: gf,gf2
+      use vars
+      use mpi
+      use multidata
+      implicit none
+        
+      INTEGER :: i,j,k,ib,sn
+      DOUBLE PRECISION :: resid
+      CHARACTER(8) :: chb
+      CHARACTER(25) :: gf,gf2
 
         if ((mod(itime,n_out).eq.0).and.(itime.gt.itime_start)) then
 
@@ -145,5 +147,5 @@
 
 88      format (10e25.8)
 
-        end subroutine plotres
+      end subroutine plotres
 !##########################################################################
