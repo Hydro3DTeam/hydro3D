@@ -1,9 +1,13 @@
-!##############################################################################     
+!#######################################################################
       subroutine boundu
-!	Note 1: prescribed inflow always comes from East
-!	Note 2: wall functions apply in ALL directions/if node inside vicous layer->no slip
-!	Note 3: if LSM/LSMbase are selected, inflow/outflow BCs only applied BELOW surface/lid
-!##############################################################################
+!-----------------------------------------------------------------------       
+!     Prescribes the u (streamwise velocity) boundary condition at each
+!     time step. It provides nurmerous option that are applied to the 
+!     West,East,South,North,Bottom,Top boundaries.
+!     Note 1: prescribed inflow always comes from East
+!     Note 2: wall functions apply in ALL directions/if node inside vicous layer->no slip
+!     Note 3: if LSM/LSMbase are selected, inflow/outflow BCs only applied BELOW surface/lid
+!#######################################################################
       use vars
       use multidata
       use mpi
@@ -443,6 +447,12 @@
       end subroutine
 !#############################################################################
       subroutine boundv
+!     Prescribes the v (spanwise velocity) boundary condition at each
+!     time step. It provides nurmerous option that are applied to the 
+!     West,East,South,North,Bottom,Top boundaries.
+!     Note 1: prescribed inflow always comes from East
+!     Note 2: wall functions apply in ALL directions/if node inside vicous layer->no slip
+!     Note 3: if LSM/LSMbase are selected, inflow/outflow BCs only applied BELOW surface/lid
 !#############################################################################
       use vars
       use multidata
@@ -761,6 +771,12 @@
       end subroutine
 !#############################################################################
       subroutine boundw
+!     Prescribes the w (vertical velocity) boundary condition at each
+!     time step. It provides nurmerous option that are applied to the 
+!     West,East,South,North,Bottom,Top boundaries.
+!     Note 1: prescribed inflow always comes from East
+!     Note 2: wall functions apply in ALL directions/if node inside vicous layer->no slip
+!     Note 3: if LSM/LSMbase are selected, inflow/outflow BCs only applied BELOW surface/lid
 !#############################################################################
       use vars
       use multidata

@@ -1,6 +1,10 @@
-!##########################################################################
-      subroutine convection
-!##########################################################################
+!#######################################################################
+      SUBROUTINE convection
+!-----------------------------------------------------------------------
+!     Numerical method that calculates the convective spatial term of
+!     the Navier-Stokes equations. 
+!     Note 1: convection scheme for 1.Explicit Euler, 2.Adams Bashfort
+!#######################################################################
       use vars
       use multidata
       implicit none
@@ -390,6 +394,6 @@
 
         end do
 
-        return
-        end subroutine convection
+        RETURN
+        END SUBROUTINE convection
 !##########################################################################

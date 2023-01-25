@@ -1,6 +1,10 @@
-!##########################################################################
-      subroutine diffusion
-!##########################################################################
+!#######################################################################
+      SUBROUTINE diffusion
+!-----------------------------------------------------------------------
+!     Numerical method that calculates the diffusion spatial term of 
+!     the Navier-Stokes equations.
+!     Note 1: diffusion scheme for 1.Implicit Euler, 2.Crank-Nicholson
+!#######################################################################
       use vars
       use mpi
       use multidata

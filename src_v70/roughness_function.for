@@ -210,8 +210,8 @@ C determine roughness geometry function
 
 ! determine porosity 
       rough_dom(ib)%rough=0.0
-	rough_dom(ib)%irough=0
-	maxk=0
+      rough_dom(ib)%irough=0
+      maxk=0
 
       do i=1,ni
 	  do j=1,nj
@@ -284,9 +284,9 @@ C determine roughness geometry function
                 dom(ib)%ustar(i-1,j,k)=0.0
                 dom(ib)%vstar(i,j-1,k)=0.0
                 dom(ib)%wstar(i,j,k-1)=0.0
-                dom(ib)%ustar(i,j,k)=0.
-                dom(ib)%vstar(i,j,k)=0.
-                dom(ib)%wstar(i,j,k)=0.
+                dom(ib)%ustar(i,j,k)=0.d0
+                dom(ib)%vstar(i,j,k)=0.d0
+                dom(ib)%wstar(i,j,k)=0.d0
               end if
             end do
           end do

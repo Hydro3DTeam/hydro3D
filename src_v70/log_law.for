@@ -1,9 +1,9 @@
-!##########################################################################
+!########################################################################
       subroutine log_law(bound,cond)
 !			Bruño Fraga Bugallo
 !			Cardiff 2016
 !			Schumman type boundary conditions
-!##########################################################################
+!########################################################################
       use vars
       use multidata
       implicit none
@@ -40,8 +40,8 @@
                   	ustar = kappa*vtan / log(30.d0*delta/fric)
                         yplus = delta*ustar/rrey
 			elseif (cond.eq.61) then				!smooth wall
-				conv  = 1.
-		            ustar = 1. 
+			     conv  = 1.d0
+		            ustar = 1.d0
 		            icont = 0
 		            tkmax = 10
 		            do while ((conv.gt.(1.d-3)).and.
@@ -84,8 +84,8 @@
                   	ustar = kappa*vtan / log(30.d0*delta/fric)
                         yplus = delta*ustar/rrey
 			elseif (cond.eq.61) then				!smooth wall
-				conv  = 1.
-		            ustar = 1. 
+			     conv  = 1.d0
+		            ustar = 1.d0 
 		            icont = 0
 		            tkmax = 10
 		            do while ((conv.gt.(1.d-3)).and.
@@ -129,8 +129,8 @@
                   	ustar = kappa*vtan / log(30.d0*delta/fric)
                         yplus = delta*ustar/rrey
 			elseif (cond.eq.61) then				!smooth wall
-				conv  = 1.
-		            ustar = 1. 
+			     conv  = 1.d0
+		            ustar = 1.d0 
 		            icont = 0
 		            tkmax = 10
 		            do while ((conv.gt.(1.d-3)).and.
@@ -220,8 +220,8 @@
                   	ustar = kappa*vtan / log(30.d0*delta/fric)
                         yplus = delta*ustar/rrey
 			elseif (cond.eq.61) then				!smooth wall
-				conv  = 1.
-		            ustar = 1. 
+			     conv  = 1.d0
+		            ustar = 1.d0 
 		            icont = 0
 		            tkmax = 10
 
@@ -266,8 +266,8 @@
                   	ustar = kappa*vtan / log(30.d0*delta/fric)
                         yplus = delta*ustar/rrey
 			elseif (cond.eq.61) then				!smooth wall
-				conv  = 1.
-		            ustar = 1. 
+			     conv  = 1.d0
+		            ustar = 1.d0 
 		            icont = 0
 		            tkmax = 10
 		            do while ((conv.gt.(1.d-3)).and.

@@ -1,15 +1,21 @@
-!######################################################################
-      subroutine bound_LSM(op)
-!######################################################################
+!#######################################################################
+      SUBROUTINE bound_LSM(op)
+!-----------------------------------------------------------------------
+!     Prescribes the phi (free-surface level), dens (density), mu
+!     (Dynamic viscosity) at the different boundaries of the domain 
+!     at each time-step.
+!     NOTE 1: Certain boundaries are time dependent. (Solitary waves Aristos)
+!     NOTE 2: Periodic boundaries share respective their variables.
+!#######################################################################
       use vars
       use LSM
       use multidata
       implicit none
 
       INTEGER :: I,J,K,np,nq,nr,op,ib,ipl
-      DOUBLE PRECISION, pointer, dimension(:,:,:) :: FI
+      DOUBLE PRECISION,pointer,dimension(:,:,:) :: FI
       DOUBLE PRECISION :: H_s,k_w,c,h_wave,tau
-      DOUBLE PRECISION,parameter :: PI=4*atan (1.0)
+      DOUBLE PRECISION,parameter :: PI=4*atan(1.0)
 
         do ib=1,nbp
 
@@ -134,5 +140,5 @@
 	call exchange(op) 
 
       RETURN
-      end subroutine bound_LSM
-!#####################################################################
+      END SUBROUTINE bound_LSM
+!#######################################################################

@@ -1,6 +1,14 @@
-!##########################################################################
-        subroutine alloc_dom
-!##########################################################################
+!#######################################################################
+        SUBROUTINE alloc_dom
+!-----------------------------------------------------------------------
+!       Check the Local Mesh Refinement (LMR) set-up between each 
+!       subdomain and its neighborouring subdomains.
+!       The LMR difference between the face,edge and corner of a specific 
+!       subdomain and its neighbours can not be superior to 1 lvl
+!       Example: LMR: 1 -> 2  (Correct!)
+!                LMR: 2 -> 4  (Correct!)
+!                LMR: 1 -> 4  (Wrong!)
+!#######################################################################
         use multidata
         use vars
         use mpi
@@ -72,9 +80,9 @@
 
            if (sync_dir.eq.1)  then
 
-!======================================================================
+!=======================================================================
 !******* Corner-Neighbors
-!======================================================================
+!=======================================================================
            do dir=1,4
 
            select case (dir)
@@ -130,9 +138,9 @@
            end if
 
            end do
-!======================================================================
+!=======================================================================
 !******* Edge-Neighbors
-!======================================================================
+!=======================================================================
            do dir=1,6
 
            select case (dir)
@@ -194,8 +202,6 @@
            end if
 
            end do
-!======================================================================
-!======================================================================
            end if !if (sync_dir.eq.1)  then
         end do
         end do
@@ -278,11 +284,17 @@
 
 !        call datainfo
 
-        return
-        end 
-!##########################################################################
-        subroutine read_mdmap
-!##########################################################################
+        RETURN
+        END SUBROUTINE alloc_dom
+!#######################################################################
+        SUBROUTINE read_mdmap
+!-----------------------------------------------------------------------
+!       Read the mdmap.cin (multi-domains map) and allocate to the
+!       processors their respective subdomain IDs. Ensure that all the
+!       subdomains have been allocated.
+!       Open the output.dat file where the simulation screem will be
+!       written out. 
+!#######################################################################
         use multidata
         use vars
         use mpi
@@ -410,11 +422,17 @@
 
         call MPI_BARRIER (MPI_COMM_WORLD,ierr)
 
-        return
-        end subroutine read_mdmap
-!##########################################################################
-        subroutine read_infodom
-!##########################################################################
+        RETURN
+        END SUBROUTINE read_mdmap
+!#######################################################################
+        SUBROUTINE read_infodom
+!-----------------------------------------------------------------------
+!       Reads infodom.cin (information-domain) store each subdomains
+!       spatial limits, Local Mesh Refinement (LMR). Check that all the
+!       spatial limit of the subdomains are correct, if the face,edge
+!       and corner they individually share with their neighbour are at
+!       the same location.
+!#######################################################################
         use multidata
         use vars
         use mpi
@@ -530,7 +548,7 @@
            dom(ib)%kprev= -1
            dom(ib)%knext= -1
 
-!================== I-PREVIOUS NEIGHBOR ===================================
+!================== I-PREVIOUS NEIGHBOR ================================
            say=0; 
            do i=0,ndoms-1
               if(i.ne.dom_id(ib)) then
@@ -554,7 +572,7 @@
               stop
            end if
 
-!================== I-NEXT NEIGHBOR ===================================
+!================== I-NEXT NEIGHBOR ====================================
            say=0; 
            do i=0,ndoms-1
               if(i.ne.dom_id(ib)) then
@@ -579,7 +597,7 @@
            end if
 
 
-!================== J-PREVIOUS NEIGHBOR ===================================
+!================== J-PREVIOUS NEIGHBOR ================================
            say=0; 
            do i=0,ndoms-1
               if(i.ne.dom_id(ib)) then
@@ -603,7 +621,7 @@
               stop
            end if
 
-!================== J-NEXT NEIGHBOR ===================================
+!================== J-NEXT NEIGHBOR ====================================
            say=0; 
            do i=0,ndoms-1
               if(i.ne.dom_id(ib)) then
@@ -628,7 +646,7 @@
            end if
 
 
-!================== K-PREVIOUS NEIGHBOR ===================================
+!================== K-PREVIOUS NEIGHBOR ================================
            say=0; 
            do i=0,ndoms-1
               if(i.ne.dom_id(ib)) then
@@ -652,7 +670,7 @@
               stop
            end if
 
-!================== K-NEXT NEIGHBOR ===================================
+!================== K-NEXT NEIGHBOR ====================================
            say=0; 
            do i=0,ndoms-1
               if(i.ne.dom_id(ib)) then
@@ -676,16 +694,16 @@
               stop
            end if
 
-!==========================================================================
+!=======================================================================
 
 !        write (6,5501) dom_id(ib),dom(ib)%iprev,dom(ib)%inext,
 !     & dom(ib)%jprev,dom(ib)%jnext,dom(ib)%kprev,dom(ib)%knext
 
         end do
 
-!**************************************************************************
+!***********************************************************************
 !============= SET CORNER NEIGHBORS
-!**************************************************************************
+!***********************************************************************
         do ib=1,nbp
 
            dom(ib)%corprev1= -1
@@ -816,9 +834,9 @@
 !     & dom(ib)%cornext2,dom(ib)%cornext3,dom(ib)%cornext4
         end do
 
-!**************************************************************************
+!***********************************************************************
 !============= SET EDGE NEIGHBORS
-!**************************************************************************
+!***********************************************************************
         do ib=1,nbp
 
            dom(ib)%edgprev1= -1
@@ -1034,9 +1052,9 @@
 !     & dom(ib)%edgnext6
 
         end do
-!**************************************************************************
+!***********************************************************************
         call MPI_BARRIER (MPI_COMM_WORLD,ierr)
-!**************************************************************************
+!***********************************************************************
         do ib=1,nbp
 
            dom(ib)%per_ip= -1
@@ -1046,7 +1064,7 @@
            dom(ib)%per_kp= -1
            dom(ib)%per_kn= -1
 
-!================== I-PREVIOUS NEIGHBOR ===================================
+!================== I-PREVIOUS NEIGHBOR ================================
         if(dom(ib)%bc_west.eq.5 .and. dom(ib)%iprev.lt.0) then
 
            say=0; 
@@ -1102,7 +1120,7 @@
 
 !           write (6,5503) dom_id(ib),dom(ib)%per_in
         end if
-!================== J-PREVIOUS NEIGHBOR ===================================
+!================== J-PREVIOUS NEIGHBOR ================================
         if(dom(ib)%bc_south.eq.5 .and. dom(ib)%jprev.lt.0) then
 
            say=0; 
@@ -1130,7 +1148,7 @@
 
 !           write (6,5504) dom_id(ib),dom(ib)%per_jp
         end if
-!================== J-NEXT NEIGHBOR ===================================
+!================== J-NEXT NEIGHBOR ====================================
         if(dom(ib)%bc_north.eq.5 .and. dom(ib)%jnext.lt.0) then
 
            say=0; 
@@ -1158,7 +1176,7 @@
 
 !           write (6,5505) dom_id(ib),dom(ib)%per_jn
         end if
-!================== K-PREVIOUS NEIGHBOR ===================================
+!================== K-PREVIOUS NEIGHBOR ================================
         if(dom(ib)%bc_bottom.eq.5 .and. dom(ib)%kprev.lt.0) then
 
            say=0; 
@@ -1186,7 +1204,7 @@
 
 !           write (6,5506) dom_id(ib),dom(ib)%per_kp
         end if
-!================== K-NEXT NEIGHBOR ===================================
+!================== K-NEXT NEIGHBOR ====================================
         if(dom(ib)%bc_top.eq.5 .and. dom(ib)%knext.lt.0) then
 
            say=0; 
@@ -1214,12 +1232,10 @@
 
 !           write (6,5507) dom_id(ib),dom(ib)%per_kn
         end if
-!==========================================================================
+!=======================================================================
         end do
 
 
-!**************************************************************************
-!**************************************************************************
 
            PERIODIC=.false.
            do ib=1,nbp
@@ -1230,13 +1246,12 @@
               end if
            end do
 
-!**************************************************************************
+!***********************************************************************
         call MPI_BARRIER (MPI_COMM_WORLD,ierr)
         call MPI_BARRIER (MPI_COMM_WORLD,ierr)
-!**************************************************************************
+!***********************************************************************
 
 
-!**************************************************************************
         do ib=1,nbp
 
            dom(ib)%coarse_ng =.false.
@@ -1418,7 +1433,7 @@
            end if
         end do
 
-!**************************************************************************
+!***********************************************************************
 
         if (myrank.eq.0) then
            write (6,*) '===== end of connectivity information ===== '
@@ -1454,11 +1469,16 @@
 !	zst=max(zst,zs2)
 !	zen=min(zen,ze2)
 
-        return
-        end subroutine read_infodom
-!##########################################################################
-        subroutine datainfo
-!##########################################################################
+        RETURN
+        END SUBROUTINE read_infodom
+!#######################################################################
+        SUBROUTINE datainfo
+!-----------------------------------------------------------------------
+!       This subroutine can be called in the subroutine alloc_dom. It is
+!       not automaically performed and was essentially used to check the
+!       the neighbour set-up of each subdomain during the early domain
+!       implementation into Hydro3D.
+!#######################################################################
         use multidata
         use mpi
         implicit none
@@ -1510,6 +1530,6 @@
         end do
 
 
-        return
-        end subroutine datainfo
-!##########################################################################
+        RETURN
+        END SUBROUTINE datainfo
+!#######################################################################

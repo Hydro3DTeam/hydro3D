@@ -1,28 +1,25 @@
 !#######################################################################
-        subroutine update_mean
-!
-!     calculate averaged values of u, v, w, (p),
-!                                  u'u', v'v', w'w',
-!                                  u'v', u'w', v'w'
-!
-!     installed options (for constant grid spacing in aver. directions):
-!
-!     only time averaging
+      SUBROUTINE update_mean
+!-----------------------------------------------------------------------
+!     Calculates and stores the first and second time averaged variables
+!     For the following field: 1.Velocity field: u,v,w
+!                              2.Active and Passive Scalar field: S                              
+!                              3.Viscosity field: vis
 !#######################################################################
-        use multidata
-        use vars
-        implicit none
+      use multidata
+      use vars
+      implicit none
 
-        INTEGER :: i,j,k,ib
-!       DOUBLE PRECISION :: facp1,facm1,facp2,facm2
-        DOUBLE PRECISION :: ufuf,vfvf,wfwf,ufvf,ufwf,vfwf
-        DOUBLE PRECISION :: ucf,vcf,wcf,pfpf,TfTf,SfSf,SfUf,SfVf,SfWf
-        DOUBLE PRECISION :: dudx,dudy,dudz,dvdx,dvdy,dvdz,dwdx,dwdy,dwdz
-	 DOUBLE PRECISION :: uf_ip1,uf_im1,uf_jp1,uf_jm1,uf_kp1,uf_km1
-	 DOUBLE PRECISION :: vf_ip1,vf_im1,vf_jp1,vf_jm1,vf_kp1,vf_km1
-	 DOUBLE PRECISION :: wf_ip1,wf_im1,wf_jp1,wf_jm1,wf_kp1,wf_km1
+      INTEGER :: i,j,k,ib
+!     DOUBLE PRECISION :: facp1,facm1,facp2,facm2
+      DOUBLE PRECISION :: ufuf,vfvf,wfwf,ufvf,ufwf,vfwf
+      DOUBLE PRECISION :: ucf,vcf,wcf,pfpf,TfTf,SfSf,SfUf,SfVf,SfWf
+      DOUBLE PRECISION :: dudx,dudy,dudz,dvdx,dvdy,dvdz,dwdx,dwdy,dwdz
+      DOUBLE PRECISION :: uf_ip1,uf_im1,uf_jp1,uf_jm1,uf_kp1,uf_km1
+      DOUBLE PRECISION :: vf_ip1,vf_im1,vf_jp1,vf_jm1,vf_kp1,vf_km1
+      DOUBLE PRECISION :: wf_ip1,wf_im1,wf_jp1,wf_jm1,wf_kp1,wf_km1
 
-        do ib=1,nbp
+      do ib=1,nbp
 
 !.....For first order moments
         if (ctime.ge.t_start_averaging1) then
@@ -326,10 +323,15 @@
         end do
 
         end do
-
-        end subroutine update_mean
+        
+        RETURN
+        END SUBROUTINE update_mean
 !#######################################################################
-        subroutine add_noise(fnoise)
+        SUBROUTINE add_noise(fnoise)
+!-----------------------------------------------------------------------
+!       When noise > 0.0 (control.cin)
+!       Add noise in the INITIAL velocity field only at the beginning of
+!       the simulation. It calls the FUNCTION random_number
 !#######################################################################
         use vars
         use multidata
@@ -409,18 +411,19 @@
         end do
 
         end do
-
-        end subroutine add_noise
+        
+        RETURN
+        END SUBROUTINE add_noise
 !#######################################################################
-        function random_number_normal(mean,sigma) result( fn_val )
-
+        FUNCTION random_number_normal(mean,sigma) result( fn_val )
+!-----------------------------------------------------------------------
 !       Generate random numbers
 !       with a normal distribution with given mean and standard deviaton.
 !
 !       Generate a random normal deviate using the polar method.
-!       Reference: Marsaglia,G. & Bray,T.A. 'A convenient method for generating
-!                  normal variables', Siam Rev., vol.6, 260-264, 1964.
-!       (source from internet)
+!       Reference: 
+!         Marsaglia,G. & Bray,T.A. 'A convenient method for generating
+!         normal variables', Siam Rev., vol.6, 260-264, 1964.
 !#######################################################################
         implicit none
 
@@ -458,7 +461,6 @@
 !.....set mean and standart deviation
         fn_val = fn_val * sigma + mean
 
-        return
-
-        end function random_number_normal
+        RETURN
+        END FUNCTION random_number_normal
 !#######################################################################

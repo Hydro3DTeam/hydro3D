@@ -1,9 +1,59 @@
-!######################################################################
-      Double precision function phi_r1smth(r)
-!######################################################################
+!#######################################################################
+      DOUBLE PRECISION FUNCTION dh(dx,dy,dz,xij,yij,zij,Xl,Yl,Zl,order)
+!-----------------------------------------------------------------------
+!     The delta interpolation function menu to select the appriopriate
+!     interpolation order. This case number is prescribed in in_geom.cin
+!
+!     PAPER: Yang,X., Zhang,X., Li,Z., & He, G.W.(2009). A smoothing
+!     technique for discrete delta functions with application to 
+!     immersed boundary method in moving boundary simulations. JCP
+!#######################################################################
+      implicit none 
+
+      INTEGER,intent(in) :: order
+      DOUBLE PRECISION,intent(in) :: dx,dy,dz,xij,yij,zij,Xl,Yl,Zl
+      DOUBLE PRECISION :: phi_r2smth,phi_r3smth,phi_r4
+      DOUBLE PRECISION :: phi_r3,phi_r1smth,phi_r4smth
+
+      SELECT CASE (order)
+
+         CASE (1)
+      dh =  phi_r1smth((xij-Xl)/dx) 
+     & * phi_r1smth((yij-Yl)/dy) * phi_r1smth((zij-Zl)/dz)
+         CASE (2)
+      dh =   phi_r2smth((xij-Xl)/dx) 
+     & * phi_r2smth((yij-Yl)/dy) * phi_r2smth((zij-Zl)/dz)
+         CASE (3)
+       dh =   phi_r3smth((xij-Xl)/dx) 
+     &   * phi_r3smth((yij-Yl)/dy) * phi_r3smth((zij-Zl)/dz)
+         CASE (4)
+       dh =   phi_r4smth((xij-Xl)/dx) 
+     &   * phi_r4smth((yij-Yl)/dy) * phi_r4smth((zij-Zl)/dz)
+         CASE (5)
+       dh =   phi_r3((xij-Xl)/dx) 
+     &   * phi_r3((yij-Yl)/dy) * phi_r3((zij-Zl)/dz)
+         CASE (6)
+      dh =   phi_r4((xij-Xl)/dx)
+     &   * phi_r4((yij-Yl)/dy) * phi_r4((zij-Zl)/dz)
+      Case default
+
+        WRITE(6,'(a)')  '===ERROR==='
+        WRITE(6,'(a)')' order of delta function is not selected '
+        STOP
+
+      END SELECT
+
+      RETURN
+      END FUNCTION dh
+!#######################################################################
+      DOUBLE PRECISION FUNCTION phi_r1smth(r)
+!-----------------------------------------------------------------------
+!     Case (1)
+!     Smooth 2-point function (phi1* - Yang et al, 2009 - Eq.18)
+!#######################################################################
       implicit none 
       
-      DOUBLE PRECISION, intent(in) :: r
+      DOUBLE PRECISION,intent(in) :: r
       DOUBLE PRECISION :: PI,abr
       
       PI = 4.D0*DATAN(1.D0)
@@ -16,11 +66,15 @@
       ELSE IF ((abr.lt.0.5).and.(abr.ge.0.0)) THEN
         phi_r1smth = 3./4.-abr**2
       END IF
+      
       RETURN
-      End Function
-!######################################################################
-      Double precision function phi_r2smth(r)
-!######################################################################
+      END FUNCTION phi_r1smth
+!#######################################################################
+      DOUBLE PRECISION FUNCTION phi_r2smth(r)
+!-----------------------------------------------------------------------
+!     Case (2)
+!     Smooth 4-point cosine function (phi2* - Yang et al, 2009 - Eq.19)
+!#######################################################################
       implicit none 
       
       DOUBLE PRECISION, intent(in) :: r
@@ -45,67 +99,13 @@
       END IF
 
       RETURN
-      End Function
-!######################################################################
-      Double precision function phi_r3(r)
-!######################################################################
-      implicit none 
-      
-      DOUBLE PRECISION, intent(in) :: r
-
-      IF (r.le.-1.5) THEN
-        phi_r3 = 0.0
-      ELSE IF ((r.ge.-1.5).and.(r.le.-0.5)) THEN
-        phi_r3 = 1.0/6.0*(5.0+3.0*r-sqrt(-3.0*(1.0+r)**2+1.0))
-      ELSE IF ((r.ge.-0.5).and.(r.le.0.0)) THEN
-        phi_r3 = 1.0/3.0*(1.0+sqrt(-3.0*r**2+1.0))
-      ELSE IF ((r.ge.0.0).and.(r.le.0.5)) THEN
-        phi_r3 = 1.0/3.0*(1.0+sqrt(-3.0*r**2+1.0))
-      ELSE IF ((r.ge.0.5).and.(r.le.1.5)) THEN
-        phi_r3 = 1.0/6.0*(5.0-3.0*r-sqrt(-3.0*(1.0-r)**2+1.0))
-      ELSE IF (r.ge.1.5) THEN
-        phi_r3 = 0.0
-      END IF
-
-      RETURN
-      End Function
-!######################################################################
-      Double precision function phi_r3smth2(r)
-!######################################################################
-      implicit none 
-      
-      DOUBLE PRECISION, intent(in) :: r
-      DOUBLE PRECISION :: PI
-      
-      PI = 4.D0*DATAN(1.D0)
-      
-      IF (r.le.-2.0) THEN
-        phi_r3smth2 = 0.0
-      ELSE IF ((r.ge.-2.0).and.(r.le.-1.0)) THEN
-        phi_r3smth2 = 55.0/48.0 - sqrt(3.0)*pi/108.0 + 13.0*r/12.0
-     &+ r**2/4.0 + (-2.0*r-3.0)/48.0*sqrt(-12.0*r**2-36.0*r-23.0)
-     &+ sqrt(3.0)/36.0*ASIN(sqrt(3.0)/2.0*(-2.0*r-3.0))
-      ELSE IF ((r.ge.-1.0).and.(r.le.0.0)) THEN
-        phi_r3smth2 = 17.0/48.0 + sqrt(3.0)*pi/108.0 - r/4.0
-     &- r**2/4.0 + (2.0*r+1.0)/16.0*sqrt(-12.0*r**2-12.0*r+1.0)
-     &- sqrt(3.0)/12.0*ASIN(sqrt(3.0)/2.0*(-2.0*r-1.0))
-      ELSE IF ((r.ge.0.0).and.(r.le.1.0)) THEN
-        phi_r3smth2 = 17.0/48.0 + sqrt(3.0)*pi/108.0 + r/4.0
-     &- r**2/4.0 + (-2.0*r+1.0)/16.0*sqrt(-12.0*r**2+12.0*r+1.0)
-     &- sqrt(3.0)/12.0*ASIN(sqrt(3.0)/2.0*(2.0*r-1.0))
-      ELSE IF ((r.ge.1.0).and.(r.le.2.0)) THEN
-        phi_r3smth2 = 55.0/48.0 - sqrt(3.0)*pi/108.0 - 13.0*r/12.0
-     &+ r**2/4.0 + (2.0*r-3.0)/48.0*sqrt(-12.0*r**2+36.0*r-23.0)
-     &+ sqrt(3.0)/36.0*ASIN(sqrt(3.0)/2.0*(2.0*r-3.0))
-      ELSE IF (r.ge.2.0) THEN
-        phi_r3smth2 = 0.0
-      END IF
-
-      RETURN
-      End Function
-!######################################################################
-      Double precision function phi_r3smth(r)
-!######################################################################
+      END FUNCTION phi_r2smth
+!#######################################################################
+      DOUBLE PRECISION FUNCTION phi_r3smth(r)
+!-----------------------------------------------------------------------
+!     Case (3)
+!     Smooth 2-point function (phi3* - Yang et al, 2009 - Eq.20)
+!#######################################################################
       implicit none 
 
       DOUBLE PRECISION, intent(in) :: r
@@ -137,33 +137,13 @@
       END IF
 
       RETURN
-      End Function
-!######################################################################
-      Double precision function phi_r4(r)
-!######################################################################
-      implicit none 
-      
-      DOUBLE PRECISION, intent(in) :: r
-      
-      IF (r.le.-2.0) THEN
-        phi_r4 = 0.0
-      ELSE IF ((r.ge.-2.0).and.(r.le.-1.0)) THEN
-        phi_r4 = 1.0/8.0*(5.0+2.0*r-sqrt(-7.0-12.0*r-4.0*r**2))
-      ELSE IF ((r.ge.-1.0).and.(r.le.0.0)) THEN
-        phi_r4 = 1.0/8.0*(3.0+2.0*r+sqrt(1.0-4.0*r-4.0*r**2))
-      ELSE IF ((r.ge.0.0).and.(r.le.1.0)) THEN
-        phi_r4 = 1.0/8.0*(3.0-2.0*r+sqrt(1.0+4.0*r-4.0*r**2))
-      ELSE IF ((r.ge.1.0).and.(r.le.2.0)) THEN
-        phi_r4 = 1.0/8.0*(5.0-2.0*r-sqrt(-7.0+12.0*r-4.0*r**2))
-      ELSE IF (r.ge.2.0) THEN
-        phi_r4 = 0.0
-      END IF
-
-      RETURN
-      End Function
-!######################################################################
+      END FUNCTION phi_r3smth
+!#######################################################################
       Double precision function phi_r4smth(r)
-!######################################################################
+!-----------------------------------------------------------------------
+!     Case (4)
+!     Smooth 4-point function (phi4 - Yang et al, 2009 - Eq.21)
+!#######################################################################
       implicit none
 
       DOUBLE PRECISION, intent(in) :: r
@@ -184,55 +164,72 @@
       ELSE IF (ar.ge.2.5) THEN
         phi_r4smth = 0.0
       END IF
+
       RETURN
-      End Function
-!######################################################################
-      Double precision function dh(dx,dy,dz,xij,yij,zij,Xl,Yl,Zl,order)
-!######################################################################
+      END FUNCTION phi_r4smth
+!#######################################################################
+      DOUBLE PRECISION FUNCTION phi_r3(r)
+!-----------------------------------------------------------------------
+!     Case (5)
+!     3-point function (phi1* - Yang et al, 2009 - Eq.16)
+!#######################################################################
       implicit none 
+      
+      DOUBLE PRECISION, intent(in) :: r
 
-      INTEGER, intent(in) :: order
-      DOUBLE PRECISION,intent(in) :: dx,dy,dz,xij,yij,zij,Xl,Yl,Zl
-      DOUBLE PRECISION :: phi_r2smth,phi_r3smth,phi_r4
-      DOUBLE PRECISION :: phi_r3,phi_r1smth,phi_r4smth
-
-      SELECT CASE (order)
-
-         CASE (1)
-      dh =  phi_r1smth((xij-Xl)/dx) 
-     & * phi_r1smth((yij-Yl)/dy) * phi_r1smth((zij-Zl)/dz)
-         CASE (2)
-      dh =   phi_r2smth((xij-Xl)/dx) 
-     & * phi_r2smth((yij-Yl)/dy) * phi_r2smth((zij-Zl)/dz)
-         CASE (3)
-       dh =   phi_r3smth((xij-Xl)/dx) 
-     &   * phi_r3smth((yij-Yl)/dy) * phi_r3smth((zij-Zl)/dz)
-         CASE (4)
-       dh =   phi_r4smth((xij-Xl)/dx) 
-     &   * phi_r4smth((yij-Yl)/dy) * phi_r4smth((zij-Zl)/dz)
-         CASE (5)
-       dh =   phi_r3((xij-Xl)/dx) 
-     &   * phi_r3((yij-Yl)/dy) * phi_r3((zij-Zl)/dz)
-         CASE (6)
-      dh =   phi_r4((xij-Xl)/dx)
-     &   * phi_r4((yij-Yl)/dy) * phi_r4((zij-Zl)/dz)
-      Case default
-
-         print*, '===ERROR==='
-         print*, ' order of delta function is not selected '
-          STOP
-
-      End Select
+      IF (r.le.-1.5) THEN
+        phi_r3 = 0.0
+      ELSE IF ((r.ge.-1.5).and.(r.le.-0.5)) THEN
+        phi_r3 = 1.0/6.0*(5.0+3.0*r-sqrt(-3.0*(1.0+r)**2+1.0))
+      ELSE IF ((r.ge.-0.5).and.(r.le.0.0)) THEN
+        phi_r3 = 1.0/3.0*(1.0+sqrt(-3.0*r**2+1.0))
+      ELSE IF ((r.ge.0.0).and.(r.le.0.5)) THEN
+        phi_r3 = 1.0/3.0*(1.0+sqrt(-3.0*r**2+1.0))
+      ELSE IF ((r.ge.0.5).and.(r.le.1.5)) THEN
+        phi_r3 = 1.0/6.0*(5.0-3.0*r-sqrt(-3.0*(1.0-r)**2+1.0))
+      ELSE IF (r.ge.1.5) THEN
+        phi_r3 = 0.0
+      END IF
 
       RETURN
-      End Function
-!######################################################################
-!######################################################################
-      subroutine ShapeFunction_MLS(UorV,L,ib)
-! MOVING LEAST-SQUARE methodology
-! Implemented by Pablo (2015)
-! Algorithm from Ramirez and Nogueira (University of A Coruna)
-!######################################################################
+      END FUNCTION  phi_r3
+!#######################################################################
+      DOUBLE PRECISION FUNCTION phi_r4(r)
+!-----------------------------------------------------------------------
+!     Case (6)
+!     4-point function (phi4 - Yang et al, 2009 - Eq.17)
+!#######################################################################
+      implicit none 
+      
+      DOUBLE PRECISION, intent(in) :: r
+      
+      IF (r.le.-2.0) THEN
+        phi_r4 = 0.0
+      ELSE IF ((r.ge.-2.0).and.(r.le.-1.0)) THEN
+        phi_r4 = 1.0/8.0*(5.0+2.0*r-sqrt(-7.0-12.0*r-4.0*r**2))
+      ELSE IF ((r.ge.-1.0).and.(r.le.0.0)) THEN
+        phi_r4 = 1.0/8.0*(3.0+2.0*r+sqrt(1.0-4.0*r-4.0*r**2))
+      ELSE IF ((r.ge.0.0).and.(r.le.1.0)) THEN
+        phi_r4 = 1.0/8.0*(3.0-2.0*r+sqrt(1.0+4.0*r-4.0*r**2))
+      ELSE IF ((r.ge.1.0).and.(r.le.2.0)) THEN
+        phi_r4 = 1.0/8.0*(5.0-2.0*r-sqrt(-7.0+12.0*r-4.0*r**2))
+      ELSE IF (r.ge.2.0) THEN
+        phi_r4 = 0.0
+      END IF
+
+      RETURN
+      END FUNCTION phi_r4
+!#######################################################################
+      SUBROUTINE ShapeFunction_MLS(UorV,L,ib)
+!-----------------------------------------------------------------------        
+!     MOVING LEAST-SQUARE methodology needs to be selected in ibm.for
+!     Implemented by Pablo (2015)
+!     Algorithm from Ramirez and Nogueira (University of A Coruna)
+!     
+!     PAPER: Ouro,P., Cea,L., Ramírez,L., & Nogueira,X. (2016). An 
+!     immersed boundary method for unstructured meshes in depth averaged
+!     shallow water models. International JNMF.
+!#######################################################################
       use vars
       use multidata
       use mpi
@@ -424,12 +421,15 @@
 	  IF(UorV.eq.2) KmaxV(L)=MLS_neignum(L)
 	  IF(UorV.eq.3) KmaxW(L)=MLS_neignum(L)
 
-	return
-	end
-!######################################################################
-      subroutine kerneltododer(W,dX1,dY1,dZ1,difx,dify,difz,hx,hy,hz,
+      RETURN
+      END SUBROUTINE ShapeFunction_MLS
+!#######################################################################
+      SUBROUTINE kerneltododer(W,dX1,dY1,dZ1,difx,dify,difz,hx,hy,hz,
      &  neignum,kwx1,kwx2,kwy1,kwy2,kwz1,kwz2,MAXNEIG)
-!######################################################################
+!-----------------------------------------------------------------------
+!     This kernel function provides a neightbour weight distribution for
+!     the calculation of the MLS shape functions vector.
+!#######################################################################
       use mpi
       implicit none
 
@@ -454,7 +454,7 @@
 	 sx(j)=0.0d+00   ;  sy(j)=0.0d+00;  sz(j)=0.0d+00
       enddo
 
-! Primero cogemos las distancias que nos interesan
+! First, we eveluate the smoothing length:
       do j=1, neignum
 	sx(j)=dabs(difx(j)) ; sy(j)=dabs(dify(j)); sz(j)=dabs(difz(j))
 	dmx=2.0d+00*hx 	; dmy=2.0d+00*hy 	;  dmz=2.0d+00*hz
@@ -527,14 +527,16 @@
 	endif
       enddo !j-loop
 
-	return
-	end
-!######################################################################
-      subroutine forma3Dder(FF,W2,dX2,dY2,dZ2,neignum,Xmls,Ymls,Zmls
+      RETURN
+      END SUBROUTINE kerneltododer
+!#######################################################################
+      SUBROUTINE forma3Dder(FF,W2,dX2,dY2,dZ2,neignum,Xmls,Ymls,Zmls
      &  ,xgau,ygau,zgau,hx,hy,hz,
      &   dFFX,dFFY,dFFZ,ddFFXX,ddFFXY,ddFFXZ,ddFFYY,ddFFYZ,ddFFZZ,
      &   MAXNEIG,nbase)
-!######################################################################
+!-----------------------------------------------------------------------
+!     Solves the moment matrix for the MLS interpolation functions.
+!#######################################################################
       implicit none
       
       INTEGER, intent(in) :: neignum,MAXNEIG,nbase
@@ -556,14 +558,14 @@
       DOUBLE PRECISION :: auxiliar1(nbase),auxiliar2(nbase)
       DOUBLE PRECISION :: sol(nbase,nbase),wsv(10),vsv(10,10),coef
 
-! Inicializamos la matriz C
+! Inicialisation of the matrix C
         do i=1,nbase
 	 do j=1, MAXNEIG
 	  C(i,j)=0.d+00
 	 enddo
 	enddo
 
-! Construimos la matriz A
+! Creation of the matrix A
       do i=1,nbase
 	do j=1,nbase
 	 A(i,j)= 0.d+00
@@ -576,7 +578,7 @@
 	enddo
       enddo
 
-! Construimos un vector auxiliar para hacer los calculos
+! Creation of a auxilary vector to do the calculs:
       do k=1,neignum
        xg=(Xmls(k)-xgau)/hx ; yg=(Ymls(k)-ygau)/hy ;zg=(Zmls(k)-zgau)/hz
 
@@ -627,15 +629,13 @@
        enddo
       enddo
 
-
-
-! Calculamos la inversa de A
-! Para calcularla resolvemos 6 sistemas de ecuaciones
-! Primero triangularizamos la matriz A y hacemos las operaciones por filas
-! sobre la matriz identidad
+! Calculation of the inverse matrix of A
+! For this calculation a system of 6 equations is resolved
+! First, triangulation of the matrix A and perform the operation per
+! rows upon the matrix identity.
  
       do i=1,nbase-1
-! Comprobamos que el pivote no sea nulo
+! Check that the pivo is not null
         if(A(i,i).lt.1.d-06)then
 	  write(6,*)' Pivote nulo',hx,hy,hz,i
 	  pause
@@ -645,7 +645,7 @@
           do k=i,nbase
             A(j,k)=A(j,k)+coef*A(i,k)
           enddo
-! Aplicamos la operación a las columnas de la identidad
+! Apply the operacion on the identity columns
 	    do icol=1,nbase
             eye(j,icol)= eye(j,icol)+coef*eye(i,icol)
 	    enddo
@@ -706,8 +706,8 @@
  	  FF(k)= C(1,k)
 	enddo
         do j=1,neignum
-	  dFFX(j)=C(2,j)/hx
-	  dFFY(j)=C(3,j)/hy
+	 dFFX(j)=C(2,j)/hx
+	 dFFY(j)=C(3,j)/hy
 	 dFFZ(j)=C(4,j)/hz
             do k=1,neignum
              dFFX(j)=dFFX(j)+dX2(k)*C(1,k)*PtC(k,j)/W2(k)
@@ -747,15 +747,15 @@
          enddo
 	endif
 
-	return
-	end
-!######################################################################
-      subroutine Back_Substitution(ndim,A,b,x)
-!######################################################################
+	RETURN
+	END SUBROUTINE forma3Dder
+!#######################################################################
+      SUBROUTINE Back_Substitution(ndim,A,b,x)
+!#######################################################################
       implicit none
 
       INTEGER :: i,j
-      INTEGER, intent(in) :: ndim
+      INTEGER,intent(in) :: ndim
       DOUBLE PRECISION :: suma
       DOUBLE PRECISION :: A(ndim,ndim),b(ndim),x(ndim)
 
@@ -767,6 +767,7 @@
         enddo
         x(i)=(b(i)-suma)/A(i,i)
       enddo
-      return
-      end
+      
+      RETURN
+      END SUBROUTINE Back_Substitution
 

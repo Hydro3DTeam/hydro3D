@@ -1,6 +1,11 @@
-!##########################################################################
+!#######################################################################
       subroutine flosol
-!##########################################################################
+!-----------------------------------------------------------------------
+!     This is where all the majic happens! It is the squletton of the
+!     simulation, every subroutine discritesizing and numerical solving
+!     the N-S equation are called here. The subroutines exporting the
+!     data files are also convened here.
+!#######################################################################
       use vars
       use mpi
       use multidata
@@ -318,4 +323,4 @@
      & 'dt=',e14.6,'  dtavg=',e14.6)
 5500  format(/1x,'Work took ',f18.8,2x,' seconds')
       end subroutine flosol
-!##########################################################################
+!#######################################################################

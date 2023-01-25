@@ -1,6 +1,9 @@
-!##########################################################################
-      subroutine checkdt
-!##########################################################################
+!#######################################################################
+      SUBROUTINE checkdt
+!-----------------------------------------------------------------------
+!     Evaluates the faster velocities in each axis, and sgs viscosity.
+!     It calculates the dt based on the CFD if the time-step is variable.
+!#######################################################################
       use vars
       use mpi
       use multidata
@@ -142,6 +145,6 @@
 
         dtavg=dtsum/(itime-itime_start+1)
 
-        return
-        end subroutine
+      RETURN
+      END SUBROUTINE checkdt
 !##########################################################################

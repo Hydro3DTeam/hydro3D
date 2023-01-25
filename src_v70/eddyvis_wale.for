@@ -1,6 +1,11 @@
-!##########################################################################
-      subroutine eddyv_wale
-!##########################################################################
+!#######################################################################
+      SUBROUTINE eddyv_wale
+!-----------------------------------------------------------------------
+!     The Wall-Adaptive Local Eddy (WALE) SGS model with a vandriest
+!     damping calculates the eddy viscosity for the scale smaller
+!     than the grid size. 
+!     The viscosity boundary condition are also prescribed.
+!#######################################################################
       use vars
       use multidata
       implicit none
@@ -22,8 +27,8 @@
       CHARACTER(25) :: gf
 
 
-        rrey=1.0/Re
-        cw=0.46
+      rrey=1.0/Re
+      cw=0.46
     
         do ib=1,nbp
 
@@ -588,6 +593,6 @@
 
         end do
 
-        return
-      end subroutine eddyv_wale
+      RETURN
+      END SUBROUTINE eddyv_wale
 !##########################################################################

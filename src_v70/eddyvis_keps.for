@@ -1,10 +1,12 @@
-!##########################################################################
+!#######################################################################
       subroutine eddyv_keps
-! k-eps model
-! includes low-Re near wall damping (as in Lam and Bremhorst, 1981)
-! Bruño Fraga Bugallo
-! Cardiff 2016
-!##########################################################################
+!-----------------------------------------------------------------------
+!     Calculates the subgrid-scale (SGS) viscosity for the unfiltered
+!     scale. This model is known as the One equation k-eps model.
+!     It includes low-Re near wall damping (Lam and Bremhorst, 1981).
+!     Bruño Fraga Bugallo
+!     Cardiff 2016
+!#######################################################################
       use vars
       use multidata
       implicit none
@@ -27,10 +29,10 @@
 	  !call exchange(22)
 	  !call exchange(33)
 
-       do rk=1,3
-	 	call eddyv_k(alfark(rk))
-		call eddyv_eps(alfark(rk))
-	 enddo
+      do rk=1,3
+	 call eddyv_k(alfark(rk))
+	 call eddyv_eps(alfark(rk))
+      enddo
 
        rrey=1.0/Re
        cmu=0.09
@@ -344,12 +346,14 @@
         end do
 
 
-        return
-      end subroutine eddyv_keps
-
-!##########################################################################
+      RETURN
+      END SUBROUTINE eddyv_keps
+!#######################################################################
       subroutine eddyv_k(alfark)
-!##########################################################################
+!-----------------------------------------------------------------------
+!     Calculates the turbulent kinetic transport equation. It uses an
+!     upwind scheme.
+!#######################################################################
       use vars
       use multidata
       implicit none
@@ -367,7 +371,7 @@
 
         rrey=1.0/Re
         sigmak=1.00
-	  cmu = 0.09
+	 cmu = 0.09
 
         do ib=1,nbp
               
@@ -408,7 +412,7 @@
 
         prod=0.8*2.0*vsgs*strain(i,j,k)
 
-	  prod=min(prod,20.*dom(ib)%epso(i,j,k))
+	 prod=min(prod,20.*dom(ib)%epso(i,j,k))
 
 !@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
         if(dom(ib)%uoo(i-1,j,k).gt.0.0) then
@@ -586,11 +590,14 @@
         call exchange(6)
         call boundksgs(cmu)
 
-        return
-      end subroutine eddyv_k
-!##########################################################################
-      subroutine eddyv_eps(alfark)
-!##########################################################################
+      RETURN
+      END SUBROUTINE eddyv_k
+!#######################################################################
+      SUBROUTINE eddyv_eps(alfark)
+!-----------------------------------------------------------------------
+!     Calculates the dissipation transport equation using a upwind
+!     scheme. 
+!#######################################################################
       use vars
       use multidata
       implicit none
@@ -829,22 +836,23 @@
         call exchange(9)
         call boundeps
 
-        return
-        end subroutine eddyv_eps
+      RETURN
+      END SUBROUTINE eddyv_eps
+!#######################################################################
+      DOUBLE PRECISION FUNCTION strain(i,j,k)
+!-----------------------------------------------------------------------
+!     Calculates the Strain tensor based on the velocity gradients.
+!     This function is used in eddys_k and eddys_eps.
+!#######################################################################
+      use vars
+      use multidata
+      implicit none
 
-!##########################################################################
-        double precision function strain(i,j,k)
-!	  calculates the Strain tensor based on the velocity gradients
-!##########################################################################
-        use vars
-        use multidata
-        implicit none
-
-        INTEGER :: i,j,k
-        INTEGER :: ib,is,ie,js,je,ks,ke
-        DOUBLE PRECISION :: dudx,dudy,dudz,dvdx,dvdy,dvdz,dwdx,dwdy,dwdz
-        DOUBLE PRECISION :: vr_a,vr_b,vr_c,vr_d
-        DOUBLE PRECISION :: s12,s13,s23
+      INTEGER :: i,j,k
+      INTEGER :: ib,is,ie,js,je,ks,ke
+      DOUBLE PRECISION :: dudx,dudy,dudz,dvdx,dvdy,dvdz,dwdx,dwdy,dwdz
+      DOUBLE PRECISION :: vr_a,vr_b,vr_c,vr_d
+      DOUBLE PRECISION :: s12,s13,s23
 
         do ib=1,nbp				
 
@@ -900,5 +908,6 @@
      &      2.0*s12*s12   + 2.0*s13*s13 + 2.0*s23*s23 )
 
 	enddo
-
-      end function
+      
+      RETURN
+      END FUNCTION strain

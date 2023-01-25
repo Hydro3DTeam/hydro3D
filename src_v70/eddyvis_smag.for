@@ -1,6 +1,10 @@
-!##########################################################################
-      subroutine eddyv_smag
-!##########################################################################
+!#######################################################################
+      SUBROUTINE eddyv_smag
+!-----------------------------------------------------------------------
+!     The Smagorinsky SGS model with a vandriest damping calculates 
+!     the eddy viscosity for the scale smaller than the grid size. 
+!     The viscosity boundary condition are also prescribed.
+!#######################################################################
       use vars
       use multidata
       implicit none
@@ -18,9 +22,9 @@
       DOUBLE PRECISION :: cs1,delta_grid,l_s,dnmin,yplus,ratio,damp
       LOGICAL :: vandriest
 
-        vandriest=.true.
-        rrey=1.0/Re
-        cs1=0.1
+      vandriest=.true.
+      rrey=1.0/Re
+      cs1=0.1
 
         call tauw_noslip								!friction velocity for no slip boundaries
 
@@ -52,6 +56,7 @@
         dudx = ( dom(ib)%u(i,j,k) - dom(ib)%u(i-1,j,k) )/dom(ib)%dx
         dudy = ( vr_a - vr_b )/dom(ib)%dy
         dudz = ( vr_c - vr_d )/dom(ib)%dz
+
 !====================================================
         vr_a = 0.25*( dom(ib)%v(i,j,k)   + dom(ib)%v(i,j-1,k) +
      &	 	      dom(ib)%v(i+1,j,k) + dom(ib)%v(i+1,j-1,k) )
@@ -66,6 +71,7 @@
         dvdy = ( dom(ib)%v(i,j,k) - dom(ib)%v(i,j-1,k) )/dom(ib)%dy
         dvdx = ( vr_a - vr_b )/dom(ib)%dx
         dvdz = ( vr_c - vr_d )/dom(ib)%dz
+
 !====================================================
         vr_a = 0.25*( dom(ib)%w(i,j,k)   + dom(ib)%w(i,j,k-1) +
      &	 	      dom(ib)%w(i+1,j,k) + dom(ib)%w(i+1,j,k-1) )
@@ -669,12 +675,13 @@
 
         end do
 
-
-        return
-      end subroutine eddyv_smag
-!##########################################################################
-      subroutine tauw_noslip
-!##########################################################################
+      RETURN
+      END SUBROUTINE eddyv_smag
+!#######################################################################
+      SUBROUTINE tauw_noslip
+!-----------------------------------------------------------------------
+!     Calculates the shear-stress for the non-slip boundary condition.
+!#######################################################################
       use vars
       use multidata
       implicit none
@@ -815,6 +822,6 @@
 
         end do
 
-        return
-      end subroutine tauw_noslip
+      RETURN
+      END SUBROUTINE tauw_noslip
 !##########################################################################

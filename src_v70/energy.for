@@ -87,6 +87,9 @@
       end subroutine mom_buo
 !##########################################################################
       subroutine energy
+!-----------------------------------------------------------------------
+!     Calculates the thermal and active transport equation using an
+!     upwind scheme.
 !##########################################################################
       use vars
       use mpi
@@ -111,7 +114,8 @@
                  do j=dom(ib)%jsp,dom(ib)%jep
 
 
-!@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+! duTdx
+!-----------------------------------------------------------------------
         if(dom(ib)%u(i-1,j,k).gt.0.0) then
            ku=dom(ib)%To(i-2,j,k)
            kc=dom(ib)%To(i-1,j,k)
@@ -147,7 +151,9 @@
            kp=0.5*(dom(ib)%To(i,j,k)+dom(ib)%To(i+1,j,k))
         end if
         duTdx=(dom(ib)%u(i,j,k)*kp-dom(ib)%u(i-1,j,k)*km)/dom(ib)%dx
-!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+! dvTdy
+!-----------------------------------------------------------------------
         if(dom(ib)%v(i,j-1,k).gt.0.0) then
            ku=dom(ib)%To(i,j-2,k)
            kc=dom(ib)%To(i,j-1,k)
@@ -183,7 +189,9 @@
            kp=0.5*(dom(ib)%To(i,j,k)+dom(ib)%To(i,j+1,k))
         end if
         dvTdy=(dom(ib)%v(i,j,k)*kp-dom(ib)%v(i,j-1,k)*km)/dom(ib)%dy
-!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+! dwTdz
+!-----------------------------------------------------------------------
         if(dom(ib)%w(i,j,k-1).gt.0.0) then
            ku=dom(ib)%To(i,j,k-2)
            kc=dom(ib)%To(i,j,k-1)
@@ -219,25 +227,27 @@
            kp=0.5*(dom(ib)%To(i,j,k)+dom(ib)%To(i,j,k+1))
         end if
         dwTdz=(dom(ib)%w(i,j,k)*kp-dom(ib)%w(i,j,k-1)*km)/dom(ib)%dz
-!@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 
+! Calculates the convection term:
         conv=(duTdx+dvTdy+dwTdz)
 
 
-                 awT=-(1.0/(Re*Pr)+(dom(ib)%vis(i,j,k)-1.0/Re)/Sc_t)/dxx
-                 aeT=-(1.0/(Re*Pr)+(dom(ib)%vis(i,j,k)-1.0/Re)/Sc_t)/dxx
-                 anT=-(1.0/(Re*Pr)+(dom(ib)%vis(i,j,k)-1.0/Re)/Sc_t)/dyy
-                 asT=-(1.0/(Re*Pr)+(dom(ib)%vis(i,j,k)-1.0/Re)/Sc_t)/dyy
-                 atT=-(1.0/(Re*Pr)+(dom(ib)%vis(i,j,k)-1.0/Re)/Sc_t)/dzz
-                 abT=-(1.0/(Re*Pr)+(dom(ib)%vis(i,j,k)-1.0/Re)/Sc_t)/dzz
+! Calculates the diffusion term:
+        awT=-(1.0/(Re*Pr)+(dom(ib)%vis(i,j,k)-1.0/Re)/Sc_t)/dxx
+        aeT=-(1.0/(Re*Pr)+(dom(ib)%vis(i,j,k)-1.0/Re)/Sc_t)/dxx
+        anT=-(1.0/(Re*Pr)+(dom(ib)%vis(i,j,k)-1.0/Re)/Sc_t)/dyy
+        asT=-(1.0/(Re*Pr)+(dom(ib)%vis(i,j,k)-1.0/Re)/Sc_t)/dyy
+        atT=-(1.0/(Re*Pr)+(dom(ib)%vis(i,j,k)-1.0/Re)/Sc_t)/dzz
+        abT=-(1.0/(Re*Pr)+(dom(ib)%vis(i,j,k)-1.0/Re)/Sc_t)/dzz
 
-                 apT = -1.0*(awT+aeT+asT+anT+abT+atT)
+        apT = -1.0*(awT+aeT+asT+anT+abT+atT)
 
-                 diff=(apT*dom(ib)%To(i,j,k)+
+        diff=(apT*dom(ib)%To(i,j,k)+
      & anT*dom(ib)%To(i,j+1,k) + asT*dom(ib)%To(i,j-1,k)+
      & aeT*dom(ib)%To(i+1,j,k) + awT*dom(ib)%To(i-1,j,k)+
      & atT*dom(ib)%To(i,j,k+1) + abT*dom(ib)%To(i,j,k-1))
  
+! Calculates the T current from the temporal term
                  dom(ib)%T(i,j,k)=(dom(ib)%To(i,j,k)-
      & dt*(conv+diff)) 
 
@@ -251,9 +261,12 @@
 
         return
       end subroutine energy
-!##########################################################################
+!#######################################################################
       subroutine boundT
-!##########################################################################
+!-----------------------------------------------------------------------
+!     Prescribe the thermal boundary conditions at each time step for the
+!     West,East,South,North,Bottom,Top boundaries.
+!#######################################################################
       use vars
       use multidata
       implicit none
@@ -270,9 +283,9 @@
            ks=dom(ib)%ksp; ke=dom(ib)%kep
 	
 ! Boundary Conditions for T
-!..............................................................................
+!.......................................................................
 !=== West ===> 
-!..............................................................................
+!.......................................................................
         if (dom(ib)%iprev.lt.0) then
            if (dom(ib)%Tbc_west.eq.7) then
               do k=1,nk; do j=1,nj

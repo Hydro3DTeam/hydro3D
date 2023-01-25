@@ -1,42 +1,61 @@
-!##########################################################################
+!#######################################################################
       program fdstag
-!##########################################################################
+!-----------------------------------------------------------------------
+!     It is here where every simulation starts. All the subroutine
+!     prior to flosol set up the initial condition for the simulation.
+!     The flosol (flow solver) is the subroutine where every step time
+!     of the simulation are performed (loop).
+!#######################################################################
       use mpi
       use vars
       implicit none
 
-        call init_parallelisation
+!Starts the parallelisation:
+      call init_parallelisation
      
-        call read_mdmap
+!Reads multi-domain map:
+      call read_mdmap
 
-        call read_control
+!Reads control file:
+      call read_control
 
-        call read_infodom
+!Reads the information of each subdomain:
+      call read_infodom
 
-        call alloc_dom
+!Creation of the subdomain allocation to their respective processor:
+      call alloc_dom
+
 !Mesh generation:
-        call localparameters
-!Allocation of the main flow variables
-        call initial
-!LSM: initialisation of the level set field and allocation of variables
-	  IF (L_LSM .or. L_LSMbase)  CALL initial_LSM_3D_channel
-!Initialisation of the flow field
-        call initflowfield
-!Rough bed :
-        IF (LROUGH)  THEN								
-          IF (.not.LRESTART) THEN
+      call localparameters
+
+!Allocation of the main flow variables:
+      call initial
+
+!LSM: initialisation of the level set field and allocation of variables:
+      IF (L_LSM .or. L_LSMbase)  CALL initial_LSM_3D_channel
+
+!Initialisation of the flow field:
+      call initflowfield
+
+!Rough bed:
+      if (LROUGH) then								
+        if (.not.LRESTART) then
           call init_rough
-          ELSE
+        else
           call rough_restart
-         END IF
-        END IF
+        end if
+      end if
+
 !IBM: reads geom.cin, genetare the geometries, opens files, etc.
-        if (LIMB) call imb_initial
-!IBM: Assignation of the Lagrangian markers to sub-domains and CPUs
-        if (LIMB) call PartLoc_Initial							
-!Calculation of the initial flux in the simulation.
+      if (LIMB) call imb_initial
+
+!IBM: Assignation of the Lagrangian markers to sub-domains and CPUs:
+      if (LIMB) call PartLoc_Initial							
+
+!Calculation of the initial flux in the simulation:
         call iniflux
-!SCALAR: initial sediment concentration variables
+
+!SCALAR: initial sediment concentration variables:
 	 if(LSCALAR)   call sediment_init
 
         if(.not.LRESTART) then
@@ -45,7 +64,8 @@
 	      if (noise.gt.0.0) call add_noise(noise)
            end if
         end if
-!LPT: initialisation of the particles distribution
+
+!LPT: initialisation of the particles distribution:
 	  if (LPT) then						
 		if (myrank.eq.0) open(unit=202,file='LPT_particles.dat')
 		call init_particle	
@@ -58,10 +78,12 @@
            write (numfile,*) '============START ITERATIONS========='
            write (6,*) '============START ITERATIONS========='
         end if
-!All fields are initialised, now let's iterate the NS eqs in time:
+
+!All fields are initialised, now let's iterate the N-S eqs in time:
         call flosol
-!End MPI parallelisation
+
+!End MPI parallelisation:
         call end_parallelisation
 
       end program
-!##########################################################################
+!#######################################################################

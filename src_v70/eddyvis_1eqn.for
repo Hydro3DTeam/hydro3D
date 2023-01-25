@@ -1,6 +1,9 @@
-!##########################################################################
-      subroutine eddyv_1eqn
-!##########################################################################
+!#######################################################################
+      SUBROUTINE eddyv_1eqn
+!-----------------------------------------------------------------------
+!     Calculates the subgrid-scale (SGS) viscosity for the unfiltered
+!     scale. This model is known as the One equation.
+!#######################################################################
       use vars
       use multidata
       implicit none
@@ -69,6 +72,7 @@
         dudx = ( dom(ib)%u(i,j,k) - dom(ib)%u(i-1,j,k) )/dom(ib)%dx
         dudy = ( vr_a - vr_b )/dom(ib)%dy
         dudz = ( vr_c - vr_d )/dom(ib)%dz
+
 !====================================================
         vr_a = 0.25*( dom(ib)%v(i,j,k)   + dom(ib)%v(i,j-1,k) +
      &	 	      dom(ib)%v(i+1,j,k) + dom(ib)%v(i+1,j-1,k) )
@@ -83,6 +87,7 @@
         dvdy = ( dom(ib)%v(i,j,k) - dom(ib)%v(i,j-1,k) )/dom(ib)%dy
         dvdx = ( vr_a - vr_b )/dom(ib)%dx
         dvdz = ( vr_c - vr_d )/dom(ib)%dz
+
 !====================================================
         vr_a = 0.25*( dom(ib)%w(i,j,k)   + dom(ib)%w(i,j,k-1) +
      &	 	      dom(ib)%w(i+1,j,k) + dom(ib)%w(i+1,j,k-1) )
@@ -181,7 +186,7 @@
            kp=0.5*(dom(ib)%ksgso(i,j,k)+dom(ib)%ksgso(i,j+1,k))
         end if
         dvkdy=(dom(ib)%v(i,j,k)*kp-dom(ib)%v(i,j-1,k)*km)/dom(ib)%dy
-!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
         if(dom(ib)%w(i,j,k-1).gt.0.0) then
            ku=dom(ib)%ksgso(i,j,k-2)
            kc=dom(ib)%ksgso(i,j,k-1)
@@ -561,6 +566,6 @@
 
         end do
 
-        return
-        end subroutine eddyv_1eqn
+        RETURN
+        END SUBROUTINE eddyv_1eqn
 !##########################################################################

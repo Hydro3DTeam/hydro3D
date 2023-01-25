@@ -15,12 +15,12 @@
         write(chb,'(i4)') dom_id(ib)
         sn=len(trim(adjustl(chb)))
         chb=repeat('0',(4-sn))//trim(adjustl(chb))
-        gf='tecout_T_'//trim(adjustl(chb))//'.plt'
+        gf='tecout_T_'//trim(adjustl(chb))//'.dat'
         open (unit=88, file=gf)
 
-        is=dom(ib)%isp; ie=dom(ib)%iep
-        js=dom(ib)%jsp; je=dom(ib)%jep
-        ks=dom(ib)%ksp; ke=dom(ib)%kep
+        is=dom(ib)%isp ; ie=dom(ib)%iep
+        js=dom(ib)%jsp ; je=dom(ib)%jep
+        ks=dom(ib)%ksp ; ke=dom(ib)%kep
         toti=(ie+1)-(is-1)+1
         totj=(je+1)-(js-1)+1
         totk=(ke+1)-(ks-1)+1
@@ -60,12 +60,12 @@
         write(chb,'(i4)') dom_id(ib)
         sn=len(trim(adjustl(chb)))
         chb=repeat('0',(4-sn))//trim(adjustl(chb))
-        gf='tecout_S_'//trim(adjustl(chb))//'.plt'
+        gf='tecout_S_'//trim(adjustl(chb))//'.dat'
         open (unit=88, file=gf)
 
-        is=dom(ib)%isp; ie=dom(ib)%iep
-        js=dom(ib)%jsp; je=dom(ib)%jep
-        ks=dom(ib)%ksp; ke=dom(ib)%kep
+        is=dom(ib)%isp ; ie=dom(ib)%iep
+        js=dom(ib)%jsp ; je=dom(ib)%jep
+        ks=dom(ib)%ksp ; ke=dom(ib)%kep
         toti=(ie+1)-(is-1)+1
         totj=(je+1)-(js-1)+1
         totk=(ke+1)-(ks-1)+1
@@ -105,7 +105,7 @@
         write(chb,'(i4)') dom_id(ib)
         sn=len(trim(adjustl(chb)))
         chb=repeat('0',(4-sn))//trim(adjustl(chb))
-        gf='tecout_p'//trim(adjustl(chb))//'.plt'
+        gf='tecout_p'//trim(adjustl(chb))//'.dat'
         open (unit=88, file=gf)
 
         is=dom(ib)%isp; ie=dom(ib)%iep
@@ -157,7 +157,7 @@
         write(chb,'(i4)') dom_id(ib)
         sn=len(trim(adjustl(chb)))
         chb=repeat('0',(4-sn))//trim(adjustl(chb))
-        gf='tecturb'//trim(adjustl(chb))//'.plt'
+        gf='tecturb'//trim(adjustl(chb))//'.dat'
         open (unit=88, file=gf)
 
         is=pl+1; ie=dom(ib)%ttc_i-pl
@@ -277,12 +277,12 @@
           chb=repeat('0',(4-sn))//trim(adjustl(chb))
           chb1=repeat('0',(6-sn1))//trim(adjustl(chb1))
           gf='tecout_phi_'//trim(adjustl(chb))//'_'//
-     & trim(adjustl(chb1))//'.plt'
+     & trim(adjustl(chb1))//'.dat'
 	  else
           write(chb,'(i4)') dom_id(ib)
           sn=len(trim(adjustl(chb)))
           chb=repeat('0',(4-sn))//trim(adjustl(chb))
-          gf='tecout_phi_'//trim(adjustl(chb))//'.plt'
+          gf='tecout_phi_'//trim(adjustl(chb))//'.dat'
 	  endif      
 
 	  open (unit=88, file=gf)
@@ -400,7 +400,7 @@
         sn=len(trim(adjustl(chb2)))
         chb2=repeat('0',(6-sn))//trim(adjustl(chb2))
         gf='tecinst'//trim(adjustl(chb2))//
-     &		'_'//trim(adjustl(chb))//'.plt'
+     &		'_'//trim(adjustl(chb))//'.dat'
         open (unit=95, file=gf)        
 
         is=pl+1; ie=dom(ib)%ttc_i-pl
@@ -473,7 +473,7 @@
         sn=len(trim(adjustl(chb2)))
         chb2=repeat('0',(6-sn))//trim(adjustl(chb2))
         gf='tecplane'//trim(adjustl(chb2))//
-     &		'_'//trim(adjustl(chb))//'.plt'
+     &		'_'//trim(adjustl(chb))//'.dat'
            open (unit=95, file=gf)     
         write(95,*)'variables=y,z,u,v,w'
         write(95,89)'zone i= 1, j=',ntotj,', k=',ntotk,' f=point'		
@@ -499,7 +499,7 @@
         sn=len(trim(adjustl(chb2)))
         chb2=repeat('0',(6-sn))//trim(adjustl(chb2))
         gf='tecplane'//trim(adjustl(chb2))//
-     &		'_'//trim(adjustl(chb))//'.plt'
+     &		'_'//trim(adjustl(chb))//'.dat'
            open (unit=95, file=gf)     
         write(95,*)'variables=x,z,u,v,w'
         write(95,89)'zone i=',ntoti,', j=1 , k=',ntotk,' f=point'		
@@ -526,7 +526,7 @@
         sn=len(trim(adjustl(chb2)))
         chb2=repeat('0',(6-sn))//trim(adjustl(chb2))
         gf='tecplane'//trim(adjustl(chb2))//
-     &		'_'//trim(adjustl(chb))//'.plt'
+     &		'_'//trim(adjustl(chb))//'.dat'
            open (unit=95, file=gf)     
         write(95,*)'variables=x,y,u,v,w'
         write(95,89)'zone i=',ntoti,', j=',ntotj,', k=1 f=point'		
