@@ -1,7 +1,7 @@
 # Tutorial
 
 ```
-# Get information from program:
+# Get information from a program:
 apt --help
 apt --man
 apt --version
@@ -28,14 +28,12 @@ cd
 cd /opt/
 cd /media/$USER/<Target_Hardrive>
 
-# Display:
+# Display on screen:
 ls 
 ll
+tree 
 
-
-
-
-
+# Add and delete files:
 cp -r 
 rsync -a --exclude 'tec*' <Source_Folder> <Target_Folder>
 du -sh <Target_Folder>
@@ -43,10 +41,11 @@ du -sh *
 rm * 
 rm <target> folder 
 
-
+# Combination of command:
 ls <Target_Folder> | wc -l 
 ps -ef | grep -rin './3dFDM.exe'
 mpirun -np 10 ./3dFDM.exe | tee screen.log
+
 
 ```
 
