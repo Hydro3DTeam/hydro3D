@@ -46,6 +46,13 @@ ls <Target_Folder> | wc -l
 ps -ef | grep -rin './3dFDM.exe'
 mpirun -np 10 ./3dFDM.exe | tee screen.log
 
+# Upload and download file:
+scp <target_file> user@address:path
+scp user@address:path/<target_file> .
+
+sftp user@address
+sftp put -r <target_dir/file> path
+sftp get -r <target_dir/file> .
 
 ```
 
