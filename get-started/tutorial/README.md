@@ -54,5 +54,10 @@ sftp user@address
 sftp put -r <target_dir/file> path
 sftp get -r <target_dir/file> .
 
+
+# Run a simulation in ssh:
+nohup mpirun -np 10 ./3dFDM.exe
+ 
+
 ```
 
