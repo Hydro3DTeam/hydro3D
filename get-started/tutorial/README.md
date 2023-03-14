@@ -58,6 +58,13 @@ sftp get -r <target_dir/file> .
 # Run a simulation in ssh:
 nohup mpirun -np 10 ./3dFDM.exe
  
+# Monitor your simulation:
+tail -f output.dat
+tail -f rms.dat
+tail -f worktime.dat
+htop
+
+
 
 ```
 
