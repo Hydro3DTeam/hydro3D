@@ -69,10 +69,10 @@
 
 ## = PROBE =
 * Probes can also have a lagrangian location, weight will be interpolated using trilinearity. 
-  Computer: H3D10
-  Sim Name: Coarse_LPT_16
-  FLAG: ! PROBE UPDATE
-  Input file: control.cin (altered)
-  Script: initial.for (altered)
+* Computer: H3D10
+* Sim Name: Coarse_LPT_16
+* FLAG: ! PROBE UPDATE
+* Input file: control.cin (altered)
+* Script: initial.for (altered)
 	  timesig.for (altered)
 	  module_vars (altered)
