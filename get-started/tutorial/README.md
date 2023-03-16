@@ -58,14 +58,10 @@ The following command permits you to move, copy and delete files and directories
 </code></pre></td><td>Download a target file from a remote HPC onto your current directory</td><td></td></tr><tr><td><pre><code>scp -r user@address:path/&#x3C;TF> .
 </code></pre></td><td>Download a target folder from a remote HPC onto your current directory</td><td></td></tr></tbody></table>
 
-### Ad:
-
-### Ad
-
-### Ad:
+### Advanced/chained commands:&#x20;
 
 <table data-header-hidden><thead><tr><th></th><th></th><th data-hidden></th></tr></thead><tbody><tr><td><pre><code>ls &#x3C;TD> | wc -l 
-</code></pre></td><td></td><td></td></tr><tr><td><pre><code>ps -ef | grep -rin './3dFDM.exe'
-</code></pre></td><td></td><td></td></tr><tr><td><pre><code>mpirun -np 10 ./3dFDM.exe | tee screen.log
-</code></pre></td><td></td><td></td></tr></tbody></table>
+</code></pre></td><td>Write the number of files present in the target directory. Feeds ls as input to wc -l </td><td></td></tr><tr><td><pre><code>ps -ef | grep -rin './3dFDM.exe'
+</code></pre></td><td>Ouput the process ID with './3dFDM.exe' name</td><td></td></tr><tr><td><pre><code>mpirun -np 10 ./3dFDM.exe | tee screen.log
+</code></pre></td><td>Write the screen output of the simulation into screen.log file</td><td></td></tr></tbody></table>
 
