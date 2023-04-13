@@ -29,4 +29,23 @@ tail -f rms.dat              # Shows you the mass deficit of the simulation
 htop                         # Shows you the ram and cpu usage of the simulation
 ```
 
+### Analyse the data (TECPLOT):
+
+```
+tec360 LAYOUT_Cavity.lay
+```
+
+### Analyse the data (Paraview):
+
+```
+# Compile the code to adapt the Tecplot output into Paraview data files:
+ifort TECPLOT_TO_PARAVIEW.f90 -o TECPLOT_TO_PARAVIEW.exe
+
+# Run the code:
+./TECPLOT_TO_PARAVIEW.exe
+
+# Open the Paraview state:
+paraview STATE_Cavity.pvsm
+```
+
 <figure><img src="../../.gitbook/assets/Ouro_Cont_ValProf.png" alt=""><figcaption></figcaption></figure>
