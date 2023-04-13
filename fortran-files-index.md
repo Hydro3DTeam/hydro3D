@@ -11,7 +11,7 @@ description: >-
 
 <summary>actuator.for</summary>
 
-_**Purpose:**_ Computational method to represent an array of turbines for a lower cost.
+_**Purpose:**_ Actuator Line Method to represent an array of turbines for a lower cost compared to the Immersed Boundary Method.
 
 _**Difficulty:**_ Hard | _**The user change likelihood:**_ Unlikely
 
