@@ -60,36 +60,26 @@ The **output files** to analyse the velocity field:
 
 </details>
 
-### Creation and parallelisation of computational domain:
+<details>
 
-The **user input file** that allows the creation and parallel segmentation of the overall computational domain into subdomains are:
+<summary>FREE-SURFACE SIMULATION</summary>
 
-* **control.cin:** define the refinement of the grid (dx,dy,dz)
-* **infodom.cin:** define the number and the bounds of the subdomains and the LMR resolution.
-* **mdmap.cin:** assign the subdomains to the given number of processors.
-
-The **files** in the code ensuring the creation and connectivity between the computational subdomains:
-
-* module\_mpi.for
-* module\_multidata.for
-* module\_vars.for
-* alloc\_dom.for
-* localparameters.for
-* exchange.for
-* exchange\_bc.for
-* exchange\_phi.for
-* exchangep.for
-* exchangepp.for
-* exchangeu.for
-* exchangev.for
-* exchangew.for
-
-### **Free-Surface Initialisation and development:**
-
-The **user input file** used to run a simulation with a free-surface:
+The **user input file** used to run a simulation of a free surface simulation
 
 * control.cin
 * infodom.cin
 * mdmap.cin
 * in\_lsm.cin
+
+The **output files** to analyse the velocity field:
+
+* tecout\_phi\_\*.dat - ASCII Tecplot file which export the free-surface instantaneous and mean level.
+
+**Module**
+
+&#x20;
+
+</details>
+
+*
 
