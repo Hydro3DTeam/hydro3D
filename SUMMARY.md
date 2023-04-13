@@ -14,6 +14,7 @@
   * [Cavity](get-started/tutorial/cavity.md)
   * [Singular Wave](get-started/tutorial/singular-wave.md)
   * [Horizontal Turbine](get-started/tutorial/horizontal-turbine.md)
+  * [Ahmed Body](get-started/tutorial/ahmed-body.md)
 
 ## Code Description
 
