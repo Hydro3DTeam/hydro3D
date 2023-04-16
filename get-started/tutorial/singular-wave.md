@@ -6,4 +6,6 @@ description: Developed by Aristos Christou
 
 The singular wave is our second benchmark and it will get you familiar with the Level-Set-Method that our code is using. The analysis of the benchmark is quite different from the previous one as it solely relies on the instantaneous field, the different ways to create a video will be addressed.
 
-<figure><img src="../../.gitbook/assets/2D_animation.gif" alt=""><figcaption></figcaption></figure>
+
+
+<figure><img src="../../.gitbook/assets/solitary_2D.gif" alt=""><figcaption></figcaption></figure>
