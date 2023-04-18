@@ -39,7 +39,6 @@ description: >-
 * [Ouro, P., Fraga, B., Viti, N., Angeloudis, A., Stoesser, T., & Gualtieri, C. (2018). Instantaneous transport of a passive scalar in a turbulent separated flow. Environ Fluid Mech, 18, 487-513.](https://orca.cf.ac.uk/107771/7/Ouro2018\_Article\_InstantaneousTransportOfAPassi.pdf)
 * [McSherry, R., Chua, K., Stoesser, T., & Mulahasan, S. (2018). Free surface flow over square bars at intermediate relative submergence. Journal of Hydraulic Research, 56(6), 825-843.](http://orca-mwe.cf.ac.uk/111977/1/Free%20surface%20flow%20over%20square%20bars%20at%20intermediate%20relative%20submergence.pdf)
 * [Cevheri, M., & Stoesser, T. (2018). Large-eddy simulation of a jet in crossflow using local mesh refinement. _Progress in Computational Fluid Dynamics, an International Journal_, _18_(3), 137-149.](https://www.inderscienceonline.com/doi/epdf/10.1504/PCFD.2018.091703)
-* [Mitrou, E., Fraga, B., & Stoesser, T. (2018). An Eulerian-Lagrangian numerical method to predict bubbly flows. In E3S Web of Conferences (Vol. 40). EDP Sciences.](https://discovery.ucl.ac.uk/id/eprint/10058250/1/Mitrou\_Eulerian.pdf)
 
 **2017**
 
@@ -190,4 +189,3 @@ description: >-
 
 
 
-****
