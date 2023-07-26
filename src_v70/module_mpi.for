@@ -15,7 +15,7 @@
 
       INTEGER,parameter :: tag_offset1=10000
       INTEGER,parameter :: tag_offset2=500
-      INTEGER,parameter :: tag_offset3=250000      ! Reduce this number if compiler fails
+      INTEGER,parameter :: tag_offset3=150000      ! Reduce this number if compiler fails
 
       contains
 !#########################################################################

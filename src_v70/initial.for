@@ -662,7 +662,7 @@
       INTEGER :: i,j,k,ib,tti,ttj,ttk,pll
       INTEGER :: sn,sn2,jtime,idfile,inind,jnind,knind
       DOUBLE PRECISION :: dum,ubw,ube,ubs,ubn,ubt,ubb,vb,wb,lz,dummy
-      DOUBLE PRECISION :: ufric
+      DOUBLE PRECISION :: ufric,sfunc,sfuncx,sfuncy,v0,L0,PI
       CHARACTER(8) :: chb1,numpt,x,y,z
       CHARACTER(25) :: gf,unst
       CHARACTER(100) :: dummyline
@@ -873,6 +873,28 @@
                  dom(ib)%u=0.0
                  ubw=0.0; ube=0.0; ubs=0.0; ubn=0.0; ubt=1.0; ubb=0.0
                  vb=0.0; wb=0.0
+        else if(trim(keyword).eq.'KH') then
+            tti=dom(ib)%ttc_i ; ttj=dom(ib)%ttc_j ; ttk=dom(ib)%ttc_k
+            PI=4.d0*atan(1.d0)
+            v0=1.d0/64
+            sn=size(rdiv)
+            L0=xcor(sn-1,2)-xcor(0,1)
+            do k=2,ttk ; do j=2,ttj ; do i=2,tti
+              sfunc = ubulk * exp(-(dom(ib)%zc(k)-L0/2)**2/(v0**2)) 
+     &        * (dcos(8*PI*dom(ib)%xc(i)) + dcos(20*PI*dom(ib)%xc(i))) 
+
+              sfuncx = -ubulk * exp(-(dom(ib)%zc(k)-L0/2)**2/(v0**2)) 
+     &        * (dcos(8*PI*dom(ib)%xc(i-1))+dcos(20*PI*dom(ib)%xc(i-1))) 
+
+              sfuncy = ubulk * exp(-(dom(ib)%zc(k-1)-L0/2)**2/(v0**2)) 
+     &        * (dcos(8*PI*dom(ib)%xc(i)) + dcos(20*PI*dom(ib)%xc(i))) 
+
+              dom(ib)%u(i,j,k)=ubulk*tanh((2*dom(ib)%zc(k)-L0)/v0) 
+     &        + 1E-3 * (sfunc-sfuncy)
+              dom(ib)%w(i,j,k) = -(sfunc-sfuncx) * 1E-3
+            end do ; end do ; end do 
+            ubw=0.0; ube=0.0; ubs=0.0; ubn=0.0; ubt=0.0; ubb=0.0
+            vb=0.0; wb=0.0
 	  else if (trim(keyword).eq.'column'
      &  		 .OR.trim(keyword).eq.'waves') then
                  dom(ib)%u=0.0
