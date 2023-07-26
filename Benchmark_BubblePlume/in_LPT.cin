@@ -1,0 +1,9 @@
+T 5				PSIcell/PSIball, delta func
+100 10			      	results output, release frec
+10				number of parts/release
+0.0024 T 0.00028		Diameter of particle
+1.5				Diffusor width in cm
+F				LPT (F) or DF (T)
+T				Random release
+0.32 0.32 0.09 0.0 0.0 0.5	xp,yp,zp,up,vp,wp
+

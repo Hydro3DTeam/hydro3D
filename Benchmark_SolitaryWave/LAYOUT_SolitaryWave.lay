@@ -1,0 +1,1306 @@
+#!MC 1410
+$!VarSet |LFDSFN1| = '"tecout_phi_0000_000100.dat" "tecout_phi_0000_000200.dat" "tecout_phi_0000_000300.dat" "tecout_phi_0000_000400.dat" "tecout_phi_0000_000500.dat" "tecout_phi_0000_000600.dat" "tecout_phi_0000_000700.dat" "tecout_phi_0000_000800.dat" "tecout_phi_0000_000900.dat" "tecout_phi_0000_001000.dat" "tecout_phi_0000_001100.dat" "tecout_phi_0000_001200.dat" "tecout_phi_0000_001300.dat" "tecout_phi_0000_001400.dat" "tecout_phi_0000_001500.dat" "tecout_phi_0000_001600.dat" "tecout_phi_0000_001700.dat" "tecout_phi_0000_001800.dat" "tecout_phi_0000_001900.dat" "tecout_phi_0000_002000.dat" "tecout_phi_0000_002100.dat" "tecout_phi_0000_002200.dat" "tecout_phi_0000_002300.dat" "tecout_phi_0000_002400.dat" "tecout_phi_0000_002500.dat" "tecout_phi_0000_002600.dat" "tecout_phi_0000_002700.dat" "tecout_phi_0000_002800.dat" "tecout_phi_0000_002900.dat" "tecout_phi_0000_003000.dat" "tecout_phi_0000_003100.dat" "tecout_phi_0000_003200.dat" "tecout_phi_0000_003300.dat" "tecout_phi_0000_003400.dat" "tecout_phi_0000_003500.dat" "tecout_phi_0000_003600.dat" "tecout_phi_0000_003700.dat" "tecout_phi_0000_003800.dat" "tecout_phi_0000_003900.dat" "tecout_phi_0000_004000.dat" "tecout_phi_0000_004100.dat" "tecout_phi_0000_004200.dat" "tecout_phi_0000_004300.dat" "tecout_phi_0000_004400.dat" "tecout_phi_0000_004500.dat" "tecout_phi_0000_004600.dat" "tecout_phi_0000_004700.dat" "tecout_phi_0000_004800.dat" "tecout_phi_0000_004900.dat" "tecout_phi_0000_005000.dat" "tecout_phi_0000_005100.dat" "tecout_phi_0000_005200.dat" "tecout_phi_0000_005300.dat" "tecout_phi_0000_005400.dat" "tecout_phi_0000_005500.dat" "tecout_phi_0000_005600.dat" "tecout_phi_0000_005700.dat" "tecout_phi_0000_005800.dat" "tecout_phi_0000_005900.dat" "tecout_phi_0000_006000.dat" "tecout_phi_0000_006100.dat" "tecout_phi_0000_006200.dat" "tecout_phi_0000_006300.dat" "tecout_phi_0000_006400.dat" "tecout_phi_0000_006500.dat" "tecout_phi_0000_006600.dat" "tecout_phi_0000_006700.dat" "tecout_phi_0000_006800.dat" "tecout_phi_0000_006900.dat" "tecout_phi_0000_007000.dat" "tecout_phi_0000_007100.dat" "tecout_phi_0000_007200.dat" "tecout_phi_0000_007300.dat" "tecout_phi_0000_007400.dat" "tecout_phi_0000_007500.dat" "tecout_phi_0000_007600.dat" "tecout_phi_0000_007700.dat" "tecout_phi_0000_007800.dat" "tecout_phi_0000_007900.dat" "tecout_phi_0000_008000.dat" "tecout_phi_0000_008100.dat" "tecout_phi_0000_008200.dat" "tecout_phi_0000_008300.dat" "tecout_phi_0000_008400.dat" "tecout_phi_0000_008500.dat" "tecout_phi_0000_008600.dat" "tecout_phi_0000_008700.dat" "tecout_phi_0000_008800.dat" "tecout_phi_0000_008900.dat" "tecout_phi_0000_009000.dat" "tecout_phi_0000_009100.dat" "tecout_phi_0000_009200.dat" "tecout_phi_0000_009300.dat" "tecout_phi_0000_009400.dat" "tecout_phi_0000_009500.dat" "tecout_phi_0000_009600.dat" "tecout_phi_0000_009700.dat" "tecout_phi_0000_009800.dat" "tecout_phi_0000_009900.dat" "tecout_phi_0000_010000.dat" "tecout_phi_0000_010100.dat" "tecout_phi_0000_010200.dat" "tecout_phi_0000_010300.dat" "tecout_phi_0000_010400.dat" "tecout_phi_0000_010500.dat" "tecout_phi_0000_010600.dat" "tecout_phi_0000_010700.dat" "tecout_phi_0000_010800.dat" "tecout_phi_0000_010900.dat" "tecout_phi_0000_011000.dat" "tecout_phi_0000_011100.dat" "tecout_phi_0000_011200.dat" "tecout_phi_0000_011300.dat" "tecout_phi_0000_011400.dat" "tecout_phi_0000_011500.dat" "tecout_phi_0000_011600.dat" "tecout_phi_0000_011700.dat" "tecout_phi_0000_011800.dat" "tecout_phi_0000_011900.dat" "tecout_phi_0000_012000.dat" "tecout_phi_0000_012100.dat" "tecout_phi_0000_012200.dat" "tecout_phi_0000_012300.dat" "tecout_phi_0000_012400.dat" "tecout_phi_0000_012500.dat" "tecout_phi_0000_012600.dat" "tecout_phi_0000_012700.dat" "tecout_phi_0000_012800.dat" "tecout_phi_0000_012900.dat" "tecout_phi_0000_013000.dat" "tecout_phi_0000_013100.dat" "tecout_phi_0000_013200.dat" "tecout_phi_0000_013300.dat" "tecout_phi_0000_013400.dat" "tecout_phi_0000_013500.dat" "tecout_phi_0000_013600.dat" "tecout_phi_0000_013700.dat" "tecout_phi_0000_013800.dat" "tecout_phi_0000_013900.dat" "tecout_phi_0000_014000.dat" "tecout_phi_0000_014100.dat" "tecout_phi_0000_014200.dat" "tecout_phi_0000_014300.dat" "tecout_phi_0000_014400.dat" "tecout_phi_0000_014500.dat" "tecout_phi_0000_014600.dat" "tecout_phi_0000_014700.dat" "tecout_phi_0000_014800.dat" "tecout_phi_0000_014900.dat" "tecout_phi_0000_015000.dat" "tecout_phi_0001_000100.dat" "tecout_phi_0001_000200.dat" "tecout_phi_0001_000300.dat" "tecout_phi_0001_000400.dat" "tecout_phi_0001_000500.dat" "tecout_phi_0001_000600.dat" "tecout_phi_0001_000700.dat" "tecout_phi_0001_000800.dat" "tecout_phi_0001_000900.dat" "tecout_phi_0001_001000.dat" "tecout_phi_0001_001100.dat" "tecout_phi_0001_001200.dat" "tecout_phi_0001_001300.dat" "tecout_phi_0001_001400.dat" "tecout_phi_0001_001500.dat" "tecout_phi_0001_001600.dat" "tecout_phi_0001_001700.dat" "tecout_phi_0001_001800.dat" "tecout_phi_0001_001900.dat" "tecout_phi_0001_002000.dat" "tecout_phi_0001_002100.dat" "tecout_phi_0001_002200.dat" "tecout_phi_0001_002300.dat" "tecout_phi_0001_002400.dat" "tecout_phi_0001_002500.dat" "tecout_phi_0001_002600.dat" "tecout_phi_0001_002700.dat" "tecout_phi_0001_002800.dat" "tecout_phi_0001_002900.dat" "tecout_phi_0001_003000.dat" "tecout_phi_0001_003100.dat" "tecout_phi_0001_003200.dat" "tecout_phi_0001_003300.dat" "tecout_phi_0001_003400.dat" "tecout_phi_0001_003500.dat" "tecout_phi_0001_003600.dat" "tecout_phi_0001_003700.dat" "tecout_phi_0001_003800.dat" "tecout_phi_0001_003900.dat" "tecout_phi_0001_004000.dat" "tecout_phi_0001_004100.dat" "tecout_phi_0001_004200.dat" "tecout_phi_0001_004300.dat" "tecout_phi_0001_004400.dat" "tecout_phi_0001_004500.dat" "tecout_phi_0001_004600.dat" "tecout_phi_0001_004700.dat" "tecout_phi_0001_004800.dat" "tecout_phi_0001_004900.dat" "tecout_phi_0001_005000.dat" "tecout_phi_0001_005100.dat" "tecout_phi_0001_005200.dat" "tecout_phi_0001_005300.dat" "tecout_phi_0001_005400.dat" "tecout_phi_0001_005500.dat" "tecout_phi_0001_005600.dat" "tecout_phi_0001_005700.dat" "tecout_phi_0001_005800.dat" "tecout_phi_0001_005900.dat" "tecout_phi_0001_006000.dat" "tecout_phi_0001_006100.dat" "tecout_phi_0001_006200.dat" "tecout_phi_0001_006300.dat" "tecout_phi_0001_006400.dat" "tecout_phi_0001_006500.dat" "tecout_phi_0001_006600.dat" "tecout_phi_0001_006700.dat" "tecout_phi_0001_006800.dat" "tecout_phi_0001_006900.dat" "tecout_phi_0001_007000.dat" "tecout_phi_0001_007100.dat" "tecout_phi_0001_007200.dat" "tecout_phi_0001_007300.dat" "tecout_phi_0001_007400.dat" "tecout_phi_0001_007500.dat" "tecout_phi_0001_007600.dat" "tecout_phi_0001_007700.dat" "tecout_phi_0001_007800.dat" "tecout_phi_0001_007900.dat" "tecout_phi_0001_008000.dat" "tecout_phi_0001_008100.dat" "tecout_phi_0001_008200.dat" "tecout_phi_0001_008300.dat" "tecout_phi_0001_008400.dat" "tecout_phi_0001_008500.dat" "tecout_phi_0001_008600.dat" "tecout_phi_0001_008700.dat" "tecout_phi_0001_008800.dat" "tecout_phi_0001_008900.dat" "tecout_phi_0001_009000.dat" "tecout_phi_0001_009100.dat" "tecout_phi_0001_009200.dat" "tecout_phi_0001_009300.dat" "tecout_phi_0001_009400.dat" "tecout_phi_0001_009500.dat" "tecout_phi_0001_009600.dat" "tecout_phi_0001_009700.dat" "tecout_phi_0001_009800.dat" "tecout_phi_0001_009900.dat" "tecout_phi_0001_010000.dat" "tecout_phi_0001_010100.dat" "tecout_phi_0001_010200.dat" "tecout_phi_0001_010300.dat" "tecout_phi_0001_010400.dat" "tecout_phi_0001_010500.dat" "tecout_phi_0001_010600.dat" "tecout_phi_0001_010700.dat" "tecout_phi_0001_010800.dat" "tecout_phi_0001_010900.dat" "tecout_phi_0001_011000.dat" "tecout_phi_0001_011100.dat" "tecout_phi_0001_011200.dat" "tecout_phi_0001_011300.dat" "tecout_phi_0001_011400.dat" "tecout_phi_0001_011500.dat" "tecout_phi_0001_011600.dat" "tecout_phi_0001_011700.dat" "tecout_phi_0001_011800.dat" "tecout_phi_0001_011900.dat" "tecout_phi_0001_012000.dat" "tecout_phi_0001_012100.dat" "tecout_phi_0001_012200.dat" "tecout_phi_0001_012300.dat" "tecout_phi_0001_012400.dat" "tecout_phi_0001_012500.dat" "tecout_phi_0001_012600.dat" "tecout_phi_0001_012700.dat" "tecout_phi_0001_012800.dat" "tecout_phi_0001_012900.dat" "tecout_phi_0001_013000.dat" "tecout_phi_0001_013100.dat" "tecout_phi_0001_013200.dat" "tecout_phi_0001_013300.dat" "tecout_phi_0001_013400.dat" "tecout_phi_0001_013500.dat" "tecout_phi_0001_013600.dat" "tecout_phi_0001_013700.dat" "tecout_phi_0001_013800.dat" "tecout_phi_0001_013900.dat" "tecout_phi_0001_014000.dat" "tecout_phi_0001_014100.dat" "tecout_phi_0001_014200.dat" "tecout_phi_0001_014300.dat" "tecout_phi_0001_014400.dat" "tecout_phi_0001_014500.dat" "tecout_phi_0001_014600.dat" "tecout_phi_0001_014700.dat" "tecout_phi_0001_014800.dat" "tecout_phi_0001_014900.dat" "tecout_phi_0001_015000.dat" "tecout_phi_0002_000100.dat" "tecout_phi_0002_000200.dat" "tecout_phi_0002_000300.dat" "tecout_phi_0002_000400.dat" "tecout_phi_0002_000500.dat" "tecout_phi_0002_000600.dat" "tecout_phi_0002_000700.dat" "tecout_phi_0002_000800.dat" "tecout_phi_0002_000900.dat" "tecout_phi_0002_001000.dat" "tecout_phi_0002_001100.dat" "tecout_phi_0002_001200.dat" "tecout_phi_0002_001300.dat" "tecout_phi_0002_001400.dat" "tecout_phi_0002_001500.dat" "tecout_phi_0002_001600.dat" "tecout_phi_0002_001700.dat" "tecout_phi_0002_001800.dat" "tecout_phi_0002_001900.dat" "tecout_phi_0002_002000.dat" "tecout_phi_0002_002100.dat" "tecout_phi_0002_002200.dat" "tecout_phi_0002_002300.dat" "tecout_phi_0002_002400.dat" "tecout_phi_0002_002500.dat" "tecout_phi_0002_002600.dat" "tecout_phi_0002_002700.dat" "tecout_phi_0002_002800.dat" "tecout_phi_0002_002900.dat" "tecout_phi_0002_003000.dat" "tecout_phi_0002_003100.dat" "tecout_phi_0002_003200.dat" "tecout_phi_0002_003300.dat" "tecout_phi_0002_003400.dat" "tecout_phi_0002_003500.dat" "tecout_phi_0002_003600.dat" "tecout_phi_0002_003700.dat" "tecout_phi_0002_003800.dat" "tecout_phi_0002_003900.dat" "tecout_phi_0002_004000.dat" "tecout_phi_0002_004100.dat" "tecout_phi_0002_004200.dat" "tecout_phi_0002_004300.dat" "tecout_phi_0002_004400.dat" "tecout_phi_0002_004500.dat" "tecout_phi_0002_004600.dat" "tecout_phi_0002_004700.dat" "tecout_phi_0002_004800.dat" "tecout_phi_0002_004900.dat" "tecout_phi_0002_005000.dat" "tecout_phi_0002_005100.dat" "tecout_phi_0002_005200.dat" "tecout_phi_0002_005300.dat" "tecout_phi_0002_005400.dat" "tecout_phi_0002_005500.dat" "tecout_phi_0002_005600.dat" "tecout_phi_0002_005700.dat" "tecout_phi_0002_005800.dat" "tecout_phi_0002_005900.dat" "tecout_phi_0002_006000.dat" "tecout_phi_0002_006100.dat" "tecout_phi_0002_006200.dat" "tecout_phi_0002_006300.dat" "tecout_phi_0002_006400.dat" "tecout_phi_0002_006500.dat" "tecout_phi_0002_006600.dat" "tecout_phi_0002_006700.dat" "tecout_phi_0002_006800.dat" "tecout_phi_0002_006900.dat" "tecout_phi_0002_007000.dat" "tecout_phi_0002_007100.dat" "tecout_phi_0002_007200.dat" "tecout_phi_0002_007300.dat" "tecout_phi_0002_007400.dat" "tecout_phi_0002_007500.dat" "tecout_phi_0002_007600.dat" "tecout_phi_0002_007700.dat" "tecout_phi_0002_007800.dat" "tecout_phi_0002_007900.dat" "tecout_phi_0002_008000.dat" "tecout_phi_0002_008100.dat" "tecout_phi_0002_008200.dat" "tecout_phi_0002_008300.dat" "tecout_phi_0002_008400.dat" "tecout_phi_0002_008500.dat" "tecout_phi_0002_008600.dat" "tecout_phi_0002_008700.dat" "tecout_phi_0002_008800.dat" "tecout_phi_0002_008900.dat" "tecout_phi_0002_009000.dat" "tecout_phi_0002_009100.dat" "tecout_phi_0002_009200.dat" "tecout_phi_0002_009300.dat" "tecout_phi_0002_009400.dat" "tecout_phi_0002_009500.dat" "tecout_phi_0002_009600.dat" "tecout_phi_0002_009700.dat" "tecout_phi_0002_009800.dat" "tecout_phi_0002_009900.dat" "tecout_phi_0002_010000.dat" "tecout_phi_0002_010100.dat" "tecout_phi_0002_010200.dat" "tecout_phi_0002_010300.dat" "tecout_phi_0002_010400.dat" "tecout_phi_0002_010500.dat" "tecout_phi_0002_010600.dat" "tecout_phi_0002_010700.dat" "tecout_phi_0002_010800.dat" "tecout_phi_0002_010900.dat" "tecout_phi_0002_011000.dat" "tecout_phi_0002_011100.dat" "tecout_phi_0002_011200.dat" "tecout_phi_0002_011300.dat" "tecout_phi_0002_011400.dat" "tecout_phi_0002_011500.dat" "tecout_phi_0002_011600.dat" "tecout_phi_0002_011700.dat" "tecout_phi_0002_011800.dat" "tecout_phi_0002_011900.dat" "tecout_phi_0002_012000.dat" "tecout_phi_0002_012100.dat" "tecout_phi_0002_012200.dat" "tecout_phi_0002_012300.dat" "tecout_phi_0002_012400.dat" "tecout_phi_0002_012500.dat" "tecout_phi_0002_012600.dat" "tecout_phi_0002_012700.dat" "tecout_phi_0002_012800.dat" "tecout_phi_0002_012900.dat" "tecout_phi_0002_013000.dat" "tecout_phi_0002_013100.dat" "tecout_phi_0002_013200.dat" "tecout_phi_0002_013300.dat" "tecout_phi_0002_013400.dat" "tecout_phi_0002_013500.dat" "tecout_phi_0002_013600.dat" "tecout_phi_0002_013700.dat" "tecout_phi_0002_013800.dat" "tecout_phi_0002_013900.dat" "tecout_phi_0002_014000.dat" "tecout_phi_0002_014100.dat" "tecout_phi_0002_014200.dat" "tecout_phi_0002_014300.dat" "tecout_phi_0002_014400.dat" "tecout_phi_0002_014500.dat" "tecout_phi_0002_014600.dat" "tecout_phi_0002_014700.dat" "tecout_phi_0002_014800.dat" "tecout_phi_0002_014900.dat" "tecout_phi_0002_015000.dat" "tecout_phi_0003_000100.dat" "tecout_phi_0003_000200.dat" "tecout_phi_0003_000300.dat" "tecout_phi_0003_000400.dat" "tecout_phi_0003_000500.dat" "tecout_phi_0003_000600.dat" "tecout_phi_0003_000700.dat" "tecout_phi_0003_000800.dat" "tecout_phi_0003_000900.dat" "tecout_phi_0003_001000.dat" "tecout_phi_0003_001100.dat" "tecout_phi_0003_001200.dat" "tecout_phi_0003_001300.dat" "tecout_phi_0003_001400.dat" "tecout_phi_0003_001500.dat" "tecout_phi_0003_001600.dat" "tecout_phi_0003_001700.dat" "tecout_phi_0003_001800.dat" "tecout_phi_0003_001900.dat" "tecout_phi_0003_002000.dat" "tecout_phi_0003_002100.dat" "tecout_phi_0003_002200.dat" "tecout_phi_0003_002300.dat" "tecout_phi_0003_002400.dat" "tecout_phi_0003_002500.dat" "tecout_phi_0003_002600.dat" "tecout_phi_0003_002700.dat" "tecout_phi_0003_002800.dat" "tecout_phi_0003_002900.dat" "tecout_phi_0003_003000.dat" "tecout_phi_0003_003100.dat" "tecout_phi_0003_003200.dat" "tecout_phi_0003_003300.dat" "tecout_phi_0003_003400.dat" "tecout_phi_0003_003500.dat" "tecout_phi_0003_003600.dat" "tecout_phi_0003_003700.dat" "tecout_phi_0003_003800.dat" "tecout_phi_0003_003900.dat" "tecout_phi_0003_004000.dat" "tecout_phi_0003_004100.dat" "tecout_phi_0003_004200.dat" "tecout_phi_0003_004300.dat" "tecout_phi_0003_004400.dat" "tecout_phi_0003_004500.dat" "tecout_phi_0003_004600.dat" "tecout_phi_0003_004700.dat" "tecout_phi_0003_004800.dat" "tecout_phi_0003_004900.dat" "tecout_phi_0003_005000.dat" "tecout_phi_0003_005100.dat" "tecout_phi_0003_005200.dat" "tecout_phi_0003_005300.dat" "tecout_phi_0003_005400.dat" "tecout_phi_0003_005500.dat" "tecout_phi_0003_005600.dat" "tecout_phi_0003_005700.dat" "tecout_phi_0003_005800.dat" "tecout_phi_0003_005900.dat" "tecout_phi_0003_006000.dat" "tecout_phi_0003_006100.dat" "tecout_phi_0003_006200.dat" "tecout_phi_0003_006300.dat" "tecout_phi_0003_006400.dat" "tecout_phi_0003_006500.dat" "tecout_phi_0003_006600.dat" "tecout_phi_0003_006700.dat" "tecout_phi_0003_006800.dat" "tecout_phi_0003_006900.dat" "tecout_phi_0003_007000.dat" "tecout_phi_0003_007100.dat" "tecout_phi_0003_007200.dat" "tecout_phi_0003_007300.dat" "tecout_phi_0003_007400.dat" "tecout_phi_0003_007500.dat" "tecout_phi_0003_007600.dat" "tecout_phi_0003_007700.dat" "tecout_phi_0003_007800.dat" "tecout_phi_0003_007900.dat" "tecout_phi_0003_008000.dat" "tecout_phi_0003_008100.dat" "tecout_phi_0003_008200.dat" "tecout_phi_0003_008300.dat" "tecout_phi_0003_008400.dat" "tecout_phi_0003_008500.dat" "tecout_phi_0003_008600.dat" "tecout_phi_0003_008700.dat" "tecout_phi_0003_008800.dat" "tecout_phi_0003_008900.dat" "tecout_phi_0003_009000.dat" "tecout_phi_0003_009100.dat" "tecout_phi_0003_009200.dat" "tecout_phi_0003_009300.dat" "tecout_phi_0003_009400.dat" "tecout_phi_0003_009500.dat" "tecout_phi_0003_009600.dat" "tecout_phi_0003_009700.dat" "tecout_phi_0003_009800.dat" "tecout_phi_0003_009900.dat" "tecout_phi_0003_010000.dat" "tecout_phi_0003_010100.dat" "tecout_phi_0003_010200.dat" "tecout_phi_0003_010300.dat" "tecout_phi_0003_010400.dat" "tecout_phi_0003_010500.dat" "tecout_phi_0003_010600.dat" "tecout_phi_0003_010700.dat" "tecout_phi_0003_010800.dat" "tecout_phi_0003_010900.dat" "tecout_phi_0003_011000.dat" "tecout_phi_0003_011100.dat" "tecout_phi_0003_011200.dat" "tecout_phi_0003_011300.dat" "tecout_phi_0003_011400.dat" "tecout_phi_0003_011500.dat" "tecout_phi_0003_011600.dat" "tecout_phi_0003_011700.dat" "tecout_phi_0003_011800.dat" "tecout_phi_0003_011900.dat" "tecout_phi_0003_012000.dat" "tecout_phi_0003_012100.dat" "tecout_phi_0003_012200.dat" "tecout_phi_0003_012300.dat" "tecout_phi_0003_012400.dat" "tecout_phi_0003_012500.dat" "tecout_phi_0003_012600.dat" "tecout_phi_0003_012700.dat" "tecout_phi_0003_012800.dat" "tecout_phi_0003_012900.dat" "tecout_phi_0003_013000.dat" "tecout_phi_0003_013100.dat" "tecout_phi_0003_013200.dat" "tecout_phi_0003_013300.dat" "tecout_phi_0003_013400.dat" "tecout_phi_0003_013500.dat" "tecout_phi_0003_013600.dat" "tecout_phi_0003_013700.dat" "tecout_phi_0003_013800.dat" "tecout_phi_0003_013900.dat" "tecout_phi_0003_014000.dat" "tecout_phi_0003_014100.dat" "tecout_phi_0003_014200.dat" "tecout_phi_0003_014300.dat" "tecout_phi_0003_014400.dat" "tecout_phi_0003_014500.dat" "tecout_phi_0003_014600.dat" "tecout_phi_0003_014700.dat" "tecout_phi_0003_014800.dat" "tecout_phi_0003_014900.dat" "tecout_phi_0003_015000.dat" "tecout_phi_0004_000100.dat" "tecout_phi_0004_000200.dat" "tecout_phi_0004_000300.dat" "tecout_phi_0004_000400.dat" "tecout_phi_0004_000500.dat" "tecout_phi_0004_000600.dat" "tecout_phi_0004_000700.dat" "tecout_phi_0004_000800.dat" "tecout_phi_0004_000900.dat" "tecout_phi_0004_001000.dat" "tecout_phi_0004_001100.dat" "tecout_phi_0004_001200.dat" "tecout_phi_0004_001300.dat" "tecout_phi_0004_001400.dat" "tecout_phi_0004_001500.dat" "tecout_phi_0004_001600.dat" "tecout_phi_0004_001700.dat" "tecout_phi_0004_001800.dat" "tecout_phi_0004_001900.dat" "tecout_phi_0004_002000.dat" "tecout_phi_0004_002100.dat" "tecout_phi_0004_002200.dat" "tecout_phi_0004_002300.dat" "tecout_phi_0004_002400.dat" "tecout_phi_0004_002500.dat" "tecout_phi_0004_002600.dat" "tecout_phi_0004_002700.dat" "tecout_phi_0004_002800.dat" "tecout_phi_0004_002900.dat" "tecout_phi_0004_003000.dat" "tecout_phi_0004_003100.dat" "tecout_phi_0004_003200.dat" "tecout_phi_0004_003300.dat" "tecout_phi_0004_003400.dat" "tecout_phi_0004_003500.dat" "tecout_phi_0004_003600.dat" "tecout_phi_0004_003700.dat" "tecout_phi_0004_003800.dat" "tecout_phi_0004_003900.dat" "tecout_phi_0004_004000.dat" "tecout_phi_0004_004100.dat" "tecout_phi_0004_004200.dat" "tecout_phi_0004_004300.dat" "tecout_phi_0004_004400.dat" "tecout_phi_0004_004500.dat" "tecout_phi_0004_004600.dat" "tecout_phi_0004_004700.dat" "tecout_phi_0004_004800.dat" "tecout_phi_0004_004900.dat" "tecout_phi_0004_005000.dat" "tecout_phi_0004_005100.dat" "tecout_phi_0004_005200.dat" "tecout_phi_0004_005300.dat" "tecout_phi_0004_005400.dat" "tecout_phi_0004_005500.dat" "tecout_phi_0004_005600.dat" "tecout_phi_0004_005700.dat" "tecout_phi_0004_005800.dat" "tecout_phi_0004_005900.dat" "tecout_phi_0004_006000.dat" "tecout_phi_0004_006100.dat" "tecout_phi_0004_006200.dat" "tecout_phi_0004_006300.dat" "tecout_phi_0004_006400.dat" "tecout_phi_0004_006500.dat" "tecout_phi_0004_006600.dat" "tecout_phi_0004_006700.dat" "tecout_phi_0004_006800.dat" "tecout_phi_0004_006900.dat" "tecout_phi_0004_007000.dat" "tecout_phi_0004_007100.dat" "tecout_phi_0004_007200.dat" "tecout_phi_0004_007300.dat" "tecout_phi_0004_007400.dat" "tecout_phi_0004_007500.dat" "tecout_phi_0004_007600.dat" "tecout_phi_0004_007700.dat" "tecout_phi_0004_007800.dat" "tecout_phi_0004_007900.dat" "tecout_phi_0004_008000.dat" "tecout_phi_0004_008100.dat" "tecout_phi_0004_008200.dat" "tecout_phi_0004_008300.dat" "tecout_phi_0004_008400.dat" "tecout_phi_0004_008500.dat" "tecout_phi_0004_008600.dat" "tecout_phi_0004_008700.dat" "tecout_phi_0004_008800.dat" "tecout_phi_0004_008900.dat" "tecout_phi_0004_009000.dat" "tecout_phi_0004_009100.dat" "tecout_phi_0004_009200.dat" "tecout_phi_0004_009300.dat" "tecout_phi_0004_009400.dat" "tecout_phi_0004_009500.dat" "tecout_phi_0004_009600.dat" "tecout_phi_0004_009700.dat" "tecout_phi_0004_009800.dat" "tecout_phi_0004_009900.dat" "tecout_phi_0004_010000.dat" "tecout_phi_0004_010100.dat" "tecout_phi_0004_010200.dat" "tecout_phi_0004_010300.dat" "tecout_phi_0004_010400.dat" "tecout_phi_0004_010500.dat" "tecout_phi_0004_010600.dat" "tecout_phi_0004_010700.dat" "tecout_phi_0004_010800.dat" "tecout_phi_0004_010900.dat" "tecout_phi_0004_011000.dat" "tecout_phi_0004_011100.dat" "tecout_phi_0004_011200.dat" "tecout_phi_0004_011300.dat" "tecout_phi_0004_011400.dat" "tecout_phi_0004_011500.dat" "tecout_phi_0004_011600.dat" "tecout_phi_0004_011700.dat" "tecout_phi_0004_011800.dat" "tecout_phi_0004_011900.dat" "tecout_phi_0004_012000.dat" "tecout_phi_0004_012100.dat" "tecout_phi_0004_012200.dat" "tecout_phi_0004_012300.dat" "tecout_phi_0004_012400.dat" "tecout_phi_0004_012500.dat" "tecout_phi_0004_012600.dat" "tecout_phi_0004_012700.dat" "tecout_phi_0004_012800.dat" "tecout_phi_0004_012900.dat" "tecout_phi_0004_013000.dat" "tecout_phi_0004_013100.dat" "tecout_phi_0004_013200.dat" "tecout_phi_0004_013300.dat" "tecout_phi_0004_013400.dat" "tecout_phi_0004_013500.dat" "tecout_phi_0004_013600.dat" "tecout_phi_0004_013700.dat" "tecout_phi_0004_013800.dat" "tecout_phi_0004_013900.dat" "tecout_phi_0004_014000.dat" "tecout_phi_0004_014100.dat" "tecout_phi_0004_014200.dat" "tecout_phi_0004_014300.dat" "tecout_phi_0004_014400.dat" "tecout_phi_0004_014500.dat" "tecout_phi_0004_014600.dat" "tecout_phi_0004_014700.dat" "tecout_phi_0004_014800.dat" "tecout_phi_0004_014900.dat" "tecout_phi_0004_015000.dat" "tecout_phi_0005_000100.dat" "tecout_phi_0005_000200.dat" "tecout_phi_0005_000300.dat" "tecout_phi_0005_000400.dat" "tecout_phi_0005_000500.dat" "tecout_phi_0005_000600.dat" "tecout_phi_0005_000700.dat" "tecout_phi_0005_000800.dat" "tecout_phi_0005_000900.dat" "tecout_phi_0005_001000.dat" "tecout_phi_0005_001100.dat" "tecout_phi_0005_001200.dat" "tecout_phi_0005_001300.dat" "tecout_phi_0005_001400.dat" "tecout_phi_0005_001500.dat" "tecout_phi_0005_001600.dat" "tecout_phi_0005_001700.dat" "tecout_phi_0005_001800.dat" "tecout_phi_0005_001900.dat" "tecout_phi_0005_002000.dat" "tecout_phi_0005_002100.dat" "tecout_phi_0005_002200.dat" "tecout_phi_0005_002300.dat" "tecout_phi_0005_002400.dat" "tecout_phi_0005_002500.dat" "tecout_phi_0005_002600.dat" "tecout_phi_0005_002700.dat" "tecout_phi_0005_002800.dat" "tecout_phi_0005_002900.dat" "tecout_phi_0005_003000.dat" "tecout_phi_0005_003100.dat" "tecout_phi_0005_003200.dat" "tecout_phi_0005_003300.dat" "tecout_phi_0005_003400.dat" "tecout_phi_0005_003500.dat" "tecout_phi_0005_003600.dat" "tecout_phi_0005_003700.dat" "tecout_phi_0005_003800.dat" "tecout_phi_0005_003900.dat" "tecout_phi_0005_004000.dat" "tecout_phi_0005_004100.dat" "tecout_phi_0005_004200.dat" "tecout_phi_0005_004300.dat" "tecout_phi_0005_004400.dat" "tecout_phi_0005_004500.dat" "tecout_phi_0005_004600.dat" "tecout_phi_0005_004700.dat" "tecout_phi_0005_004800.dat" "tecout_phi_0005_004900.dat" "tecout_phi_0005_005000.dat" "tecout_phi_0005_005100.dat" "tecout_phi_0005_005200.dat" "tecout_phi_0005_005300.dat" "tecout_phi_0005_005400.dat" "tecout_phi_0005_005500.dat" "tecout_phi_0005_005600.dat" "tecout_phi_0005_005700.dat" "tecout_phi_0005_005800.dat" "tecout_phi_0005_005900.dat" "tecout_phi_0005_006000.dat" "tecout_phi_0005_006100.dat" "tecout_phi_0005_006200.dat" "tecout_phi_0005_006300.dat" "tecout_phi_0005_006400.dat" "tecout_phi_0005_006500.dat" "tecout_phi_0005_006600.dat" "tecout_phi_0005_006700.dat" "tecout_phi_0005_006800.dat" "tecout_phi_0005_006900.dat" "tecout_phi_0005_007000.dat" "tecout_phi_0005_007100.dat" "tecout_phi_0005_007200.dat" "tecout_phi_0005_007300.dat" "tecout_phi_0005_007400.dat" "tecout_phi_0005_007500.dat" "tecout_phi_0005_007600.dat" "tecout_phi_0005_007700.dat" "tecout_phi_0005_007800.dat" "tecout_phi_0005_007900.dat" "tecout_phi_0005_008000.dat" "tecout_phi_0005_008100.dat" "tecout_phi_0005_008200.dat" "tecout_phi_0005_008300.dat" "tecout_phi_0005_008400.dat" "tecout_phi_0005_008500.dat" "tecout_phi_0005_008600.dat" "tecout_phi_0005_008700.dat" "tecout_phi_0005_008800.dat" "tecout_phi_0005_008900.dat" "tecout_phi_0005_009000.dat" "tecout_phi_0005_009100.dat" "tecout_phi_0005_009200.dat" "tecout_phi_0005_009300.dat" "tecout_phi_0005_009400.dat" "tecout_phi_0005_009500.dat" "tecout_phi_0005_009600.dat" "tecout_phi_0005_009700.dat" "tecout_phi_0005_009800.dat" "tecout_phi_0005_009900.dat" "tecout_phi_0005_010000.dat" "tecout_phi_0005_010100.dat" "tecout_phi_0005_010200.dat" "tecout_phi_0005_010300.dat" "tecout_phi_0005_010400.dat" "tecout_phi_0005_010500.dat" "tecout_phi_0005_010600.dat" "tecout_phi_0005_010700.dat" "tecout_phi_0005_010800.dat" "tecout_phi_0005_010900.dat" "tecout_phi_0005_011000.dat" "tecout_phi_0005_011100.dat" "tecout_phi_0005_011200.dat" "tecout_phi_0005_011300.dat" "tecout_phi_0005_011400.dat" "tecout_phi_0005_011500.dat" "tecout_phi_0005_011600.dat" "tecout_phi_0005_011700.dat" "tecout_phi_0005_011800.dat" "tecout_phi_0005_011900.dat" "tecout_phi_0005_012000.dat" "tecout_phi_0005_012100.dat" "tecout_phi_0005_012200.dat" "tecout_phi_0005_012300.dat" "tecout_phi_0005_012400.dat" "tecout_phi_0005_012500.dat" "tecout_phi_0005_012600.dat" "tecout_phi_0005_012700.dat" "tecout_phi_0005_012800.dat" "tecout_phi_0005_012900.dat" "tecout_phi_0005_013000.dat" "tecout_phi_0005_013100.dat" "tecout_phi_0005_013200.dat" "tecout_phi_0005_013300.dat" "tecout_phi_0005_013400.dat" "tecout_phi_0005_013500.dat" "tecout_phi_0005_013600.dat" "tecout_phi_0005_013700.dat" "tecout_phi_0005_013800.dat" "tecout_phi_0005_013900.dat" "tecout_phi_0005_014000.dat" "tecout_phi_0005_014100.dat" "tecout_phi_0005_014200.dat" "tecout_phi_0005_014300.dat" "tecout_phi_0005_014400.dat" "tecout_phi_0005_014500.dat" "tecout_phi_0005_014600.dat" "tecout_phi_0005_014700.dat" "tecout_phi_0005_014800.dat" "tecout_phi_0005_014900.dat" "tecout_phi_0005_015000.dat" "tecout_phi_0006_000100.dat" "tecout_phi_0006_000200.dat" "tecout_phi_0006_000300.dat" "tecout_phi_0006_000400.dat" "tecout_phi_0006_000500.dat" "tecout_phi_0006_000600.dat" "tecout_phi_0006_000700.dat" "tecout_phi_0006_000800.dat" "tecout_phi_0006_000900.dat" "tecout_phi_0006_001000.dat" "tecout_phi_0006_001100.dat" "tecout_phi_0006_001200.dat" "tecout_phi_0006_001300.dat" "tecout_phi_0006_001400.dat" "tecout_phi_0006_001500.dat" "tecout_phi_0006_001600.dat" "tecout_phi_0006_001700.dat" "tecout_phi_0006_001800.dat" "tecout_phi_0006_001900.dat" "tecout_phi_0006_002000.dat" "tecout_phi_0006_002100.dat" "tecout_phi_0006_002200.dat" "tecout_phi_0006_002300.dat" "tecout_phi_0006_002400.dat" "tecout_phi_0006_002500.dat" "tecout_phi_0006_002600.dat" "tecout_phi_0006_002700.dat" "tecout_phi_0006_002800.dat" "tecout_phi_0006_002900.dat" "tecout_phi_0006_003000.dat" "tecout_phi_0006_003100.dat" "tecout_phi_0006_003200.dat" "tecout_phi_0006_003300.dat" "tecout_phi_0006_003400.dat" "tecout_phi_0006_003500.dat" "tecout_phi_0006_003600.dat" "tecout_phi_0006_003700.dat" "tecout_phi_0006_003800.dat" "tecout_phi_0006_003900.dat" "tecout_phi_0006_004000.dat" "tecout_phi_0006_004100.dat" "tecout_phi_0006_004200.dat" "tecout_phi_0006_004300.dat" "tecout_phi_0006_004400.dat" "tecout_phi_0006_004500.dat" "tecout_phi_0006_004600.dat" "tecout_phi_0006_004700.dat" "tecout_phi_0006_004800.dat" "tecout_phi_0006_004900.dat" "tecout_phi_0006_005000.dat" "tecout_phi_0006_005100.dat" "tecout_phi_0006_005200.dat" "tecout_phi_0006_005300.dat" "tecout_phi_0006_005400.dat" "tecout_phi_0006_005500.dat" "tecout_phi_0006_005600.dat" "tecout_phi_0006_005700.dat" "tecout_phi_0006_005800.dat" "tecout_phi_0006_005900.dat" "tecout_phi_0006_006000.dat" "tecout_phi_0006_006100.dat" "tecout_phi_0006_006200.dat" "tecout_phi_0006_006300.dat" "tecout_phi_0006_006400.dat" "tecout_phi_0006_006500.dat" "tecout_phi_0006_006600.dat" "tecout_phi_0006_006700.dat" "tecout_phi_0006_006800.dat" "tecout_phi_0006_006900.dat" "tecout_phi_0006_007000.dat" "tecout_phi_0006_007100.dat" "tecout_phi_0006_007200.dat" "tecout_phi_0006_007300.dat" "tecout_phi_0006_007400.dat" "tecout_phi_0006_007500.dat" "tecout_phi_0006_007600.dat" "tecout_phi_0006_007700.dat" "tecout_phi_0006_007800.dat" "tecout_phi_0006_007900.dat" "tecout_phi_0006_008000.dat" "tecout_phi_0006_008100.dat" "tecout_phi_0006_008200.dat" "tecout_phi_0006_008300.dat" "tecout_phi_0006_008400.dat" "tecout_phi_0006_008500.dat" "tecout_phi_0006_008600.dat" "tecout_phi_0006_008700.dat" "tecout_phi_0006_008800.dat" "tecout_phi_0006_008900.dat" "tecout_phi_0006_009000.dat" "tecout_phi_0006_009100.dat" "tecout_phi_0006_009200.dat" "tecout_phi_0006_009300.dat" "tecout_phi_0006_009400.dat" "tecout_phi_0006_009500.dat" "tecout_phi_0006_009600.dat" "tecout_phi_0006_009700.dat" "tecout_phi_0006_009800.dat" "tecout_phi_0006_009900.dat" "tecout_phi_0006_010000.dat" "tecout_phi_0006_010100.dat" "tecout_phi_0006_010200.dat" "tecout_phi_0006_010300.dat" "tecout_phi_0006_010400.dat" "tecout_phi_0006_010500.dat" "tecout_phi_0006_010600.dat" "tecout_phi_0006_010700.dat" "tecout_phi_0006_010800.dat" "tecout_phi_0006_010900.dat" "tecout_phi_0006_011000.dat" "tecout_phi_0006_011100.dat" "tecout_phi_0006_011200.dat" "tecout_phi_0006_011300.dat" "tecout_phi_0006_011400.dat" "tecout_phi_0006_011500.dat" "tecout_phi_0006_011600.dat" "tecout_phi_0006_011700.dat" "tecout_phi_0006_011800.dat" "tecout_phi_0006_011900.dat" "tecout_phi_0006_012000.dat" "tecout_phi_0006_012100.dat" "tecout_phi_0006_012200.dat" "tecout_phi_0006_012300.dat" "tecout_phi_0006_012400.dat" "tecout_phi_0006_012500.dat" "tecout_phi_0006_012600.dat" "tecout_phi_0006_012700.dat" "tecout_phi_0006_012800.dat" "tecout_phi_0006_012900.dat" "tecout_phi_0006_013000.dat" "tecout_phi_0006_013100.dat" "tecout_phi_0006_013200.dat" "tecout_phi_0006_013300.dat" "tecout_phi_0006_013400.dat" "tecout_phi_0006_013500.dat" "tecout_phi_0006_013600.dat" "tecout_phi_0006_013700.dat" "tecout_phi_0006_013800.dat" "tecout_phi_0006_013900.dat" "tecout_phi_0006_014000.dat" "tecout_phi_0006_014100.dat" "tecout_phi_0006_014200.dat" "tecout_phi_0006_014300.dat" "tecout_phi_0006_014400.dat" "tecout_phi_0006_014500.dat" "tecout_phi_0006_014600.dat" "tecout_phi_0006_014700.dat" "tecout_phi_0006_014800.dat" "tecout_phi_0006_014900.dat" "tecout_phi_0006_015000.dat" "tecout_phi_0007_000100.dat" "tecout_phi_0007_000200.dat" "tecout_phi_0007_000300.dat" "tecout_phi_0007_000400.dat" "tecout_phi_0007_000500.dat" "tecout_phi_0007_000600.dat" "tecout_phi_0007_000700.dat" "tecout_phi_0007_000800.dat" "tecout_phi_0007_000900.dat" "tecout_phi_0007_001000.dat" "tecout_phi_0007_001100.dat" "tecout_phi_0007_001200.dat" "tecout_phi_0007_001300.dat" "tecout_phi_0007_001400.dat" "tecout_phi_0007_001500.dat" "tecout_phi_0007_001600.dat" "tecout_phi_0007_001700.dat" "tecout_phi_0007_001800.dat" "tecout_phi_0007_001900.dat" "tecout_phi_0007_002000.dat" "tecout_phi_0007_002100.dat" "tecout_phi_0007_002200.dat" "tecout_phi_0007_002300.dat" "tecout_phi_0007_002400.dat" "tecout_phi_0007_002500.dat" "tecout_phi_0007_002600.dat" "tecout_phi_0007_002700.dat" "tecout_phi_0007_002800.dat" "tecout_phi_0007_002900.dat" "tecout_phi_0007_003000.dat" "tecout_phi_0007_003100.dat" "tecout_phi_0007_003200.dat" "tecout_phi_0007_003300.dat" "tecout_phi_0007_003400.dat" "tecout_phi_0007_003500.dat" "tecout_phi_0007_003600.dat" "tecout_phi_0007_003700.dat" "tecout_phi_0007_003800.dat" "tecout_phi_0007_003900.dat" "tecout_phi_0007_004000.dat" "tecout_phi_0007_004100.dat" "tecout_phi_0007_004200.dat" "tecout_phi_0007_004300.dat" "tecout_phi_0007_004400.dat" "tecout_phi_0007_004500.dat" "tecout_phi_0007_004600.dat" "tecout_phi_0007_004700.dat" "tecout_phi_0007_004800.dat" "tecout_phi_0007_004900.dat" "tecout_phi_0007_005000.dat" "tecout_phi_0007_005100.dat" "tecout_phi_0007_005200.dat" "tecout_phi_0007_005300.dat" "tecout_phi_0007_005400.dat" "tecout_phi_0007_005500.dat" "tecout_phi_0007_005600.dat" "tecout_phi_0007_005700.dat" "tecout_phi_0007_005800.dat" "tecout_phi_0007_005900.dat" "tecout_phi_0007_006000.dat" "tecout_phi_0007_006100.dat" "tecout_phi_0007_006200.dat" "tecout_phi_0007_006300.dat" "tecout_phi_0007_006400.dat" "tecout_phi_0007_006500.dat" "tecout_phi_0007_006600.dat" "tecout_phi_0007_006700.dat" "tecout_phi_0007_006800.dat" "tecout_phi_0007_006900.dat" "tecout_phi_0007_007000.dat" "tecout_phi_0007_007100.dat" "tecout_phi_0007_007200.dat" "tecout_phi_0007_007300.dat" "tecout_phi_0007_007400.dat" "tecout_phi_0007_007500.dat" "tecout_phi_0007_007600.dat" "tecout_phi_0007_007700.dat" "tecout_phi_0007_007800.dat" "tecout_phi_0007_007900.dat" "tecout_phi_0007_008000.dat" "tecout_phi_0007_008100.dat" "tecout_phi_0007_008200.dat" "tecout_phi_0007_008300.dat" "tecout_phi_0007_008400.dat" "tecout_phi_0007_008500.dat" "tecout_phi_0007_008600.dat" "tecout_phi_0007_008700.dat" "tecout_phi_0007_008800.dat" "tecout_phi_0007_008900.dat" "tecout_phi_0007_009000.dat" "tecout_phi_0007_009100.dat" "tecout_phi_0007_009200.dat" "tecout_phi_0007_009300.dat" "tecout_phi_0007_009400.dat" "tecout_phi_0007_009500.dat" "tecout_phi_0007_009600.dat" "tecout_phi_0007_009700.dat" "tecout_phi_0007_009800.dat" "tecout_phi_0007_009900.dat" "tecout_phi_0007_010000.dat" "tecout_phi_0007_010100.dat" "tecout_phi_0007_010200.dat" "tecout_phi_0007_010300.dat" "tecout_phi_0007_010400.dat" "tecout_phi_0007_010500.dat" "tecout_phi_0007_010600.dat" "tecout_phi_0007_010700.dat" "tecout_phi_0007_010800.dat" "tecout_phi_0007_010900.dat" "tecout_phi_0007_011000.dat" "tecout_phi_0007_011100.dat" "tecout_phi_0007_011200.dat" "tecout_phi_0007_011300.dat" "tecout_phi_0007_011400.dat" "tecout_phi_0007_011500.dat" "tecout_phi_0007_011600.dat" "tecout_phi_0007_011700.dat" "tecout_phi_0007_011800.dat" "tecout_phi_0007_011900.dat" "tecout_phi_0007_012000.dat" "tecout_phi_0007_012100.dat" "tecout_phi_0007_012200.dat" "tecout_phi_0007_012300.dat" "tecout_phi_0007_012400.dat" "tecout_phi_0007_012500.dat" "tecout_phi_0007_012600.dat" "tecout_phi_0007_012700.dat" "tecout_phi_0007_012800.dat" "tecout_phi_0007_012900.dat" "tecout_phi_0007_013000.dat" "tecout_phi_0007_013100.dat" "tecout_phi_0007_013200.dat" "tecout_phi_0007_013300.dat" "tecout_phi_0007_013400.dat" "tecout_phi_0007_013500.dat" "tecout_phi_0007_013600.dat" "tecout_phi_0007_013700.dat" "tecout_phi_0007_013800.dat" "tecout_phi_0007_013900.dat" "tecout_phi_0007_014000.dat" "tecout_phi_0007_014100.dat" "tecout_phi_0007_014200.dat" "tecout_phi_0007_014300.dat" "tecout_phi_0007_014400.dat" "tecout_phi_0007_014500.dat" "tecout_phi_0007_014600.dat" "tecout_phi_0007_014700.dat" "tecout_phi_0007_014800.dat" "tecout_phi_0007_014900.dat" "tecout_phi_0007_015000.dat" "tecout_phi_0008_000100.dat" "tecout_phi_0008_000200.dat" "tecout_phi_0008_000300.dat" "tecout_phi_0008_000400.dat" "tecout_phi_0008_000500.dat" "tecout_phi_0008_000600.dat" "tecout_phi_0008_000700.dat" "tecout_phi_0008_000800.dat" "tecout_phi_0008_000900.dat" "tecout_phi_0008_001000.dat" "tecout_phi_0008_001100.dat" "tecout_phi_0008_001200.dat" "tecout_phi_0008_001300.dat" "tecout_phi_0008_001400.dat" "tecout_phi_0008_001500.dat" "tecout_phi_0008_001600.dat" "tecout_phi_0008_001700.dat" "tecout_phi_0008_001800.dat" "tecout_phi_0008_001900.dat" "tecout_phi_0008_002000.dat" "tecout_phi_0008_002100.dat" "tecout_phi_0008_002200.dat" "tecout_phi_0008_002300.dat" "tecout_phi_0008_002400.dat" "tecout_phi_0008_002500.dat" "tecout_phi_0008_002600.dat" "tecout_phi_0008_002700.dat" "tecout_phi_0008_002800.dat" "tecout_phi_0008_002900.dat" "tecout_phi_0008_003000.dat" "tecout_phi_0008_003100.dat" "tecout_phi_0008_003200.dat" "tecout_phi_0008_003300.dat" "tecout_phi_0008_003400.dat" "tecout_phi_0008_003500.dat" "tecout_phi_0008_003600.dat" "tecout_phi_0008_003700.dat" "tecout_phi_0008_003800.dat" "tecout_phi_0008_003900.dat" "tecout_phi_0008_004000.dat" "tecout_phi_0008_004100.dat" "tecout_phi_0008_004200.dat" "tecout_phi_0008_004300.dat" "tecout_phi_0008_004400.dat" "tecout_phi_0008_004500.dat" "tecout_phi_0008_004600.dat" "tecout_phi_0008_004700.dat" "tecout_phi_0008_004800.dat" "tecout_phi_0008_004900.dat" "tecout_phi_0008_005000.dat" "tecout_phi_0008_005100.dat" "tecout_phi_0008_005200.dat" "tecout_phi_0008_005300.dat" "tecout_phi_0008_005400.dat" "tecout_phi_0008_005500.dat" "tecout_phi_0008_005600.dat" "tecout_phi_0008_005700.dat" "tecout_phi_0008_005800.dat" "tecout_phi_0008_005900.dat" "tecout_phi_0008_006000.dat" "tecout_phi_0008_006100.dat" "tecout_phi_0008_006200.dat" "tecout_phi_0008_006300.dat" "tecout_phi_0008_006400.dat" "tecout_phi_0008_006500.dat" "tecout_phi_0008_006600.dat" "tecout_phi_0008_006700.dat" "tecout_phi_0008_006800.dat" "tecout_phi_0008_006900.dat" "tecout_phi_0008_007000.dat" "tecout_phi_0008_007100.dat" "tecout_phi_0008_007200.dat" "tecout_phi_0008_007300.dat" "tecout_phi_0008_007400.dat" "tecout_phi_0008_007500.dat" "tecout_phi_0008_007600.dat" "tecout_phi_0008_007700.dat" "tecout_phi_0008_007800.dat" "tecout_phi_0008_007900.dat" "tecout_phi_0008_008000.dat" "tecout_phi_0008_008100.dat" "tecout_phi_0008_008200.dat" "tecout_phi_0008_008300.dat" "tecout_phi_0008_008400.dat" "tecout_phi_0008_008500.dat" "tecout_phi_0008_008600.dat" "tecout_phi_0008_008700.dat" "tecout_phi_0008_008800.dat" "tecout_phi_0008_008900.dat" "tecout_phi_0008_009000.dat" "tecout_phi_0008_009100.dat" "tecout_phi_0008_009200.dat" "tecout_phi_0008_009300.dat" "tecout_phi_0008_009400.dat" "tecout_phi_0008_009500.dat" "tecout_phi_0008_009600.dat" "tecout_phi_0008_009700.dat" "tecout_phi_0008_009800.dat" "tecout_phi_0008_009900.dat" "tecout_phi_0008_010000.dat" "tecout_phi_0008_010100.dat" "tecout_phi_0008_010200.dat" "tecout_phi_0008_010300.dat" "tecout_phi_0008_010400.dat" "tecout_phi_0008_010500.dat" "tecout_phi_0008_010600.dat" "tecout_phi_0008_010700.dat" "tecout_phi_0008_010800.dat" "tecout_phi_0008_010900.dat" "tecout_phi_0008_011000.dat" "tecout_phi_0008_011100.dat" "tecout_phi_0008_011200.dat" "tecout_phi_0008_011300.dat" "tecout_phi_0008_011400.dat" "tecout_phi_0008_011500.dat" "tecout_phi_0008_011600.dat" "tecout_phi_0008_011700.dat" "tecout_phi_0008_011800.dat" "tecout_phi_0008_011900.dat" "tecout_phi_0008_012000.dat" "tecout_phi_0008_012100.dat" "tecout_phi_0008_012200.dat" "tecout_phi_0008_012300.dat" "tecout_phi_0008_012400.dat" "tecout_phi_0008_012500.dat" "tecout_phi_0008_012600.dat" "tecout_phi_0008_012700.dat" "tecout_phi_0008_012800.dat" "tecout_phi_0008_012900.dat" "tecout_phi_0008_013000.dat" "tecout_phi_0008_013100.dat" "tecout_phi_0008_013200.dat" "tecout_phi_0008_013300.dat" "tecout_phi_0008_013400.dat" "tecout_phi_0008_013500.dat" "tecout_phi_0008_013600.dat" "tecout_phi_0008_013700.dat" "tecout_phi_0008_013800.dat" "tecout_phi_0008_013900.dat" "tecout_phi_0008_014000.dat" "tecout_phi_0008_014100.dat" "tecout_phi_0008_014200.dat" "tecout_phi_0008_014300.dat" "tecout_phi_0008_014400.dat" "tecout_phi_0008_014500.dat" "tecout_phi_0008_014600.dat" "tecout_phi_0008_014700.dat" "tecout_phi_0008_014800.dat" "tecout_phi_0008_014900.dat" "tecout_phi_0008_015000.dat" "tecout_phi_0009_000100.dat" "tecout_phi_0009_000200.dat" "tecout_phi_0009_000300.dat" "tecout_phi_0009_000400.dat" "tecout_phi_0009_000500.dat" "tecout_phi_0009_000600.dat" "tecout_phi_0009_000700.dat" "tecout_phi_0009_000800.dat" "tecout_phi_0009_000900.dat" "tecout_phi_0009_001000.dat" "tecout_phi_0009_001100.dat" "tecout_phi_0009_001200.dat" "tecout_phi_0009_001300.dat" "tecout_phi_0009_001400.dat" "tecout_phi_0009_001500.dat" "tecout_phi_0009_001600.dat" "tecout_phi_0009_001700.dat" "tecout_phi_0009_001800.dat" "tecout_phi_0009_001900.dat" "tecout_phi_0009_002000.dat" "tecout_phi_0009_002100.dat" "tecout_phi_0009_002200.dat" "tecout_phi_0009_002300.dat" "tecout_phi_0009_002400.dat" "tecout_phi_0009_002500.dat" "tecout_phi_0009_002600.dat" "tecout_phi_0009_002700.dat" "tecout_phi_0009_002800.dat" "tecout_phi_0009_002900.dat" "tecout_phi_0009_003000.dat" "tecout_phi_0009_003100.dat" "tecout_phi_0009_003200.dat" "tecout_phi_0009_003300.dat" "tecout_phi_0009_003400.dat" "tecout_phi_0009_003500.dat" "tecout_phi_0009_003600.dat" "tecout_phi_0009_003700.dat" "tecout_phi_0009_003800.dat" "tecout_phi_0009_003900.dat" "tecout_phi_0009_004000.dat" "tecout_phi_0009_004100.dat" "tecout_phi_0009_004200.dat" "tecout_phi_0009_004300.dat" "tecout_phi_0009_004400.dat" "tecout_phi_0009_004500.dat" "tecout_phi_0009_004600.dat" "tecout_phi_0009_004700.dat" "tecout_phi_0009_004800.dat" "tecout_phi_0009_004900.dat" "tecout_phi_0009_005000.dat" "tecout_phi_0009_005100.dat" "tecout_phi_0009_005200.dat" "tecout_phi_0009_005300.dat" "tecout_phi_0009_005400.dat" "tecout_phi_0009_005500.dat" "tecout_phi_0009_005600.dat" "tecout_phi_0009_005700.dat" "tecout_phi_0009_005800.dat" "tecout_phi_0009_005900.dat" "tecout_phi_0009_006000.dat" "tecout_phi_0009_006100.dat" "tecout_phi_0009_006200.dat" "tecout_phi_0009_006300.dat" "tecout_phi_0009_006400.dat" "tecout_phi_0009_006500.dat" "tecout_phi_0009_006600.dat" "tecout_phi_0009_006700.dat" "tecout_phi_0009_006800.dat" "tecout_phi_0009_006900.dat" "tecout_phi_0009_007000.dat" "tecout_phi_0009_007100.dat" "tecout_phi_0009_007200.dat" "tecout_phi_0009_007300.dat" "tecout_phi_0009_007400.dat" "tecout_phi_0009_007500.dat" "tecout_phi_0009_007600.dat" "tecout_phi_0009_007700.dat" "tecout_phi_0009_007800.dat" "tecout_phi_0009_007900.dat" "tecout_phi_0009_008000.dat" "tecout_phi_0009_008100.dat" "tecout_phi_0009_008200.dat" "tecout_phi_0009_008300.dat" "tecout_phi_0009_008400.dat" "tecout_phi_0009_008500.dat" "tecout_phi_0009_008600.dat" "tecout_phi_0009_008700.dat" "tecout_phi_0009_008800.dat" "tecout_phi_0009_008900.dat" "tecout_phi_0009_009000.dat" "tecout_phi_0009_009100.dat" "tecout_phi_0009_009200.dat" "tecout_phi_0009_009300.dat" "tecout_phi_0009_009400.dat" "tecout_phi_0009_009500.dat" "tecout_phi_0009_009600.dat" "tecout_phi_0009_009700.dat" "tecout_phi_0009_009800.dat" "tecout_phi_0009_009900.dat" "tecout_phi_0009_010000.dat" "tecout_phi_0009_010100.dat" "tecout_phi_0009_010200.dat" "tecout_phi_0009_010300.dat" "tecout_phi_0009_010400.dat" "tecout_phi_0009_010500.dat" "tecout_phi_0009_010600.dat" "tecout_phi_0009_010700.dat" "tecout_phi_0009_010800.dat" "tecout_phi_0009_010900.dat" "tecout_phi_0009_011000.dat" "tecout_phi_0009_011100.dat" "tecout_phi_0009_011200.dat" "tecout_phi_0009_011300.dat" "tecout_phi_0009_011400.dat" "tecout_phi_0009_011500.dat" "tecout_phi_0009_011600.dat" "tecout_phi_0009_011700.dat" "tecout_phi_0009_011800.dat" "tecout_phi_0009_011900.dat" "tecout_phi_0009_012000.dat" "tecout_phi_0009_012100.dat" "tecout_phi_0009_012200.dat" "tecout_phi_0009_012300.dat" "tecout_phi_0009_012400.dat" "tecout_phi_0009_012500.dat" "tecout_phi_0009_012600.dat" "tecout_phi_0009_012700.dat" "tecout_phi_0009_012800.dat" "tecout_phi_0009_012900.dat" "tecout_phi_0009_013000.dat" "tecout_phi_0009_013100.dat" "tecout_phi_0009_013200.dat" "tecout_phi_0009_013300.dat" "tecout_phi_0009_013400.dat" "tecout_phi_0009_013500.dat" "tecout_phi_0009_013600.dat" "tecout_phi_0009_013700.dat" "tecout_phi_0009_013800.dat" "tecout_phi_0009_013900.dat" "tecout_phi_0009_014000.dat" "tecout_phi_0009_014100.dat" "tecout_phi_0009_014200.dat" "tecout_phi_0009_014300.dat" "tecout_phi_0009_014400.dat" "tecout_phi_0009_014500.dat" "tecout_phi_0009_014600.dat" "tecout_phi_0009_014700.dat" "tecout_phi_0009_014800.dat" "tecout_phi_0009_014900.dat" "tecout_phi_0009_015000.dat" "tecout_phi_0010_000100.dat" "tecout_phi_0010_000200.dat" "tecout_phi_0010_000300.dat" "tecout_phi_0010_000400.dat" "tecout_phi_0010_000500.dat" "tecout_phi_0010_000600.dat" "tecout_phi_0010_000700.dat" "tecout_phi_0010_000800.dat" "tecout_phi_0010_000900.dat" "tecout_phi_0010_001000.dat" "tecout_phi_0010_001100.dat" "tecout_phi_0010_001200.dat" "tecout_phi_0010_001300.dat" "tecout_phi_0010_001400.dat" "tecout_phi_0010_001500.dat" "tecout_phi_0010_001600.dat" "tecout_phi_0010_001700.dat" "tecout_phi_0010_001800.dat" "tecout_phi_0010_001900.dat" "tecout_phi_0010_002000.dat" "tecout_phi_0010_002100.dat" "tecout_phi_0010_002200.dat" "tecout_phi_0010_002300.dat" "tecout_phi_0010_002400.dat" "tecout_phi_0010_002500.dat" "tecout_phi_0010_002600.dat" "tecout_phi_0010_002700.dat" "tecout_phi_0010_002800.dat" "tecout_phi_0010_002900.dat" "tecout_phi_0010_003000.dat" "tecout_phi_0010_003100.dat" "tecout_phi_0010_003200.dat" "tecout_phi_0010_003300.dat" "tecout_phi_0010_003400.dat" "tecout_phi_0010_003500.dat" "tecout_phi_0010_003600.dat" "tecout_phi_0010_003700.dat" "tecout_phi_0010_003800.dat" "tecout_phi_0010_003900.dat" "tecout_phi_0010_004000.dat" "tecout_phi_0010_004100.dat" "tecout_phi_0010_004200.dat" "tecout_phi_0010_004300.dat" "tecout_phi_0010_004400.dat" "tecout_phi_0010_004500.dat" "tecout_phi_0010_004600.dat" "tecout_phi_0010_004700.dat" "tecout_phi_0010_004800.dat" "tecout_phi_0010_004900.dat" "tecout_phi_0010_005000.dat" "tecout_phi_0010_005100.dat" "tecout_phi_0010_005200.dat" "tecout_phi_0010_005300.dat" "tecout_phi_0010_005400.dat" "tecout_phi_0010_005500.dat" "tecout_phi_0010_005600.dat" "tecout_phi_0010_005700.dat" "tecout_phi_0010_005800.dat" "tecout_phi_0010_005900.dat" "tecout_phi_0010_006000.dat" "tecout_phi_0010_006100.dat" "tecout_phi_0010_006200.dat" "tecout_phi_0010_006300.dat" "tecout_phi_0010_006400.dat" "tecout_phi_0010_006500.dat" "tecout_phi_0010_006600.dat" "tecout_phi_0010_006700.dat" "tecout_phi_0010_006800.dat" "tecout_phi_0010_006900.dat" "tecout_phi_0010_007000.dat" "tecout_phi_0010_007100.dat" "tecout_phi_0010_007200.dat" "tecout_phi_0010_007300.dat" "tecout_phi_0010_007400.dat" "tecout_phi_0010_007500.dat" "tecout_phi_0010_007600.dat" "tecout_phi_0010_007700.dat" "tecout_phi_0010_007800.dat" "tecout_phi_0010_007900.dat" "tecout_phi_0010_008000.dat" "tecout_phi_0010_008100.dat" "tecout_phi_0010_008200.dat" "tecout_phi_0010_008300.dat" "tecout_phi_0010_008400.dat" "tecout_phi_0010_008500.dat" "tecout_phi_0010_008600.dat" "tecout_phi_0010_008700.dat" "tecout_phi_0010_008800.dat" "tecout_phi_0010_008900.dat" "tecout_phi_0010_009000.dat" "tecout_phi_0010_009100.dat" "tecout_phi_0010_009200.dat" "tecout_phi_0010_009300.dat" "tecout_phi_0010_009400.dat" "tecout_phi_0010_009500.dat" "tecout_phi_0010_009600.dat" "tecout_phi_0010_009700.dat" "tecout_phi_0010_009800.dat" "tecout_phi_0010_009900.dat" "tecout_phi_0010_010000.dat" "tecout_phi_0010_010100.dat" "tecout_phi_0010_010200.dat" "tecout_phi_0010_010300.dat" "tecout_phi_0010_010400.dat" "tecout_phi_0010_010500.dat" "tecout_phi_0010_010600.dat" "tecout_phi_0010_010700.dat" "tecout_phi_0010_010800.dat" "tecout_phi_0010_010900.dat" "tecout_phi_0010_011000.dat" "tecout_phi_0010_011100.dat" "tecout_phi_0010_011200.dat" "tecout_phi_0010_011300.dat" "tecout_phi_0010_011400.dat" "tecout_phi_0010_011500.dat" "tecout_phi_0010_011600.dat" "tecout_phi_0010_011700.dat" "tecout_phi_0010_011800.dat" "tecout_phi_0010_011900.dat" "tecout_phi_0010_012000.dat" "tecout_phi_0010_012100.dat" "tecout_phi_0010_012200.dat" "tecout_phi_0010_012300.dat" "tecout_phi_0010_012400.dat" "tecout_phi_0010_012500.dat" "tecout_phi_0010_012600.dat" "tecout_phi_0010_012700.dat" "tecout_phi_0010_012800.dat" "tecout_phi_0010_012900.dat" "tecout_phi_0010_013000.dat" "tecout_phi_0010_013100.dat" "tecout_phi_0010_013200.dat" "tecout_phi_0010_013300.dat" "tecout_phi_0010_013400.dat" "tecout_phi_0010_013500.dat" "tecout_phi_0010_013600.dat" "tecout_phi_0010_013700.dat" "tecout_phi_0010_013800.dat" "tecout_phi_0010_013900.dat" "tecout_phi_0010_014000.dat" "tecout_phi_0010_014100.dat" "tecout_phi_0010_014200.dat" "tecout_phi_0010_014300.dat" "tecout_phi_0010_014400.dat" "tecout_phi_0010_014500.dat" "tecout_phi_0010_014600.dat" "tecout_phi_0010_014700.dat" "tecout_phi_0010_014800.dat" "tecout_phi_0010_014900.dat" "tecout_phi_0010_015000.dat" "tecout_phi_0011_000100.dat" "tecout_phi_0011_000200.dat" "tecout_phi_0011_000300.dat" "tecout_phi_0011_000400.dat" "tecout_phi_0011_000500.dat" "tecout_phi_0011_000600.dat" "tecout_phi_0011_000700.dat" "tecout_phi_0011_000800.dat" "tecout_phi_0011_000900.dat" "tecout_phi_0011_001000.dat" "tecout_phi_0011_001100.dat" "tecout_phi_0011_001200.dat" "tecout_phi_0011_001300.dat" "tecout_phi_0011_001400.dat" "tecout_phi_0011_001500.dat" "tecout_phi_0011_001600.dat" "tecout_phi_0011_001700.dat" "tecout_phi_0011_001800.dat" "tecout_phi_0011_001900.dat" "tecout_phi_0011_002000.dat" "tecout_phi_0011_002100.dat" "tecout_phi_0011_002200.dat" "tecout_phi_0011_002300.dat" "tecout_phi_0011_002400.dat" "tecout_phi_0011_002500.dat" "tecout_phi_0011_002600.dat" "tecout_phi_0011_002700.dat" "tecout_phi_0011_002800.dat" "tecout_phi_0011_002900.dat" "tecout_phi_0011_003000.dat" "tecout_phi_0011_003100.dat" "tecout_phi_0011_003200.dat" "tecout_phi_0011_003300.dat" "tecout_phi_0011_003400.dat" "tecout_phi_0011_003500.dat" "tecout_phi_0011_003600.dat" "tecout_phi_0011_003700.dat" "tecout_phi_0011_003800.dat" "tecout_phi_0011_003900.dat" "tecout_phi_0011_004000.dat" "tecout_phi_0011_004100.dat" "tecout_phi_0011_004200.dat" "tecout_phi_0011_004300.dat" "tecout_phi_0011_004400.dat" "tecout_phi_0011_004500.dat" "tecout_phi_0011_004600.dat" "tecout_phi_0011_004700.dat" "tecout_phi_0011_004800.dat" "tecout_phi_0011_004900.dat" "tecout_phi_0011_005000.dat" "tecout_phi_0011_005100.dat" "tecout_phi_0011_005200.dat" "tecout_phi_0011_005300.dat" "tecout_phi_0011_005400.dat" "tecout_phi_0011_005500.dat" "tecout_phi_0011_005600.dat" "tecout_phi_0011_005700.dat" "tecout_phi_0011_005800.dat" "tecout_phi_0011_005900.dat" "tecout_phi_0011_006000.dat" "tecout_phi_0011_006100.dat" "tecout_phi_0011_006200.dat" "tecout_phi_0011_006300.dat" "tecout_phi_0011_006400.dat" "tecout_phi_0011_006500.dat" "tecout_phi_0011_006600.dat" "tecout_phi_0011_006700.dat" "tecout_phi_0011_006800.dat" "tecout_phi_0011_006900.dat" "tecout_phi_0011_007000.dat" "tecout_phi_0011_007100.dat" "tecout_phi_0011_007200.dat" "tecout_phi_0011_007300.dat" "tecout_phi_0011_007400.dat" "tecout_phi_0011_007500.dat" "tecout_phi_0011_007600.dat" "tecout_phi_0011_007700.dat" "tecout_phi_0011_007800.dat" "tecout_phi_0011_007900.dat" "tecout_phi_0011_008000.dat" "tecout_phi_0011_008100.dat" "tecout_phi_0011_008200.dat" "tecout_phi_0011_008300.dat" "tecout_phi_0011_008400.dat" "tecout_phi_0011_008500.dat" "tecout_phi_0011_008600.dat" "tecout_phi_0011_008700.dat" "tecout_phi_0011_008800.dat" "tecout_phi_0011_008900.dat" "tecout_phi_0011_009000.dat" "tecout_phi_0011_009100.dat" "tecout_phi_0011_009200.dat" "tecout_phi_0011_009300.dat" "tecout_phi_0011_009400.dat" "tecout_phi_0011_009500.dat" "tecout_phi_0011_009600.dat" "tecout_phi_0011_009700.dat" "tecout_phi_0011_009800.dat" "tecout_phi_0011_009900.dat" "tecout_phi_0011_010000.dat" "tecout_phi_0011_010100.dat" "tecout_phi_0011_010200.dat" "tecout_phi_0011_010300.dat" "tecout_phi_0011_010400.dat" "tecout_phi_0011_010500.dat" "tecout_phi_0011_010600.dat" "tecout_phi_0011_010700.dat" "tecout_phi_0011_010800.dat" "tecout_phi_0011_010900.dat" "tecout_phi_0011_011000.dat" "tecout_phi_0011_011100.dat" "tecout_phi_0011_011200.dat" "tecout_phi_0011_011300.dat" "tecout_phi_0011_011400.dat" "tecout_phi_0011_011500.dat" "tecout_phi_0011_011600.dat" "tecout_phi_0011_011700.dat" "tecout_phi_0011_011800.dat" "tecout_phi_0011_011900.dat" "tecout_phi_0011_012000.dat" "tecout_phi_0011_012100.dat" "tecout_phi_0011_012200.dat" "tecout_phi_0011_012300.dat" "tecout_phi_0011_012400.dat" "tecout_phi_0011_012500.dat" "tecout_phi_0011_012600.dat" "tecout_phi_0011_012700.dat" "tecout_phi_0011_012800.dat" "tecout_phi_0011_012900.dat" "tecout_phi_0011_013000.dat" "tecout_phi_0011_013100.dat" "tecout_phi_0011_013200.dat" "tecout_phi_0011_013300.dat" "tecout_phi_0011_013400.dat" "tecout_phi_0011_013500.dat" "tecout_phi_0011_013600.dat" "tecout_phi_0011_013700.dat" "tecout_phi_0011_013800.dat" "tecout_phi_0011_013900.dat" "tecout_phi_0011_014000.dat" "tecout_phi_0011_014100.dat" "tecout_phi_0011_014200.dat" "tecout_phi_0011_014300.dat" "tecout_phi_0011_014400.dat" "tecout_phi_0011_014500.dat" "tecout_phi_0011_014600.dat" "tecout_phi_0011_014700.dat" "tecout_phi_0011_014800.dat" "tecout_phi_0011_014900.dat" "tecout_phi_0011_015000.dat" "tecout_phi_0012_000100.dat" "tecout_phi_0012_000200.dat" "tecout_phi_0012_000300.dat" "tecout_phi_0012_000400.dat" "tecout_phi_0012_000500.dat" "tecout_phi_0012_000600.dat" "tecout_phi_0012_000700.dat" "tecout_phi_0012_000800.dat" "tecout_phi_0012_000900.dat" "tecout_phi_0012_001000.dat" "tecout_phi_0012_001100.dat" "tecout_phi_0012_001200.dat" "tecout_phi_0012_001300.dat" "tecout_phi_0012_001400.dat" "tecout_phi_0012_001500.dat" "tecout_phi_0012_001600.dat" "tecout_phi_0012_001700.dat" "tecout_phi_0012_001800.dat" "tecout_phi_0012_001900.dat" "tecout_phi_0012_002000.dat" "tecout_phi_0012_002100.dat" "tecout_phi_0012_002200.dat" "tecout_phi_0012_002300.dat" "tecout_phi_0012_002400.dat" "tecout_phi_0012_002500.dat" "tecout_phi_0012_002600.dat" "tecout_phi_0012_002700.dat" "tecout_phi_0012_002800.dat" "tecout_phi_0012_002900.dat" "tecout_phi_0012_003000.dat" "tecout_phi_0012_003100.dat" "tecout_phi_0012_003200.dat" "tecout_phi_0012_003300.dat" "tecout_phi_0012_003400.dat" "tecout_phi_0012_003500.dat" "tecout_phi_0012_003600.dat" "tecout_phi_0012_003700.dat" "tecout_phi_0012_003800.dat" "tecout_phi_0012_003900.dat" "tecout_phi_0012_004000.dat" "tecout_phi_0012_004100.dat" "tecout_phi_0012_004200.dat" "tecout_phi_0012_004300.dat" "tecout_phi_0012_004400.dat" "tecout_phi_0012_004500.dat" "tecout_phi_0012_004600.dat" "tecout_phi_0012_004700.dat" "tecout_phi_0012_004800.dat" "tecout_phi_0012_004900.dat" "tecout_phi_0012_005000.dat" "tecout_phi_0012_005100.dat" "tecout_phi_0012_005200.dat" "tecout_phi_0012_005300.dat" "tecout_phi_0012_005400.dat" "tecout_phi_0012_005500.dat" "tecout_phi_0012_005600.dat" "tecout_phi_0012_005700.dat" "tecout_phi_0012_005800.dat" "tecout_phi_0012_005900.dat" "tecout_phi_0012_006000.dat" "tecout_phi_0012_006100.dat" "tecout_phi_0012_006200.dat" "tecout_phi_0012_006300.dat" "tecout_phi_0012_006400.dat" "tecout_phi_0012_006500.dat" "tecout_phi_0012_006600.dat" "tecout_phi_0012_006700.dat" "tecout_phi_0012_006800.dat" "tecout_phi_0012_006900.dat" "tecout_phi_0012_007000.dat" "tecout_phi_0012_007100.dat" "tecout_phi_0012_007200.dat" "tecout_phi_0012_007300.dat" "tecout_phi_0012_007400.dat" "tecout_phi_0012_007500.dat" "tecout_phi_0012_007600.dat" "tecout_phi_0012_007700.dat" "tecout_phi_0012_007800.dat" "tecout_phi_0012_007900.dat" "tecout_phi_0012_008000.dat" "tecout_phi_0012_008100.dat" "tecout_phi_0012_008200.dat" "tecout_phi_0012_008300.dat" "tecout_phi_0012_008400.dat" "tecout_phi_0012_008500.dat" "tecout_phi_0012_008600.dat" "tecout_phi_0012_008700.dat" "tecout_phi_0012_008800.dat" "tecout_phi_0012_008900.dat" "tecout_phi_0012_009000.dat" "tecout_phi_0012_009100.dat" "tecout_phi_0012_009200.dat" "tecout_phi_0012_009300.dat" "tecout_phi_0012_009400.dat" "tecout_phi_0012_009500.dat" "tecout_phi_0012_009600.dat" "tecout_phi_0012_009700.dat" "tecout_phi_0012_009800.dat" "tecout_phi_0012_009900.dat" "tecout_phi_0012_010000.dat" "tecout_phi_0012_010100.dat" "tecout_phi_0012_010200.dat" "tecout_phi_0012_010300.dat" "tecout_phi_0012_010400.dat" "tecout_phi_0012_010500.dat" "tecout_phi_0012_010600.dat" "tecout_phi_0012_010700.dat" "tecout_phi_0012_010800.dat" "tecout_phi_0012_010900.dat" "tecout_phi_0012_011000.dat" "tecout_phi_0012_011100.dat" "tecout_phi_0012_011200.dat" "tecout_phi_0012_011300.dat" "tecout_phi_0012_011400.dat" "tecout_phi_0012_011500.dat" "tecout_phi_0012_011600.dat" "tecout_phi_0012_011700.dat" "tecout_phi_0012_011800.dat" "tecout_phi_0012_011900.dat" "tecout_phi_0012_012000.dat" "tecout_phi_0012_012100.dat" "tecout_phi_0012_012200.dat" "tecout_phi_0012_012300.dat" "tecout_phi_0012_012400.dat" "tecout_phi_0012_012500.dat" "tecout_phi_0012_012600.dat" "tecout_phi_0012_012700.dat" "tecout_phi_0012_012800.dat" "tecout_phi_0012_012900.dat" "tecout_phi_0012_013000.dat" "tecout_phi_0012_013100.dat" "tecout_phi_0012_013200.dat" "tecout_phi_0012_013300.dat" "tecout_phi_0012_013400.dat" "tecout_phi_0012_013500.dat" "tecout_phi_0012_013600.dat" "tecout_phi_0012_013700.dat" "tecout_phi_0012_013800.dat" "tecout_phi_0012_013900.dat" "tecout_phi_0012_014000.dat" "tecout_phi_0012_014100.dat" "tecout_phi_0012_014200.dat" "tecout_phi_0012_014300.dat" "tecout_phi_0012_014400.dat" "tecout_phi_0012_014500.dat" "tecout_phi_0012_014600.dat" "tecout_phi_0012_014700.dat" "tecout_phi_0012_014800.dat" "tecout_phi_0012_014900.dat" "tecout_phi_0012_015000.dat" "tecout_phi_0013_000100.dat" "tecout_phi_0013_000200.dat" "tecout_phi_0013_000300.dat" "tecout_phi_0013_000400.dat" "tecout_phi_0013_000500.dat" "tecout_phi_0013_000600.dat" "tecout_phi_0013_000700.dat" "tecout_phi_0013_000800.dat" "tecout_phi_0013_000900.dat" "tecout_phi_0013_001000.dat" "tecout_phi_0013_001100.dat" "tecout_phi_0013_001200.dat" "tecout_phi_0013_001300.dat" "tecout_phi_0013_001400.dat" "tecout_phi_0013_001500.dat" "tecout_phi_0013_001600.dat" "tecout_phi_0013_001700.dat" "tecout_phi_0013_001800.dat" "tecout_phi_0013_001900.dat" "tecout_phi_0013_002000.dat" "tecout_phi_0013_002100.dat" "tecout_phi_0013_002200.dat" "tecout_phi_0013_002300.dat" "tecout_phi_0013_002400.dat" "tecout_phi_0013_002500.dat" "tecout_phi_0013_002600.dat" "tecout_phi_0013_002700.dat" "tecout_phi_0013_002800.dat" "tecout_phi_0013_002900.dat" "tecout_phi_0013_003000.dat" "tecout_phi_0013_003100.dat" "tecout_phi_0013_003200.dat" "tecout_phi_0013_003300.dat" "tecout_phi_0013_003400.dat" "tecout_phi_0013_003500.dat" "tecout_phi_0013_003600.dat" "tecout_phi_0013_003700.dat" "tecout_phi_0013_003800.dat" "tecout_phi_0013_003900.dat" "tecout_phi_0013_004000.dat" "tecout_phi_0013_004100.dat" "tecout_phi_0013_004200.dat" "tecout_phi_0013_004300.dat" "tecout_phi_0013_004400.dat" "tecout_phi_0013_004500.dat" "tecout_phi_0013_004600.dat" "tecout_phi_0013_004700.dat" "tecout_phi_0013_004800.dat" "tecout_phi_0013_004900.dat" "tecout_phi_0013_005000.dat" "tecout_phi_0013_005100.dat" "tecout_phi_0013_005200.dat" "tecout_phi_0013_005300.dat" "tecout_phi_0013_005400.dat" "tecout_phi_0013_005500.dat" "tecout_phi_0013_005600.dat" "tecout_phi_0013_005700.dat" "tecout_phi_0013_005800.dat" "tecout_phi_0013_005900.dat" "tecout_phi_0013_006000.dat" "tecout_phi_0013_006100.dat" "tecout_phi_0013_006200.dat" "tecout_phi_0013_006300.dat" "tecout_phi_0013_006400.dat" "tecout_phi_0013_006500.dat" "tecout_phi_0013_006600.dat" "tecout_phi_0013_006700.dat" "tecout_phi_0013_006800.dat" "tecout_phi_0013_006900.dat" "tecout_phi_0013_007000.dat" "tecout_phi_0013_007100.dat" "tecout_phi_0013_007200.dat" "tecout_phi_0013_007300.dat" "tecout_phi_0013_007400.dat" "tecout_phi_0013_007500.dat" "tecout_phi_0013_007600.dat" "tecout_phi_0013_007700.dat" "tecout_phi_0013_007800.dat" "tecout_phi_0013_007900.dat" "tecout_phi_0013_008000.dat" "tecout_phi_0013_008100.dat" "tecout_phi_0013_008200.dat" "tecout_phi_0013_008300.dat" "tecout_phi_0013_008400.dat" "tecout_phi_0013_008500.dat" "tecout_phi_0013_008600.dat" "tecout_phi_0013_008700.dat" "tecout_phi_0013_008800.dat" "tecout_phi_0013_008900.dat" "tecout_phi_0013_009000.dat" "tecout_phi_0013_009100.dat" "tecout_phi_0013_009200.dat" "tecout_phi_0013_009300.dat" "tecout_phi_0013_009400.dat" "tecout_phi_0013_009500.dat" "tecout_phi_0013_009600.dat" "tecout_phi_0013_009700.dat" "tecout_phi_0013_009800.dat" "tecout_phi_0013_009900.dat" "tecout_phi_0013_010000.dat" "tecout_phi_0013_010100.dat" "tecout_phi_0013_010200.dat" "tecout_phi_0013_010300.dat" "tecout_phi_0013_010400.dat" "tecout_phi_0013_010500.dat" "tecout_phi_0013_010600.dat" "tecout_phi_0013_010700.dat" "tecout_phi_0013_010800.dat" "tecout_phi_0013_010900.dat" "tecout_phi_0013_011000.dat" "tecout_phi_0013_011100.dat" "tecout_phi_0013_011200.dat" "tecout_phi_0013_011300.dat" "tecout_phi_0013_011400.dat" "tecout_phi_0013_011500.dat" "tecout_phi_0013_011600.dat" "tecout_phi_0013_011700.dat" "tecout_phi_0013_011800.dat" "tecout_phi_0013_011900.dat" "tecout_phi_0013_012000.dat" "tecout_phi_0013_012100.dat" "tecout_phi_0013_012200.dat" "tecout_phi_0013_012300.dat" "tecout_phi_0013_012400.dat" "tecout_phi_0013_012500.dat" "tecout_phi_0013_012600.dat" "tecout_phi_0013_012700.dat" "tecout_phi_0013_012800.dat" "tecout_phi_0013_012900.dat" "tecout_phi_0013_013000.dat" "tecout_phi_0013_013100.dat" "tecout_phi_0013_013200.dat" "tecout_phi_0013_013300.dat" "tecout_phi_0013_013400.dat" "tecout_phi_0013_013500.dat" "tecout_phi_0013_013600.dat" "tecout_phi_0013_013700.dat" "tecout_phi_0013_013800.dat" "tecout_phi_0013_013900.dat" "tecout_phi_0013_014000.dat" "tecout_phi_0013_014100.dat" "tecout_phi_0013_014200.dat" "tecout_phi_0013_014300.dat" "tecout_phi_0013_014400.dat" "tecout_phi_0013_014500.dat" "tecout_phi_0013_014600.dat" "tecout_phi_0013_014700.dat" "tecout_phi_0013_014800.dat" "tecout_phi_0013_014900.dat" "tecout_phi_0013_015000.dat" "tecout_phi_0014_000100.dat" "tecout_phi_0014_000200.dat" "tecout_phi_0014_000300.dat" "tecout_phi_0014_000400.dat" "tecout_phi_0014_000500.dat" "tecout_phi_0014_000600.dat" "tecout_phi_0014_000700.dat" "tecout_phi_0014_000800.dat" "tecout_phi_0014_000900.dat" "tecout_phi_0014_001000.dat" "tecout_phi_0014_001100.dat" "tecout_phi_0014_001200.dat" "tecout_phi_0014_001300.dat" "tecout_phi_0014_001400.dat" "tecout_phi_0014_001500.dat" "tecout_phi_0014_001600.dat" "tecout_phi_0014_001700.dat" "tecout_phi_0014_001800.dat" "tecout_phi_0014_001900.dat" "tecout_phi_0014_002000.dat" "tecout_phi_0014_002100.dat" "tecout_phi_0014_002200.dat" "tecout_phi_0014_002300.dat" "tecout_phi_0014_002400.dat" "tecout_phi_0014_002500.dat" "tecout_phi_0014_002600.dat" "tecout_phi_0014_002700.dat" "tecout_phi_0014_002800.dat" "tecout_phi_0014_002900.dat" "tecout_phi_0014_003000.dat" "tecout_phi_0014_003100.dat" "tecout_phi_0014_003200.dat" "tecout_phi_0014_003300.dat" "tecout_phi_0014_003400.dat" "tecout_phi_0014_003500.dat" "tecout_phi_0014_003600.dat" "tecout_phi_0014_003700.dat" "tecout_phi_0014_003800.dat" "tecout_phi_0014_003900.dat" "tecout_phi_0014_004000.dat" "tecout_phi_0014_004100.dat" "tecout_phi_0014_004200.dat" "tecout_phi_0014_004300.dat" "tecout_phi_0014_004400.dat" "tecout_phi_0014_004500.dat" "tecout_phi_0014_004600.dat" "tecout_phi_0014_004700.dat" "tecout_phi_0014_004800.dat" "tecout_phi_0014_004900.dat" "tecout_phi_0014_005000.dat" "tecout_phi_0014_005100.dat" "tecout_phi_0014_005200.dat" "tecout_phi_0014_005300.dat" "tecout_phi_0014_005400.dat" "tecout_phi_0014_005500.dat" "tecout_phi_0014_005600.dat" "tecout_phi_0014_005700.dat" "tecout_phi_0014_005800.dat" "tecout_phi_0014_005900.dat" "tecout_phi_0014_006000.dat" "tecout_phi_0014_006100.dat" "tecout_phi_0014_006200.dat" "tecout_phi_0014_006300.dat" "tecout_phi_0014_006400.dat" "tecout_phi_0014_006500.dat" "tecout_phi_0014_006600.dat" "tecout_phi_0014_006700.dat" "tecout_phi_0014_006800.dat" "tecout_phi_0014_006900.dat" "tecout_phi_0014_007000.dat" "tecout_phi_0014_007100.dat" "tecout_phi_0014_007200.dat" "tecout_phi_0014_007300.dat" "tecout_phi_0014_007400.dat" "tecout_phi_0014_007500.dat" "tecout_phi_0014_007600.dat" "tecout_phi_0014_007700.dat" "tecout_phi_0014_007800.dat" "tecout_phi_0014_007900.dat" "tecout_phi_0014_008000.dat" "tecout_phi_0014_008100.dat" "tecout_phi_0014_008200.dat" "tecout_phi_0014_008300.dat" "tecout_phi_0014_008400.dat" "tecout_phi_0014_008500.dat" "tecout_phi_0014_008600.dat" "tecout_phi_0014_008700.dat" "tecout_phi_0014_008800.dat" "tecout_phi_0014_008900.dat" "tecout_phi_0014_009000.dat" "tecout_phi_0014_009100.dat" "tecout_phi_0014_009200.dat" "tecout_phi_0014_009300.dat" "tecout_phi_0014_009400.dat" "tecout_phi_0014_009500.dat" "tecout_phi_0014_009600.dat" "tecout_phi_0014_009700.dat" "tecout_phi_0014_009800.dat" "tecout_phi_0014_009900.dat" "tecout_phi_0014_010000.dat" "tecout_phi_0014_010100.dat" "tecout_phi_0014_010200.dat" "tecout_phi_0014_010300.dat" "tecout_phi_0014_010400.dat" "tecout_phi_0014_010500.dat" "tecout_phi_0014_010600.dat" "tecout_phi_0014_010700.dat" "tecout_phi_0014_010800.dat" "tecout_phi_0014_010900.dat" "tecout_phi_0014_011000.dat" "tecout_phi_0014_011100.dat" "tecout_phi_0014_011200.dat" "tecout_phi_0014_011300.dat" "tecout_phi_0014_011400.dat" "tecout_phi_0014_011500.dat" "tecout_phi_0014_011600.dat" "tecout_phi_0014_011700.dat" "tecout_phi_0014_011800.dat" "tecout_phi_0014_011900.dat" "tecout_phi_0014_012000.dat" "tecout_phi_0014_012100.dat" "tecout_phi_0014_012200.dat" "tecout_phi_0014_012300.dat" "tecout_phi_0014_012400.dat" "tecout_phi_0014_012500.dat" "tecout_phi_0014_012600.dat" "tecout_phi_0014_012700.dat" "tecout_phi_0014_012800.dat" "tecout_phi_0014_012900.dat" "tecout_phi_0014_013000.dat" "tecout_phi_0014_013100.dat" "tecout_phi_0014_013200.dat" "tecout_phi_0014_013300.dat" "tecout_phi_0014_013400.dat" "tecout_phi_0014_013500.dat" "tecout_phi_0014_013600.dat" "tecout_phi_0014_013700.dat" "tecout_phi_0014_013800.dat" "tecout_phi_0014_013900.dat" "tecout_phi_0014_014000.dat" "tecout_phi_0014_014100.dat" "tecout_phi_0014_014200.dat" "tecout_phi_0014_014300.dat" "tecout_phi_0014_014400.dat" "tecout_phi_0014_014500.dat" "tecout_phi_0014_014600.dat" "tecout_phi_0014_014700.dat" "tecout_phi_0014_014800.dat" "tecout_phi_0014_014900.dat" "tecout_phi_0014_015000.dat" "tecout_phi_0015_000100.dat" "tecout_phi_0015_000200.dat" "tecout_phi_0015_000300.dat" "tecout_phi_0015_000400.dat" "tecout_phi_0015_000500.dat" "tecout_phi_0015_000600.dat" "tecout_phi_0015_000700.dat" "tecout_phi_0015_000800.dat" "tecout_phi_0015_000900.dat" "tecout_phi_0015_001000.dat" "tecout_phi_0015_001100.dat" "tecout_phi_0015_001200.dat" "tecout_phi_0015_001300.dat" "tecout_phi_0015_001400.dat" "tecout_phi_0015_001500.dat" "tecout_phi_0015_001600.dat" "tecout_phi_0015_001700.dat" "tecout_phi_0015_001800.dat" "tecout_phi_0015_001900.dat" "tecout_phi_0015_002000.dat" "tecout_phi_0015_002100.dat" "tecout_phi_0015_002200.dat" "tecout_phi_0015_002300.dat" "tecout_phi_0015_002400.dat" "tecout_phi_0015_002500.dat" "tecout_phi_0015_002600.dat" "tecout_phi_0015_002700.dat" "tecout_phi_0015_002800.dat" "tecout_phi_0015_002900.dat" "tecout_phi_0015_003000.dat" "tecout_phi_0015_003100.dat" "tecout_phi_0015_003200.dat" "tecout_phi_0015_003300.dat" "tecout_phi_0015_003400.dat" "tecout_phi_0015_003500.dat" "tecout_phi_0015_003600.dat" "tecout_phi_0015_003700.dat" "tecout_phi_0015_003800.dat" "tecout_phi_0015_003900.dat" "tecout_phi_0015_004000.dat" "tecout_phi_0015_004100.dat" "tecout_phi_0015_004200.dat" "tecout_phi_0015_004300.dat" "tecout_phi_0015_004400.dat" "tecout_phi_0015_004500.dat" "tecout_phi_0015_004600.dat" "tecout_phi_0015_004700.dat" "tecout_phi_0015_004800.dat" "tecout_phi_0015_004900.dat" "tecout_phi_0015_005000.dat" "tecout_phi_0015_005100.dat" "tecout_phi_0015_005200.dat" "tecout_phi_0015_005300.dat" "tecout_phi_0015_005400.dat" "tecout_phi_0015_005500.dat" "tecout_phi_0015_005600.dat" "tecout_phi_0015_005700.dat" "tecout_phi_0015_005800.dat" "tecout_phi_0015_005900.dat" "tecout_phi_0015_006000.dat" "tecout_phi_0015_006100.dat" "tecout_phi_0015_006200.dat" "tecout_phi_0015_006300.dat" "tecout_phi_0015_006400.dat" "tecout_phi_0015_006500.dat" "tecout_phi_0015_006600.dat" "tecout_phi_0015_006700.dat" "tecout_phi_0015_006800.dat" "tecout_phi_0015_006900.dat" "tecout_phi_0015_007000.dat" "tecout_phi_0015_007100.dat" "tecout_phi_0015_007200.dat" "tecout_phi_0015_007300.dat" "tecout_phi_0015_007400.dat" "tecout_phi_0015_007500.dat" "tecout_phi_0015_007600.dat" "tecout_phi_0015_007700.dat" "tecout_phi_0015_007800.dat" "tecout_phi_0015_007900.dat" "tecout_phi_0015_008000.dat" "tecout_phi_0015_008100.dat" "tecout_phi_0015_008200.dat" "tecout_phi_0015_008300.dat" "tecout_phi_0015_008400.dat" "tecout_phi_0015_008500.dat" "tecout_phi_0015_008600.dat" "tecout_phi_0015_008700.dat" "tecout_phi_0015_008800.dat" "tecout_phi_0015_008900.dat" "tecout_phi_0015_009000.dat" "tecout_phi_0015_009100.dat" "tecout_phi_0015_009200.dat" "tecout_phi_0015_009300.dat" "tecout_phi_0015_009400.dat" "tecout_phi_0015_009500.dat" "tecout_phi_0015_009600.dat" "tecout_phi_0015_009700.dat" "tecout_phi_0015_009800.dat" "tecout_phi_0015_009900.dat" "tecout_phi_0015_010000.dat" "tecout_phi_0015_010100.dat" "tecout_phi_0015_010200.dat" "tecout_phi_0015_010300.dat" "tecout_phi_0015_010400.dat" "tecout_phi_0015_010500.dat" "tecout_phi_0015_010600.dat" "tecout_phi_0015_010700.dat" "tecout_phi_0015_010800.dat" "tecout_phi_0015_010900.dat" "tecout_phi_0015_011000.dat" "tecout_phi_0015_011100.dat" "tecout_phi_0015_011200.dat" "tecout_phi_0015_011300.dat" "tecout_phi_0015_011400.dat" "tecout_phi_0015_011500.dat" "tecout_phi_0015_011600.dat" "tecout_phi_0015_011700.dat" "tecout_phi_0015_011800.dat" "tecout_phi_0015_011900.dat" "tecout_phi_0015_012000.dat" "tecout_phi_0015_012100.dat" "tecout_phi_0015_012200.dat" "tecout_phi_0015_012300.dat" "tecout_phi_0015_012400.dat" "tecout_phi_0015_012500.dat" "tecout_phi_0015_012600.dat" "tecout_phi_0015_012700.dat" "tecout_phi_0015_012800.dat" "tecout_phi_0015_012900.dat" "tecout_phi_0015_013000.dat" "tecout_phi_0015_013100.dat" "tecout_phi_0015_013200.dat" "tecout_phi_0015_013300.dat" "tecout_phi_0015_013400.dat" "tecout_phi_0015_013500.dat" "tecout_phi_0015_013600.dat" "tecout_phi_0015_013700.dat" "tecout_phi_0015_013800.dat" "tecout_phi_0015_013900.dat" "tecout_phi_0015_014000.dat" "tecout_phi_0015_014100.dat" "tecout_phi_0015_014200.dat" "tecout_phi_0015_014300.dat" "tecout_phi_0015_014400.dat" "tecout_phi_0015_014500.dat" "tecout_phi_0015_014600.dat" "tecout_phi_0015_014700.dat" "tecout_phi_0015_014800.dat" "tecout_phi_0015_014900.dat" "tecout_phi_0015_015000.dat" "tecout_phi_0016_000100.dat" "tecout_phi_0016_000200.dat" "tecout_phi_0016_000300.dat" "tecout_phi_0016_000400.dat" "tecout_phi_0016_000500.dat" "tecout_phi_0016_000600.dat" "tecout_phi_0016_000700.dat" "tecout_phi_0016_000800.dat" "tecout_phi_0016_000900.dat" "tecout_phi_0016_001000.dat" "tecout_phi_0016_001100.dat" "tecout_phi_0016_001200.dat" "tecout_phi_0016_001300.dat" "tecout_phi_0016_001400.dat" "tecout_phi_0016_001500.dat" "tecout_phi_0016_001600.dat" "tecout_phi_0016_001700.dat" "tecout_phi_0016_001800.dat" "tecout_phi_0016_001900.dat" "tecout_phi_0016_002000.dat" "tecout_phi_0016_002100.dat" "tecout_phi_0016_002200.dat" "tecout_phi_0016_002300.dat" "tecout_phi_0016_002400.dat" "tecout_phi_0016_002500.dat" "tecout_phi_0016_002600.dat" "tecout_phi_0016_002700.dat" "tecout_phi_0016_002800.dat" "tecout_phi_0016_002900.dat" "tecout_phi_0016_003000.dat" "tecout_phi_0016_003100.dat" "tecout_phi_0016_003200.dat" "tecout_phi_0016_003300.dat" "tecout_phi_0016_003400.dat" "tecout_phi_0016_003500.dat" "tecout_phi_0016_003600.dat" "tecout_phi_0016_003700.dat" "tecout_phi_0016_003800.dat" "tecout_phi_0016_003900.dat" "tecout_phi_0016_004000.dat" "tecout_phi_0016_004100.dat" "tecout_phi_0016_004200.dat" "tecout_phi_0016_004300.dat" "tecout_phi_0016_004400.dat" "tecout_phi_0016_004500.dat" "tecout_phi_0016_004600.dat" "tecout_phi_0016_004700.dat" "tecout_phi_0016_004800.dat" "tecout_phi_0016_004900.dat" "tecout_phi_0016_005000.dat" "tecout_phi_0016_005100.dat" "tecout_phi_0016_005200.dat" "tecout_phi_0016_005300.dat" "tecout_phi_0016_005400.dat" "tecout_phi_0016_005500.dat" "tecout_phi_0016_005600.dat" "tecout_phi_0016_005700.dat" "tecout_phi_0016_005800.dat" "tecout_phi_0016_005900.dat" "tecout_phi_0016_006000.dat" "tecout_phi_0016_006100.dat" "tecout_phi_0016_006200.dat" "tecout_phi_0016_006300.dat" "tecout_phi_0016_006400.dat" "tecout_phi_0016_006500.dat" "tecout_phi_0016_006600.dat" "tecout_phi_0016_006700.dat" "tecout_phi_0016_006800.dat" "tecout_phi_0016_006900.dat" "tecout_phi_0016_007000.dat" "tecout_phi_0016_007100.dat" "tecout_phi_0016_007200.dat" "tecout_phi_0016_007300.dat" "tecout_phi_0016_007400.dat" "tecout_phi_0016_007500.dat" "tecout_phi_0016_007600.dat" "tecout_phi_0016_007700.dat" "tecout_phi_0016_007800.dat" "tecout_phi_0016_007900.dat" "tecout_phi_0016_008000.dat" "tecout_phi_0016_008100.dat" "tecout_phi_0016_008200.dat" "tecout_phi_0016_008300.dat" "tecout_phi_0016_008400.dat" "tecout_phi_0016_008500.dat" "tecout_phi_0016_008600.dat" "tecout_phi_0016_008700.dat" "tecout_phi_0016_008800.dat" "tecout_phi_0016_008900.dat" "tecout_phi_0016_009000.dat" "tecout_phi_0016_009100.dat" "tecout_phi_0016_009200.dat" "tecout_phi_0016_009300.dat" "tecout_phi_0016_009400.dat" "tecout_phi_0016_009500.dat" "tecout_phi_0016_009600.dat" "tecout_phi_0016_009700.dat" "tecout_phi_0016_009800.dat" "tecout_phi_0016_009900.dat" "tecout_phi_0016_010000.dat" "tecout_phi_0016_010100.dat" "tecout_phi_0016_010200.dat" "tecout_phi_0016_010300.dat" "tecout_phi_0016_010400.dat" "tecout_phi_0016_010500.dat" "tecout_phi_0016_010600.dat" "tecout_phi_0016_010700.dat" "tecout_phi_0016_010800.dat" "tecout_phi_0016_010900.dat" "tecout_phi_0016_011000.dat" "tecout_phi_0016_011100.dat" "tecout_phi_0016_011200.dat" "tecout_phi_0016_011300.dat" "tecout_phi_0016_011400.dat" "tecout_phi_0016_011500.dat" "tecout_phi_0016_011600.dat" "tecout_phi_0016_011700.dat" "tecout_phi_0016_011800.dat" "tecout_phi_0016_011900.dat" "tecout_phi_0016_012000.dat" "tecout_phi_0016_012100.dat" "tecout_phi_0016_012200.dat" "tecout_phi_0016_012300.dat" "tecout_phi_0016_012400.dat" "tecout_phi_0016_012500.dat" "tecout_phi_0016_012600.dat" "tecout_phi_0016_012700.dat" "tecout_phi_0016_012800.dat" "tecout_phi_0016_012900.dat" "tecout_phi_0016_013000.dat" "tecout_phi_0016_013100.dat" "tecout_phi_0016_013200.dat" "tecout_phi_0016_013300.dat" "tecout_phi_0016_013400.dat" "tecout_phi_0016_013500.dat" "tecout_phi_0016_013600.dat" "tecout_phi_0016_013700.dat" "tecout_phi_0016_013800.dat" "tecout_phi_0016_013900.dat" "tecout_phi_0016_014000.dat" "tecout_phi_0016_014100.dat" "tecout_phi_0016_014200.dat" "tecout_phi_0016_014300.dat" "tecout_phi_0016_014400.dat" "tecout_phi_0016_014500.dat" "tecout_phi_0016_014600.dat" "tecout_phi_0016_014700.dat" "tecout_phi_0016_014800.dat" "tecout_phi_0016_014900.dat" "tecout_phi_0016_015000.dat" "tecout_phi_0017_000100.dat" "tecout_phi_0017_000200.dat" "tecout_phi_0017_000300.dat" "tecout_phi_0017_000400.dat" "tecout_phi_0017_000500.dat" "tecout_phi_0017_000600.dat" "tecout_phi_0017_000700.dat" "tecout_phi_0017_000800.dat" "tecout_phi_0017_000900.dat" "tecout_phi_0017_001000.dat" "tecout_phi_0017_001100.dat" "tecout_phi_0017_001200.dat" "tecout_phi_0017_001300.dat" "tecout_phi_0017_001400.dat" "tecout_phi_0017_001500.dat" "tecout_phi_0017_001600.dat" "tecout_phi_0017_001700.dat" "tecout_phi_0017_001800.dat" "tecout_phi_0017_001900.dat" "tecout_phi_0017_002000.dat" "tecout_phi_0017_002100.dat" "tecout_phi_0017_002200.dat" "tecout_phi_0017_002300.dat" "tecout_phi_0017_002400.dat" "tecout_phi_0017_002500.dat" "tecout_phi_0017_002600.dat" "tecout_phi_0017_002700.dat" "tecout_phi_0017_002800.dat" "tecout_phi_0017_002900.dat" "tecout_phi_0017_003000.dat" "tecout_phi_0017_003100.dat" "tecout_phi_0017_003200.dat" "tecout_phi_0017_003300.dat" "tecout_phi_0017_003400.dat" "tecout_phi_0017_003500.dat" "tecout_phi_0017_003600.dat" "tecout_phi_0017_003700.dat" "tecout_phi_0017_003800.dat" "tecout_phi_0017_003900.dat" "tecout_phi_0017_004000.dat" "tecout_phi_0017_004100.dat" "tecout_phi_0017_004200.dat" "tecout_phi_0017_004300.dat" "tecout_phi_0017_004400.dat" "tecout_phi_0017_004500.dat" "tecout_phi_0017_004600.dat" "tecout_phi_0017_004700.dat" "tecout_phi_0017_004800.dat" "tecout_phi_0017_004900.dat" "tecout_phi_0017_005000.dat" "tecout_phi_0017_005100.dat" "tecout_phi_0017_005200.dat" "tecout_phi_0017_005300.dat" "tecout_phi_0017_005400.dat" "tecout_phi_0017_005500.dat" "tecout_phi_0017_005600.dat" "tecout_phi_0017_005700.dat" "tecout_phi_0017_005800.dat" "tecout_phi_0017_005900.dat" "tecout_phi_0017_006000.dat" "tecout_phi_0017_006100.dat" "tecout_phi_0017_006200.dat" "tecout_phi_0017_006300.dat" "tecout_phi_0017_006400.dat" "tecout_phi_0017_006500.dat" "tecout_phi_0017_006600.dat" "tecout_phi_0017_006700.dat" "tecout_phi_0017_006800.dat" "tecout_phi_0017_006900.dat" "tecout_phi_0017_007000.dat" "tecout_phi_0017_007100.dat" "tecout_phi_0017_007200.dat" "tecout_phi_0017_007300.dat" "tecout_phi_0017_007400.dat" "tecout_phi_0017_007500.dat" "tecout_phi_0017_007600.dat" "tecout_phi_0017_007700.dat" "tecout_phi_0017_007800.dat" "tecout_phi_0017_007900.dat" "tecout_phi_0017_008000.dat" "tecout_phi_0017_008100.dat" "tecout_phi_0017_008200.dat" "tecout_phi_0017_008300.dat" "tecout_phi_0017_008400.dat" "tecout_phi_0017_008500.dat" "tecout_phi_0017_008600.dat" "tecout_phi_0017_008700.dat" "tecout_phi_0017_008800.dat" "tecout_phi_0017_008900.dat" "tecout_phi_0017_009000.dat" "tecout_phi_0017_009100.dat" "tecout_phi_0017_009200.dat" "tecout_phi_0017_009300.dat" "tecout_phi_0017_009400.dat" "tecout_phi_0017_009500.dat" "tecout_phi_0017_009600.dat" "tecout_phi_0017_009700.dat" "tecout_phi_0017_009800.dat" "tecout_phi_0017_009900.dat" "tecout_phi_0017_010000.dat" "tecout_phi_0017_010100.dat" "tecout_phi_0017_010200.dat" "tecout_phi_0017_010300.dat" "tecout_phi_0017_010400.dat" "tecout_phi_0017_010500.dat" "tecout_phi_0017_010600.dat" "tecout_phi_0017_010700.dat" "tecout_phi_0017_010800.dat" "tecout_phi_0017_010900.dat" "tecout_phi_0017_011000.dat" "tecout_phi_0017_011100.dat" "tecout_phi_0017_011200.dat" "tecout_phi_0017_011300.dat" "tecout_phi_0017_011400.dat" "tecout_phi_0017_011500.dat" "tecout_phi_0017_011600.dat" "tecout_phi_0017_011700.dat" "tecout_phi_0017_011800.dat" "tecout_phi_0017_011900.dat" "tecout_phi_0017_012000.dat" "tecout_phi_0017_012100.dat" "tecout_phi_0017_012200.dat" "tecout_phi_0017_012300.dat" "tecout_phi_0017_012400.dat" "tecout_phi_0017_012500.dat" "tecout_phi_0017_012600.dat" "tecout_phi_0017_012700.dat" "tecout_phi_0017_012800.dat" "tecout_phi_0017_012900.dat" "tecout_phi_0017_013000.dat" "tecout_phi_0017_013100.dat" "tecout_phi_0017_013200.dat" "tecout_phi_0017_013300.dat" "tecout_phi_0017_013400.dat" "tecout_phi_0017_013500.dat" "tecout_phi_0017_013600.dat" "tecout_phi_0017_013700.dat" "tecout_phi_0017_013800.dat" "tecout_phi_0017_013900.dat" "tecout_phi_0017_014000.dat" "tecout_phi_0017_014100.dat" "tecout_phi_0017_014200.dat" "tecout_phi_0017_014300.dat" "tecout_phi_0017_014400.dat" "tecout_phi_0017_014500.dat" "tecout_phi_0017_014600.dat" "tecout_phi_0017_014700.dat" "tecout_phi_0017_014800.dat" "tecout_phi_0017_014900.dat" "tecout_phi_0017_015000.dat" "tecout_phi_0018_000100.dat" "tecout_phi_0018_000200.dat" "tecout_phi_0018_000300.dat" "tecout_phi_0018_000400.dat" "tecout_phi_0018_000500.dat" "tecout_phi_0018_000600.dat" "tecout_phi_0018_000700.dat" "tecout_phi_0018_000800.dat" "tecout_phi_0018_000900.dat" "tecout_phi_0018_001000.dat" "tecout_phi_0018_001100.dat" "tecout_phi_0018_001200.dat" "tecout_phi_0018_001300.dat" "tecout_phi_0018_001400.dat" "tecout_phi_0018_001500.dat" "tecout_phi_0018_001600.dat" "tecout_phi_0018_001700.dat" "tecout_phi_0018_001800.dat" "tecout_phi_0018_001900.dat" "tecout_phi_0018_002000.dat" "tecout_phi_0018_002100.dat" "tecout_phi_0018_002200.dat" "tecout_phi_0018_002300.dat" "tecout_phi_0018_002400.dat" "tecout_phi_0018_002500.dat" "tecout_phi_0018_002600.dat" "tecout_phi_0018_002700.dat" "tecout_phi_0018_002800.dat" "tecout_phi_0018_002900.dat" "tecout_phi_0018_003000.dat" "tecout_phi_0018_003100.dat" "tecout_phi_0018_003200.dat" "tecout_phi_0018_003300.dat" "tecout_phi_0018_003400.dat" "tecout_phi_0018_003500.dat" "tecout_phi_0018_003600.dat" "tecout_phi_0018_003700.dat" "tecout_phi_0018_003800.dat" "tecout_phi_0018_003900.dat" "tecout_phi_0018_004000.dat" "tecout_phi_0018_004100.dat" "tecout_phi_0018_004200.dat" "tecout_phi_0018_004300.dat" "tecout_phi_0018_004400.dat" "tecout_phi_0018_004500.dat" "tecout_phi_0018_004600.dat" "tecout_phi_0018_004700.dat" "tecout_phi_0018_004800.dat" "tecout_phi_0018_004900.dat" "tecout_phi_0018_005000.dat" "tecout_phi_0018_005100.dat" "tecout_phi_0018_005200.dat" "tecout_phi_0018_005300.dat" "tecout_phi_0018_005400.dat" "tecout_phi_0018_005500.dat" "tecout_phi_0018_005600.dat" "tecout_phi_0018_005700.dat" "tecout_phi_0018_005800.dat" "tecout_phi_0018_005900.dat" "tecout_phi_0018_006000.dat" "tecout_phi_0018_006100.dat" "tecout_phi_0018_006200.dat" "tecout_phi_0018_006300.dat" "tecout_phi_0018_006400.dat" "tecout_phi_0018_006500.dat" "tecout_phi_0018_006600.dat" "tecout_phi_0018_006700.dat" "tecout_phi_0018_006800.dat" "tecout_phi_0018_006900.dat" "tecout_phi_0018_007000.dat" "tecout_phi_0018_007100.dat" "tecout_phi_0018_007200.dat" "tecout_phi_0018_007300.dat" "tecout_phi_0018_007400.dat" "tecout_phi_0018_007500.dat" "tecout_phi_0018_007600.dat" "tecout_phi_0018_007700.dat" "tecout_phi_0018_007800.dat" "tecout_phi_0018_007900.dat" "tecout_phi_0018_008000.dat" "tecout_phi_0018_008100.dat" "tecout_phi_0018_008200.dat" "tecout_phi_0018_008300.dat" "tecout_phi_0018_008400.dat" "tecout_phi_0018_008500.dat" "tecout_phi_0018_008600.dat" "tecout_phi_0018_008700.dat" "tecout_phi_0018_008800.dat" "tecout_phi_0018_008900.dat" "tecout_phi_0018_009000.dat" "tecout_phi_0018_009100.dat" "tecout_phi_0018_009200.dat" "tecout_phi_0018_009300.dat" "tecout_phi_0018_009400.dat" "tecout_phi_0018_009500.dat" "tecout_phi_0018_009600.dat" "tecout_phi_0018_009700.dat" "tecout_phi_0018_009800.dat" "tecout_phi_0018_009900.dat" "tecout_phi_0018_010000.dat" "tecout_phi_0018_010100.dat" "tecout_phi_0018_010200.dat" "tecout_phi_0018_010300.dat" "tecout_phi_0018_010400.dat" "tecout_phi_0018_010500.dat" "tecout_phi_0018_010600.dat" "tecout_phi_0018_010700.dat" "tecout_phi_0018_010800.dat" "tecout_phi_0018_010900.dat" "tecout_phi_0018_011000.dat" "tecout_phi_0018_011100.dat" "tecout_phi_0018_011200.dat" "tecout_phi_0018_011300.dat" "tecout_phi_0018_011400.dat" "tecout_phi_0018_011500.dat" "tecout_phi_0018_011600.dat" "tecout_phi_0018_011700.dat" "tecout_phi_0018_011800.dat" "tecout_phi_0018_011900.dat" "tecout_phi_0018_012000.dat" "tecout_phi_0018_012100.dat" "tecout_phi_0018_012200.dat" "tecout_phi_0018_012300.dat" "tecout_phi_0018_012400.dat" "tecout_phi_0018_012500.dat" "tecout_phi_0018_012600.dat" "tecout_phi_0018_012700.dat" "tecout_phi_0018_012800.dat" "tecout_phi_0018_012900.dat" "tecout_phi_0018_013000.dat" "tecout_phi_0018_013100.dat" "tecout_phi_0018_013200.dat" "tecout_phi_0018_013300.dat" "tecout_phi_0018_013400.dat" "tecout_phi_0018_013500.dat" "tecout_phi_0018_013600.dat" "tecout_phi_0018_013700.dat" "tecout_phi_0018_013800.dat" "tecout_phi_0018_013900.dat" "tecout_phi_0018_014000.dat" "tecout_phi_0018_014100.dat" "tecout_phi_0018_014200.dat" "tecout_phi_0018_014300.dat" "tecout_phi_0018_014400.dat" "tecout_phi_0018_014500.dat" "tecout_phi_0018_014600.dat" "tecout_phi_0018_014700.dat" "tecout_phi_0018_014800.dat" "tecout_phi_0018_014900.dat" "tecout_phi_0018_015000.dat" "tecout_phi_0019_000100.dat" "tecout_phi_0019_000200.dat" "tecout_phi_0019_000300.dat" "tecout_phi_0019_000400.dat" "tecout_phi_0019_000500.dat" "tecout_phi_0019_000600.dat" "tecout_phi_0019_000700.dat" "tecout_phi_0019_000800.dat" "tecout_phi_0019_000900.dat" "tecout_phi_0019_001000.dat" "tecout_phi_0019_001100.dat" "tecout_phi_0019_001200.dat" "tecout_phi_0019_001300.dat" "tecout_phi_0019_001400.dat" "tecout_phi_0019_001500.dat" "tecout_phi_0019_001600.dat" "tecout_phi_0019_001700.dat" "tecout_phi_0019_001800.dat" "tecout_phi_0019_001900.dat" "tecout_phi_0019_002000.dat" "tecout_phi_0019_002100.dat" "tecout_phi_0019_002200.dat" "tecout_phi_0019_002300.dat" "tecout_phi_0019_002400.dat" "tecout_phi_0019_002500.dat" "tecout_phi_0019_002600.dat" "tecout_phi_0019_002700.dat" "tecout_phi_0019_002800.dat" "tecout_phi_0019_002900.dat" "tecout_phi_0019_003000.dat" "tecout_phi_0019_003100.dat" "tecout_phi_0019_003200.dat" "tecout_phi_0019_003300.dat" "tecout_phi_0019_003400.dat" "tecout_phi_0019_003500.dat" "tecout_phi_0019_003600.dat" "tecout_phi_0019_003700.dat" "tecout_phi_0019_003800.dat" "tecout_phi_0019_003900.dat" "tecout_phi_0019_004000.dat" "tecout_phi_0019_004100.dat" "tecout_phi_0019_004200.dat" "tecout_phi_0019_004300.dat" "tecout_phi_0019_004400.dat" "tecout_phi_0019_004500.dat" "tecout_phi_0019_004600.dat" "tecout_phi_0019_004700.dat" "tecout_phi_0019_004800.dat" "tecout_phi_0019_004900.dat" "tecout_phi_0019_005000.dat" "tecout_phi_0019_005100.dat" "tecout_phi_0019_005200.dat" "tecout_phi_0019_005300.dat" "tecout_phi_0019_005400.dat" "tecout_phi_0019_005500.dat" "tecout_phi_0019_005600.dat" "tecout_phi_0019_005700.dat" "tecout_phi_0019_005800.dat" "tecout_phi_0019_005900.dat" "tecout_phi_0019_006000.dat" "tecout_phi_0019_006100.dat" "tecout_phi_0019_006200.dat" "tecout_phi_0019_006300.dat" "tecout_phi_0019_006400.dat" "tecout_phi_0019_006500.dat" "tecout_phi_0019_006600.dat" "tecout_phi_0019_006700.dat" "tecout_phi_0019_006800.dat" "tecout_phi_0019_006900.dat" "tecout_phi_0019_007000.dat" "tecout_phi_0019_007100.dat" "tecout_phi_0019_007200.dat" "tecout_phi_0019_007300.dat" "tecout_phi_0019_007400.dat" "tecout_phi_0019_007500.dat" "tecout_phi_0019_007600.dat" "tecout_phi_0019_007700.dat" "tecout_phi_0019_007800.dat" "tecout_phi_0019_007900.dat" "tecout_phi_0019_008000.dat" "tecout_phi_0019_008100.dat" "tecout_phi_0019_008200.dat" "tecout_phi_0019_008300.dat" "tecout_phi_0019_008400.dat" "tecout_phi_0019_008500.dat" "tecout_phi_0019_008600.dat" "tecout_phi_0019_008700.dat" "tecout_phi_0019_008800.dat" "tecout_phi_0019_008900.dat" "tecout_phi_0019_009000.dat" "tecout_phi_0019_009100.dat" "tecout_phi_0019_009200.dat" "tecout_phi_0019_009300.dat" "tecout_phi_0019_009400.dat" "tecout_phi_0019_009500.dat" "tecout_phi_0019_009600.dat" "tecout_phi_0019_009700.dat" "tecout_phi_0019_009800.dat" "tecout_phi_0019_009900.dat" "tecout_phi_0019_010000.dat" "tecout_phi_0019_010100.dat" "tecout_phi_0019_010200.dat" "tecout_phi_0019_010300.dat" "tecout_phi_0019_010400.dat" "tecout_phi_0019_010500.dat" "tecout_phi_0019_010600.dat" "tecout_phi_0019_010700.dat" "tecout_phi_0019_010800.dat" "tecout_phi_0019_010900.dat" "tecout_phi_0019_011000.dat" "tecout_phi_0019_011100.dat" "tecout_phi_0019_011200.dat" "tecout_phi_0019_011300.dat" "tecout_phi_0019_011400.dat" "tecout_phi_0019_011500.dat" "tecout_phi_0019_011600.dat" "tecout_phi_0019_011700.dat" "tecout_phi_0019_011800.dat" "tecout_phi_0019_011900.dat" "tecout_phi_0019_012000.dat" "tecout_phi_0019_012100.dat" "tecout_phi_0019_012200.dat" "tecout_phi_0019_012300.dat" "tecout_phi_0019_012400.dat" "tecout_phi_0019_012500.dat" "tecout_phi_0019_012600.dat" "tecout_phi_0019_012700.dat" "tecout_phi_0019_012800.dat" "tecout_phi_0019_012900.dat" "tecout_phi_0019_013000.dat" "tecout_phi_0019_013100.dat" "tecout_phi_0019_013200.dat" "tecout_phi_0019_013300.dat" "tecout_phi_0019_013400.dat" "tecout_phi_0019_013500.dat" "tecout_phi_0019_013600.dat" "tecout_phi_0019_013700.dat" "tecout_phi_0019_013800.dat" "tecout_phi_0019_013900.dat" "tecout_phi_0019_014000.dat" "tecout_phi_0019_014100.dat" "tecout_phi_0019_014200.dat" "tecout_phi_0019_014300.dat" "tecout_phi_0019_014400.dat" "tecout_phi_0019_014500.dat" "tecout_phi_0019_014600.dat" "tecout_phi_0019_014700.dat" "tecout_phi_0019_014800.dat" "tecout_phi_0019_014900.dat" "tecout_phi_0019_015000.dat"'
+$!VarSet |LFDSVL1| = '"x" "y" "z" "phi" "phim" "dens" "mu"'
+$!SetStyleBase Factory
+$!CreateColorMap 
+  Name = 'Sequential - Viridis'
+  NumControlPoints = 11
+  ControlPoint 1
+    {
+    ColorMapFraction = 0
+    LeadRGB
+      {
+      R = 68
+      G = 1
+      B = 84
+      }
+    TrailRGB
+      {
+      R = 68
+      G = 1
+      B = 84
+      }
+    }
+  ControlPoint 2
+    {
+    ColorMapFraction = 0.08163
+    LeadRGB
+      {
+      R = 72
+      G = 31
+      B = 112
+      }
+    TrailRGB
+      {
+      R = 72
+      G = 31
+      B = 112
+      }
+    }
+  ControlPoint 3
+    {
+    ColorMapFraction = 0.1837
+    LeadRGB
+      {
+      R = 67
+      G = 63
+      B = 133
+      }
+    TrailRGB
+      {
+      R = 67
+      G = 63
+      B = 133
+      }
+    }
+  ControlPoint 4
+    {
+    ColorMapFraction = 0.2857
+    LeadRGB
+      {
+      R = 54
+      G = 92
+      B = 141
+      }
+    TrailRGB
+      {
+      R = 54
+      G = 92
+      B = 141
+      }
+    }
+  ControlPoint 5
+    {
+    ColorMapFraction = 0.3878
+    LeadRGB
+      {
+      R = 43
+      G = 117
+      B = 142
+      }
+    TrailRGB
+      {
+      R = 43
+      G = 117
+      B = 142
+      }
+    }
+  ControlPoint 6
+    {
+    ColorMapFraction = 0.4898
+    LeadRGB
+      {
+      R = 33
+      G = 142
+      B = 141
+      }
+    TrailRGB
+      {
+      R = 33
+      G = 142
+      B = 141
+      }
+    }
+  ControlPoint 7
+    {
+    ColorMapFraction = 0.5918
+    LeadRGB
+      {
+      R = 33
+      G = 166
+      B = 133
+      }
+    TrailRGB
+      {
+      R = 33
+      G = 166
+      B = 133
+      }
+    }
+  ControlPoint 8
+    {
+    ColorMapFraction = 0.6939
+    LeadRGB
+      {
+      R = 64
+      G = 189
+      B = 114
+      }
+    TrailRGB
+      {
+      R = 64
+      G = 189
+      B = 114
+      }
+    }
+  ControlPoint 9
+    {
+    ColorMapFraction = 0.7959
+    LeadRGB
+      {
+      R = 119
+      G = 209
+      B = 83
+      }
+    TrailRGB
+      {
+      R = 119
+      G = 209
+      B = 83
+      }
+    }
+  ControlPoint 10
+    {
+    ColorMapFraction = 0.898
+    LeadRGB
+      {
+      R = 186
+      G = 222
+      B = 40
+      }
+    TrailRGB
+      {
+      R = 186
+      G = 222
+      B = 40
+      }
+    }
+  ControlPoint 11
+    {
+    ColorMapFraction = 1
+    LeadRGB
+      {
+      R = 253
+      G = 231
+      B = 37
+      }
+    TrailRGB
+      {
+      R = 253
+      G = 231
+      B = 37
+      }
+    }
+$!CreateColorMap 
+  Name = 'Sequential - Blue modified (1)'
+  NumControlPoints = 6
+  ControlPoint 1
+    {
+    ColorMapFraction = 0.005115
+    LeadRGB
+      {
+      R = 255
+      G = 255
+      B = 255
+      }
+    TrailRGB
+      {
+      R = 255
+      G = 255
+      B = 255
+      }
+    }
+  ControlPoint 2
+    {
+    ColorMapFraction = 0.3333
+    LeadRGB
+      {
+      R = 158
+      G = 202
+      B = 225
+      }
+    TrailRGB
+      {
+      R = 158
+      G = 202
+      B = 225
+      }
+    }
+  ControlPoint 3
+    {
+    ColorMapFraction = 0.5
+    LeadRGB
+      {
+      R = 107
+      G = 174
+      B = 214
+      }
+    TrailRGB
+      {
+      R = 107
+      G = 174
+      B = 214
+      }
+    }
+  ControlPoint 4
+    {
+    ColorMapFraction = 0.6667
+    LeadRGB
+      {
+      R = 66
+      G = 146
+      B = 198
+      }
+    TrailRGB
+      {
+      R = 66
+      G = 146
+      B = 198
+      }
+    }
+  ControlPoint 5
+    {
+    ColorMapFraction = 0.8333
+    LeadRGB
+      {
+      R = 33
+      G = 113
+      B = 181
+      }
+    TrailRGB
+      {
+      R = 33
+      G = 113
+      B = 181
+      }
+    }
+  ControlPoint 6
+    {
+    ColorMapFraction = 1
+    LeadRGB
+      {
+      R = 8
+      G = 69
+      B = 148
+      }
+    TrailRGB
+      {
+      R = 8
+      G = 69
+      B = 148
+      }
+    }
+$!GlobalPaper 
+  PaperSizeInfo
+    {
+    Letter
+      {
+      Width = 8.5
+      Height = 11
+      LeftHardClipOffset = 0.125
+      RightHardClipOffset = 0.125
+      TopHardClipOffset = 0.125
+      BottomHardClipOffset = 0.125
+      }
+    }
+$!Page 
+  Name = 'Untitled'
+  PaperAttributes
+    {
+    BackgroundColor = White
+    IsTransparent = Yes
+    OrientPortrait = No
+    ShowGrid = Yes
+    ShowRuler = No
+    ShowPaper = No
+    PaperSize = Letter
+    RulerSpacing = OneInch
+    PaperGridSpacing = HalfInch
+    RegionInWorkArea
+      {
+      X1 = 1
+      Y1 = 0.25
+      X2 = 10
+      Y2 = 8.25
+      }
+    }
+### Frame Number 1 ###
+$!ReadDataSet  '|LFDSFN1|'
+  InitialPlotType = Cartesian2D
+  IncludeText = No
+  IncludeGeom = No
+  AssignStrandIDs = Yes
+  VarLoadMode = ByName
+  VarNameList = '|LFDSVL1|'
+$!RemoveVar |LFDSVL1|
+$!RemoveVar |LFDSFN1|
+$!ExtractSliceToZones 
+  SliceSurface = YPlanes
+  CopyCellCenteredValues = No
+  XVar = 1
+  YVar = 2
+  ZVar = 3
+  ValueBlanking
+    {
+    Include = No
+    }
+  Origin
+    {
+    X = 10.176
+    Y = 0.448
+    Z = 0.992
+    }
+  SourceFieldmaps =  [1]
+  SourceFieldmapsIgnoringBlanking =  []
+$!FrameLayout 
+  ShowBorder = No
+  ShowHeader = No
+  HeaderColor = Red
+  XYPos
+    {
+    X = 1
+    Y = 0.25
+    }
+  Width = 9
+  Height = 8
+$!ThreeDAxis 
+  AspectRatioLimit = 25
+  BoxAspectRatioLimit = 25
+$!PlotType  = Cartesian2D
+$!FrameName  = 'Frame 001'
+$!GlobalTime 
+  SolutionTime = 0.299999999999999989
+$!ActiveFieldMaps  =  [1-2]
+$!GlobalRGB 
+  RedChannelVar = 4
+  GreenChannelVar = 4
+  BlueChannelVar = 4
+  RangeMin = 0
+  RangeMax = 1
+$!GlobalContour  1
+  Var = 4
+  ColorMapName = 'Sequential - Blue modified (1)'
+  Legend
+    {
+    XYPos
+      {
+      X = 95
+      }
+    }
+  ColorCutoff
+    {
+    RangeMin = -0.8711658
+    RangeMax = 0.6185026
+    }
+  ColorMapFilter
+    {
+    ContinuousColor
+      {
+      CMin = -1.616
+      CMax = 1.3633368
+      }
+    }
+$!ContourLevels New
+  ContourGroup = 1
+  RawData
+1
+0
+$!GlobalContour  2
+  Var = 5
+  ColorMapName = 'Sequential - Viridis'
+  Legend
+    {
+    Show = Yes
+    XYPos
+      {
+      X = 95
+      }
+    }
+  ColorMapFilter
+    {
+    ContinuousColor
+      {
+      CMin = 0
+      CMax = 1
+      }
+    }
+$!ContourLevels New
+  ContourGroup = 2
+  RawData
+1
+0
+$!GlobalContour  3
+  Var = 6
+  ColorMapName = 'Sequential - Viridis'
+  Legend
+    {
+    Show = Yes
+    XYPos
+      {
+      X = 95
+      }
+    }
+  ColorMapFilter
+    {
+    ContinuousColor
+      {
+      CMin = 0
+      CMax = 1
+      }
+    }
+$!ContourLevels New
+  ContourGroup = 3
+  RawData
+19
+50
+100
+150
+200
+250
+300
+350
+400
+450
+500
+550
+600
+650
+700
+750
+800
+850
+900
+950
+$!GlobalContour  4
+  Var = 7
+  ColorMapName = 'Sequential - Viridis'
+  Legend
+    {
+    Show = Yes
+    XYPos
+      {
+      X = 95
+      }
+    }
+  ColorMapFilter
+    {
+    ContinuousColor
+      {
+      CMin = 0
+      CMax = 1
+      }
+    }
+$!ContourLevels New
+  ContourGroup = 4
+  RawData
+19
+0.001
+0.002
+0.003
+0.004
+0.005
+0.006
+0.007
+0.008
+0.009
+0.01
+0.011
+0.012
+0.013
+0.014
+0.015
+0.016
+0.017
+0.018
+0.019
+$!GlobalContour  5
+  Var = 4
+  ColorMapName = 'Sequential - Viridis'
+  Legend
+    {
+    Show = Yes
+    XYPos
+      {
+      X = 95
+      }
+    }
+  ColorMapFilter
+    {
+    ContinuousColor
+      {
+      CMin = 0
+      CMax = 1
+      }
+    }
+$!ContourLevels New
+  ContourGroup = 5
+  RawData
+14
+-1.4
+-1.2
+-1
+-0.8
+-0.6
+-0.4
+-0.2
+0
+0.2
+0.4
+0.6
+0.8
+1
+1.2
+$!GlobalContour  6
+  Var = 4
+  ColorMapName = 'Sequential - Viridis'
+  Legend
+    {
+    Show = Yes
+    XYPos
+      {
+      X = 95
+      }
+    }
+  ColorMapFilter
+    {
+    ContinuousColor
+      {
+      CMin = 0
+      CMax = 1
+      }
+    }
+$!ContourLevels New
+  ContourGroup = 6
+  RawData
+14
+-1.4
+-1.2
+-1
+-0.8
+-0.6
+-0.4
+-0.2
+0
+0.2
+0.4
+0.6
+0.8
+1
+1.2
+$!GlobalContour  7
+  Var = 4
+  ColorMapName = 'Sequential - Viridis'
+  Legend
+    {
+    Show = Yes
+    XYPos
+      {
+      X = 95
+      }
+    }
+  ColorMapFilter
+    {
+    ContinuousColor
+      {
+      CMin = 0
+      CMax = 1
+      }
+    }
+$!ContourLevels New
+  ContourGroup = 7
+  RawData
+14
+-1.4
+-1.2
+-1
+-0.8
+-0.6
+-0.4
+-0.2
+0
+0.2
+0.4
+0.6
+0.8
+1
+1.2
+$!GlobalContour  8
+  Var = 4
+  ColorMapName = 'Sequential - Viridis'
+  Legend
+    {
+    Show = Yes
+    XYPos
+      {
+      X = 95
+      }
+    }
+  ColorMapFilter
+    {
+    ContinuousColor
+      {
+      CMin = 0
+      CMax = 1
+      }
+    }
+$!ContourLevels New
+  ContourGroup = 8
+  RawData
+14
+-1.4
+-1.2
+-1
+-0.8
+-0.6
+-0.4
+-0.2
+0
+0.2
+0.4
+0.6
+0.8
+1
+1.2
+$!GlobalScatter 
+  Legend
+    {
+    XYPos
+      {
+      X = 95
+      }
+    }
+  RefScatSymbol
+    {
+    Color = Red
+    FillColor = Red
+    }
+$!FieldMap  [1]
+  Mesh
+    {
+    Color = Black
+    }
+  Contour
+    {
+    ContourType = Flood
+    Color = Black
+    UseLightingEffect = Yes
+    }
+  Vector
+    {
+    Color = Black
+    }
+  Scatter
+    {
+    Color = Black
+    }
+  Shade
+    {
+    Color = Custom2
+    }
+  EdgeLayer
+    {
+    Show = Yes
+    Color = Black
+    LineThickness = 0.1
+    }
+  Points
+    {
+    PointsToPlot = SurfaceNodes
+    }
+  Surfaces
+    {
+    SurfacesToPlot = None
+    IRange
+      {
+      Max = 1
+      }
+    }
+  Effects
+    {
+    LightingEffect = Gouraud
+    }
+$!FieldMap  [2]
+  Mesh
+    {
+    Color = Black
+    }
+  Contour
+    {
+    ContourType = Flood
+    Color = Black
+    UseLightingEffect = Yes
+    }
+  Vector
+    {
+    Color = Black
+    }
+  Scatter
+    {
+    Color = Black
+    }
+  Shade
+    {
+    Color = Custom2
+    }
+  EdgeLayer
+    {
+    Show = Yes
+    Color = Black
+    LineThickness = 0.1
+    }
+  Points
+    {
+    PointsToPlot = SurfaceNodes
+    }
+  Surfaces
+    {
+    SurfacesToPlot = None
+    IRange
+      {
+      Max = 1
+      }
+    }
+  VolumeMode
+    {
+    VolumeObjectsToPlot
+      {
+      ShowIsosurfaces = No
+      ShowSlices = No
+      ShowStreamtraces = No
+      }
+    }
+  Effects
+    {
+    LightingEffect = Gouraud
+    }
+$!TwoDAxis 
+  XDetail
+    {
+    VarNum = 1
+    }
+  YDetail
+    {
+    VarNum = 3
+    }
+$!View Fit
+$!TwoDAxis 
+  PreserveAxisScale = Yes
+  DepXToYRatio = 0.25
+  ViewportPosition
+    {
+    X1 = 4.0137
+    Y1 = 9.2262
+    X2 = 95.749
+    Y2 = 98.31
+    }
+  ViewportTopSnapTarget = 98.310421286
+$!TwoDAxis 
+  XDetail
+    {
+    ShowAxis = No
+    RangeMin = -0.40606421770955786199
+    RangeMax = 20.593935782290444081
+    GRSpacing = 5
+    }
+$!TwoDAxis 
+  YDetail
+    {
+    ShowAxis = No
+    RangeMin = -1.6136278988908643317
+    RangeMax = 2.9181615663638336144
+    GRSpacing = 0.5
+    AxisLine
+      {
+      Show = No
+      }
+    }
+$!IsoSurfaceAttributes  1
+  IsoSurfaceSelection = OneSpecificValue
+  Isovalue1 = -0.8711658
+  Isovalue2 = -0.1263316
+  Isovalue3 = 0.6185026
+  Effects
+    {
+    LightingEffect = Gouraud
+    }
+$!IsoSurfaceAttributes  2
+  DefinitionContourGroup = 2
+  IsoSurfaceSelection = OneSpecificValue
+  Contour
+    {
+    LineContourGroup = 2
+    FloodColoring = Group2
+    }
+  Effects
+    {
+    LightingEffect = Gouraud
+    }
+$!IsoSurfaceAttributes  3
+  DefinitionContourGroup = 3
+  IsoSurfaceSelection = OneSpecificValue
+  Contour
+    {
+    LineContourGroup = 3
+    FloodColoring = Group3
+    }
+  Effects
+    {
+    LightingEffect = Gouraud
+    }
+$!IsoSurfaceAttributes  4
+  DefinitionContourGroup = 4
+  IsoSurfaceSelection = OneSpecificValue
+  Contour
+    {
+    LineContourGroup = 4
+    FloodColoring = Group4
+    }
+  Effects
+    {
+    LightingEffect = Gouraud
+    }
+$!IsoSurfaceAttributes  5
+  DefinitionContourGroup = 5
+  IsoSurfaceSelection = OneSpecificValue
+  Contour
+    {
+    LineContourGroup = 5
+    FloodColoring = Group5
+    }
+  Effects
+    {
+    LightingEffect = Gouraud
+    }
+$!IsoSurfaceAttributes  6
+  DefinitionContourGroup = 6
+  IsoSurfaceSelection = OneSpecificValue
+  Contour
+    {
+    LineContourGroup = 6
+    FloodColoring = Group6
+    }
+  Effects
+    {
+    LightingEffect = Gouraud
+    }
+$!IsoSurfaceAttributes  7
+  DefinitionContourGroup = 7
+  IsoSurfaceSelection = OneSpecificValue
+  Contour
+    {
+    LineContourGroup = 7
+    FloodColoring = Group7
+    }
+  Effects
+    {
+    LightingEffect = Gouraud
+    }
+$!IsoSurfaceAttributes  8
+  DefinitionContourGroup = 8
+  IsoSurfaceSelection = OneSpecificValue
+  Contour
+    {
+    LineContourGroup = 8
+    FloodColoring = Group8
+    }
+  Effects
+    {
+    LightingEffect = Gouraud
+    }
+$!SliceAttributes  1
+  SliceSurface = YPlanes
+  PrimaryPosition
+    {
+    X = 10.176
+    Y = 0.448
+    Z = 0.992
+    I = 1
+    J = 1
+    K = 1
+    }
+  StartPosition
+    {
+    X = 0.96
+    Y = -0.0128
+    Z = 0.0704
+    }
+  EndPosition
+    {
+    X = 19.392
+    Y = 0.9088
+    Z = 1.9136
+    I = 2
+    J = 2
+    K = 2
+    }
+  EdgeLayer
+    {
+    Show = No
+    }
+  Effects
+    {
+    LightingEffect = Gouraud
+    SurfaceTranslucency = 10
+    }
+  SliceConstraint
+    {
+    Include = No
+    Origin
+      {
+      X = 10.176
+      Y = 0.448
+      Z = 0.992
+      }
+    BoxDimension
+      {
+      X = 10.24
+      Y = 0.512
+      Z = 1.024
+      }
+    }
+$!SliceAttributes  2
+  SliceSurface = YPlanes
+  PrimaryPosition
+    {
+    X = 10.176
+    Y = 0.448
+    Z = 0.992
+    }
+  StartPosition
+    {
+    X = 0.96
+    Y = -0.0128
+    Z = 0.0704
+    }
+  EndPosition
+    {
+    X = 19.392
+    Y = 0.9088
+    Z = 1.9136
+    I = 2
+    J = 2
+    K = 2
+    }
+  EdgeLayer
+    {
+    Show = No
+    }
+  Effects
+    {
+    LightingEffect = Gouraud
+    SurfaceTranslucency = 10
+    }
+  SliceConstraint
+    {
+    Origin
+      {
+      X = 10.176
+      Y = 0.448
+      Z = 0.992
+      }
+    BoxDimension
+      {
+      X = 10.24
+      Y = 0.512
+      Z = 1.024
+      }
+    }
+$!SliceAttributes  3
+  SliceSurface = ZPlanes
+  PrimaryPosition
+    {
+    X = 10.176
+    Y = 0.448
+    Z = 0.992
+    }
+  StartPosition
+    {
+    X = 0.96
+    Y = -0.0128
+    Z = 0.0704
+    }
+  EndPosition
+    {
+    X = 19.392
+    Y = 0.9088
+    Z = 1.9136
+    I = 2
+    J = 2
+    K = 2
+    }
+  EdgeLayer
+    {
+    Show = No
+    }
+  Effects
+    {
+    LightingEffect = Gouraud
+    SurfaceTranslucency = 10
+    }
+  SliceConstraint
+    {
+    Origin
+      {
+      X = 10.176
+      Y = 0.448
+      Z = 0.992
+      }
+    BoxDimension
+      {
+      X = 10.24
+      Y = 0.512
+      Z = 1.024
+      }
+    }
+$!SliceAttributes  4
+  PrimaryPosition
+    {
+    X = 10.176
+    Y = 0.448
+    Z = 0.992
+    }
+  StartPosition
+    {
+    X = 0.96
+    Y = -0.0128
+    Z = 0.0704
+    }
+  EndPosition
+    {
+    X = 19.392
+    Y = 0.9088
+    Z = 1.9136
+    I = 2
+    J = 2
+    K = 2
+    }
+  EdgeLayer
+    {
+    Show = No
+    }
+  Effects
+    {
+    LightingEffect = Gouraud
+    SurfaceTranslucency = 10
+    }
+  SliceConstraint
+    {
+    Origin
+      {
+      X = 10.176
+      Y = 0.448
+      Z = 0.992
+      }
+    BoxDimension
+      {
+      X = 10.24
+      Y = 0.512
+      Z = 1.024
+      }
+    }
+$!SliceAttributes  5
+  SliceSurface = YPlanes
+  PrimaryPosition
+    {
+    X = 10.176
+    Y = 0.448
+    Z = 0.992
+    }
+  StartPosition
+    {
+    X = 0.96
+    Y = -0.0128
+    Z = 0.0704
+    }
+  EndPosition
+    {
+    X = 19.392
+    Y = 0.9088
+    Z = 1.9136
+    I = 2
+    J = 2
+    K = 2
+    }
+  EdgeLayer
+    {
+    Show = No
+    }
+  Effects
+    {
+    LightingEffect = Gouraud
+    SurfaceTranslucency = 10
+    }
+  SliceConstraint
+    {
+    Origin
+      {
+      X = 10.176
+      Y = 0.448
+      Z = 0.992
+      }
+    BoxDimension
+      {
+      X = 10.24
+      Y = 0.512
+      Z = 1.024
+      }
+    }
+$!SliceAttributes  6
+  SliceSurface = ZPlanes
+  PrimaryPosition
+    {
+    X = 10.176
+    Y = 0.448
+    Z = 0.992
+    }
+  StartPosition
+    {
+    X = 0.96
+    Y = -0.0128
+    Z = 0.0704
+    }
+  EndPosition
+    {
+    X = 19.392
+    Y = 0.9088
+    Z = 1.9136
+    I = 2
+    J = 2
+    K = 2
+    }
+  EdgeLayer
+    {
+    Show = No
+    }
+  Effects
+    {
+    LightingEffect = Gouraud
+    SurfaceTranslucency = 10
+    }
+  SliceConstraint
+    {
+    Origin
+      {
+      X = 10.176
+      Y = 0.448
+      Z = 0.992
+      }
+    BoxDimension
+      {
+      X = 10.24
+      Y = 0.512
+      Z = 1.024
+      }
+    }
+$!SliceAttributes  7
+  PrimaryPosition
+    {
+    X = 10.176
+    Y = 0.448
+    Z = 0.992
+    }
+  StartPosition
+    {
+    X = 0.96
+    Y = -0.0128
+    Z = 0.0704
+    }
+  EndPosition
+    {
+    X = 19.392
+    Y = 0.9088
+    Z = 1.9136
+    I = 2
+    J = 2
+    K = 2
+    }
+  EdgeLayer
+    {
+    Show = No
+    }
+  Effects
+    {
+    LightingEffect = Gouraud
+    SurfaceTranslucency = 10
+    }
+  SliceConstraint
+    {
+    Origin
+      {
+      X = 10.176
+      Y = 0.448
+      Z = 0.992
+      }
+    BoxDimension
+      {
+      X = 10.24
+      Y = 0.512
+      Z = 1.024
+      }
+    }
+$!SliceAttributes  8
+  SliceSurface = YPlanes
+  PrimaryPosition
+    {
+    X = 10.176
+    Y = 0.448
+    Z = 0.992
+    }
+  StartPosition
+    {
+    X = 0.96
+    Y = -0.0128
+    Z = 0.0704
+    }
+  EndPosition
+    {
+    X = 19.392
+    Y = 0.9088
+    Z = 1.9136
+    I = 2
+    J = 2
+    K = 2
+    }
+  EdgeLayer
+    {
+    Show = No
+    }
+  Effects
+    {
+    LightingEffect = Gouraud
+    SurfaceTranslucency = 10
+    }
+  SliceConstraint
+    {
+    Origin
+      {
+      X = 10.176
+      Y = 0.448
+      Z = 0.992
+      }
+    BoxDimension
+      {
+      X = 10.24
+      Y = 0.512
+      Z = 1.024
+      }
+    }
+$!StreamAttributes 
+  StreamTiming
+    {
+    MarkSize = 1
+    MarkSymbol
+      {
+      GeomShape = Sphere
+      }
+    }
+  RodRibbon
+    {
+    Effects
+      {
+      LightingEffect = Gouraud
+      }
+    }
+  MaxSteps = 10000
+$!FieldLayers 
+  ShowMesh = No
+  ShowContour = Yes
+  ShowShade = Yes
+  ShowEdge = No
+$!SliceLayers 
+  Show = Yes
+$!StreamtraceLayers 
+  Show = No
+$!FrameControl ActivateByNumber
+  Frame = 1
+$!SetStyleBase Config
