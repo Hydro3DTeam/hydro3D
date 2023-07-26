@@ -1,0 +1,13 @@
+================= ENERGY ====================================
+0.72		Prantl Number (air=0.72,C02=2.80)
+0.6		Turbulent Schmidt Number (0.2-0.5)
+0.0034		Thermal Expansion Coefficient
+0.5,0.5		Th,Tc
+7		West Boundary Condition (C)
+7		East Boundary Condition (C)
+7		South Boundary Condition (C)
+7		North Boundary Condition (C)
+7		Bottom Boundary Condition (C)
+7		Top Boundary Condition (C)
+		
+		

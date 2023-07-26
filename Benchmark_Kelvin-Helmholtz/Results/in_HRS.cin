@@ -1,0 +1,290 @@
+======== Bc_human ==========
+0.004			Hman_dtmax for Plen_ps if starting from restart (checkdt.for)
+1			nHman (# of humans) ! 11		
+========== Door Front  ========== 
+0.00 0.00 0.00		Mouth Position: Cx_hM,Cy_hM,Cz_hM			!255
+0.00 0.00 0.00		Mouth Size: 	Lx_hM,Ly_hM,Lz_hM (overall length)
+0.00 0.00 0.00   	Nose Position:  Cx_hN,Cy_hN,Cz_hN
+0.00 0.00 0.00		Nose Size: 	Lx_hN,Ly_hN,Lz_hN (overall length)
+-0.5 0.00 0.00		Mouth Vels:	U_hM,V_hM,W_hM (Set vels for Phased or Constant flow only)
+0.00 0.00 0.00		Nose Vels:	U_hN,V_hN,W_hN (positive for inhale)
+F 1 35 			Scalar:		Scalar (T/F),Sgroup,SInlet
+---------- Flow Phase --------
+10			Celltype: (10:Inlet, 20=Oulet ,21=ConvectiveBC)
+F			LPhFlw (Using Phased flow=T)
+1.67 1.67 1.67		Phase lengths:	Plen_in,Plen_ex,Plen_ps (inhale,exhale,pause in seconds)
+F                       LCoFlw (Using Cough flow=T)
+20.0 0.5 0.08           Co_Fr,Co_du,Co_pvt(Frequency #/min, duration, peak velocity time)
+0.000 8.334 0.000	Cough Vels:	Co_Uh,Co_Vh,Co_Wh (Set vels for Cough flow only)
+5			Co_num (number of continuous coughs)
+F 0.0			LFlwCombo (Using Phased and Cough Flow=T),Ts_Co (Cough start time)
+----- IBP Boundary-----------
+T				   IBP Boundary
+RCyl_BC.pts         File name (Velocity distribution and magnitude,NO phase)
+0.0	0.0	-0.01			   Cx,Cy,Cz
+----- Domain Wall Outlet -----
+Position and Size set by mouth
+------------------------------
+T			LDWO (Using Domain Wall Outlet=T)
+4			DWO_dr (1=West,2=East,3=South,4=North,5=Bottom,6=Top)
+========== Door Front  ========== 
+0.00 0.00 0.00		Mouth Position: Cx_hM,Cy_hM,Cz_hM			!255
+0.00 0.00 0.00		Mouth Size: 	Lx_hM,Ly_hM,Lz_hM (overall length)
+0.00 0.00 0.00   	Nose Position:  Cx_hN,Cy_hN,Cz_hN
+0.00 0.00 0.00		Nose Size: 	Lx_hN,Ly_hN,Lz_hN (overall length)
+0.50 0.00 0.00		Mouth Vels:	U_hM,V_hM,W_hM (Set vels for Phased or Constant flow only)
+0.00 0.00 0.00		Nose Vels:	U_hN,V_hN,W_hN (positive for inhale)
+F 1 35 			Scalar:		Scalar (T/F),Sgroup,SInlet
+---------- Flow Phase --------
+10			Celltype: (10:Inlet, 20=Oulet ,21=ConvectiveBC)
+F			LPhFlw (Using Phased flow=T)
+1.67 1.67 1.67		Phase lengths:	Plen_in,Plen_ex,Plen_ps (inhale,exhale,pause in seconds)
+F                       LCoFlw (Using Cough flow=T)
+20.0 0.5 0.08           Co_Fr,Co_du,Co_pvt(Frequency #/min, duration, peak velocity time)
+0.000 8.334 0.000	Cough Vels:	Co_Uh,Co_Vh,Co_Wh (Set vels for Cough flow only)
+5			Co_num (number of continuous coughs)
+F 0.0			LFlwCombo (Using Phased and Cough Flow=T),Ts_Co (Cough start time)
+----- IBP Boundary-----------
+T				   IBP Boundary
+RCyl_BC.pts         File name (Velocity distribution and magnitude,NO phase)
+0.00	0.0	0.0			   Cx,Cy,Cz
+----- Domain Wall Outlet -----
+Position and Size set by mouth
+------------------------------
+T			LDWO (Using Domain Wall Outlet=T)
+4			DWO_dr (1=West,2=East,3=South,4=North,5=Bottom,6=Top)
+
+========== Door Front  ========== 
+1.50 0.16 0.64		Mouth Position: Cx_hM,Cy_hM,Cz_hM		!255
+0.012 0.32 0.11		Mouth Size: 	Lx_hM,Ly_hM,Lz_hM (overall length)
+0.00 0.00 0.00  	Nose Position:  Cx_hN,Cy_hN,Cz_hN
+0.00 0.00 0.00		Nose Size: 	Lx_hN,Ly_hN,Lz_hN (overall length)
+1.00 0.00 0.00		Mouth Vels:	U_hM,V_hM,W_hM (Set vels for Phased or Constant flow only)
+0.00 0.00 0.00		Nose Vels:	U_hN,V_hN,W_hN (positive for inhale)
+F 1 35 			Scalar:		Scalar (T/F),Sgroup,SInlet
+---------- Flow Phase --------
+10			Celltype: (10:Inlet, 20=Oulet ,21=ConvectiveBC)
+F			LPhFlw (Using Phased flow=T)
+1.67 1.67 1.67		Phase lengths:	Plen_in,Plen_ex,Plen_ps (inhale,exhale,pause in seconds)
+F                       LCoFlw (Using Cough flow=T)
+20.0 0.5 0.08           Co_Fr,Co_du,Co_pvt(Frequency #/min, duration, peak velocity time)
+0.000 8.334 0.000	Cough Vels:	Co_Uh,Co_Vh,Co_Wh (Set vels for Cough flow only)
+5			Co_num (number of continuous coughs)
+F 0.0			LFlwCombo (Using Phased and Cough Flow=T),Ts_Co (Cough start time)
+----- IBP Boundary-----------
+F				   IBP Boundary
+31.LOWERDECK_Door_1_BC.pts         File name (Velocity distribution and magnitude,NO phase)
+0.0	1.5	1.0		   Cx,Cy,Cz
+----- Domain Wall Outlet -----
+Position and Size set by mouth
+------------------------------
+T			LDWO (Using Domain Wall Outlet=T)
+4			DWO_dr (1=West,2=East,3=South,4=North,5=Bottom,6=Top)
+========== HVAC  ========== 
+0.00 0.00 0.00		Mouth Position: Cx_hM,Cy_hM,Cz_hM			!255
+0.00 0.00 0.00		Mouth Size: 	Lx_hM,Ly_hM,Lz_hM (overall length)
+0.00 0.00 0.00   	Nose Position:  Cx_hN,Cy_hN,Cz_hN
+0.00 0.00 0.00		Nose Size: 	Lx_hN,Ly_hN,Lz_hN (overall length)
+0.00 -2.0 0.00		Mouth Vels:	U_hM,V_hM,W_hM (Set vels for Phased or Constant flow only)
+0.00 0.00 0.00		Nose Vels:	U_hN,V_hN,W_hN (positive for inhale)
+T 1 12 			Scalar:		Scalar (T/F),Sgroup,SInlet
+---------- Flow Phase --------
+10			Celltype: (10:Inlet, 20=Oulet ,21=ConvectiveBC)
+F			LPhFlw (Using Phased flow=T)
+1.67 1.67 1.67		Phase lengths:	Plen_in,Plen_ex,Plen_ps (inhale,exhale,pause in seconds)
+F                       LCoFlw (Using Cough flow=T)
+20.0 0.5 0.08           Co_Fr,Co_du,Co_pvt(Frequency #/min, duration, peak velocity time)
+0.000 8.334 0.000	Cough Vels:	Co_Uh,Co_Vh,Co_Wh (Set vels for Cough flow only)
+5			Co_num (number of continuous coughs)
+F 0.0			LFlwCombo (Using Phased and Cough Flow=T),Ts_Co (Cough start time)
+----- IBP Boundary-----------
+T					IBP Boundary
+LOWERDECK_HVAC_BC_NEG_SIDE_1_20mm.pts         	File name (Velocity distribution and magnitude,NO phase)
+0.0	1.22	1.4			Cx,Cy,Cz
+----- Domain Wall Outlet -----
+Position and Size set by mouth
+------------------------------
+F			LDWO (Using Domain Wall Outlet=T)
+4			DWO_dr (1=West,2=East,3=South,4=North,5=Bottom,6=Top)
+========== HVAC  ========== 
+0.00 0.00 0.00		Mouth Position: Cx_hM,Cy_hM,Cz_hM			!255
+0.00 0.00 0.00		Mouth Size: 	Lx_hM,Ly_hM,Lz_hM (overall length)
+0.00 0.00 0.00   	Nose Position:  Cx_hN,Cy_hN,Cz_hN
+0.00 0.00 0.00		Nose Size: 	Lx_hN,Ly_hN,Lz_hN (overall length)
+0.00 -2.0 0.00		Mouth Vels:	U_hM,V_hM,W_hM (Set vels for Phased or Constant flow only)
+0.00 0.00 0.00		Nose Vels:	U_hN,V_hN,W_hN (positive for inhale)
+T 1 12 			Scalar:		Scalar (T/F),Sgroup,SInlet
+---------- Flow Phase --------
+10			Celltype: (10:Inlet, 20=Oulet ,21=ConvectiveBC)
+F			LPhFlw (Using Phased flow=T)
+1.67 1.67 1.67		Phase lengths:	Plen_in,Plen_ex,Plen_ps (inhale,exhale,pause in seconds)
+F                       LCoFlw (Using Cough flow=T)
+20.0 0.5 0.08           Co_Fr,Co_du,Co_pvt(Frequency #/min, duration, peak velocity time)
+0.000 8.334 0.000	Cough Vels:	Co_Uh,Co_Vh,Co_Wh (Set vels for Cough flow only)
+5			Co_num (number of continuous coughs)
+F 0.0			LFlwCombo (Using Phased and Cough Flow=T),Ts_Co (Cough start time)
+----- IBP Boundary-----------
+T					IBP Boundary
+LOWERDECK_HVAC_BC_NEG_SIDE_2_20mm.pts         	File name (Velocity distribution and magnitude,NO phase)
+0.0	1.22	0.92			Cx,Cy,Cz
+----- Domain Wall Outlet -----
+Position and Size set by mouth
+------------------------------
+F			LDWO (Using Domain Wall Outlet=T)
+4			DWO_dr (1=West,2=East,3=South,4=North,5=Bottom,6=Top)
+========== HVAC  ========== 
+0.00 0.00 0.00		Mouth Position: Cx_hM,Cy_hM,Cz_hM			!255
+0.00 0.00 0.00		Mouth Size: 	Lx_hM,Ly_hM,Lz_hM (overall length)
+0.00 0.00 0.00   	Nose Position:  Cx_hN,Cy_hN,Cz_hN
+0.00 0.00 0.00		Nose Size: 	Lx_hN,Ly_hN,Lz_hN (overall length)
+0.00 -2.0 0.00		Mouth Vels:	U_hM,V_hM,W_hM (Set vels for Phased or Constant flow only)
+0.00 0.00 0.00		Nose Vels:	U_hN,V_hN,W_hN (positive for inhale)
+T 1 12 			Scalar:		Scalar (T/F),Sgroup,SInlet
+---------- Flow Phase --------
+10			Celltype: (10:Inlet, 20=Oulet ,21=ConvectiveBC)
+F			LPhFlw (Using Phased flow=T)
+1.67 1.67 1.67		Phase lengths:	Plen_in,Plen_ex,Plen_ps (inhale,exhale,pause in seconds)
+F                       LCoFlw (Using Cough flow=T)
+20.0 0.5 0.08           Co_Fr,Co_du,Co_pvt(Frequency #/min, duration, peak velocity time)
+0.000 8.334 0.000	Cough Vels:	Co_Uh,Co_Vh,Co_Wh (Set vels for Cough flow only)
+5			Co_num (number of continuous coughs)
+F 0.0			LFlwCombo (Using Phased and Cough Flow=T),Ts_Co (Cough start time)
+----- IBP Boundary-----------
+T					IBP Boundary
+LOWERDECK_HVAC_BC_NEG_SIDE_3_20mm.pts         	File name (Velocity distribution and magnitude,NO phase)
+0.0	1.22	0.92			Cx,Cy,Cz
+----- Domain Wall Outlet -----
+Position and Size set by mouth
+------------------------------
+F			LDWO (Using Domain Wall Outlet=T)
+4			DWO_dr (1=West,2=East,3=South,4=North,5=Bottom,6=Top)
+========== HVAC  ========== 
+0.00 0.00 0.00		Mouth Position: Cx_hM,Cy_hM,Cz_hM			!255
+0.00 0.00 0.00		Mouth Size: 	Lx_hM,Ly_hM,Lz_hM (overall length)
+0.00 0.00 0.00   	Nose Position:  Cx_hN,Cy_hN,Cz_hN
+0.00 0.00 0.00		Nose Size: 	Lx_hN,Ly_hN,Lz_hN (overall length)
+0.00 2.00 0.00		Mouth Vels:	U_hM,V_hM,W_hM (Set vels for Phased or Constant flow only)
+0.00 0.00 0.00		Nose Vels:	U_hN,V_hN,W_hN (positive for inhale)
+T 1 12 			Scalar:		Scalar (T/F),Sgroup,SInlet
+---------- Flow Phase --------
+10			Celltype: (10:Inlet, 20=Oulet ,21=ConvectiveBC)
+F			LPhFlw (Using Phased flow=T)
+1.67 1.67 1.67		Phase lengths:	Plen_in,Plen_ex,Plen_ps (inhale,exhale,pause in seconds)
+F                       LCoFlw (Using Cough flow=T)
+20.0 0.5 0.08           Co_Fr,Co_du,Co_pvt(Frequency #/min, duration, peak velocity time)
+0.000 8.334 0.000	Cough Vels:	Co_Uh,Co_Vh,Co_Wh (Set vels for Cough flow only)
+5			Co_num (number of continuous coughs)
+F 0.0			LFlwCombo (Using Phased and Cough Flow=T),Ts_Co (Cough start time)
+----- IBP Boundary-----------
+T					IBP Boundary
+LOWERDECK_HVAC_BC_POS_SIDE_20mm.pts         	File name (Velocity distribution and magnitude,NO phase)
+0.0	1.20	0.92			Cx,Cy,Cz
+----- Domain Wall Outlet -----
+Position and Size set by mouth
+------------------------------
+F			LDWO (Using Domain Wall Outlet=T)
+4			DWO_dr (1=West,2=East,3=South,4=North,5=Bottom,6=Top)
+========== HVAC  ========== 
+0.00 0.00 0.00		Mouth Position: Cx_hM,Cy_hM,Cz_hM			!255
+0.00 0.00 0.00		Mouth Size: 	Lx_hM,Ly_hM,Lz_hM (overall length)
+0.00 0.00 0.00   	Nose Position:  Cx_hN,Cy_hN,Cz_hN
+0.00 0.00 0.00		Nose Size: 	Lx_hN,Ly_hN,Lz_hN (overall length)
+0.00 -2.0 0.00		Mouth Vels:	U_hM,V_hM,W_hM (Set vels for Phased or Constant flow only)
+0.00 0.00 0.00		Nose Vels:	U_hN,V_hN,W_hN (positive for inhale)
+T 1 12 			Scalar:		Scalar (T/F),Sgroup,SInlet
+---------- Flow Phase --------
+10			Celltype: (10:Inlet, 20=Oulet ,21=ConvectiveBC)
+F			LPhFlw (Using Phased flow=T)
+1.67 1.67 1.67		Phase lengths:	Plen_in,Plen_ex,Plen_ps (inhale,exhale,pause in seconds)
+F                       LCoFlw (Using Cough flow=T)
+20.0 0.5 0.08           Co_Fr,Co_du,Co_pvt(Frequency #/min, duration, peak velocity time)
+0.000 8.334 0.000	Cough Vels:	Co_Uh,Co_Vh,Co_Wh (Set vels for Cough flow only)
+5			Co_num (number of continuous coughs)
+F 0.0			LFlwCombo (Using Phased and Cough Flow=T),Ts_Co (Cough start time)
+----- IBP Boundary-----------
+T					IBP Boundary
+UPPERDECK_HVAC_BC_NEG_SIDE_20mm.pts         	File name (Velocity distribution and magnitude,NO phase)
+0.0	1.22	0.92			Cx,Cy,CZ
+----- Domain Wall Outlet -----
+Position and Size set by mouth
+------------------------------
+F			LDWO (Using Domain Wall Outlet=T)
+4			DWO_dr (1=West,2=East,3=South,4=North,5=Bottom,6=Top)
+========== HVAC  ========== 
+0.00 0.00 0.00		Mouth Position: Cx_hM,Cy_hM,Cz_hM			!255
+0.00 0.00 0.00		Mouth Size: 	Lx_hM,Ly_hM,Lz_hM (overall length)
+0.00 0.00 0.00   	Nose Position:  Cx_hN,Cy_hN,Cz_hN
+0.00 0.00 0.00		Nose Size: 	Lx_hN,Ly_hN,Lz_hN (overall length)
+0.00 2.00 0.00		Mouth Vels:	U_hM,V_hM,W_hM (Set vels for Phased or Constant flow only)
+0.00 0.00 0.00		Nose Vels:	U_hN,V_hN,W_hN (positive for inhale)
+T 1 12 			Scalar:		Scalar (T/F),Sgroup,SInlet
+---------- Flow Phase --------
+10			Celltype: (10:Inlet, 20=Oulet ,21=ConvectiveBC)
+F			LPhFlw (Using Phased flow=T)
+1.67 1.67 1.67		Phase lengths:	Plen_in,Plen_ex,Plen_ps (inhale,exhale,pause in seconds)
+F                       LCoFlw (Using Cough flow=T)
+20.0 0.5 0.08           Co_Fr,Co_du,Co_pvt(Frequency #/min, duration, peak velocity time)
+0.000 8.334 0.000	Cough Vels:	Co_Uh,Co_Vh,Co_Wh (Set vels for Cough flow only)
+5			Co_num (number of continuous coughs)
+F 0.0			LFlwCombo (Using Phased and Cough Flow=T),Ts_Co (Cough start time)
+----- IBP Boundary-----------
+T					IBP Boundary
+UPPERDECK_HVAC_BC_POS_SIDE_20mm.pts         	File name (Velocity distribution and magnitude,NO phase)
+0.0	1.20	0.92			Cx,Cy,Cz
+----- Domain Wall Outlet -----
+Position and Size set by mouth
+------------------------------
+F			LDWO (Using Domain Wall Outlet=T)
+4			DWO_dr (1=West,2=East,3=South,4=North,5=Bottom,6=Top)
+========== HVAC  ========== 
+0.00 0.00 0.00		Mouth Position: Cx_hM,Cy_hM,Cz_hM			!255
+0.00 0.00 0.00		Mouth Size: 	Lx_hM,Ly_hM,Lz_hM (overall length)
+0.00 0.00 0.00   	Nose Position:  Cx_hN,Cy_hN,Cz_hN
+0.00 0.00 0.00		Nose Size: 	Lx_hN,Ly_hN,Lz_hN (overall length)
+0.00 -2.0 0.00		Mouth Vels:	U_hM,V_hM,W_hM (Set vels for Phased or Constant flow only)
+0.00 0.00 0.00		Nose Vels:	U_hN,V_hN,W_hN (positive for inhale)
+T 1 12 			Scalar:		Scalar (T/F),Sgroup,SInlet
+---------- Flow Phase --------
+10			Celltype: (10:Inlet, 20=Oulet ,21=ConvectiveBC)
+F			LPhFlw (Using Phased flow=T)
+1.67 1.67 1.67		Phase lengths:	Plen_in,Plen_ex,Plen_ps (inhale,exhale,pause in seconds)
+F                       LCoFlw (Using Cough flow=T)
+20.0 0.5 0.08           Co_Fr,Co_du,Co_pvt(Frequency #/min, duration, peak velocity time)
+0.000 8.334 0.000	Cough Vels:	Co_Uh,Co_Vh,Co_Wh (Set vels for Cough flow only)
+5			Co_num (number of continuous coughs)
+F 0.0			LFlwCombo (Using Phased and Cough Flow=T),Ts_Co (Cough start time)
+----- IBP Boundary-----------
+T					IBP Boundary
+UPPERDECK_HVAC_BC_NEG_SIDE_20mm.pts         	File name (Velocity distribution and magnitude,NO phase)
+0.0	1.22	0.75			Cx,Cy,CZ
+----- Domain Wall Outlet -----
+Position and Size set by mouth
+------------------------------
+F			LDWO (Using Domain Wall Outlet=T)
+4			DWO_dr (1=West,2=East,3=South,4=North,5=Bottom,6=Top)
+========== HVAC  ========== 
+0.00 0.00 0.00		Mouth Position: Cx_hM,Cy_hM,Cz_hM			!255
+0.00 0.00 0.00		Mouth Size: 	Lx_hM,Ly_hM,Lz_hM (overall length)
+0.00 0.00 0.00   	Nose Position:  Cx_hN,Cy_hN,Cz_hN
+0.00 0.00 0.00		Nose Size: 	Lx_hN,Ly_hN,Lz_hN (overall length)
+0.00 2.00 0.00		Mouth Vels:	U_hM,V_hM,W_hM (Set vels for Phased or Constant flow only)
+0.00 0.00 0.00		Nose Vels:	U_hN,V_hN,W_hN (positive for inhale)
+T 1 12 			Scalar:		Scalar (T/F),Sgroup,SInlet
+---------- Flow Phase --------
+10			Celltype: (10:Inlet, 20=Oulet ,21=ConvectiveBC)
+F			LPhFlw (Using Phased flow=T)
+1.67 1.67 1.67		Phase lengths:	Plen_in,Plen_ex,Plen_ps (inhale,exhale,pause in seconds)
+F                       LCoFlw (Using Cough flow=T)
+20.0 0.5 0.08           Co_Fr,Co_du,Co_pvt(Frequency #/min, duration, peak velocity time)
+0.000 8.334 0.000	Cough Vels:	Co_Uh,Co_Vh,Co_Wh (Set vels for Cough flow only)
+5			Co_num (number of continuous coughs)
+F 0.0			LFlwCombo (Using Phased and Cough Flow=T),Ts_Co (Cough start time)
+----- IBP Boundary-----------
+T					IBP Boundary
+UPPERDECK_HVAC_BC_POS_SIDE_20mm.pts         	File name (Velocity distribution and magnitude,NO phase)
+0.0	1.20	0.75			Cx,Cy,Cz
+----- Domain Wall Outlet -----
+Position and Size set by mouth
+------------------------------
+F			LDWO (Using Domain Wall Outlet=T)
+4			DWO_dr (1=West,2=East,3=South,4=North,5=Bottom,6=Top)

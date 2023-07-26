@@ -1,0 +1,1815 @@
+ dom:           0  cpu:           0  ib:           1
+ dom:           1  cpu:           1  ib:           1
+ dom:           2  cpu:           2  ib:           1
+ dom:           3  cpu:           3  ib:           1
+ dom:           4  cpu:           4  ib:           1
+ dom:           5  cpu:           5  ib:           1
+ dom:           6  cpu:           6  ib:           1
+ dom:           7  cpu:           0  ib:           2
+ dom:           8  cpu:           1  ib:           2
+ dom:           9  cpu:           2  ib:           2
+ dom:          10  cpu:           3  ib:           2
+ dom:          11  cpu:           4  ib:           2
+ dom:          12  cpu:           5  ib:           2
+ dom:          13  cpu:           6  ib:           2
+ dom:          14  cpu:           0  ib:           3
+ dom:          15  cpu:           1  ib:           3
+ dom:          16  cpu:           2  ib:           3
+ dom:          17  cpu:           3  ib:           3
+ dom:          18  cpu:           4  ib:           3
+ dom:          19  cpu:           5  ib:           3
+ dom:          20  cpu:           6  ib:           3
+ dom:          21  cpu:           0  ib:           4
+ dom:          22  cpu:           1  ib:           4
+ dom:          23  cpu:           2  ib:           4
+ dom:          24  cpu:           3  ib:           4
+ dom:          25  cpu:           4  ib:           4
+ dom:          26  cpu:           5  ib:           4
+ dom:          27  cpu:           6  ib:           4
+ dom:          28  cpu:           0  ib:           5
+ dom:          29  cpu:           1  ib:           5
+ dom:          30  cpu:           2  ib:           5
+ dom:          31  cpu:           3  ib:           5
+ dom:          32  cpu:           4  ib:           5
+ dom:          33  cpu:           5  ib:           5
+ dom:          34  cpu:           6  ib:           5
+ dom:          35  cpu:           0  ib:           6
+ dom:          36  cpu:           1  ib:           6
+ dom:          37  cpu:           2  ib:           6
+ dom:          38  cpu:           3  ib:           6
+ dom:          39  cpu:           4  ib:           6
+ dom:          40  cpu:           5  ib:           6
+ dom:          41  cpu:           6  ib:           6
+ === end of connectivity information === 
+  
+  
+ ============START ITERATIONS=========
+  ntime:       1 rmax: 0.534608E-06 	  iter       2
+  ntime:       2 rmax: 0.487048E-06 	  iter       2
+  ntime:       3 rmax: 0.441668E-06 	  iter       2
+  ntime:       4 rmax: 0.468648E-06 	  iter       2
+  ntime:       5 rmax: 0.464166E-06 	  iter       2
+  ntime:       6 rmax: 0.461386E-06 	  iter       2
+  ntime:       7 rmax: 0.541423E-06 	  iter       2
+  ntime:       8 rmax: 0.473785E-06 	  iter       2
+  ntime:       9 rmax: 0.463412E-06 	  iter       2
+  ntime:      10 rmax: 0.449702E-06 	  iter       2
+  ntime:      11 rmax: 0.474069E-06 	  iter       2
+  ntime:      12 rmax: 0.442785E-06 	  iter       2
+  ntime:      13 rmax: 0.463683E-06 	  iter       2
+  ntime:      14 rmax: 0.446327E-06 	  iter       2
+  ntime:      15 rmax: 0.515806E-06 	  iter       2
+  ntime:      16 rmax: 0.497069E-06 	  iter       2
+  ntime:      17 rmax: 0.462003E-06 	  iter       2
+  ntime:      18 rmax: 0.436212E-06 	  iter       2
+  ntime:      19 rmax: 0.455675E-06 	  iter       2
+  ntime:      20 rmax: 0.473496E-06 	  iter       2
+
+ ========== nrtstp=      20  ctime=  0.160000E+00  dt=  0.800000E-02  dtavg=  0.800000E-02
+  
+
+ Work took         7.60724787   seconds
+  
+  ntime:      21 rmax: 0.446758E-06 	  iter       2
+  ntime:      22 rmax: 0.468525E-06 	  iter       2
+  ntime:      23 rmax: 0.440018E-06 	  iter       2
+  ntime:      24 rmax: 0.465106E-06 	  iter       2
+  ntime:      25 rmax: 0.474370E-06 	  iter       2
+  ntime:      26 rmax: 0.481537E-06 	  iter       2
+  ntime:      27 rmax: 0.476047E-06 	  iter       2
+  ntime:      28 rmax: 0.464002E-06 	  iter       2
+  ntime:      29 rmax: 0.497737E-06 	  iter       2
+  ntime:      30 rmax: 0.470672E-06 	  iter       2
+  ntime:      31 rmax: 0.480167E-06 	  iter       2
+  ntime:      32 rmax: 0.449061E-06 	  iter       2
+  ntime:      33 rmax: 0.498031E-06 	  iter       2
+  ntime:      34 rmax: 0.456961E-06 	  iter       2
+  ntime:      35 rmax: 0.494622E-06 	  iter       2
+  ntime:      36 rmax: 0.460297E-06 	  iter       2
+  ntime:      37 rmax: 0.512696E-06 	  iter       2
+  ntime:      38 rmax: 0.498474E-06 	  iter       2
+  ntime:      39 rmax: 0.478021E-06 	  iter       2
+  ntime:      40 rmax: 0.458943E-06 	  iter       2
+
+ ========== nrtstp=      40  ctime=  0.320000E+00  dt=  0.800000E-02  dtavg=  0.800000E-02
+  
+
+ Work took        14.92537383   seconds
+  
+  ntime:      41 rmax: 0.474635E-06 	  iter       2
+  ntime:      42 rmax: 0.481823E-06 	  iter       2
+  ntime:      43 rmax: 0.451677E-06 	  iter       2
+  ntime:      44 rmax: 0.481121E-06 	  iter       2
+  ntime:      45 rmax: 0.471706E-06 	  iter       2
+  ntime:      46 rmax: 0.491118E-06 	  iter       2
+  ntime:      47 rmax: 0.461197E-06 	  iter       2
+  ntime:      48 rmax: 0.491693E-06 	  iter       2
+  ntime:      49 rmax: 0.450590E-06 	  iter       2
+  ntime:      50 rmax: 0.468059E-06 	  iter       2
+  ntime:      51 rmax: 0.510396E-06 	  iter       2
+  ntime:      52 rmax: 0.468444E-06 	  iter       2
+  ntime:      53 rmax: 0.464013E-06 	  iter       2
+  ntime:      54 rmax: 0.468702E-06 	  iter       2
+  ntime:      55 rmax: 0.488497E-06 	  iter       2
+  ntime:      56 rmax: 0.469633E-06 	  iter       2
+  ntime:      57 rmax: 0.526427E-06 	  iter       2
+  ntime:      58 rmax: 0.467399E-06 	  iter       2
+  ntime:      59 rmax: 0.507813E-06 	  iter       2
+  ntime:      60 rmax: 0.516824E-06 	  iter       2
+
+ ========== nrtstp=      60  ctime=  0.480000E+00  dt=  0.800000E-02  dtavg=  0.800000E-02
+  
+
+ Work took        22.27339768   seconds
+  
+  ntime:      61 rmax: 0.458298E-06 	  iter       2
+  ntime:      62 rmax: 0.464164E-06 	  iter       2
+  ntime:      63 rmax: 0.487803E-06 	  iter       2
+  ntime:      64 rmax: 0.500069E-06 	  iter       2
+  ntime:      65 rmax: 0.460367E-06 	  iter       2
+  ntime:      66 rmax: 0.456921E-06 	  iter       2
+  ntime:      67 rmax: 0.470393E-06 	  iter       2
+  ntime:      68 rmax: 0.472373E-06 	  iter       2
+  ntime:      69 rmax: 0.470278E-06 	  iter       2
+  ntime:      70 rmax: 0.480885E-06 	  iter       2
+  ntime:      71 rmax: 0.460622E-06 	  iter       2
+  ntime:      72 rmax: 0.474616E-06 	  iter       2
+  ntime:      73 rmax: 0.502605E-06 	  iter       2
+  ntime:      74 rmax: 0.472995E-06 	  iter       2
+  ntime:      75 rmax: 0.456687E-06 	  iter       2
+  ntime:      76 rmax: 0.448294E-06 	  iter       2
+  ntime:      77 rmax: 0.480390E-06 	  iter       2
+  ntime:      78 rmax: 0.473753E-06 	  iter       2
+  ntime:      79 rmax: 0.490147E-06 	  iter       2
+  ntime:      80 rmax: 0.460320E-06 	  iter       2
+
+ ========== nrtstp=      80  ctime=  0.640000E+00  dt=  0.800000E-02  dtavg=  0.800000E-02
+  
+
+ Work took        29.59892628   seconds
+  
+  ntime:      81 rmax: 0.501994E-06 	  iter       2
+  ntime:      82 rmax: 0.495805E-06 	  iter       2
+  ntime:      83 rmax: 0.453763E-06 	  iter       2
+  ntime:      84 rmax: 0.466935E-06 	  iter       2
+  ntime:      85 rmax: 0.518539E-06 	  iter       2
+  ntime:      86 rmax: 0.495132E-06 	  iter       2
+  ntime:      87 rmax: 0.443833E-06 	  iter       2
+  ntime:      88 rmax: 0.452906E-06 	  iter       2
+  ntime:      89 rmax: 0.469943E-06 	  iter       2
+  ntime:      90 rmax: 0.455397E-06 	  iter       2
+  ntime:      91 rmax: 0.471217E-06 	  iter       2
+  ntime:      92 rmax: 0.473801E-06 	  iter       2
+  ntime:      93 rmax: 0.479038E-06 	  iter       2
+  ntime:      94 rmax: 0.463614E-06 	  iter       2
+  ntime:      95 rmax: 0.505398E-06 	  iter       2
+  ntime:      96 rmax: 0.480061E-06 	  iter       2
+  ntime:      97 rmax: 0.445382E-06 	  iter       2
+  ntime:      98 rmax: 0.451468E-06 	  iter       2
+  ntime:      99 rmax: 0.462138E-06 	  iter       2
+  ntime:     100 rmax: 0.478715E-06 	  iter       2
+
+ ========== nrtstp=     100  ctime=  0.800000E+00  dt=  0.800000E-02  dtavg=  0.800000E-02
+  
+
+ Work took        36.95798413   seconds
+  
+  ntime:     101 rmax: 0.471905E-06 	  iter       2
+  ntime:     102 rmax: 0.450910E-06 	  iter       2
+  ntime:     103 rmax: 0.485678E-06 	  iter       2
+  ntime:     104 rmax: 0.478455E-06 	  iter       2
+  ntime:     105 rmax: 0.445888E-06 	  iter       2
+  ntime:     106 rmax: 0.465940E-06 	  iter       2
+  ntime:     107 rmax: 0.506735E-06 	  iter       2
+  ntime:     108 rmax: 0.451067E-06 	  iter       2
+  ntime:     109 rmax: 0.434855E-06 	  iter       2
+  ntime:     110 rmax: 0.462146E-06 	  iter       2
+  ntime:     111 rmax: 0.481358E-06 	  iter       2
+  ntime:     112 rmax: 0.473665E-06 	  iter       2
+  ntime:     113 rmax: 0.477685E-06 	  iter       2
+  ntime:     114 rmax: 0.463871E-06 	  iter       2
+  ntime:     115 rmax: 0.478577E-06 	  iter       2
+  ntime:     116 rmax: 0.457598E-06 	  iter       2
+  ntime:     117 rmax: 0.494868E-06 	  iter       2
+  ntime:     118 rmax: 0.473577E-06 	  iter       2
+  ntime:     119 rmax: 0.451719E-06 	  iter       2
+  ntime:     120 rmax: 0.445696E-06 	  iter       2
+
+ ========== nrtstp=     120  ctime=  0.960000E+00  dt=  0.800000E-02  dtavg=  0.800000E-02
+  
+
+ Work took        44.30584630   seconds
+  
+  ntime:     121 rmax: 0.458468E-06 	  iter       2
+  ntime:     122 rmax: 0.490264E-06 	  iter       2
+  ntime:     123 rmax: 0.457946E-06 	  iter       2
+  ntime:     124 rmax: 0.464126E-06 	  iter       2
+  ntime:     125 rmax: 0.468589E-06 	  iter       2
+  ntime:     126 rmax: 0.480404E-06 	  iter       2
+  ntime:     127 rmax: 0.436929E-06 	  iter       2
+  ntime:     128 rmax: 0.456157E-06 	  iter       2
+  ntime:     129 rmax: 0.485072E-06 	  iter       2
+  ntime:     130 rmax: 0.456989E-06 	  iter       2
+  ntime:     131 rmax: 0.444867E-06 	  iter       2
+  ntime:     132 rmax: 0.469361E-06 	  iter       2
+  ntime:     133 rmax: 0.487536E-06 	  iter       2
+  ntime:     134 rmax: 0.480872E-06 	  iter       2
+  ntime:     135 rmax: 0.474044E-06 	  iter       2
+  ntime:     136 rmax: 0.446634E-06 	  iter       2
+  ntime:     137 rmax: 0.466996E-06 	  iter       2
+  ntime:     138 rmax: 0.445770E-06 	  iter       2
+  ntime:     139 rmax: 0.463199E-06 	  iter       2
+  ntime:     140 rmax: 0.472074E-06 	  iter       2
+
+ ========== nrtstp=     140  ctime=  0.112000E+01  dt=  0.800000E-02  dtavg=  0.800000E-02
+  
+
+ Work took        51.79797575   seconds
+  
+  ntime:     141 rmax: 0.463338E-06 	  iter       2
+  ntime:     142 rmax: 0.436997E-06 	  iter       2
+  ntime:     143 rmax: 0.465900E-06 	  iter       2
+  ntime:     144 rmax: 0.470535E-06 	  iter       2
+  ntime:     145 rmax: 0.465405E-06 	  iter       2
+  ntime:     146 rmax: 0.455085E-06 	  iter       2
+  ntime:     147 rmax: 0.445754E-06 	  iter       2
+  ntime:     148 rmax: 0.477716E-06 	  iter       2
+  ntime:     149 rmax: 0.448622E-06 	  iter       2
+  ntime:     150 rmax: 0.449524E-06 	  iter       2
+  ntime:     151 rmax: 0.459465E-06 	  iter       2
+  ntime:     152 rmax: 0.456022E-06 	  iter       2
+  ntime:     153 rmax: 0.467158E-06 	  iter       2
+  ntime:     154 rmax: 0.472520E-06 	  iter       2
+  ntime:     155 rmax: 0.482978E-06 	  iter       2
+  ntime:     156 rmax: 0.492561E-06 	  iter       2
+  ntime:     157 rmax: 0.472364E-06 	  iter       2
+  ntime:     158 rmax: 0.437649E-06 	  iter       2
+  ntime:     159 rmax: 0.487354E-06 	  iter       2
+  ntime:     160 rmax: 0.452092E-06 	  iter       2
+
+ ========== nrtstp=     160  ctime=  0.128000E+01  dt=  0.800000E-02  dtavg=  0.800000E-02
+  
+
+ Work took        59.19972824   seconds
+  
+  ntime:     161 rmax: 0.461778E-06 	  iter       2
+  ntime:     162 rmax: 0.451701E-06 	  iter       2
+  ntime:     163 rmax: 0.469159E-06 	  iter       2
+  ntime:     164 rmax: 0.458756E-06 	  iter       2
+  ntime:     165 rmax: 0.471182E-06 	  iter       2
+  ntime:     166 rmax: 0.463889E-06 	  iter       2
+  ntime:     167 rmax: 0.474144E-06 	  iter       2
+  ntime:     168 rmax: 0.433345E-06 	  iter       2
+  ntime:     169 rmax: 0.446124E-06 	  iter       2
+  ntime:     170 rmax: 0.496691E-06 	  iter       2
+  ntime:     171 rmax: 0.448439E-06 	  iter       2
+  ntime:     172 rmax: 0.455666E-06 	  iter       2
+  ntime:     173 rmax: 0.440619E-06 	  iter       2
+  ntime:     174 rmax: 0.477202E-06 	  iter       2
+  ntime:     175 rmax: 0.476507E-06 	  iter       2
+  ntime:     176 rmax: 0.484734E-06 	  iter       2
+  ntime:     177 rmax: 0.486732E-06 	  iter       2
+  ntime:     178 rmax: 0.491361E-06 	  iter       2
+  ntime:     179 rmax: 0.457473E-06 	  iter       2
+  ntime:     180 rmax: 0.455816E-06 	  iter       2
+
+ ========== nrtstp=     180  ctime=  0.144000E+01  dt=  0.800000E-02  dtavg=  0.800000E-02
+  
+
+ Work took        66.55910402   seconds
+  
+  ntime:     181 rmax: 0.469219E-06 	  iter       2
+  ntime:     182 rmax: 0.464095E-06 	  iter       2
+  ntime:     183 rmax: 0.464560E-06 	  iter       2
+  ntime:     184 rmax: 0.455173E-06 	  iter       2
+  ntime:     185 rmax: 0.475286E-06 	  iter       2
+  ntime:     186 rmax: 0.458003E-06 	  iter       2
+  ntime:     187 rmax: 0.474370E-06 	  iter       2
+  ntime:     188 rmax: 0.462467E-06 	  iter       2
+  ntime:     189 rmax: 0.480172E-06 	  iter       2
+  ntime:     190 rmax: 0.439173E-06 	  iter       2
+  ntime:     191 rmax: 0.461641E-06 	  iter       2
+  ntime:     192 rmax: 0.492553E-06 	  iter       2
+  ntime:     193 rmax: 0.465849E-06 	  iter       2
+  ntime:     194 rmax: 0.446985E-06 	  iter       2
+  ntime:     195 rmax: 0.448609E-06 	  iter       2
+  ntime:     196 rmax: 0.461666E-06 	  iter       2
+  ntime:     197 rmax: 0.476963E-06 	  iter       2
+  ntime:     198 rmax: 0.484256E-06 	  iter       2
+  ntime:     199 rmax: 0.490597E-06 	  iter       2
+  ntime:     200 rmax: 0.474461E-06 	  iter       2
+
+ ========== nrtstp=     200  ctime=  0.160000E+01  dt=  0.800000E-02  dtavg=  0.800000E-02
+  
+
+ Work took        73.92872393   seconds
+  
+  ntime:     201 rmax: 0.455684E-06 	  iter       2
+  ntime:     202 rmax: 0.470161E-06 	  iter       2
+  ntime:     203 rmax: 0.474398E-06 	  iter       2
+  ntime:     204 rmax: 0.473318E-06 	  iter       2
+  ntime:     205 rmax: 0.508906E-06 	  iter       2
+  ntime:     206 rmax: 0.461489E-06 	  iter       2
+  ntime:     207 rmax: 0.459734E-06 	  iter       2
+  ntime:     208 rmax: 0.458739E-06 	  iter       2
+  ntime:     209 rmax: 0.471215E-06 	  iter       2
+  ntime:     210 rmax: 0.458956E-06 	  iter       2
+  ntime:     211 rmax: 0.471891E-06 	  iter       2
+  ntime:     212 rmax: 0.424583E-06 	  iter       2
+  ntime:     213 rmax: 0.487362E-06 	  iter       2
+  ntime:     214 rmax: 0.484555E-06 	  iter       2
+  ntime:     215 rmax: 0.461230E-06 	  iter       2
+  ntime:     216 rmax: 0.444131E-06 	  iter       2
+  ntime:     217 rmax: 0.453346E-06 	  iter       2
+  ntime:     218 rmax: 0.470158E-06 	  iter       2
+  ntime:     219 rmax: 0.489437E-06 	  iter       2
+  ntime:     220 rmax: 0.494117E-06 	  iter       2
+
+ ========== nrtstp=     220  ctime=  0.176000E+01  dt=  0.800000E-02  dtavg=  0.800000E-02
+  
+
+ Work took        81.26266845   seconds
+  
+  ntime:     221 rmax: 0.487483E-06 	  iter       2
+  ntime:     222 rmax: 0.473402E-06 	  iter       2
+  ntime:     223 rmax: 0.440071E-06 	  iter       2
+  ntime:     224 rmax: 0.464260E-06 	  iter       2
+  ntime:     225 rmax: 0.464450E-06 	  iter       2
+  ntime:     226 rmax: 0.475844E-06 	  iter       2
+  ntime:     227 rmax: 0.483980E-06 	  iter       2
+  ntime:     228 rmax: 0.455914E-06 	  iter       2
+  ntime:     229 rmax: 0.450684E-06 	  iter       2
+  ntime:     230 rmax: 0.474032E-06 	  iter       2
+  ntime:     231 rmax: 0.466092E-06 	  iter       2
+  ntime:     232 rmax: 0.474498E-06 	  iter       2
+  ntime:     233 rmax: 0.472929E-06 	  iter       2
+  ntime:     234 rmax: 0.445966E-06 	  iter       2
+  ntime:     235 rmax: 0.522469E-06 	  iter       2
+  ntime:     236 rmax: 0.476122E-06 	  iter       2
+  ntime:     237 rmax: 0.467321E-06 	  iter       2
+  ntime:     238 rmax: 0.442617E-06 	  iter       2
+  ntime:     239 rmax: 0.460854E-06 	  iter       2
+  ntime:     240 rmax: 0.480208E-06 	  iter       2
+
+ ========== nrtstp=     240  ctime=  0.192000E+01  dt=  0.800000E-02  dtavg=  0.800000E-02
+  
+
+ Work took        88.66325504   seconds
+  
+  ntime:     241 rmax: 0.487750E-06 	  iter       2
+  ntime:     242 rmax: 0.510576E-06 	  iter       2
+  ntime:     243 rmax: 0.485155E-06 	  iter       2
+  ntime:     244 rmax: 0.490582E-06 	  iter       2
+  ntime:     245 rmax: 0.445517E-06 	  iter       2
+  ntime:     246 rmax: 0.469684E-06 	  iter       2
+  ntime:     247 rmax: 0.468700E-06 	  iter       2
+  ntime:     248 rmax: 0.489966E-06 	  iter       2
+  ntime:     249 rmax: 0.499687E-06 	  iter       2
+  ntime:     250 rmax: 0.463663E-06 	  iter       2
+  ntime:     251 rmax: 0.451715E-06 	  iter       2
+  ntime:     252 rmax: 0.455393E-06 	  iter       2
+  ntime:     253 rmax: 0.460114E-06 	  iter       2
+  ntime:     254 rmax: 0.471451E-06 	  iter       2
+  ntime:     255 rmax: 0.462518E-06 	  iter       2
+  ntime:     256 rmax: 0.469888E-06 	  iter       2
+  ntime:     257 rmax: 0.531471E-06 	  iter       2
+  ntime:     258 rmax: 0.479293E-06 	  iter       2
+  ntime:     259 rmax: 0.481950E-06 	  iter       2
+  ntime:     260 rmax: 0.464924E-06 	  iter       2
+
+ ========== nrtstp=     260  ctime=  0.208000E+01  dt=  0.800000E-02  dtavg=  0.800000E-02
+  
+
+ Work took        95.96585477   seconds
+  
+  ntime:     261 rmax: 0.482094E-06 	  iter       2
+  ntime:     262 rmax: 0.469045E-06 	  iter       2
+  ntime:     263 rmax: 0.489958E-06 	  iter       2
+  ntime:     264 rmax: 0.506616E-06 	  iter       2
+  ntime:     265 rmax: 0.483488E-06 	  iter       2
+  ntime:     266 rmax: 0.488658E-06 	  iter       2
+  ntime:     267 rmax: 0.444766E-06 	  iter       2
+  ntime:     268 rmax: 0.443884E-06 	  iter       2
+  ntime:     269 rmax: 0.450995E-06 	  iter       2
+  ntime:     270 rmax: 0.479968E-06 	  iter       2
+  ntime:     271 rmax: 0.459221E-06 	  iter       2
+  ntime:     272 rmax: 0.464515E-06 	  iter       2
+  ntime:     273 rmax: 0.451883E-06 	  iter       2
+  ntime:     274 rmax: 0.449763E-06 	  iter       2
+  ntime:     275 rmax: 0.457572E-06 	  iter       2
+  ntime:     276 rmax: 0.479268E-06 	  iter       2
+  ntime:     277 rmax: 0.457843E-06 	  iter       2
+  ntime:     278 rmax: 0.455399E-06 	  iter       2
+  ntime:     279 rmax: 0.447299E-06 	  iter       2
+  ntime:     280 rmax: 0.463773E-06 	  iter       2
+
+ ========== nrtstp=     280  ctime=  0.224000E+01  dt=  0.800000E-02  dtavg=  0.800000E-02
+  
+
+ Work took       103.48730595   seconds
+  
+  ntime:     281 rmax: 0.454571E-06 	  iter       2
+  ntime:     282 rmax: 0.456923E-06 	  iter       2
+  ntime:     283 rmax: 0.474182E-06 	  iter       2
+  ntime:     284 rmax: 0.471324E-06 	  iter       2
+  ntime:     285 rmax: 0.482638E-06 	  iter       2
+  ntime:     286 rmax: 0.492579E-06 	  iter       2
+  ntime:     287 rmax: 0.480676E-06 	  iter       2
+  ntime:     288 rmax: 0.491329E-06 	  iter       2
+  ntime:     289 rmax: 0.473829E-06 	  iter       2
+  ntime:     290 rmax: 0.445302E-06 	  iter       2
+  ntime:     291 rmax: 0.450228E-06 	  iter       2
+  ntime:     292 rmax: 0.480046E-06 	  iter       2
+  ntime:     293 rmax: 0.452370E-06 	  iter       2
+  ntime:     294 rmax: 0.443188E-06 	  iter       2
+  ntime:     295 rmax: 0.449222E-06 	  iter       2
+  ntime:     296 rmax: 0.471127E-06 	  iter       2
+  ntime:     297 rmax: 0.471128E-06 	  iter       2
+  ntime:     298 rmax: 0.477899E-06 	  iter       2
+  ntime:     299 rmax: 0.437213E-06 	  iter       2
+  ntime:     300 rmax: 0.480382E-06 	  iter       2
+
+ ========== nrtstp=     300  ctime=  0.240000E+01  dt=  0.800000E-02  dtavg=  0.800000E-02
+  
+
+ Work took       110.76122381   seconds
+  
+  ntime:     301 rmax: 0.437617E-06 	  iter       2
+  ntime:     302 rmax: 0.489398E-06 	  iter       2
+  ntime:     303 rmax: 0.471354E-06 	  iter       2
+  ntime:     304 rmax: 0.485632E-06 	  iter       2
+  ntime:     305 rmax: 0.474181E-06 	  iter       2
+  ntime:     306 rmax: 0.468710E-06 	  iter       2
+  ntime:     307 rmax: 0.502247E-06 	  iter       2
+  ntime:     308 rmax: 0.488101E-06 	  iter       2
+  ntime:     309 rmax: 0.508361E-06 	  iter       2
+  ntime:     310 rmax: 0.474604E-06 	  iter       2
+  ntime:     311 rmax: 0.458310E-06 	  iter       2
+  ntime:     312 rmax: 0.443428E-06 	  iter       2
+  ntime:     313 rmax: 0.450780E-06 	  iter       2
+  ntime:     314 rmax: 0.494510E-06 	  iter       2
+  ntime:     315 rmax: 0.472628E-06 	  iter       2
+  ntime:     316 rmax: 0.462557E-06 	  iter       2
+  ntime:     317 rmax: 0.454487E-06 	  iter       2
+  ntime:     318 rmax: 0.461184E-06 	  iter       2
+  ntime:     319 rmax: 0.473774E-06 	  iter       2
+  ntime:     320 rmax: 0.495213E-06 	  iter       2
+
+ ========== nrtstp=     320  ctime=  0.256000E+01  dt=  0.800000E-02  dtavg=  0.800000E-02
+  
+
+ Work took       118.13179981   seconds
+  
+  ntime:     321 rmax: 0.447045E-06 	  iter       2
+  ntime:     322 rmax: 0.496103E-06 	  iter       2
+  ntime:     323 rmax: 0.457084E-06 	  iter       2
+  ntime:     324 rmax: 0.456563E-06 	  iter       2
+  ntime:     325 rmax: 0.474687E-06 	  iter       2
+  ntime:     326 rmax: 0.466535E-06 	  iter       2
+  ntime:     327 rmax: 0.471325E-06 	  iter       2
+  ntime:     328 rmax: 0.472665E-06 	  iter       2
+  ntime:     329 rmax: 0.487341E-06 	  iter       2
+  ntime:     330 rmax: 0.476633E-06 	  iter       2
+  ntime:     331 rmax: 0.490278E-06 	  iter       2
+  ntime:     332 rmax: 0.449458E-06 	  iter       2
+  ntime:     333 rmax: 0.473176E-06 	  iter       2
+  ntime:     334 rmax: 0.437820E-06 	  iter       2
+  ntime:     335 rmax: 0.448656E-06 	  iter       2
+  ntime:     336 rmax: 0.460644E-06 	  iter       2
+  ntime:     337 rmax: 0.483290E-06 	  iter       2
+  ntime:     338 rmax: 0.431777E-06 	  iter       2
+  ntime:     339 rmax: 0.489508E-06 	  iter       2
+  ntime:     340 rmax: 0.470845E-06 	  iter       2
+
+ ========== nrtstp=     340  ctime=  0.272000E+01  dt=  0.800000E-02  dtavg=  0.800000E-02
+  
+
+ Work took       125.53186844   seconds
+  
+  ntime:     341 rmax: 0.479599E-06 	  iter       2
+  ntime:     342 rmax: 0.467639E-06 	  iter       2
+  ntime:     343 rmax: 0.433910E-06 	  iter       2
+  ntime:     344 rmax: 0.503750E-06 	  iter       2
+  ntime:     345 rmax: 0.508997E-06 	  iter       2
+  ntime:     346 rmax: 0.475508E-06 	  iter       2
+  ntime:     347 rmax: 0.482032E-06 	  iter       2
+  ntime:     348 rmax: 0.465683E-06 	  iter       2
+  ntime:     349 rmax: 0.452558E-06 	  iter       2
+  ntime:     350 rmax: 0.482115E-06 	  iter       2
+  ntime:     351 rmax: 0.466123E-06 	  iter       2
+  ntime:     352 rmax: 0.496371E-06 	  iter       2
+  ntime:     353 rmax: 0.482121E-06 	  iter       2
+  ntime:     354 rmax: 0.461636E-06 	  iter       2
+  ntime:     355 rmax: 0.463447E-06 	  iter       2
+  ntime:     356 rmax: 0.465665E-06 	  iter       2
+  ntime:     357 rmax: 0.487390E-06 	  iter       2
+  ntime:     358 rmax: 0.493254E-06 	  iter       2
+  ntime:     359 rmax: 0.499372E-06 	  iter       2
+  ntime:     360 rmax: 0.463205E-06 	  iter       2
+
+ ========== nrtstp=     360  ctime=  0.288000E+01  dt=  0.800000E-02  dtavg=  0.800000E-02
+  
+
+ Work took       132.85763456   seconds
+  
+  ntime:     361 rmax: 0.483788E-06 	  iter       2
+  ntime:     362 rmax: 0.476136E-06 	  iter       2
+  ntime:     363 rmax: 0.494366E-06 	  iter       2
+  ntime:     364 rmax: 0.458919E-06 	  iter       2
+  ntime:     365 rmax: 0.438504E-06 	  iter       2
+  ntime:     366 rmax: 0.548258E-06 	  iter       2
+  ntime:     367 rmax: 0.549556E-06 	  iter       2
+  ntime:     368 rmax: 0.510999E-06 	  iter       2
+  ntime:     369 rmax: 0.503420E-06 	  iter       2
+  ntime:     370 rmax: 0.444966E-06 	  iter       2
+  ntime:     371 rmax: 0.447574E-06 	  iter       2
+  ntime:     372 rmax: 0.486735E-06 	  iter       2
+  ntime:     373 rmax: 0.471732E-06 	  iter       2
+  ntime:     374 rmax: 0.504329E-06 	  iter       2
+  ntime:     375 rmax: 0.493429E-06 	  iter       2
+  ntime:     376 rmax: 0.456367E-06 	  iter       2
+  ntime:     377 rmax: 0.459003E-06 	  iter       2
+  ntime:     378 rmax: 0.474516E-06 	  iter       2
+  ntime:     379 rmax: 0.496250E-06 	  iter       2
+  ntime:     380 rmax: 0.522639E-06 	  iter       2
+
+ ========== nrtstp=     380  ctime=  0.304000E+01  dt=  0.800000E-02  dtavg=  0.800000E-02
+  
+
+ Work took       140.25200883   seconds
+  
+  ntime:     381 rmax: 0.520907E-06 	  iter       2
+  ntime:     382 rmax: 0.477671E-06 	  iter       2
+  ntime:     383 rmax: 0.473754E-06 	  iter       2
+  ntime:     384 rmax: 0.481997E-06 	  iter       2
+  ntime:     385 rmax: 0.470086E-06 	  iter       2
+  ntime:     386 rmax: 0.436911E-06 	  iter       2
+  ntime:     387 rmax: 0.465044E-06 	  iter       2
+  ntime:     388 rmax: 0.545456E-06 	  iter       2
+  ntime:     389 rmax: 0.524899E-06 	  iter       2
+  ntime:     390 rmax: 0.484556E-06 	  iter       2
+  ntime:     391 rmax: 0.482363E-06 	  iter       2
+  ntime:     392 rmax: 0.472732E-06 	  iter       2
+  ntime:     393 rmax: 0.472976E-06 	  iter       2
+  ntime:     394 rmax: 0.504447E-06 	  iter       2
+  ntime:     395 rmax: 0.483812E-06 	  iter       2
+  ntime:     396 rmax: 0.503155E-06 	  iter       2
+  ntime:     397 rmax: 0.485780E-06 	  iter       2
+  ntime:     398 rmax: 0.495244E-06 	  iter       2
+  ntime:     399 rmax: 0.473706E-06 	  iter       2
+  ntime:     400 rmax: 0.483814E-06 	  iter       2
+
+ ========== nrtstp=     400  ctime=  0.320000E+01  dt=  0.800000E-02  dtavg=  0.800000E-02
+  
+
+ Work took       147.62607203   seconds
+  
+  ntime:     401 rmax: 0.485085E-06 	  iter       2
+  ntime:     402 rmax: 0.533992E-06 	  iter       2
+  ntime:     403 rmax: 0.528224E-06 	  iter       2
+  ntime:     404 rmax: 0.458028E-06 	  iter       2
+  ntime:     405 rmax: 0.477542E-06 	  iter       2
+  ntime:     406 rmax: 0.494712E-06 	  iter       2
+  ntime:     407 rmax: 0.490747E-06 	  iter       2
+  ntime:     408 rmax: 0.434201E-06 	  iter       2
+  ntime:     409 rmax: 0.480117E-06 	  iter       2
+  ntime:     410 rmax: 0.479466E-06 	  iter       2
+  ntime:     411 rmax: 0.512637E-06 	  iter       2
+  ntime:     412 rmax: 0.503154E-06 	  iter       2
+  ntime:     413 rmax: 0.494140E-06 	  iter       2
+  ntime:     414 rmax: 0.458323E-06 	  iter       2
+  ntime:     415 rmax: 0.518035E-06 	  iter       2
+  ntime:     416 rmax: 0.525140E-06 	  iter       2
+  ntime:     417 rmax: 0.488585E-06 	  iter       2
+  ntime:     418 rmax: 0.471060E-06 	  iter       2
+  ntime:     419 rmax: 0.463683E-06 	  iter       2
+  ntime:     420 rmax: 0.477607E-06 	  iter       2
+
+ ========== nrtstp=     420  ctime=  0.336000E+01  dt=  0.800000E-02  dtavg=  0.800000E-02
+  
+
+ Work took       154.88070926   seconds
+  
+  ntime:     421 rmax: 0.482374E-06 	  iter       2
+  ntime:     422 rmax: 0.485480E-06 	  iter       2
+  ntime:     423 rmax: 0.473795E-06 	  iter       2
+  ntime:     424 rmax: 0.503161E-06 	  iter       2
+  ntime:     425 rmax: 0.481197E-06 	  iter       2
+  ntime:     426 rmax: 0.472826E-06 	  iter       2
+  ntime:     427 rmax: 0.472429E-06 	  iter       2
+  ntime:     428 rmax: 0.474101E-06 	  iter       2
+  ntime:     429 rmax: 0.465815E-06 	  iter       2
+  ntime:     430 rmax: 0.444359E-06 	  iter       2
+  ntime:     431 rmax: 0.485999E-06 	  iter       2
+  ntime:     432 rmax: 0.542546E-06 	  iter       2
+  ntime:     433 rmax: 0.602235E-06 	  iter       2
+  ntime:     434 rmax: 0.481478E-06 	  iter       2
+  ntime:     435 rmax: 0.424254E-06 	  iter       2
+  ntime:     436 rmax: 0.436167E-06 	  iter       2
+  ntime:     437 rmax: 0.491231E-06 	  iter       2
+  ntime:     438 rmax: 0.483009E-06 	  iter       2
+  ntime:     439 rmax: 0.475894E-06 	  iter       2
+  ntime:     440 rmax: 0.481207E-06 	  iter       2
+
+ ========== nrtstp=     440  ctime=  0.352000E+01  dt=  0.800000E-02  dtavg=  0.800000E-02
+  
+
+ Work took       162.29564805   seconds
+  
+  ntime:     441 rmax: 0.464864E-06 	  iter       2
+  ntime:     442 rmax: 0.447067E-06 	  iter       2
+  ntime:     443 rmax: 0.458834E-06 	  iter       2
+  ntime:     444 rmax: 0.501548E-06 	  iter       2
+  ntime:     445 rmax: 0.470878E-06 	  iter       2
+  ntime:     446 rmax: 0.534005E-06 	  iter       2
+  ntime:     447 rmax: 0.545179E-06 	  iter       2
+  ntime:     448 rmax: 0.548410E-06 	  iter       2
+  ntime:     449 rmax: 0.504344E-06 	  iter       2
+  ntime:     450 rmax: 0.473363E-06 	  iter       2
+  ntime:     451 rmax: 0.493089E-06 	  iter       2
+  ntime:     452 rmax: 0.455618E-06 	  iter       2
+  ntime:     453 rmax: 0.506510E-06 	  iter       2
+  ntime:     454 rmax: 0.521180E-06 	  iter       2
+  ntime:     455 rmax: 0.525401E-06 	  iter       2
+  ntime:     456 rmax: 0.493009E-06 	  iter       2
+  ntime:     457 rmax: 0.509831E-06 	  iter       2
+  ntime:     458 rmax: 0.463866E-06 	  iter       2
+  ntime:     459 rmax: 0.511485E-06 	  iter       2
+  ntime:     460 rmax: 0.531940E-06 	  iter       2
+
+ ========== nrtstp=     460  ctime=  0.368000E+01  dt=  0.800000E-02  dtavg=  0.800000E-02
+  
+
+ Work took       169.60761910   seconds
+  
+  ntime:     461 rmax: 0.477376E-06 	  iter       2
+  ntime:     462 rmax: 0.498826E-06 	  iter       2
+  ntime:     463 rmax: 0.474594E-06 	  iter       2
+  ntime:     464 rmax: 0.462670E-06 	  iter       2
+  ntime:     465 rmax: 0.476692E-06 	  iter       2
+  ntime:     466 rmax: 0.459463E-06 	  iter       2
+  ntime:     467 rmax: 0.464632E-06 	  iter       2
+  ntime:     468 rmax: 0.527579E-06 	  iter       2
+  ntime:     469 rmax: 0.491701E-06 	  iter       2
+  ntime:     470 rmax: 0.589180E-06 	  iter       2
+  ntime:     471 rmax: 0.543005E-06 	  iter       2
+  ntime:     472 rmax: 0.553353E-06 	  iter       2
+  ntime:     473 rmax: 0.504095E-06 	  iter       2
+  ntime:     474 rmax: 0.465806E-06 	  iter       2
+  ntime:     475 rmax: 0.467747E-06 	  iter       2
+  ntime:     476 rmax: 0.494207E-06 	  iter       2
+  ntime:     477 rmax: 0.505012E-06 	  iter       2
+  ntime:     478 rmax: 0.489837E-06 	  iter       2
+  ntime:     479 rmax: 0.474368E-06 	  iter       2
+  ntime:     480 rmax: 0.511344E-06 	  iter       2
+
+ ========== nrtstp=     480  ctime=  0.384000E+01  dt=  0.800000E-02  dtavg=  0.800000E-02
+  
+
+ Work took       176.97753538   seconds
+  
+  ntime:     481 rmax: 0.608810E-06 	  iter       2
+  ntime:     482 rmax: 0.525277E-06 	  iter       2
+  ntime:     483 rmax: 0.489046E-06 	  iter       2
+  ntime:     484 rmax: 0.457129E-06 	  iter       2
+  ntime:     485 rmax: 0.474399E-06 	  iter       2
+  ntime:     486 rmax: 0.477446E-06 	  iter       2
+  ntime:     487 rmax: 0.461385E-06 	  iter       2
+  ntime:     488 rmax: 0.442677E-06 	  iter       2
+  ntime:     489 rmax: 0.478254E-06 	  iter       2
+  ntime:     490 rmax: 0.546184E-06 	  iter       2
+  ntime:     491 rmax: 0.506359E-06 	  iter       2
+  ntime:     492 rmax: 0.485231E-06 	  iter       2
+  ntime:     493 rmax: 0.471919E-06 	  iter       2
+  ntime:     494 rmax: 0.569372E-06 	  iter       2
+  ntime:     495 rmax: 0.499566E-06 	  iter       2
+  ntime:     496 rmax: 0.499746E-06 	  iter       2
+  ntime:     497 rmax: 0.468853E-06 	  iter       2
+  ntime:     498 rmax: 0.549030E-06 	  iter       2
+  ntime:     499 rmax: 0.482376E-06 	  iter       2
+  ntime:     500 rmax: 0.462969E-06 	  iter       2
+
+ ========== nrtstp=     500  ctime=  0.400000E+01  dt=  0.800000E-02  dtavg=  0.800000E-02
+  
+
+ Work took       184.30229645   seconds
+  
+  ntime:     501 rmax: 0.443571E-06 	  iter       2
+  ntime:     502 rmax: 0.508750E-06 	  iter       2
+  ntime:     503 rmax: 0.534210E-06 	  iter       2
+  ntime:     504 rmax: 0.464282E-06 	  iter       2
+  ntime:     505 rmax: 0.469140E-06 	  iter       2
+  ntime:     506 rmax: 0.469665E-06 	  iter       2
+  ntime:     507 rmax: 0.479544E-06 	  iter       2
+  ntime:     508 rmax: 0.462068E-06 	  iter       2
+  ntime:     509 rmax: 0.464047E-06 	  iter       2
+  ntime:     510 rmax: 0.475171E-06 	  iter       2
+  ntime:     511 rmax: 0.471051E-06 	  iter       2
+  ntime:     512 rmax: 0.541881E-06 	  iter       2
+  ntime:     513 rmax: 0.488560E-06 	  iter       2
+  ntime:     514 rmax: 0.468493E-06 	  iter       2
+  ntime:     515 rmax: 0.445641E-06 	  iter       2
+  ntime:     516 rmax: 0.504870E-06 	  iter       2
+  ntime:     517 rmax: 0.465413E-06 	  iter       2
+  ntime:     518 rmax: 0.518183E-06 	  iter       2
+  ntime:     519 rmax: 0.488057E-06 	  iter       2
+  ntime:     520 rmax: 0.506516E-06 	  iter       2
+
+ ========== nrtstp=     520  ctime=  0.416000E+01  dt=  0.800000E-02  dtavg=  0.800000E-02
+  
+
+ Work took       191.61294647   seconds
+  
+  ntime:     521 rmax: 0.491233E-06 	  iter       2
+  ntime:     522 rmax: 0.474493E-06 	  iter       2
+  ntime:     523 rmax: 0.477052E-06 	  iter       2
+  ntime:     524 rmax: 0.479023E-06 	  iter       2
+  ntime:     525 rmax: 0.468896E-06 	  iter       2
+  ntime:     526 rmax: 0.478829E-06 	  iter       2
+  ntime:     527 rmax: 0.484626E-06 	  iter       2
+  ntime:     528 rmax: 0.480126E-06 	  iter       2
+  ntime:     529 rmax: 0.494009E-06 	  iter       2
+  ntime:     530 rmax: 0.482653E-06 	  iter       2
+  ntime:     531 rmax: 0.457612E-06 	  iter       2
+  ntime:     532 rmax: 0.442067E-06 	  iter       2
+  ntime:     533 rmax: 0.486358E-06 	  iter       2
+  ntime:     534 rmax: 0.558591E-06 	  iter       2
+  ntime:     535 rmax: 0.481722E-06 	  iter       2
+  ntime:     536 rmax: 0.458639E-06 	  iter       2
+  ntime:     537 rmax: 0.459050E-06 	  iter       2
+  ntime:     538 rmax: 0.509764E-06 	  iter       2
+  ntime:     539 rmax: 0.474690E-06 	  iter       2
+  ntime:     540 rmax: 0.491249E-06 	  iter       2
+
+ ========== nrtstp=     540  ctime=  0.432000E+01  dt=  0.800000E-02  dtavg=  0.800000E-02
+  
+
+ Work took       198.92344664   seconds
+  
+  ntime:     541 rmax: 0.443119E-06 	  iter       2
+  ntime:     542 rmax: 0.463682E-06 	  iter       2
+  ntime:     543 rmax: 0.516258E-06 	  iter       2
+  ntime:     544 rmax: 0.449345E-06 	  iter       2
+  ntime:     545 rmax: 0.496376E-06 	  iter       2
+  ntime:     546 rmax: 0.494787E-06 	  iter       2
+  ntime:     547 rmax: 0.450342E-06 	  iter       2
+  ntime:     548 rmax: 0.451868E-06 	  iter       2
+  ntime:     549 rmax: 0.460941E-06 	  iter       2
+  ntime:     550 rmax: 0.468970E-06 	  iter       2
+  ntime:     551 rmax: 0.486990E-06 	  iter       2
+  ntime:     552 rmax: 0.480721E-06 	  iter       2
+  ntime:     553 rmax: 0.479026E-06 	  iter       2
+  ntime:     554 rmax: 0.442277E-06 	  iter       2
+  ntime:     555 rmax: 0.471238E-06 	  iter       2
+  ntime:     556 rmax: 0.510676E-06 	  iter       2
+  ntime:     557 rmax: 0.467051E-06 	  iter       2
+  ntime:     558 rmax: 0.465679E-06 	  iter       2
+  ntime:     559 rmax: 0.477966E-06 	  iter       2
+  ntime:     560 rmax: 0.471387E-06 	  iter       2
+
+ ========== nrtstp=     560  ctime=  0.448000E+01  dt=  0.800000E-02  dtavg=  0.800000E-02
+  
+
+ Work took       206.28468959   seconds
+  
+  ntime:     561 rmax: 0.487751E-06 	  iter       2
+  ntime:     562 rmax: 0.473823E-06 	  iter       2
+  ntime:     563 rmax: 0.476297E-06 	  iter       2
+  ntime:     564 rmax: 0.473205E-06 	  iter       2
+  ntime:     565 rmax: 0.504891E-06 	  iter       2
+  ntime:     566 rmax: 0.443380E-06 	  iter       2
+  ntime:     567 rmax: 0.467349E-06 	  iter       2
+  ntime:     568 rmax: 0.485493E-06 	  iter       2
+  ntime:     569 rmax: 0.465186E-06 	  iter       2
+  ntime:     570 rmax: 0.455864E-06 	  iter       2
+  ntime:     571 rmax: 0.459113E-06 	  iter       2
+  ntime:     572 rmax: 0.479474E-06 	  iter       2
+  ntime:     573 rmax: 0.475720E-06 	  iter       2
+  ntime:     574 rmax: 0.470908E-06 	  iter       2
+  ntime:     575 rmax: 0.462797E-06 	  iter       2
+  ntime:     576 rmax: 0.486914E-06 	  iter       2
+  ntime:     577 rmax: 0.451765E-06 	  iter       2
+  ntime:     578 rmax: 0.470028E-06 	  iter       2
+  ntime:     579 rmax: 0.514806E-06 	  iter       2
+  ntime:     580 rmax: 0.490592E-06 	  iter       2
+
+ ========== nrtstp=     580  ctime=  0.464000E+01  dt=  0.800000E-02  dtavg=  0.800000E-02
+  
+
+ Work took       213.66032132   seconds
+  
+  ntime:     581 rmax: 0.478433E-06 	  iter       2
+  ntime:     582 rmax: 0.461027E-06 	  iter       2
+  ntime:     583 rmax: 0.472923E-06 	  iter       2
+  ntime:     584 rmax: 0.450118E-06 	  iter       2
+  ntime:     585 rmax: 0.491059E-06 	  iter       2
+  ntime:     586 rmax: 0.454130E-06 	  iter       2
+  ntime:     587 rmax: 0.487932E-06 	  iter       2
+  ntime:     588 rmax: 0.437341E-06 	  iter       2
+  ntime:     589 rmax: 0.462216E-06 	  iter       2
+  ntime:     590 rmax: 0.485683E-06 	  iter       2
+  ntime:     591 rmax: 0.461908E-06 	  iter       2
+  ntime:     592 rmax: 0.458093E-06 	  iter       2
+  ntime:     593 rmax: 0.474154E-06 	  iter       2
+  ntime:     594 rmax: 0.482114E-06 	  iter       2
+  ntime:     595 rmax: 0.485114E-06 	  iter       2
+  ntime:     596 rmax: 0.474140E-06 	  iter       2
+  ntime:     597 rmax: 0.454531E-06 	  iter       2
+  ntime:     598 rmax: 0.525900E-06 	  iter       2
+  ntime:     599 rmax: 0.433756E-06 	  iter       2
+  ntime:     600 rmax: 0.447648E-06 	  iter       2
+
+ ========== nrtstp=     600  ctime=  0.480000E+01  dt=  0.800000E-02  dtavg=  0.800000E-02
+  
+
+ Work took       220.90252684   seconds
+  
+  ntime:     601 rmax: 0.477443E-06 	  iter       2
+  ntime:     602 rmax: 0.446969E-06 	  iter       2
+  ntime:     603 rmax: 0.430639E-06 	  iter       2
+  ntime:     604 rmax: 0.464610E-06 	  iter       2
+  ntime:     605 rmax: 0.457776E-06 	  iter       2
+  ntime:     606 rmax: 0.466291E-06 	  iter       2
+  ntime:     607 rmax: 0.462561E-06 	  iter       2
+  ntime:     608 rmax: 0.431841E-06 	  iter       2
+  ntime:     609 rmax: 0.541666E-06 	  iter       2
+  ntime:     610 rmax: 0.448479E-06 	  iter       2
+  ntime:     611 rmax: 0.467241E-06 	  iter       2
+  ntime:     612 rmax: 0.494628E-06 	  iter       2
+  ntime:     613 rmax: 0.455935E-06 	  iter       2
+  ntime:     614 rmax: 0.482743E-06 	  iter       2
+  ntime:     615 rmax: 0.475085E-06 	  iter       2
+  ntime:     616 rmax: 0.467074E-06 	  iter       2
+  ntime:     617 rmax: 0.472834E-06 	  iter       2
+  ntime:     618 rmax: 0.468448E-06 	  iter       2
+  ntime:     619 rmax: 0.449166E-06 	  iter       2
+  ntime:     620 rmax: 0.500054E-06 	  iter       2
+
+ ========== nrtstp=     620  ctime=  0.496000E+01  dt=  0.800000E-02  dtavg=  0.800000E-02
+  
+
+ Work took       228.27878381   seconds
+  
+  ntime:     621 rmax: 0.460002E-06 	  iter       2
+  ntime:     622 rmax: 0.464567E-06 	  iter       2
+  ntime:     623 rmax: 0.451458E-06 	  iter       2
+  ntime:     624 rmax: 0.462558E-06 	  iter       2
+  ntime:     625 rmax: 0.464854E-06 	  iter       2
+  ntime:     626 rmax: 0.454358E-06 	  iter       2
+  ntime:     627 rmax: 0.448986E-06 	  iter       2
+  ntime:     628 rmax: 0.478169E-06 	  iter       2
+  ntime:     629 rmax: 0.443459E-06 	  iter       2
+  ntime:     630 rmax: 0.425112E-06 	  iter       2
+  ntime:     631 rmax: 0.539799E-06 	  iter       2
+  ntime:     632 rmax: 0.430280E-06 	  iter       2
+  ntime:     633 rmax: 0.481556E-06 	  iter       2
+  ntime:     634 rmax: 0.467348E-06 	  iter       2
+  ntime:     635 rmax: 0.475936E-06 	  iter       2
+  ntime:     636 rmax: 0.491401E-06 	  iter       2
+  ntime:     637 rmax: 0.472527E-06 	  iter       2
+  ntime:     638 rmax: 0.455426E-06 	  iter       2
+  ntime:     639 rmax: 0.475688E-06 	  iter       2
+  ntime:     640 rmax: 0.462383E-06 	  iter       2
+
+ ========== nrtstp=     640  ctime=  0.512000E+01  dt=  0.800000E-02  dtavg=  0.800000E-02
+  
+
+ Work took       235.62747626   seconds
+  
+  ntime:     641 rmax: 0.471045E-06 	  iter       2
+  ntime:     642 rmax: 0.481246E-06 	  iter       2
+  ntime:     643 rmax: 0.468638E-06 	  iter       2
+  ntime:     644 rmax: 0.452450E-06 	  iter       2
+  ntime:     645 rmax: 0.439054E-06 	  iter       2
+  ntime:     646 rmax: 0.469647E-06 	  iter       2
+  ntime:     647 rmax: 0.473114E-06 	  iter       2
+  ntime:     648 rmax: 0.479551E-06 	  iter       2
+  ntime:     649 rmax: 0.466399E-06 	  iter       2
+  ntime:     650 rmax: 0.474592E-06 	  iter       2
+  ntime:     651 rmax: 0.450002E-06 	  iter       2
+  ntime:     652 rmax: 0.451735E-06 	  iter       2
+  ntime:     653 rmax: 0.513277E-06 	  iter       2
+  ntime:     654 rmax: 0.473117E-06 	  iter       2
+  ntime:     655 rmax: 0.462871E-06 	  iter       2
+  ntime:     656 rmax: 0.449922E-06 	  iter       2
+  ntime:     657 rmax: 0.469725E-06 	  iter       2
+  ntime:     658 rmax: 0.483480E-06 	  iter       2
+  ntime:     659 rmax: 0.470910E-06 	  iter       2
+  ntime:     660 rmax: 0.464398E-06 	  iter       2
+
+ ========== nrtstp=     660  ctime=  0.528000E+01  dt=  0.800000E-02  dtavg=  0.800000E-02
+  
+
+ Work took       242.95406242   seconds
+  
+  ntime:     661 rmax: 0.465331E-06 	  iter       2
+  ntime:     662 rmax: 0.433062E-06 	  iter       2
+  ntime:     663 rmax: 0.469327E-06 	  iter       2
+  ntime:     664 rmax: 0.506190E-06 	  iter       2
+  ntime:     665 rmax: 0.481918E-06 	  iter       2
+  ntime:     666 rmax: 0.453353E-06 	  iter       2
+  ntime:     667 rmax: 0.453430E-06 	  iter       2
+  ntime:     668 rmax: 0.471844E-06 	  iter       2
+  ntime:     669 rmax: 0.473475E-06 	  iter       2
+  ntime:     670 rmax: 0.476919E-06 	  iter       2
+  ntime:     671 rmax: 0.476167E-06 	  iter       2
+  ntime:     672 rmax: 0.475865E-06 	  iter       2
+  ntime:     673 rmax: 0.418599E-06 	  iter       2
+  ntime:     674 rmax: 0.502756E-06 	  iter       2
+  ntime:     675 rmax: 0.481141E-06 	  iter       2
+  ntime:     676 rmax: 0.466813E-06 	  iter       2
+  ntime:     677 rmax: 0.455708E-06 	  iter       2
+  ntime:     678 rmax: 0.478247E-06 	  iter       2
+  ntime:     679 rmax: 0.485429E-06 	  iter       2
+  ntime:     680 rmax: 0.470902E-06 	  iter       2
+
+ ========== nrtstp=     680  ctime=  0.544000E+01  dt=  0.800000E-02  dtavg=  0.800000E-02
+  
+
+ Work took       250.32249312   seconds
+  
+  ntime:     681 rmax: 0.473118E-06 	  iter       2
+  ntime:     682 rmax: 0.471987E-06 	  iter       2
+  ntime:     683 rmax: 0.502572E-06 	  iter       2
+  ntime:     684 rmax: 0.448058E-06 	  iter       2
+  ntime:     685 rmax: 0.438008E-06 	  iter       2
+  ntime:     686 rmax: 0.504790E-06 	  iter       2
+  ntime:     687 rmax: 0.461718E-06 	  iter       2
+  ntime:     688 rmax: 0.445342E-06 	  iter       2
+  ntime:     689 rmax: 0.453828E-06 	  iter       2
+  ntime:     690 rmax: 0.456672E-06 	  iter       2
+  ntime:     691 rmax: 0.455772E-06 	  iter       2
+  ntime:     692 rmax: 0.449441E-06 	  iter       2
+  ntime:     693 rmax: 0.479110E-06 	  iter       2
+  ntime:     694 rmax: 0.472538E-06 	  iter       2
+  ntime:     695 rmax: 0.446562E-06 	  iter       2
+  ntime:     696 rmax: 0.506035E-06 	  iter       2
+  ntime:     697 rmax: 0.494253E-06 	  iter       2
+  ntime:     698 rmax: 0.482726E-06 	  iter       2
+  ntime:     699 rmax: 0.461187E-06 	  iter       2
+  ntime:     700 rmax: 0.482927E-06 	  iter       2
+
+ ========== nrtstp=     700  ctime=  0.560000E+01  dt=  0.800000E-02  dtavg=  0.800000E-02
+  
+
+ Work took       257.97719074   seconds
+  
+  ntime:     701 rmax: 0.473728E-06 	  iter       2
+  ntime:     702 rmax: 0.473027E-06 	  iter       2
+  ntime:     703 rmax: 0.462730E-06 	  iter       2
+  ntime:     704 rmax: 0.462135E-06 	  iter       2
+  ntime:     705 rmax: 0.495155E-06 	  iter       2
+  ntime:     706 rmax: 0.447753E-06 	  iter       2
+  ntime:     707 rmax: 0.447860E-06 	  iter       2
+  ntime:     708 rmax: 0.487163E-06 	  iter       2
+  ntime:     709 rmax: 0.470282E-06 	  iter       2
+  ntime:     710 rmax: 0.478911E-06 	  iter       2
+  ntime:     711 rmax: 0.461462E-06 	  iter       2
+  ntime:     712 rmax: 0.460431E-06 	  iter       2
+  ntime:     713 rmax: 0.492927E-06 	  iter       2
+  ntime:     714 rmax: 0.455701E-06 	  iter       2
+  ntime:     715 rmax: 0.469965E-06 	  iter       2
+  ntime:     716 rmax: 0.475998E-06 	  iter       2
+  ntime:     717 rmax: 0.429088E-06 	  iter       2
+  ntime:     718 rmax: 0.489348E-06 	  iter       2
+  ntime:     719 rmax: 0.502624E-06 	  iter       2
+  ntime:     720 rmax: 0.482245E-06 	  iter       2
+
+ ========== nrtstp=     720  ctime=  0.576000E+01  dt=  0.800000E-02  dtavg=  0.800000E-02
+  
+
+ Work took       265.35754461   seconds
+  
+  ntime:     721 rmax: 0.483751E-06 	  iter       2
+  ntime:     722 rmax: 0.475313E-06 	  iter       2
+  ntime:     723 rmax: 0.474371E-06 	  iter       2
+  ntime:     724 rmax: 0.474675E-06 	  iter       2
+  ntime:     725 rmax: 0.482874E-06 	  iter       2
+  ntime:     726 rmax: 0.519129E-06 	  iter       2
+  ntime:     727 rmax: 0.482637E-06 	  iter       2
+  ntime:     728 rmax: 0.471789E-06 	  iter       2
+  ntime:     729 rmax: 0.451678E-06 	  iter       2
+  ntime:     730 rmax: 0.489068E-06 	  iter       2
+  ntime:     731 rmax: 0.509107E-06 	  iter       2
+  ntime:     732 rmax: 0.473048E-06 	  iter       2
+  ntime:     733 rmax: 0.459331E-06 	  iter       2
+  ntime:     734 rmax: 0.465141E-06 	  iter       2
+  ntime:     735 rmax: 0.470383E-06 	  iter       2
+  ntime:     736 rmax: 0.472885E-06 	  iter       2
+  ntime:     737 rmax: 0.489464E-06 	  iter       2
+  ntime:     738 rmax: 0.457629E-06 	  iter       2
+  ntime:     739 rmax: 0.437594E-06 	  iter       2
+  ntime:     740 rmax: 0.454975E-06 	  iter       2
+
+ ========== nrtstp=     740  ctime=  0.592000E+01  dt=  0.800000E-02  dtavg=  0.800000E-02
+  
+
+ Work took       272.66643849   seconds
+  
+  ntime:     741 rmax: 0.460376E-06 	  iter       2
+  ntime:     742 rmax: 0.469128E-06 	  iter       2
+  ntime:     743 rmax: 0.496704E-06 	  iter       2
+  ntime:     744 rmax: 0.459968E-06 	  iter       2
+  ntime:     745 rmax: 0.451706E-06 	  iter       2
+  ntime:     746 rmax: 0.465067E-06 	  iter       2
+  ntime:     747 rmax: 0.465109E-06 	  iter       2
+  ntime:     748 rmax: 0.498472E-06 	  iter       2
+  ntime:     749 rmax: 0.457095E-06 	  iter       2
+  ntime:     750 rmax: 0.462378E-06 	  iter       2
+  ntime:     751 rmax: 0.465568E-06 	  iter       2
+  ntime:     752 rmax: 0.459371E-06 	  iter       2
+  ntime:     753 rmax: 0.478957E-06 	  iter       2
+  ntime:     754 rmax: 0.475376E-06 	  iter       2
+  ntime:     755 rmax: 0.467516E-06 	  iter       2
+  ntime:     756 rmax: 0.451813E-06 	  iter       2
+  ntime:     757 rmax: 0.456858E-06 	  iter       2
+  ntime:     758 rmax: 0.483082E-06 	  iter       2
+  ntime:     759 rmax: 0.480722E-06 	  iter       2
+  ntime:     760 rmax: 0.443198E-06 	  iter       2
+
+ ========== nrtstp=     760  ctime=  0.608000E+01  dt=  0.800000E-02  dtavg=  0.800000E-02
+  
+
+ Work took       279.87120709   seconds
+  
+  ntime:     761 rmax: 0.471758E-06 	  iter       2
+  ntime:     762 rmax: 0.424737E-06 	  iter       2
+  ntime:     763 rmax: 0.454721E-06 	  iter       2
+  ntime:     764 rmax: 0.487234E-06 	  iter       2
+  ntime:     765 rmax: 0.490234E-06 	  iter       2
+  ntime:     766 rmax: 0.453546E-06 	  iter       2
+  ntime:     767 rmax: 0.446132E-06 	  iter       2
+  ntime:     768 rmax: 0.453264E-06 	  iter       2
+  ntime:     769 rmax: 0.443475E-06 	  iter       2
+  ntime:     770 rmax: 0.507338E-06 	  iter       2
+  ntime:     771 rmax: 0.464787E-06 	  iter       2
+  ntime:     772 rmax: 0.472738E-06 	  iter       2
+  ntime:     773 rmax: 0.473411E-06 	  iter       2
+  ntime:     774 rmax: 0.493752E-06 	  iter       2
+  ntime:     775 rmax: 0.489122E-06 	  iter       2
+  ntime:     776 rmax: 0.493591E-06 	  iter       2
+  ntime:     777 rmax: 0.467194E-06 	  iter       2
+  ntime:     778 rmax: 0.452061E-06 	  iter       2
+  ntime:     779 rmax: 0.482570E-06 	  iter       2
+  ntime:     780 rmax: 0.477743E-06 	  iter       2
+
+ ========== nrtstp=     780  ctime=  0.624000E+01  dt=  0.800000E-02  dtavg=  0.800000E-02
+  
+
+ Work took       287.47565790   seconds
+  
+  ntime:     781 rmax: 0.473284E-06 	  iter       2
+  ntime:     782 rmax: 0.446239E-06 	  iter       2
+  ntime:     783 rmax: 0.520155E-06 	  iter       2
+  ntime:     784 rmax: 0.422729E-06 	  iter       2
+  ntime:     785 rmax: 0.454763E-06 	  iter       2
+  ntime:     786 rmax: 0.474038E-06 	  iter       2
+  ntime:     787 rmax: 0.460674E-06 	  iter       2
+  ntime:     788 rmax: 0.434311E-06 	  iter       2
+  ntime:     789 rmax: 0.457270E-06 	  iter       2
+  ntime:     790 rmax: 0.469833E-06 	  iter       2
+  ntime:     791 rmax: 0.495818E-06 	  iter       2
+  ntime:     792 rmax: 0.507765E-06 	  iter       2
+  ntime:     793 rmax: 0.479106E-06 	  iter       2
+  ntime:     794 rmax: 0.478598E-06 	  iter       2
+  ntime:     795 rmax: 0.447008E-06 	  iter       2
+  ntime:     796 rmax: 0.458374E-06 	  iter       2
+  ntime:     797 rmax: 0.474582E-06 	  iter       2
+  ntime:     798 rmax: 0.483213E-06 	  iter       2
+  ntime:     799 rmax: 0.452414E-06 	  iter       2
+  ntime:     800 rmax: 0.453170E-06 	  iter       2
+
+ ========== nrtstp=     800  ctime=  0.640000E+01  dt=  0.800000E-02  dtavg=  0.800000E-02
+  
+
+ Work took       294.85994258   seconds
+  
+  ntime:     801 rmax: 0.477150E-06 	  iter       2
+  ntime:     802 rmax: 0.483116E-06 	  iter       2
+  ntime:     803 rmax: 0.470073E-06 	  iter       2
+  ntime:     804 rmax: 0.451301E-06 	  iter       2
+  ntime:     805 rmax: 0.520106E-06 	  iter       2
+  ntime:     806 rmax: 0.538812E-06 	  iter       2
+  ntime:     807 rmax: 0.489755E-06 	  iter       2
+  ntime:     808 rmax: 0.474438E-06 	  iter       2
+  ntime:     809 rmax: 0.437821E-06 	  iter       2
+  ntime:     810 rmax: 0.443470E-06 	  iter       2
+  ntime:     811 rmax: 0.482547E-06 	  iter       2
+  ntime:     812 rmax: 0.473980E-06 	  iter       2
+  ntime:     813 rmax: 0.483468E-06 	  iter       2
+  ntime:     814 rmax: 0.511767E-06 	  iter       2
+  ntime:     815 rmax: 0.486048E-06 	  iter       2
+  ntime:     816 rmax: 0.474510E-06 	  iter       2
+  ntime:     817 rmax: 0.457972E-06 	  iter       2
+  ntime:     818 rmax: 0.466065E-06 	  iter       2
+  ntime:     819 rmax: 0.497223E-06 	  iter       2
+  ntime:     820 rmax: 0.481732E-06 	  iter       2
+
+ ========== nrtstp=     820  ctime=  0.656000E+01  dt=  0.800000E-02  dtavg=  0.800000E-02
+  
+
+ Work took       302.19106212   seconds
+  
+  ntime:     821 rmax: 0.437614E-06 	  iter       2
+  ntime:     822 rmax: 0.475827E-06 	  iter       2
+  ntime:     823 rmax: 0.490137E-06 	  iter       2
+  ntime:     824 rmax: 0.508953E-06 	  iter       2
+  ntime:     825 rmax: 0.477062E-06 	  iter       2
+  ntime:     826 rmax: 0.439446E-06 	  iter       2
+  ntime:     827 rmax: 0.559607E-06 	  iter       2
+  ntime:     828 rmax: 0.524650E-06 	  iter       2
+  ntime:     829 rmax: 0.486168E-06 	  iter       2
+  ntime:     830 rmax: 0.481308E-06 	  iter       2
+  ntime:     831 rmax: 0.479719E-06 	  iter       2
+  ntime:     832 rmax: 0.466434E-06 	  iter       2
+  ntime:     833 rmax: 0.498445E-06 	  iter       2
+  ntime:     834 rmax: 0.464199E-06 	  iter       2
+  ntime:     835 rmax: 0.500591E-06 	  iter       2
+  ntime:     836 rmax: 0.515055E-06 	  iter       2
+  ntime:     837 rmax: 0.480233E-06 	  iter       2
+  ntime:     838 rmax: 0.463700E-06 	  iter       2
+  ntime:     839 rmax: 0.460670E-06 	  iter       2
+  ntime:     840 rmax: 0.483948E-06 	  iter       2
+
+ ========== nrtstp=     840  ctime=  0.672000E+01  dt=  0.800000E-02  dtavg=  0.800000E-02
+  
+
+ Work took       309.61453393   seconds
+  
+  ntime:     841 rmax: 0.492181E-06 	  iter       2
+  ntime:     842 rmax: 0.501552E-06 	  iter       2
+  ntime:     843 rmax: 0.447567E-06 	  iter       2
+  ntime:     844 rmax: 0.513617E-06 	  iter       2
+  ntime:     845 rmax: 0.473287E-06 	  iter       2
+  ntime:     846 rmax: 0.486031E-06 	  iter       2
+  ntime:     847 rmax: 0.479890E-06 	  iter       2
+  ntime:     848 rmax: 0.460946E-06 	  iter       2
+  ntime:     849 rmax: 0.574572E-06 	  iter       2
+  ntime:     850 rmax: 0.542719E-06 	  iter       2
+  ntime:     851 rmax: 0.473654E-06 	  iter       2
+  ntime:     852 rmax: 0.448955E-06 	  iter       2
+  ntime:     853 rmax: 0.489398E-06 	  iter       2
+  ntime:     854 rmax: 0.463004E-06 	  iter       2
+  ntime:     855 rmax: 0.465781E-06 	  iter       2
+  ntime:     856 rmax: 0.491753E-06 	  iter       2
+  ntime:     857 rmax: 0.538783E-06 	  iter       2
+  ntime:     858 rmax: 0.487059E-06 	  iter       2
+  ntime:     859 rmax: 0.460659E-06 	  iter       2
+  ntime:     860 rmax: 0.476125E-06 	  iter       2
+
+ ========== nrtstp=     860  ctime=  0.688000E+01  dt=  0.800000E-02  dtavg=  0.800000E-02
+  
+
+ Work took       316.86889610   seconds
+  
+  ntime:     861 rmax: 0.455850E-06 	  iter       2
+  ntime:     862 rmax: 0.478864E-06 	  iter       2
+  ntime:     863 rmax: 0.549518E-06 	  iter       2
+  ntime:     864 rmax: 0.493158E-06 	  iter       2
+  ntime:     865 rmax: 0.451321E-06 	  iter       2
+  ntime:     866 rmax: 0.474423E-06 	  iter       2
+  ntime:     867 rmax: 0.484095E-06 	  iter       2
+  ntime:     868 rmax: 0.470995E-06 	  iter       2
+  ntime:     869 rmax: 0.432442E-06 	  iter       2
+  ntime:     870 rmax: 0.478559E-06 	  iter       2
+  ntime:     871 rmax: 0.533878E-06 	  iter       2
+  ntime:     872 rmax: 0.535320E-06 	  iter       2
+  ntime:     873 rmax: 0.479164E-06 	  iter       2
+  ntime:     874 rmax: 0.426211E-06 	  iter       2
+  ntime:     875 rmax: 0.464679E-06 	  iter       2
+  ntime:     876 rmax: 0.507316E-06 	  iter       2
+  ntime:     877 rmax: 0.504030E-06 	  iter       2
+  ntime:     878 rmax: 0.506117E-06 	  iter       2
+  ntime:     879 rmax: 0.496268E-06 	  iter       2
+  ntime:     880 rmax: 0.454061E-06 	  iter       2
+
+ ========== nrtstp=     880  ctime=  0.704000E+01  dt=  0.800000E-02  dtavg=  0.800000E-02
+  
+
+ Work took       324.21700349   seconds
+  
+  ntime:     881 rmax: 0.451536E-06 	  iter       2
+  ntime:     882 rmax: 0.456589E-06 	  iter       2
+  ntime:     883 rmax: 0.487945E-06 	  iter       2
+  ntime:     884 rmax: 0.477317E-06 	  iter       2
+  ntime:     885 rmax: 0.534309E-06 	  iter       2
+  ntime:     886 rmax: 0.485655E-06 	  iter       2
+  ntime:     887 rmax: 0.467174E-06 	  iter       2
+  ntime:     888 rmax: 0.458254E-06 	  iter       2
+  ntime:     889 rmax: 0.485840E-06 	  iter       2
+  ntime:     890 rmax: 0.475440E-06 	  iter       2
+  ntime:     891 rmax: 0.447327E-06 	  iter       2
+  ntime:     892 rmax: 0.478334E-06 	  iter       2
+  ntime:     893 rmax: 0.512643E-06 	  iter       2
+  ntime:     894 rmax: 0.542878E-06 	  iter       2
+  ntime:     895 rmax: 0.511464E-06 	  iter       2
+  ntime:     896 rmax: 0.424859E-06 	  iter       2
+  ntime:     897 rmax: 0.463294E-06 	  iter       2
+  ntime:     898 rmax: 0.521203E-06 	  iter       2
+  ntime:     899 rmax: 0.509383E-06 	  iter       2
+  ntime:     900 rmax: 0.501556E-06 	  iter       2
+
+ ========== nrtstp=     900  ctime=  0.720000E+01  dt=  0.800000E-02  dtavg=  0.800000E-02
+  
+
+ Work took       331.62445320   seconds
+  
+  ntime:     901 rmax: 0.450199E-06 	  iter       2
+  ntime:     902 rmax: 0.451181E-06 	  iter       2
+  ntime:     903 rmax: 0.461548E-06 	  iter       2
+  ntime:     904 rmax: 0.469641E-06 	  iter       2
+  ntime:     905 rmax: 0.491578E-06 	  iter       2
+  ntime:     906 rmax: 0.469270E-06 	  iter       2
+  ntime:     907 rmax: 0.519695E-06 	  iter       2
+  ntime:     908 rmax: 0.482922E-06 	  iter       2
+  ntime:     909 rmax: 0.465379E-06 	  iter       2
+  ntime:     910 rmax: 0.456461E-06 	  iter       2
+  ntime:     911 rmax: 0.480856E-06 	  iter       2
+  ntime:     912 rmax: 0.457889E-06 	  iter       2
+  ntime:     913 rmax: 0.496962E-06 	  iter       2
+  ntime:     914 rmax: 0.486385E-06 	  iter       2
+  ntime:     915 rmax: 0.541624E-06 	  iter       2
+  ntime:     916 rmax: 0.534071E-06 	  iter       2
+  ntime:     917 rmax: 0.488431E-06 	  iter       2
+  ntime:     918 rmax: 0.438331E-06 	  iter       2
+  ntime:     919 rmax: 0.476162E-06 	  iter       2
+  ntime:     920 rmax: 0.500032E-06 	  iter       2
+
+ ========== nrtstp=     920  ctime=  0.736000E+01  dt=  0.800000E-02  dtavg=  0.800000E-02
+  
+
+ Work took       338.95135042   seconds
+  
+  ntime:     921 rmax: 0.463612E-06 	  iter       2
+  ntime:     922 rmax: 0.476954E-06 	  iter       2
+  ntime:     923 rmax: 0.469198E-06 	  iter       2
+  ntime:     924 rmax: 0.459719E-06 	  iter       2
+  ntime:     925 rmax: 0.451554E-06 	  iter       2
+  ntime:     926 rmax: 0.451007E-06 	  iter       2
+  ntime:     927 rmax: 0.471398E-06 	  iter       2
+  ntime:     928 rmax: 0.475804E-06 	  iter       2
+  ntime:     929 rmax: 0.533744E-06 	  iter       2
+  ntime:     930 rmax: 0.497815E-06 	  iter       2
+  ntime:     931 rmax: 0.484595E-06 	  iter       2
+  ntime:     932 rmax: 0.456966E-06 	  iter       2
+  ntime:     933 rmax: 0.471880E-06 	  iter       2
+  ntime:     934 rmax: 0.477054E-06 	  iter       2
+  ntime:     935 rmax: 0.515565E-06 	  iter       2
+  ntime:     936 rmax: 0.491847E-06 	  iter       2
+  ntime:     937 rmax: 0.567152E-06 	  iter       2
+  ntime:     938 rmax: 0.534881E-06 	  iter       2
+  ntime:     939 rmax: 0.466945E-06 	  iter       2
+  ntime:     940 rmax: 0.478229E-06 	  iter       2
+
+ ========== nrtstp=     940  ctime=  0.752000E+01  dt=  0.800000E-02  dtavg=  0.800000E-02
+  
+
+ Work took       346.31816559   seconds
+  
+  ntime:     941 rmax: 0.489449E-06 	  iter       2
+  ntime:     942 rmax: 0.517133E-06 	  iter       2
+  ntime:     943 rmax: 0.460756E-06 	  iter       2
+  ntime:     944 rmax: 0.512553E-06 	  iter       2
+  ntime:     945 rmax: 0.471236E-06 	  iter       2
+  ntime:     946 rmax: 0.465753E-06 	  iter       2
+  ntime:     947 rmax: 0.460721E-06 	  iter       2
+  ntime:     948 rmax: 0.473981E-06 	  iter       2
+  ntime:     949 rmax: 0.459475E-06 	  iter       2
+  ntime:     950 rmax: 0.469532E-06 	  iter       2
+  ntime:     951 rmax: 0.560989E-06 	  iter       2
+  ntime:     952 rmax: 0.499885E-06 	  iter       2
+  ntime:     953 rmax: 0.488308E-06 	  iter       2
+  ntime:     954 rmax: 0.468225E-06 	  iter       2
+  ntime:     955 rmax: 0.497555E-06 	  iter       2
+  ntime:     956 rmax: 0.494795E-06 	  iter       2
+  ntime:     957 rmax: 0.481491E-06 	  iter       2
+  ntime:     958 rmax: 0.486202E-06 	  iter       2
+  ntime:     959 rmax: 0.523731E-06 	  iter       2
+  ntime:     960 rmax: 0.498735E-06 	  iter       2
+
+ ========== nrtstp=     960  ctime=  0.768000E+01  dt=  0.800000E-02  dtavg=  0.800000E-02
+  
+
+ Work took       353.68101429   seconds
+  
+  ntime:     961 rmax: 0.473746E-06 	  iter       2
+  ntime:     962 rmax: 0.458302E-06 	  iter       2
+  ntime:     963 rmax: 0.511977E-06 	  iter       2
+  ntime:     964 rmax: 0.513013E-06 	  iter       2
+  ntime:     965 rmax: 0.492604E-06 	  iter       2
+  ntime:     966 rmax: 0.473472E-06 	  iter       2
+  ntime:     967 rmax: 0.478313E-06 	  iter       2
+  ntime:     968 rmax: 0.452755E-06 	  iter       2
+  ntime:     969 rmax: 0.465987E-06 	  iter       2
+  ntime:     970 rmax: 0.474307E-06 	  iter       2
+  ntime:     971 rmax: 0.449160E-06 	  iter       2
+  ntime:     972 rmax: 0.458536E-06 	  iter       2
+  ntime:     973 rmax: 0.516025E-06 	  iter       2
+  ntime:     974 rmax: 0.468805E-06 	  iter       2
+  ntime:     975 rmax: 0.470229E-06 	  iter       2
+  ntime:     976 rmax: 0.441946E-06 	  iter       2
+  ntime:     977 rmax: 0.476072E-06 	  iter       2
+  ntime:     978 rmax: 0.471437E-06 	  iter       2
+  ntime:     979 rmax: 0.494299E-06 	  iter       2
+  ntime:     980 rmax: 0.453126E-06 	  iter       2
+
+ ========== nrtstp=     980  ctime=  0.784000E+01  dt=  0.800000E-02  dtavg=  0.800000E-02
+  
+
+ Work took       361.06303618   seconds
+  
+  ntime:     981 rmax: 0.490309E-06 	  iter       2
+  ntime:     982 rmax: 0.491729E-06 	  iter       2
+  ntime:     983 rmax: 0.472983E-06 	  iter       2
+  ntime:     984 rmax: 0.470552E-06 	  iter       2
+  ntime:     985 rmax: 0.493980E-06 	  iter       2
+  ntime:     986 rmax: 0.477695E-06 	  iter       2
+  ntime:     987 rmax: 0.439328E-06 	  iter       2
+  ntime:     988 rmax: 0.459427E-06 	  iter       2
+  ntime:     989 rmax: 0.480069E-06 	  iter       2
+  ntime:     990 rmax: 0.464824E-06 	  iter       2
+  ntime:     991 rmax: 0.472116E-06 	  iter       2
+  ntime:     992 rmax: 0.485922E-06 	  iter       2
+  ntime:     993 rmax: 0.455510E-06 	  iter       2
+  ntime:     994 rmax: 0.474879E-06 	  iter       2
+  ntime:     995 rmax: 0.483324E-06 	  iter       2
+  ntime:     996 rmax: 0.477473E-06 	  iter       2
+  ntime:     997 rmax: 0.440562E-06 	  iter       2
+  ntime:     998 rmax: 0.436921E-06 	  iter       2
+  ntime:     999 rmax: 0.498346E-06 	  iter       2
+  ntime:    1000 rmax: 0.469097E-06 	  iter       2
+
+ ========== nrtstp=    1000  ctime=  0.800000E+01  dt=  0.800000E-02  dtavg=  0.800000E-02
+  
+
+ Work took       368.46617155   seconds
+  
+  ntime:    1001 rmax: 0.473720E-06 	  iter       2
+  ntime:    1002 rmax: 0.487018E-06 	  iter       2
+  ntime:    1003 rmax: 0.504819E-06 	  iter       2
+  ntime:    1004 rmax: 0.512816E-06 	  iter       2
+  ntime:    1005 rmax: 0.450838E-06 	  iter       2
+  ntime:    1006 rmax: 0.467681E-06 	  iter       2
+  ntime:    1007 rmax: 0.463046E-06 	  iter       2
+  ntime:    1008 rmax: 0.447964E-06 	  iter       2
+  ntime:    1009 rmax: 0.435505E-06 	  iter       2
+  ntime:    1010 rmax: 0.452271E-06 	  iter       2
+  ntime:    1011 rmax: 0.470007E-06 	  iter       2
+  ntime:    1012 rmax: 0.471913E-06 	  iter       2
+  ntime:    1013 rmax: 0.471837E-06 	  iter       2
+  ntime:    1014 rmax: 0.466497E-06 	  iter       2
+  ntime:    1015 rmax: 0.450563E-06 	  iter       2
+  ntime:    1016 rmax: 0.466533E-06 	  iter       2
+  ntime:    1017 rmax: 0.508667E-06 	  iter       2
+  ntime:    1018 rmax: 0.467243E-06 	  iter       2
+  ntime:    1019 rmax: 0.443484E-06 	  iter       2
+  ntime:    1020 rmax: 0.456211E-06 	  iter       2
+
+ ========== nrtstp=    1020  ctime=  0.816000E+01  dt=  0.800000E-02  dtavg=  0.800000E-02
+  
+
+ Work took       375.84395623   seconds
+  
+  ntime:    1021 rmax: 0.466422E-06 	  iter       2
+  ntime:    1022 rmax: 0.483163E-06 	  iter       2
+  ntime:    1023 rmax: 0.469851E-06 	  iter       2
+  ntime:    1024 rmax: 0.488403E-06 	  iter       2
+  ntime:    1025 rmax: 0.507545E-06 	  iter       2
+  ntime:    1026 rmax: 0.484296E-06 	  iter       2
+  ntime:    1027 rmax: 0.458843E-06 	  iter       2
+  ntime:    1028 rmax: 0.493998E-06 	  iter       2
+  ntime:    1029 rmax: 0.498612E-06 	  iter       2
+  ntime:    1030 rmax: 0.458608E-06 	  iter       2
+  ntime:    1031 rmax: 0.443562E-06 	  iter       2
+  ntime:    1032 rmax: 0.451913E-06 	  iter       2
+  ntime:    1033 rmax: 0.492698E-06 	  iter       2
+  ntime:    1034 rmax: 0.465780E-06 	  iter       2
+  ntime:    1035 rmax: 0.457402E-06 	  iter       2
+  ntime:    1036 rmax: 0.460860E-06 	  iter       2
+  ntime:    1037 rmax: 0.464232E-06 	  iter       2
+  ntime:    1038 rmax: 0.455791E-06 	  iter       2
+  ntime:    1039 rmax: 0.487099E-06 	  iter       2
+  ntime:    1040 rmax: 0.466015E-06 	  iter       2
+
+ ========== nrtstp=    1040  ctime=  0.832000E+01  dt=  0.800000E-02  dtavg=  0.800000E-02
+  
+
+ Work took       383.09060269   seconds
+  
+  ntime:    1041 rmax: 0.452692E-06 	  iter       2
+  ntime:    1042 rmax: 0.457109E-06 	  iter       2
+  ntime:    1043 rmax: 0.461357E-06 	  iter       2
+  ntime:    1044 rmax: 0.476926E-06 	  iter       2
+  ntime:    1045 rmax: 0.459306E-06 	  iter       2
+  ntime:    1046 rmax: 0.499498E-06 	  iter       2
+  ntime:    1047 rmax: 0.452728E-06 	  iter       2
+  ntime:    1048 rmax: 0.478102E-06 	  iter       2
+  ntime:    1049 rmax: 0.448944E-06 	  iter       2
+  ntime:    1050 rmax: 0.476802E-06 	  iter       2
+  ntime:    1051 rmax: 0.494766E-06 	  iter       2
+  ntime:    1052 rmax: 0.483610E-06 	  iter       2
+  ntime:    1053 rmax: 0.445283E-06 	  iter       2
+  ntime:    1054 rmax: 0.454304E-06 	  iter       2
+  ntime:    1055 rmax: 0.500151E-06 	  iter       2
+  ntime:    1056 rmax: 0.469087E-06 	  iter       2
+  ntime:    1057 rmax: 0.458036E-06 	  iter       2
+  ntime:    1058 rmax: 0.444783E-06 	  iter       2
+  ntime:    1059 rmax: 0.529718E-06 	  iter       2
+  ntime:    1060 rmax: 0.449458E-06 	  iter       2
+
+ ========== nrtstp=    1060  ctime=  0.848000E+01  dt=  0.800000E-02  dtavg=  0.800000E-02
+  
+
+ Work took       390.50263088   seconds
+  
+  ntime:    1061 rmax: 0.458007E-06 	  iter       2
+  ntime:    1062 rmax: 0.468763E-06 	  iter       2
+  ntime:    1063 rmax: 0.445399E-06 	  iter       2
+  ntime:    1064 rmax: 0.442756E-06 	  iter       2
+  ntime:    1065 rmax: 0.459909E-06 	  iter       2
+  ntime:    1066 rmax: 0.465703E-06 	  iter       2
+  ntime:    1067 rmax: 0.485690E-06 	  iter       2
+  ntime:    1068 rmax: 0.479905E-06 	  iter       2
+  ntime:    1069 rmax: 0.488375E-06 	  iter       2
+  ntime:    1070 rmax: 0.478064E-06 	  iter       2
+  ntime:    1071 rmax: 0.447742E-06 	  iter       2
+  ntime:    1072 rmax: 0.452735E-06 	  iter       2
+  ntime:    1073 rmax: 0.464981E-06 	  iter       2
+  ntime:    1074 rmax: 0.483611E-06 	  iter       2
+  ntime:    1075 rmax: 0.478221E-06 	  iter       2
+  ntime:    1076 rmax: 0.482044E-06 	  iter       2
+  ntime:    1077 rmax: 0.477472E-06 	  iter       2
+  ntime:    1078 rmax: 0.451080E-06 	  iter       2
+  ntime:    1079 rmax: 0.462010E-06 	  iter       2
+  ntime:    1080 rmax: 0.459732E-06 	  iter       2
+
+ ========== nrtstp=    1080  ctime=  0.864000E+01  dt=  0.800000E-02  dtavg=  0.800000E-02
+  
+
+ Work took       397.80688516   seconds
+  
+  ntime:    1081 rmax: 0.492723E-06 	  iter       2
+  ntime:    1082 rmax: 0.467205E-06 	  iter       2
+  ntime:    1083 rmax: 0.459205E-06 	  iter       2
+  ntime:    1084 rmax: 0.448374E-06 	  iter       2
+  ntime:    1085 rmax: 0.438350E-06 	  iter       2
+  ntime:    1086 rmax: 0.449827E-06 	  iter       2
+  ntime:    1087 rmax: 0.459179E-06 	  iter       2
+  ntime:    1088 rmax: 0.454302E-06 	  iter       2
+  ntime:    1089 rmax: 0.469030E-06 	  iter       2
+  ntime:    1090 rmax: 0.443413E-06 	  iter       2
+  ntime:    1091 rmax: 0.467848E-06 	  iter       2
+  ntime:    1092 rmax: 0.490079E-06 	  iter       2
+  ntime:    1093 rmax: 0.489989E-06 	  iter       2
+  ntime:    1094 rmax: 0.447942E-06 	  iter       2
+  ntime:    1095 rmax: 0.445851E-06 	  iter       2
+  ntime:    1096 rmax: 0.458047E-06 	  iter       2
+  ntime:    1097 rmax: 0.461573E-06 	  iter       2
+  ntime:    1098 rmax: 0.487799E-06 	  iter       2
+  ntime:    1099 rmax: 0.485989E-06 	  iter       2
+  ntime:    1100 rmax: 0.469492E-06 	  iter       2
+
+ ========== nrtstp=    1100  ctime=  0.880000E+01  dt=  0.800000E-02  dtavg=  0.800000E-02
+  
+
+ Work took       405.19694776   seconds
+  
+  ntime:    1101 rmax: 0.468214E-06 	  iter       2
+  ntime:    1102 rmax: 0.452364E-06 	  iter       2
+  ntime:    1103 rmax: 0.498465E-06 	  iter       2
+  ntime:    1104 rmax: 0.487513E-06 	  iter       2
+  ntime:    1105 rmax: 0.477724E-06 	  iter       2
+  ntime:    1106 rmax: 0.458657E-06 	  iter       2
+  ntime:    1107 rmax: 0.447162E-06 	  iter       2
+  ntime:    1108 rmax: 0.469862E-06 	  iter       2
+  ntime:    1109 rmax: 0.466984E-06 	  iter       2
+  ntime:    1110 rmax: 0.461314E-06 	  iter       2
+  ntime:    1111 rmax: 0.472598E-06 	  iter       2
+  ntime:    1112 rmax: 0.432553E-06 	  iter       2
+  ntime:    1113 rmax: 0.487773E-06 	  iter       2
+  ntime:    1114 rmax: 0.525338E-06 	  iter       2
+  ntime:    1115 rmax: 0.465952E-06 	  iter       2
+  ntime:    1116 rmax: 0.440363E-06 	  iter       2
+  ntime:    1117 rmax: 0.458748E-06 	  iter       2
+  ntime:    1118 rmax: 0.487347E-06 	  iter       2
+  ntime:    1119 rmax: 0.466066E-06 	  iter       2
+  ntime:    1120 rmax: 0.497977E-06 	  iter       2
+
+ ========== nrtstp=    1120  ctime=  0.896000E+01  dt=  0.800000E-02  dtavg=  0.800000E-02
+  
+
+ Work took       412.48225221   seconds
+  
+  ntime:    1121 rmax: 0.478135E-06 	  iter       2
+  ntime:    1122 rmax: 0.490038E-06 	  iter       2
+  ntime:    1123 rmax: 0.478028E-06 	  iter       2
+  ntime:    1124 rmax: 0.464577E-06 	  iter       2
+  ntime:    1125 rmax: 0.505040E-06 	  iter       2
+  ntime:    1126 rmax: 0.475472E-06 	  iter       2
+  ntime:    1127 rmax: 0.487538E-06 	  iter       2
+  ntime:    1128 rmax: 0.467624E-06 	  iter       2
+  ntime:    1129 rmax: 0.493719E-06 	  iter       2
+  ntime:    1130 rmax: 0.462877E-06 	  iter       2
+  ntime:    1131 rmax: 0.460099E-06 	  iter       2
+  ntime:    1132 rmax: 0.464506E-06 	  iter       2
+  ntime:    1133 rmax: 0.469023E-06 	  iter       2
+  ntime:    1134 rmax: 0.443069E-06 	  iter       2
+  ntime:    1135 rmax: 0.488651E-06 	  iter       2
+  ntime:    1136 rmax: 0.504310E-06 	  iter       2
+  ntime:    1137 rmax: 0.482745E-06 	  iter       2
+  ntime:    1138 rmax: 0.468001E-06 	  iter       2
+  ntime:    1139 rmax: 0.462496E-06 	  iter       2
+  ntime:    1140 rmax: 0.463300E-06 	  iter       2
+
+ ========== nrtstp=    1140  ctime=  0.912000E+01  dt=  0.800000E-02  dtavg=  0.800000E-02
+  
+
+ Work took       420.19187145   seconds
+  
+  ntime:    1141 rmax: 0.464334E-06 	  iter       2
+  ntime:    1142 rmax: 0.503282E-06 	  iter       2
+  ntime:    1143 rmax: 0.469956E-06 	  iter       2
+  ntime:    1144 rmax: 0.477778E-06 	  iter       2
+  ntime:    1145 rmax: 0.435097E-06 	  iter       2
+  ntime:    1146 rmax: 0.432596E-06 	  iter       2
+  ntime:    1147 rmax: 0.487440E-06 	  iter       2
+  ntime:    1148 rmax: 0.486631E-06 	  iter       2
+  ntime:    1149 rmax: 0.511032E-06 	  iter       2
+  ntime:    1150 rmax: 0.457009E-06 	  iter       2
+  ntime:    1151 rmax: 0.476411E-06 	  iter       2
+  ntime:    1152 rmax: 0.452973E-06 	  iter       2
+  ntime:    1153 rmax: 0.447053E-06 	  iter       2
+  ntime:    1154 rmax: 0.465490E-06 	  iter       2
+  ntime:    1155 rmax: 0.468010E-06 	  iter       2
+  ntime:    1156 rmax: 0.443001E-06 	  iter       2
+  ntime:    1157 rmax: 0.499429E-06 	  iter       2
+  ntime:    1158 rmax: 0.477938E-06 	  iter       2
+  ntime:    1159 rmax: 0.467506E-06 	  iter       2
+  ntime:    1160 rmax: 0.467448E-06 	  iter       2
+
+ ========== nrtstp=    1160  ctime=  0.928000E+01  dt=  0.800000E-02  dtavg=  0.800000E-02
+  
+
+ Work took       427.69565771   seconds
+  
+  ntime:    1161 rmax: 0.481965E-06 	  iter       2
+  ntime:    1162 rmax: 0.466028E-06 	  iter       2
+  ntime:    1163 rmax: 0.493942E-06 	  iter       2
+  ntime:    1164 rmax: 0.494250E-06 	  iter       2
+  ntime:    1165 rmax: 0.459170E-06 	  iter       2
+  ntime:    1166 rmax: 0.501378E-06 	  iter       2
+  ntime:    1167 rmax: 0.435559E-06 	  iter       2
+  ntime:    1168 rmax: 0.435993E-06 	  iter       2
+  ntime:    1169 rmax: 0.464362E-06 	  iter       2
+  ntime:    1170 rmax: 0.480146E-06 	  iter       2
+  ntime:    1171 rmax: 0.501294E-06 	  iter       2
+  ntime:    1172 rmax: 0.488024E-06 	  iter       2
+  ntime:    1173 rmax: 0.458122E-06 	  iter       2
+  ntime:    1174 rmax: 0.449578E-06 	  iter       2
+  ntime:    1175 rmax: 0.462825E-06 	  iter       2
+  ntime:    1176 rmax: 0.466189E-06 	  iter       2
+  ntime:    1177 rmax: 0.467112E-06 	  iter       2
+  ntime:    1178 rmax: 0.434714E-06 	  iter       2
+  ntime:    1179 rmax: 0.522936E-06 	  iter       2
+  ntime:    1180 rmax: 0.487490E-06 	  iter       2
+
+ ========== nrtstp=    1180  ctime=  0.944000E+01  dt=  0.800000E-02  dtavg=  0.800000E-02
+  
+
+ Work took       435.30296642   seconds
+  
+  ntime:    1181 rmax: 0.473194E-06 	  iter       2
+  ntime:    1182 rmax: 0.479243E-06 	  iter       2
+  ntime:    1183 rmax: 0.470766E-06 	  iter       2
+  ntime:    1184 rmax: 0.473053E-06 	  iter       2
+  ntime:    1185 rmax: 0.464104E-06 	  iter       2
+  ntime:    1186 rmax: 0.471845E-06 	  iter       2
+  ntime:    1187 rmax: 0.495414E-06 	  iter       2
+  ntime:    1188 rmax: 0.483314E-06 	  iter       2
+  ntime:    1189 rmax: 0.450471E-06 	  iter       2
+  ntime:    1190 rmax: 0.445798E-06 	  iter       2
+  ntime:    1191 rmax: 0.465537E-06 	  iter       2
+  ntime:    1192 rmax: 0.479736E-06 	  iter       2
+  ntime:    1193 rmax: 0.462352E-06 	  iter       2
+  ntime:    1194 rmax: 0.455774E-06 	  iter       2
+  ntime:    1195 rmax: 0.452591E-06 	  iter       2
+  ntime:    1196 rmax: 0.449094E-06 	  iter       2
+  ntime:    1197 rmax: 0.455108E-06 	  iter       2
+  ntime:    1198 rmax: 0.487514E-06 	  iter       2
+  ntime:    1199 rmax: 0.457194E-06 	  iter       2
+  ntime:    1200 rmax: 0.437609E-06 	  iter       2
+
+ ========== nrtstp=    1200  ctime=  0.960000E+01  dt=  0.800000E-02  dtavg=  0.800000E-02
+  
+
+ Work took       442.64392451   seconds
+  
+  ntime:    1201 rmax: 0.439847E-06 	  iter       2
+  ntime:    1202 rmax: 0.455061E-06 	  iter       2
+  ntime:    1203 rmax: 0.468860E-06 	  iter       2
+  ntime:    1204 rmax: 0.485439E-06 	  iter       2
+  ntime:    1205 rmax: 0.490197E-06 	  iter       2
+  ntime:    1206 rmax: 0.486170E-06 	  iter       2
+  ntime:    1207 rmax: 0.508568E-06 	  iter       2
+  ntime:    1208 rmax: 0.521680E-06 	  iter       2
+  ntime:    1209 rmax: 0.543680E-06 	  iter       2
+  ntime:    1210 rmax: 0.521299E-06 	  iter       2
+  ntime:    1211 rmax: 0.460938E-06 	  iter       2
+  ntime:    1212 rmax: 0.450807E-06 	  iter       2
+  ntime:    1213 rmax: 0.467713E-06 	  iter       2
+  ntime:    1214 rmax: 0.495782E-06 	  iter       2
+  ntime:    1215 rmax: 0.445015E-06 	  iter       2
+  ntime:    1216 rmax: 0.444020E-06 	  iter       2
+  ntime:    1217 rmax: 0.470717E-06 	  iter       2
+  ntime:    1218 rmax: 0.465943E-06 	  iter       2
+  ntime:    1219 rmax: 0.474959E-06 	  iter       2
+  ntime:    1220 rmax: 0.497697E-06 	  iter       2
+
+ ========== nrtstp=    1220  ctime=  0.976000E+01  dt=  0.800000E-02  dtavg=  0.800000E-02
+  
+
+ Work took       449.99395267   seconds
+  
+  ntime:    1221 rmax: 0.448516E-06 	  iter       2
+  ntime:    1222 rmax: 0.480180E-06 	  iter       2
+  ntime:    1223 rmax: 0.446959E-06 	  iter       2
+  ntime:    1224 rmax: 0.456887E-06 	  iter       2
+  ntime:    1225 rmax: 0.453392E-06 	  iter       2
+  ntime:    1226 rmax: 0.478404E-06 	  iter       2
+  ntime:    1227 rmax: 0.475361E-06 	  iter       2
+  ntime:    1228 rmax: 0.455497E-06 	  iter       2
+  ntime:    1229 rmax: 0.482356E-06 	  iter       2
+  ntime:    1230 rmax: 0.505501E-06 	  iter       2
+  ntime:    1231 rmax: 0.516492E-06 	  iter       2
+  ntime:    1232 rmax: 0.484349E-06 	  iter       2
+  ntime:    1233 rmax: 0.474260E-06 	  iter       2
+  ntime:    1234 rmax: 0.453320E-06 	  iter       2
+  ntime:    1235 rmax: 0.458910E-06 	  iter       2
+  ntime:    1236 rmax: 0.481439E-06 	  iter       2
+  ntime:    1237 rmax: 0.460370E-06 	  iter       2
+  ntime:    1238 rmax: 0.439869E-06 	  iter       2
+  ntime:    1239 rmax: 0.461720E-06 	  iter       2
+  ntime:    1240 rmax: 0.461293E-06 	  iter       2
+
+ ========== nrtstp=    1240  ctime=  0.992000E+01  dt=  0.800000E-02  dtavg=  0.800000E-02
+  
+
+ Work took       457.35049051   seconds
+  
+  ntime:    1241 rmax: 0.462915E-06 	  iter       2
+  ntime:    1242 rmax: 0.473365E-06 	  iter       2
+  ntime:    1243 rmax: 0.459712E-06 	  iter       2
+  ntime:    1244 rmax: 0.475201E-06 	  iter       2
+  ntime:    1245 rmax: 0.456946E-06 	  iter       2
+  ntime:    1246 rmax: 0.475068E-06 	  iter       2
+  ntime:    1247 rmax: 0.505544E-06 	  iter       2
+  ntime:    1248 rmax: 0.491638E-06 	  iter       2
+  ntime:    1249 rmax: 0.450027E-06 	  iter       2
+  ntime:    1250 rmax: 0.459158E-06 	  iter       2
+  ntime:    1251 rmax: 0.466339E-06 	  iter       2
+  ntime:    1252 rmax: 0.471450E-06 	  iter       2
+  ntime:    1253 rmax: 0.496532E-06 	  iter       2
+  ntime:    1254 rmax: 0.455487E-06 	  iter       2
+  ntime:    1255 rmax: 0.455999E-06 	  iter       2
+  ntime:    1256 rmax: 0.453570E-06 	  iter       2
+  ntime:    1257 rmax: 0.460001E-06 	  iter       2
+  ntime:    1258 rmax: 0.487242E-06 	  iter       2
+  ntime:    1259 rmax: 0.476083E-06 	  iter       2
+  ntime:    1260 rmax: 0.433474E-06 	  iter       2
+
+ ========== nrtstp=    1260  ctime=  0.100800E+02  dt=  0.800000E-02  dtavg=  0.800000E-02
+  
+
+ Work took       464.80794398   seconds
+  
+  ntime:    1261 rmax: 0.491541E-06 	  iter       2
+  ntime:    1262 rmax: 0.468723E-06 	  iter       2
+  ntime:    1263 rmax: 0.484599E-06 	  iter       2
+  ntime:    1264 rmax: 0.480819E-06 	  iter       2
+  ntime:    1265 rmax: 0.485974E-06 	  iter       2
+  ntime:    1266 rmax: 0.509106E-06 	  iter       2
+  ntime:    1267 rmax: 0.520448E-06 	  iter       2
+  ntime:    1268 rmax: 0.497588E-06 	  iter       2
+  ntime:    1269 rmax: 0.507532E-06 	  iter       2
+  ntime:    1270 rmax: 0.487728E-06 	  iter       2
+  ntime:    1271 rmax: 0.437819E-06 	  iter       2
+  ntime:    1272 rmax: 0.468499E-06 	  iter       2
+  ntime:    1273 rmax: 0.465749E-06 	  iter       2
+  ntime:    1274 rmax: 0.477906E-06 	  iter       2
+  ntime:    1275 rmax: 0.450527E-06 	  iter       2
+  ntime:    1276 rmax: 0.457960E-06 	  iter       2
+  ntime:    1277 rmax: 0.477582E-06 	  iter       2
+  ntime:    1278 rmax: 0.485107E-06 	  iter       2
+  ntime:    1279 rmax: 0.488258E-06 	  iter       2
+  ntime:    1280 rmax: 0.492711E-06 	  iter       2
+
+ ========== nrtstp=    1280  ctime=  0.102400E+02  dt=  0.800000E-02  dtavg=  0.800000E-02
+  
+
+ Work took       472.09123440   seconds
+  
+  ntime:    1281 rmax: 0.501637E-06 	  iter       2
+  ntime:    1282 rmax: 0.454949E-06 	  iter       2
+  ntime:    1283 rmax: 0.494115E-06 	  iter       2
+  ntime:    1284 rmax: 0.473100E-06 	  iter       2
+  ntime:    1285 rmax: 0.496409E-06 	  iter       2
+  ntime:    1286 rmax: 0.465710E-06 	  iter       2
+  ntime:    1287 rmax: 0.476016E-06 	  iter       2
+  ntime:    1288 rmax: 0.501816E-06 	  iter       2
+  ntime:    1289 rmax: 0.507111E-06 	  iter       2
+  ntime:    1290 rmax: 0.482377E-06 	  iter       2
+  ntime:    1291 rmax: 0.509291E-06 	  iter       2
+  ntime:    1292 rmax: 0.457918E-06 	  iter       2
+  ntime:    1293 rmax: 0.460649E-06 	  iter       2
+  ntime:    1294 rmax: 0.479105E-06 	  iter       2
+  ntime:    1295 rmax: 0.479664E-06 	  iter       2
+  ntime:    1296 rmax: 0.475071E-06 	  iter       2
+  ntime:    1297 rmax: 0.465245E-06 	  iter       2
+  ntime:    1298 rmax: 0.436621E-06 	  iter       2
+  ntime:    1299 rmax: 0.435352E-06 	  iter       2
+  ntime:    1300 rmax: 0.479568E-06 	  iter       2
+
+ ========== nrtstp=    1300  ctime=  0.104000E+02  dt=  0.800000E-02  dtavg=  0.800000E-02
+  
+
+ Work took       479.45110925   seconds
+  
+  ntime:    1301 rmax: 0.455341E-06 	  iter       2
+  ntime:    1302 rmax: 0.503044E-06 	  iter       2
+  ntime:    1303 rmax: 0.513826E-06 	  iter       2
+  ntime:    1304 rmax: 0.469079E-06 	  iter       2
+  ntime:    1305 rmax: 0.472428E-06 	  iter       2
+  ntime:    1306 rmax: 0.477692E-06 	  iter       2
+  ntime:    1307 rmax: 0.487765E-06 	  iter       2
+  ntime:    1308 rmax: 0.425432E-06 	  iter       2
+  ntime:    1309 rmax: 0.461962E-06 	  iter       2
+  ntime:    1310 rmax: 0.492427E-06 	  iter       2
+  ntime:    1311 rmax: 0.529070E-06 	  iter       2
+  ntime:    1312 rmax: 0.505647E-06 	  iter       2
+  ntime:    1313 rmax: 0.468926E-06 	  iter       2
+  ntime:    1314 rmax: 0.432305E-06 	  iter       2
+  ntime:    1315 rmax: 0.461037E-06 	  iter       2
+  ntime:    1316 rmax: 0.490132E-06 	  iter       2
+  ntime:    1317 rmax: 0.508379E-06 	  iter       2
+  ntime:    1318 rmax: 0.510559E-06 	  iter       2
+  ntime:    1319 rmax: 0.443118E-06 	  iter       2
+  ntime:    1320 rmax: 0.451678E-06 	  iter       2
+
+ ========== nrtstp=    1320  ctime=  0.105600E+02  dt=  0.800000E-02  dtavg=  0.800000E-02
+  
+
+ Work took       486.73599606   seconds
+  
+  ntime:    1321 rmax: 0.428726E-06 	  iter       2
+  ntime:    1322 rmax: 0.474341E-06 	  iter       2
+  ntime:    1323 rmax: 0.481044E-06 	  iter       2
+  ntime:    1324 rmax: 0.524629E-06 	  iter       2
+  ntime:    1325 rmax: 0.512922E-06 	  iter       2
+  ntime:    1326 rmax: 0.500415E-06 	  iter       2
+  ntime:    1327 rmax: 0.488370E-06 	  iter       2
+  ntime:    1328 rmax: 0.488396E-06 	  iter       2
+  ntime:    1329 rmax: 0.483587E-06 	  iter       2
+  ntime:    1330 rmax: 0.429500E-06 	  iter       2
+  ntime:    1331 rmax: 0.496801E-06 	  iter       2
+  ntime:    1332 rmax: 0.534345E-06 	  iter       2
+  ntime:    1333 rmax: 0.546387E-06 	  iter       2
+  ntime:    1334 rmax: 0.518839E-06 	  iter       2
+  ntime:    1335 rmax: 0.474974E-06 	  iter       2
+  ntime:    1336 rmax: 0.460483E-06 	  iter       2
+  ntime:    1337 rmax: 0.483981E-06 	  iter       2
+  ntime:    1338 rmax: 0.484422E-06 	  iter       2
+  ntime:    1339 rmax: 0.473965E-06 	  iter       2
+  ntime:    1340 rmax: 0.485802E-06 	  iter       2
+
+ ========== nrtstp=    1340  ctime=  0.107200E+02  dt=  0.800000E-02  dtavg=  0.800000E-02
+  
+
+ Work took       494.15128239   seconds
+  
+  ntime:    1341 rmax: 0.442007E-06 	  iter       2
+  ntime:    1342 rmax: 0.458450E-06 	  iter       2
+  ntime:    1343 rmax: 0.448482E-06 	  iter       2
+  ntime:    1344 rmax: 0.474287E-06 	  iter       2
+  ntime:    1345 rmax: 0.457306E-06 	  iter       2
+  ntime:    1346 rmax: 0.550320E-06 	  iter       2
+  ntime:    1347 rmax: 0.515895E-06 	  iter       2
+  ntime:    1348 rmax: 0.488232E-06 	  iter       2
+  ntime:    1349 rmax: 0.485964E-06 	  iter       2
+  ntime:    1350 rmax: 0.482309E-06 	  iter       2
+  ntime:    1351 rmax: 0.497629E-06 	  iter       2
+  ntime:    1352 rmax: 0.459800E-06 	  iter       2
+  ntime:    1353 rmax: 0.473411E-06 	  iter       2
+  ntime:    1354 rmax: 0.559491E-06 	  iter       2
+  ntime:    1355 rmax: 0.561017E-06 	  iter       2
+  ntime:    1356 rmax: 0.549670E-06 	  iter       2
+  ntime:    1357 rmax: 0.446945E-06 	  iter       2
+  ntime:    1358 rmax: 0.478901E-06 	  iter       2
+  ntime:    1359 rmax: 0.474507E-06 	  iter       2
+  ntime:    1360 rmax: 0.483563E-06 	  iter       2
+
+ ========== nrtstp=    1360  ctime=  0.108800E+02  dt=  0.800000E-02  dtavg=  0.800000E-02
+  
+
+ Work took       501.47484518   seconds
+  
+ ctime=   10.8799999999997     
