@@ -34,6 +34,9 @@
 	imb_shape=1	; imbnumber=1		; ibturbine=.false.
 	radsin=0.d0	; turax =1			; reddelta=1.d0      
 
+       allocate(r_act(5000),c_act(5000),Pit_act(5000))
+       r_act(:)=0.d0 ; c_act(:)=0.d0 ; Pit_act(:)=0.d0 
+
 	IF (myrank.ne.master) RETURN
 !Allocate variables only needed by the master:
 	allocate(Cx(bodynum),Cxor(bodynum),Cy(bodynum),Cyor(bodynum))
@@ -79,11 +82,6 @@
 	   endif
 	   if (.not.rotating(M)) radsin(M)=0.d0
 
-!Actuator line:
-	   if(ibturbine(M) .and. turax(M).eq.3 .and. M.eq.1) then
-	    allocate(r_act(5000),c_act(5000),Pit_act(5000))
-	    r_act=0.d0 ; c_act=0.d0 ;Pit_act=0.d0 
-	   endif
 !Write possible combinations of movements/body types that doesn't work
       End do !M
       close (1)
@@ -104,6 +102,7 @@
 	
       dxm=g_dx/rdivmax ; dym=g_dy/rdivmax ; dzm=g_dz/rdivmax	!Minimum grid sizes
 	 
+
 	write(6,*)'Largest rdivmax  :',rdivmax	
 	write(6,'(a,3e12.4)')'Smallest gridsize: ',dxm,dym,dzm	 
 		
@@ -122,6 +121,10 @@
      & write(6,*)'Too many ib points, change maxn in imb.for'
 	IF (maxnodeIBS.gt.maxn) STOP
 	Enddo
+        
+!       do L=1,nodes(1)
+!       WRITE(6,'(a,3F9.3)') 'r,c,Pit',r_act(L),c_act(L),Pit_act(L)
+!       end do
 
 !The velocity and force vectors/matrix are allocated:
       allocate (U_Beta1(bodynum,maxnodeIBS),U_Beta2(bodynum,maxnodeIBS))
@@ -130,6 +133,8 @@
 !Initiate all these variables:
 	U_Beta1=0.d0  ; U_Beta2=0.d0  ; U_Beta3=0.d0
 	R0=0.d0       ; alpha0=0.d0	  ; imb_block=0
+       
+
 
 	if (myrank.eq.master) then
        allocate (FX1(bodynum,maxnodeIBS)) ; FX1=0.D0 
@@ -138,6 +143,7 @@
        allocate (FX1M(bodynum,maxnodeIBS)) ; FX1M=0.D0 
        allocate (FX2M(bodynum,maxnodeIBS)) ; FX2M=0.D0 
        allocate (FX3M(bodynum,maxnodeIBS)) ; FX3M=0.D0 
+       
 	endif
 !Local angle and radius:
 	 call imb_alpha0	
@@ -356,6 +362,7 @@
       
       INTEGER :: K,L,N,numIBslv
 
+
        call MPI_BCAST(maxnodeIBS,1,MPI_INTEGER,
      &  master,MPI_COMM_WORLD,ierr)		!Total # IB points
        call MPI_BCAST(nodes,bodynum,MPI_INTEGER,
@@ -375,6 +382,13 @@
        call MPI_BCAST(ibturbine,bodynum,MPI_LOGICAL,
      &  master,MPI_COMM_WORLD,ierr)		!If the body is a turbine
         call MPI_BARRIER(MPI_COMM_WORLD,ierr)
+
+!        call MPI_BCAST(r_act,maxnodeIBS,MPI_DOUBLE_PRECISION,
+!     &		       master,MPI_COMM_WORLD,ierr)
+!        call MPI_BCAST(c_act,maxnodeIBS,MPI_DOUBLE_PRECISION,
+!     &			master,MPI_COMM_WORLD,ierr)
+!        call MPI_BCAST(Pit_act,maxnodeIBS,MPI_DOUBLE_PRECISION,
+!     &			master,MPI_COMM_WORLD,ierr)
 
 	nIBslv=maxnodeIBS
 
@@ -434,12 +448,9 @@
       
       INTEGER :: K
 	
+
       Do K=1,bodynum
 
-!Distribute properties of the actuator line turbines
-	if(itime==itime_start .and. imb_shape(K)==5 .and. turax(K)==3) then
-	     CALL ActuatorLine_Initial(K)			!Turbine via Actuator Line model
-	endif
 
 	 IF (imb_shape(K).eq.5 .and. rotating(K)) then
 	   if(ibturbine(K)) then
@@ -453,8 +464,13 @@
 	 ENDIF
 	Enddo	
 
+       !Distribute properties of the actuator line turbines
+!	if(itime==itime_start .and. imb_shape(K)==5 .and. turax(K)==3) then
+!	endif
+
 		Call PartLoc  					!Asign markers to domains and processors 
 !           if (itime.eq.itime_start)   	call imb_vel_to_zero		
+       if(itime.eq.itime_start) CALL ActuatorLine_Initial!(1)			!Turbine via Actuator Line model
 
 	IF(itime.eq.itime_start) then				!Generate delta func for steady bodies
 	 if(myrank.eq.master)write(6,*)'Delta functions initiating'
@@ -593,6 +609,10 @@
 	  ENDDO
 	 Enddo
 	ENDIF !master
+
+!      WRITE(6,'(a,I8,a,I8)') 'proc:', myrank,
+!     & '  size(nodex_loc)',size(nodex_loc)
+!      call MPI_BARRIER(MPI_COMM_WORLD,ierr)
 	
 !Now the properties of the markers owned by each processor is scattered
 !We can't use BCAST because then we share all the vectors (+memory)
@@ -604,6 +624,8 @@
         call MPI_BCAST(R0_loc,maxnodeIBS,MPI_DOUBLE_PRECISION,
      &			master,MPI_COMM_WORLD,ierr)
 	ENDIF
+
+
 
         call MPI_BCAST(rott_loc,maxnodeIBS,MPI_INTEGER,
      &			master,MPI_COMM_WORLD,ierr)
@@ -1155,7 +1177,9 @@
 	  ft_loc=ft_loc+(FX2(M,L)*dcos(rads(M)+alpha0(M,L))
      &         -FX3(M,L)*dsin(rads(M)+alpha0(M,L)))*R0(M,L)*dzm*c_act(L)
 	 end do
-	call ActuatorLine_FEM(M)
+	
+        call ActuatorLine_FEM(M)
+
 !For the AL plot the coefficients of thrust and power:
        write(forcefilej,88)alpharads
      &  ,2.d0*fx_loc/(PI*0.135**2*ubulk**2)

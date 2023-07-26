@@ -43,6 +43,7 @@ eddyvis_wale.o\
 eddyvis_1eqn.o\
 eddyvis_keps.o\
 exchange_bc.o\
+exchange_bcphi.o\
 exchangep.o\
 exchangepp.o\
 exchangesca.o\

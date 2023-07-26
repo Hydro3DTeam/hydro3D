@@ -866,9 +866,9 @@
                 
         if (trim(keyword).eq.'channel'.OR.trim(keyword).eq.'wave')then
               if (.not.L_LSM .and. .not.L_LSMbase) dom(ib)%u=ubulk
-                   ubw=ubulk; ube=ubulk; ubs=ubulk				
-		       ubn=ubulk; ubt=ubulk; ubb=ubulk
-                   vb=0.0; wb=0.0
+                  ubw=ubulk; ube=ubulk; ubs=ubulk				
+		    ubn=ubulk; ubt=ubulk; ubb=ubulk
+                  vb=0.0; wb=0.0
         else if (trim(keyword).eq.'cavity') then
                  dom(ib)%u=0.0
                  ubw=0.0; ube=0.0; ubs=0.0; ubn=0.0; ubt=1.0; ubb=0.0

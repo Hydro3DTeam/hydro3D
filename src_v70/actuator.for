@@ -176,6 +176,7 @@
 
        PI = 4.D0*DATAN(1.D0)
 
+
          write(char_block,'(i3)') numIB
          strlen=LEN(TRIM(ADJUSTL(char_block)))
          char_block=REPEAT('0',(3-strlen))//TRIM(ADJUSTL(char_block))
@@ -196,7 +197,7 @@
 
 	 r_act(1+maxnodeIBS)  =r_in(1)      !+0.3999999d0*dzm
 	 c_act(1+maxnodeIBS)  =c_in(1)
-       Pit_act(1+maxnodeIBS)=Pit_in(1) 
+        Pit_act(1+maxnodeIBS)=Pit_in(1) 
 	 nodex(numIB,1)=0.D0
 	 nodey(numIB,1)=0.D0
 	 nodez(numIB,1)=r_act(1+maxnodeIBS)
@@ -285,7 +286,7 @@
       RETURN
       end
 !######################################################################
-      SUBROUTINE ActuatorLine_Initial(M)
+      SUBROUTINE ActuatorLine_Initial!(M)
 !######################################################################
       use vars
       use multidata
@@ -293,16 +294,27 @@
       use mpi
       implicit none
 
-      INTEGER :: M
+      INTEGER :: M,L
       
-      if(itime.eq.itime_start .and. myrank.ne.0) then
+!      if(myrank.eq.0) then
+!       do L=1,nodes(1)
+!       WRITE(6,'(a,3F9.3)') 'r,c,Pit',r_act(L),c_act(L),Pit_act(L)
+!       end do
+!      end if
+      
+      WRITE(6,'(a,I8,a,I8)') 'proc:', myrank,'  size(r_act)',size(r_act)
+      call MPI_BARRIER(MPI_COMM_WORLD,ierr)
+
+!      if(itime.eq.itime_start .and. myrank.ne.0) then
+        call MPI_BCAST(r_act,maxnodeIBS,MPI_DOUBLE_PRECISION,
+     &		       master,MPI_COMM_WORLD,ierr)
         call MPI_BCAST(c_act,maxnodeIBS,MPI_DOUBLE_PRECISION,
      &			master,MPI_COMM_WORLD,ierr)
         call MPI_BCAST(Pit_act,maxnodeIBS,MPI_DOUBLE_PRECISION,
      &			master,MPI_COMM_WORLD,ierr)
-        call MPI_BCAST(r_act,maxnodeIBS,MPI_DOUBLE_PRECISION,
-     &			master,MPI_COMM_WORLD,ierr)
-	endif
+!	endif
+
+       call MPI_BARRIER(MPI_COMM_WORLD,ierr)
 	END SUBROUTINE
 !######################################################################
       SUBROUTINE ActuatorLine(M,L,ib)

@@ -13,6 +13,7 @@
       DOUBLE PRECISION :: fact,fact1,buffer_rmax
 
         rmax=0.d0
+
         if(differencing.eq.2) then
         do ib=1,nbp
            fact=0.d0 ; fact1=0.d0
@@ -60,7 +61,6 @@
                     fact1=fact*dom(ib)%dx*dom(ib)%dy*dom(ib)%dz
                     resor=max(rmax,abs(fact1))
                     rmax=max(resor,abs(fact1))
-
                  end do
               end do
            end do
