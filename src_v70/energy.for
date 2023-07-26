@@ -34,7 +34,8 @@
         
       INTEGER :: i,j,k,ib
       INTEGER :: is,ie,js,je,ks,ke
- 
+      
+      grx=0.d0 ; gry=0.d0 ; grz=-9.81
 
         do ib=1,nbp
 

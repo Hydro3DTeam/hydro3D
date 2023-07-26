@@ -869,10 +869,12 @@
                   ubw=ubulk; ube=ubulk; ubs=ubulk				
 		    ubn=ubulk; ubt=ubulk; ubb=ubulk
                   vb=0.0; wb=0.0
+
         else if (trim(keyword).eq.'cavity') then
                  dom(ib)%u=0.0
                  ubw=0.0; ube=0.0; ubs=0.0; ubn=0.0; ubt=1.0; ubb=0.0
                  vb=0.0; wb=0.0
+
         else if(trim(keyword).eq.'KH') then
             tti=dom(ib)%ttc_i ; ttj=dom(ib)%ttc_j ; ttk=dom(ib)%ttc_k
             PI=4.d0*atan(1.d0)
@@ -895,6 +897,26 @@
             end do ; end do ; end do 
             ubw=0.0; ube=0.0; ubs=0.0; ubn=0.0; ubt=0.0; ubb=0.0
             vb=0.0; wb=0.0
+
+          else if(trim(keyword).eq.'RT') then
+            tti=dom(ib)%ttc_i ; ttj=dom(ib)%ttc_j ; ttk=dom(ib)%ttc_k
+            dom(ib)%u=ubulk
+            ubw=0.0; ube=0.0; ubs=0.0; ubn=0.0; ubt=0.0; ubb=0.0
+            vb=0.0; wb=0.0
+            IF(LENERGY) THEN
+              do k=1,ttk
+                if(dom(ib)%z(k).le.zen/2.d0) then
+                  do j=1,ttj ; do i=1,tti
+                    dom(ib)%T(i,j,k)=40.d0
+                  end do ; end do
+                else 
+                  do j=1,ttj ; do i=1,tti
+                    dom(ib)%T(i,j,k)=20.d0
+                  end do ; end do
+                end if
+              end do 
+            END IF
+
 	  else if (trim(keyword).eq.'column'
      &  		 .OR.trim(keyword).eq.'waves') then
                  dom(ib)%u=0.0
