@@ -533,11 +533,15 @@ C#############################################################
      &dom(ib)%p(i+1,j+1,k)  +dom(ib)%p(i,j,k+1)+
      &dom(ib)%p(i+1,j,k+1)  +dom(ib)%p(i,j+1,k+1)+
      &dom(ib)%p(i+1,j+1,k+1))
+                 if (LSCALAR) then
                  S_cn  =0.125*(dom(ib)%S(i,j,k)+
      &dom(ib)%S(i+1,j,k)    +dom(ib)%S(i,j+1,k)+
      &dom(ib)%S(i+1,j+1,k)  +dom(ib)%S(i,j,k+1)+
      &dom(ib)%S(i+1,j,k+1)  +dom(ib)%S(i,j+1,k+1)+
      &dom(ib)%S(i+1,j+1,k+1))
+                 else
+                 S_cn = 0.0d0
+                 end if
                  k_cn  =0.125*(dom(ib)%ksgs(i,j,k)+
      &dom(ib)%ksgs(i+1,j,k)    +dom(ib)%ksgs(i,j+1,k)+
      &dom(ib)%ksgs(i+1,j+1,k)  +dom(ib)%ksgs(i,j,k+1)+
